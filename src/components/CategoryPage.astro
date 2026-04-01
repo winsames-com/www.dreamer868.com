@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageBanner from './PageBanner.astro';
 import ArticleCard from './ArticleCard.astro';
+import { url } from '../utils/url';
 
 interface Article {
   data: {
@@ -39,7 +40,7 @@ const sorted = [...articles].sort((a, b) => a.data.order - b.data.order);
       {sorted.map((article) => (
         <ArticleCard
           title={article.data.title}
-          href={`/articles/${article.data.slug}`}
+          href={url(`/articles/${article.data.slug}`)}
           image={article.data.images.hero.url}
           imageAlt={article.data.images.hero.alt}
           category={article.data.category}
