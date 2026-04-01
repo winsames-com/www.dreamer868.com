@@ -1,0 +1,14 @@
+---
+import { getCollection } from 'astro:content';
+import CategoryPage from '../../components/CategoryPage.astro';
+
+const articles = (await getCollection('articles')).filter(
+  (a) => a.data.subcategory === 'tax-services'
+);
+---
+
+<CategoryPage
+  title="租稅服務"
+  description="常見稅務類型總覽，合法節稅策略與專業協作。"
+  articles={articles}
+/>

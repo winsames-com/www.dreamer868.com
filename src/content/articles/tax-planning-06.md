@@ -1,0 +1,210 @@
+---
+title: 與會計師團隊協作說明
+date: 2026-03-19
+author: Writer
+status: draft
+version: 1
+task: 一-C-6 與會計師團隊協作說明
+category: 稅務規劃
+
+images:
+  hero:
+    pexels_id: 8441778
+    url: "https://images.pexels.com/photos/8441778/pexels-photo-8441778.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
+    alt: "與會計師團隊的專業協作"
+    photographer: "Kampus Production"
+    photographer_url: "https://www.pexels.com/@kampus"
+    credit: "Photo by Kampus Production on Pexels"
+
+section: "existing"
+subcategory: "tax-planning"
+order: 6
+slug: "tax-planning-06"
+---
+
+# 與會計師團隊協作說明
+
+![與會計師團隊的專業協作](https://images.pexels.com/photos/8441778/pexels-photo-8441778.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200)
+*Photo by [Kampus Production](https://www.pexels.com/@kampus) on [Pexels](https://www.pexels.com)*
+
+無論你是個人或企業主，稅務規劃都可能需要專業會計師的協助。
+
+但很多人不知道：**什麼時候該找會計師？找會計師能幫你做什麼？怎麼和會計師有效溝通？**
+
+在尊茂，我們的團隊中就有專業會計師。這篇文章說明我們如何與會計師協作，為你提供完整的稅務服務。
+
+---
+
+## 為什麼需要會計師
+
+![會計師的專業價值](https://images.pexels.com/photos/6863244/pexels-photo-6863244.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [Karolina Kaboompics](https://www.pexels.com/@karolina-grabowska) on [Pexels](https://www.pexels.com)*
+
+會計師不只是幫你「報稅」的人。
+
+**會計師能提供的價值：**
+
+| 服務項目 | 說明 |
+|----------|------|
+| 稅務申報 | 確保正確申報，避免罰款 |
+| 節稅規劃 | 運用專業知識合法降低稅負 |
+| 帳務處理 | 建立正確的財務記錄 |
+| 稅務諮詢 | 回答稅務問題，提供建議 |
+| 稅務爭議 | 協助處理與國稅局的溝通 |
+| 財報簽證 | 公司財報的專業背書 |
+
+**簡單的稅務問題，你可以自己處理。但當情況變複雜，專業協助就變得必要。**
+
+什麼時候情況算「複雜」？有公司、有海外資產、有大額不動產交易、有傳承規劃需求⋯⋯這些都是需要會計師的訊號。
+
+---
+
+## 尊茂的會計師服務
+
+![我們的會計師團隊](https://images.pexels.com/photos/8441861/pexels-photo-8441861.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [Kampus Production](https://www.pexels.com/@kampus) on [Pexels](https://www.pexels.com)*
+
+我們的專業團隊中，會計師是重要的成員。
+
+**我們的會計師能協助：**
+- 個人綜合所得稅申報與規劃
+- 企業營所稅申報與規劃
+- 遺產稅與贈與稅申報
+- 公司設立與組織架構建議
+- 跨國稅務諮詢
+- 稅務爭議處理
+
+與一般會計師事務所不同的是：**我們的會計師是整體財務規劃團隊的一員。**
+
+這代表什麼？
+
+當我們幫你做財務規劃時，稅務面向會被完整考量。不是規劃完才去想稅的問題，而是從一開始就把稅務納入思考。
+
+---
+
+## 協作模式
+
+![團隊協作的方式](https://images.pexels.com/photos/7821671/pexels-photo-7821671.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [RDNE Stock project](https://www.pexels.com/@rdne) on [Pexels](https://www.pexels.com)*
+
+在尊茂，跨專業協作是這樣進行的：
+
+**第一步：了解你的整體狀況**
+
+財務顧問先和你會談，了解你的：
+- 收入來源與結構
+- 資產與負債
+- 短中長期目標
+- 特殊需求或擔憂
+
+**第二步：初步評估**
+
+根據你的狀況，判斷是否需要會計師介入。不是每個案例都需要，我們會據實告訴你。
+
+**第三步：會計師諮詢**
+
+如果需要，會計師會加入討論：
+- 分析你的稅務現況
+- 提出可能的規劃方向
+- 說明各方案的稅務影響
+
+**第四步：整合建議**
+
+財務顧問整合所有專業意見，給你完整的建議方案。
+
+**你只需要對一個窗口，但背後有整個團隊的支持。**
+
+---
+
+## 什麼時候該找我們
+
+![判斷是否需要協助](https://images.pexels.com/photos/6694567/pexels-photo-6694567.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [Karolina Kaboompics](https://www.pexels.com/@karolina-grabowska) on [Pexels](https://www.pexels.com)*
+
+以下情況，建議尋求專業協助：
+
+**個人**
+- 年收入超過 200 萬
+- 有海外所得或資產
+- 準備買賣不動產
+- 正在規劃退休
+- 有傳承規劃需求
+
+**企業主**
+- 公司剛設立，需要建立帳務
+- 收入結構複雜（個人+公司）
+- 準備擴大營業或轉型
+- 考慮企業傳承
+- 有跨國營運需求
+
+**特殊情況**
+- 收到國稅局補稅通知
+- 被選中稅務查核
+- 準備進行大額資產移轉
+- 發生繼承事件
+
+**不確定自己的情況是否需要專業協助？歡迎先和我們聊聊，我們會誠實告訴你。**
+
+---
+
+## 服務流程
+
+![會計師服務的流程](https://images.pexels.com/photos/8441812/pexels-photo-8441812.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [Kampus Production](https://www.pexels.com/@kampus) on [Pexels](https://www.pexels.com)*
+
+如果你決定使用我們的會計師服務，流程如下：
+
+**1. 初步諮詢**
+- 了解你的需求
+- 評估需要的服務內容
+- 說明服務範圍與費用
+
+**2. 資料收集**
+- 提供所需文件
+- 會計師審閱與整理
+- 確認資料完整性
+
+**3. 分析與規劃**
+- 會計師進行專業分析
+- 提出規劃建議
+- 討論並確認方向
+
+**4. 執行與申報**
+- 依規劃方向執行
+- 完成稅務申報
+- 保留完整紀錄
+
+**5. 後續追蹤**
+- 定期檢視
+- 根據變化調整
+- 回答後續問題
+
+---
+
+## 與外部會計師的差異
+
+你可能已經有自己的會計師。我們的服務和外部會計師有什麼不同？
+
+**一般會計師事務所：**
+- 專注於稅務和帳務
+- 可能不了解你的整體財務規劃
+- 各項服務分開處理
+
+**尊茂的整合服務：**
+- 稅務是整體財務規劃的一部分
+- 會計師與財務顧問、律師等專業協作
+- 一個窗口，整合所有服務
+
+**這不代表你要換掉現有的會計師。**如果你對現有會計師滿意，我們可以和他們協作。重點是確保你的稅務規劃和整體財務規劃是一致的。
+
+---
+
+## 下一步
+
+稅務問題讓你困擾嗎？或是想確認你的稅務規劃是否有優化空間？歡迎與我們聯繫。
+
+📞 0909-230140
+📧 dreamer88888888888@gmail.com
+📍 臺中市南屯區同心里文心路一段186號9樓之1
+
+**賦予人們宏觀永續的財商新思路**

@@ -1,0 +1,14 @@
+---
+import { getCollection } from 'astro:content';
+import CategoryPage from '../components/CategoryPage.astro';
+
+const articles = (await getCollection('articles')).filter(
+  (a) => a.data.subcategory === 'team'
+);
+---
+
+<CategoryPage
+  title="專業團隊"
+  description="跨領域專業團隊，提供全面的財務規劃服務。"
+  articles={articles}
+/>

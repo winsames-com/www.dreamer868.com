@@ -1,0 +1,13 @@
+---
+import { getCollection } from 'astro:content';
+import CategoryPage from '../components/CategoryPage.astro';
+
+const articles = await getCollection('articles');
+const sorted = articles.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+---
+
+<CategoryPage
+  title="最新消息"
+  description="尊茂財務規劃的最新資訊與文章。"
+  articles={sorted}
+/>

@@ -1,0 +1,178 @@
+---
+title: 保險在財務規劃中的角色
+date: 2026-03-19
+author: Writer
+status: draft
+version: 1
+task: 三-B-1 保險在財務規劃中的角色
+category: 保險服務
+
+images:
+  hero:
+    pexels_id: 8441812
+    url: "https://images.pexels.com/photos/8441812/pexels-photo-8441812.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
+    alt: "保險在財務規劃中的角色"
+    photographer: "Kampus Production"
+    photographer_url: "https://www.pexels.com/@kampus"
+    credit: "Photo by Kampus Production on Pexels"
+
+section: "services"
+subcategory: "insurance"
+order: 1
+slug: "insurance-01"
+---
+
+# 保險在財務規劃中的角色
+
+![保險在財務規劃中的角色](https://images.pexels.com/photos/8441812/pexels-photo-8441812.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200)
+*Photo by [Kampus Production](https://www.pexels.com/@kampus) on [Pexels](https://www.pexels.com)*
+
+很多人對保險的印象是「被推銷」。
+
+業務員來拜訪、親友介紹、電話銷售⋯⋯這些經驗讓人對保險有些排斥。但如果從財務規劃的角度來看，保險其實是很重要的工具。
+
+**關鍵不是要不要買保險，而是買什麼、買多少、為什麼買。**
+
+---
+
+## 保險的本質
+
+![保險的本質](https://images.pexels.com/photos/6863332/pexels-photo-6863332.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [Karolina Kaboompics](https://www.pexels.com/@karolina-grabowska) on [Pexels](https://www.pexels.com)*
+
+保險的本質是什麼？
+
+**風險轉移。**
+
+人生有很多風險：生病、意外、身故、失能⋯⋯這些事情如果發生，可能需要大筆支出，或失去收入來源。
+
+保險的作用是：用確定的小額支出（保費），換取不確定的大額保障（理賠）。
+
+| 沒有保險 | 有保險 |
+|---------|--------|
+| 風險自己承擔 | 風險轉移給保險公司 |
+| 不確定會不會花大錢 | 確定每年花小錢 |
+| 出事可能影響生活 | 出事有保障 |
+
+**保險不是投資、不是儲蓄，而是風險管理工具。**
+
+---
+
+## 保險在財務規劃中的定位
+
+![保險的定位](https://images.pexels.com/photos/8441778/pexels-photo-8441778.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [Kampus Production](https://www.pexels.com/@kampus) on [Pexels](https://www.pexels.com)*
+
+在整體財務規劃中，保險扮演「防守」的角色：
+
+**財務規劃的三個層面**
+
+| 層面 | 功能 | 工具 |
+|------|------|------|
+| 防守 | 保護現有的 | 保險、緊急預備金 |
+| 進攻 | 累積更多的 | 投資、儲蓄 |
+| 傳承 | 傳給下一代 | 遺囑、信託、保險 |
+
+**防守要先做好，進攻才有意義。**
+
+如果沒有保障，一場意外或疾病可能讓你多年的努力歸零。先把風險處理好，再談投資和累積。
+
+---
+
+## 保險能解決什麼問題
+
+![保險解決的問題](https://images.pexels.com/photos/7821671/pexels-photo-7821671.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [RDNE Stock project](https://www.pexels.com/@rdne) on [Pexels](https://www.pexels.com)*
+
+保險可以解決這些風險：
+
+**身故風險**
+- 如果我走了，家人怎麼辦？
+- 房貸誰來還？
+- 子女教育費從哪來？
+
+**醫療風險**
+- 生重病需要大筆醫療費
+- 可能需要長時間休養
+- 收入中斷怎麼辦？
+
+**失能風險**
+- 如果無法工作
+- 需要長期照護
+- 誰來照顧我？
+
+**長壽風險**
+- 活得很長，錢不夠用
+- 退休金不足
+- 需要穩定的收入來源
+
+**每一種風險，都有對應的保險產品可以處理。**
+
+---
+
+## 保險規劃的正確順序
+
+![保險規劃的順序](https://images.pexels.com/photos/8441861/pexels-photo-8441861.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [Kampus Production](https://www.pexels.com/@kampus) on [Pexels](https://www.pexels.com)*
+
+很多人買保險的順序是錯的：
+
+**錯誤的順序**
+1. 有人推薦就買
+2. 買了才想能幹嘛
+3. 不知道自己需要什麼
+
+**正確的順序**
+1. 先了解自己有什麼風險
+2. 評估需要多少保障
+3. 檢視現有的保障
+4. 補足缺口
+
+**在財務規劃的流程中，保險評估是在「需求分析」之後。**
+
+先知道你需要什麼，再決定要不要買、買什麼。
+
+---
+
+## 我們如何處理保險
+
+![我們的處理方式](https://images.pexels.com/photos/6802042/pexels-photo-6802042.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [Karolina Kaboompics](https://www.pexels.com/@karolina-grabowska) on [Pexels](https://www.pexels.com)*
+
+在尊茂，保險是財務規劃的一部分，不是獨立銷售的商品。
+
+**我們的做法**
+
+1. **先做需求分析**
+   - 你有什麼風險？
+   - 需要多少保障？
+   - 目前有什麼保障？
+
+2. **找出保障缺口**
+   - 哪些風險沒有保？
+   - 保額夠不夠？
+   - 需要調整什麼？
+
+3. **提出建議**
+   - 需要補什麼保障
+   - 什麼產品適合
+   - 費用是多少
+
+4. **你決定要不要買**
+   - 我們給建議
+   - 你做決定
+   - 不強迫
+
+**如果你的保障已經足夠，我們會直接告訴你，不會硬推。**
+
+---
+
+## 下一步
+
+想了解保險在你的財務規劃中應該扮演什麼角色？歡迎預約諮詢，讓我們評估你的保障需求。
+
+📞 0909-230140
+📧 dreamer88888888888@gmail.com
+📍 臺中市南屯區同心里文心路一段186號9樓之1
+
+**賦予人們宏觀永續的財商新思路**

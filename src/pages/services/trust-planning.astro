@@ -1,0 +1,14 @@
+---
+import { getCollection } from 'astro:content';
+import CategoryPage from '../../components/CategoryPage.astro';
+
+const articles = (await getCollection('articles')).filter(
+  (a) => a.data.subcategory === 'trust-planning'
+);
+---
+
+<CategoryPage
+  title="信託規劃"
+  description="客製化信託方案，確保資產按照您的意願分配。"
+  articles={articles}
+/>

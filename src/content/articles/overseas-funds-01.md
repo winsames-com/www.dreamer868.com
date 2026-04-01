@@ -1,0 +1,179 @@
+---
+title: 為什麼要配置海外資產？
+date: 2026-03-19
+author: Writer
+status: draft
+version: 1
+task: 三-I-1 為什麼要配置海外資產
+category: 海外基金債券
+
+images:
+  hero:
+    pexels_id: 3184292
+    url: "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
+    alt: "海外資產配置"
+    photographer: "fauxels"
+    photographer_url: "https://www.pexels.com/@fauxels"
+    credit: "Photo by fauxels on Pexels"
+
+section: "services"
+subcategory: "overseas-funds"
+order: 1
+slug: "overseas-funds-01"
+---
+
+# 為什麼要配置海外資產？
+
+![海外資產配置](https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200)
+*Photo by [fauxels](https://www.pexels.com/@fauxels) on [Pexels](https://www.pexels.com)*
+
+你的錢都放在台灣嗎？
+
+很多人的資產——存款、股票、房子——都集中在同一個國家。這樣方便管理，但也代表所有的雞蛋都在同一個籃子裡。
+
+這篇文章談談為什麼要考慮配置海外資產。
+
+---
+
+## 為什麼不只放台灣
+
+![不只放台灣](https://images.pexels.com/photos/6863332/pexels-photo-6863332.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [Karolina Kaboompics](https://www.pexels.com/@karolina-grabowska) on [Pexels](https://www.pexels.com)*
+
+把資產集中在單一國家的風險：
+
+**單一市場風險**
+- 台灣經濟如果不好，資產都受影響
+- 股市下跌、房價修正、匯率貶值
+- 沒有其他市場來平衡
+
+**單一貨幣風險**
+- 所有資產都以新台幣計價
+- 如果新台幣貶值，購買力下降
+- 對未來有海外需求的人影響更大
+
+**地緣政治風險**
+- 台灣的特殊地緣位置
+- 萬一有狀況，資產難以移動
+- 分散一部分在海外是保險
+
+---
+
+## 海外資產的好處
+
+![海外好處](https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [Sora Shimazaki](https://www.pexels.com/@sora-shimazaki) on [Pexels](https://www.pexels.com)*
+
+配置海外資產的主要好處：
+
+**分散風險**
+- 不同市場有不同的表現
+- 台灣不好時，其他地方可能好
+- 降低整體的波動
+
+**貨幣分散**
+- 持有多種貨幣
+- 對沖匯率風險
+- 長期購買力保護
+
+**參與全球機會**
+- 台灣市場相對小
+- 全球有更多投資機會
+- 可以參與不同產業和市場
+
+**資產保護**
+- 分散在不同的法律管轄區
+- 萬一有狀況，有備案
+- 某種程度的保險效果
+
+---
+
+## 什麼人適合配置海外資產
+
+![適合對象](https://images.pexels.com/photos/6802042/pexels-photo-6802042.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [Karolina Kaboompics](https://www.pexels.com/@karolina-grabowska) on [Pexels](https://www.pexels.com)*
+
+以下情況特別適合考慮海外資產：
+
+| 情況 | 原因 |
+|------|------|
+| 資產有一定規模 | 分散才有意義 |
+| 子女海外求學 | 未來有外幣需求 |
+| 計劃移民 | 提前佈局 |
+| 企業主 | 分散企業和個人風險 |
+| 傳承規劃 | 給下一代更多選擇 |
+
+**不是說小資產就不能配置，而是要考量成本效益。**
+
+---
+
+## 常見的顧慮
+
+![常見顧慮](https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [fauxels](https://www.pexels.com/@fauxels) on [Pexels](https://www.pexels.com)*
+
+很多人對海外資產有顧慮：
+
+**語言障礙**
+- 不懂英文怎麼辦？
+- 其實有中文服務的管道
+- 或透過專業顧問協助
+
+**不了解**
+- 對海外市場不熟悉
+- 這需要學習或專業協助
+- 不熟悉不代表不該做
+
+**怕被騙**
+- 海外投資詐騙多
+- 所以要選對管道
+- 正規機構和顧問
+
+**稅務複雜**
+- 海外所得要申報
+- 確實需要了解稅務規定
+- 合規申報很重要
+
+**這些顧慮都有解決方法，重點是用對的方式。**
+
+---
+
+## 配置多少比例合適
+
+![配置比例](https://images.pexels.com/photos/8441778/pexels-photo-8441778.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [Kampus Production](https://www.pexels.com/@kampus) on [Pexels](https://www.pexels.com)*
+
+海外資產應該佔多少比例？
+
+**沒有標準答案**
+- 視個人情況而定
+- 資產規模、年齡、目標
+- 風險承受能力
+
+**常見的參考**
+
+| 情況 | 海外比例參考 |
+|------|-------------|
+| 保守型 | 10-20% |
+| 穩健型 | 20-40% |
+| 積極型 | 40-60% |
+
+**考量因素**
+- 有沒有海外需求（子女留學、移民）
+- 收入是否穩定
+- 對匯率波動的承受度
+- 整體財務規劃
+
+**建議和財務顧問討論，找出適合你的配置。**
+
+---
+
+## 下一步
+
+想了解海外資產配置？歡迎預約諮詢，我們可以協調專業團隊為你評估。
+
+📞 0909-230140
+📧 dreamer88888888888@gmail.com
+📍 臺中市南屯區同心里文心路一段186號9樓之1
+
+**賦予人們宏觀永續的財商新思路**

@@ -1,0 +1,14 @@
+---
+import { getCollection } from 'astro:content';
+import CategoryPage from '../../components/CategoryPage.astro';
+
+const articles = (await getCollection('articles')).filter(
+  (a) => a.data.subcategory === 'tax-planning'
+);
+---
+
+<CategoryPage
+  title="稅務規劃"
+  description="提供個人與企業的合法節稅策略，降低稅務負擔，保護您的資產。"
+  articles={articles}
+/>

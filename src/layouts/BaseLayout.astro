@@ -1,0 +1,88 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import FloatingButtons from '../components/FloatingButtons.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  keywords?: string;
+  ogImage?: string;
+}
+
+const {
+  title,
+  description = '台中稅務規劃公司,台中財產繼承規劃,我們利用專業的理財規劃知識，根據每位客戶的個別需求，提供全面的理財諮詢和建議，協助他們實現財務目標。',
+  keywords = '稅務規劃,理財規劃,財富傳承,財務顧問,台中理財顧問,海外銀行開戶,家族治理,信託規劃',
+  ogImage = '',
+} = Astro.props;
+
+const siteTitle = `${title} | 尊茂財務規劃`;
+---
+
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content={description} />
+  <meta name="keywords" content={keywords} />
+
+  <meta property="og:locale" content="zh_TW" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="尊茂財務規劃" />
+  <meta property="og:title" content={siteTitle} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={Astro.url.href} />
+  {ogImage && <meta property="og:image" content={ogImage} />}
+
+  <title>{siteTitle}</title>
+  <link rel="shortcut icon" href="/favicon.ico" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@400;700&family=Tiro+Devanagari+Hindi&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TT5Y5BH5V2"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TT5Y5BH5V2');
+  </script>
+</head>
+<body>
+  <Header />
+  <main>
+    <slot />
+  </main>
+  <Footer />
+  <FloatingButtons />
+
+  <!-- Scroll animation observer -->
+  <script is:inline>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('[data-animate-in]').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

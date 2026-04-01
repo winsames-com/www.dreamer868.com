@@ -1,0 +1,14 @@
+---
+import { getCollection } from 'astro:content';
+import CategoryPage from '../../components/CategoryPage.astro';
+
+const articles = (await getCollection('articles')).filter(
+  (a) => a.data.subcategory === 'insurance'
+);
+---
+
+<CategoryPage
+  title="保險服務"
+  description="保險不只是保障，也是傳承與節稅的重要工具。"
+  articles={articles}
+/>

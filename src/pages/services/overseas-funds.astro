@@ -1,0 +1,14 @@
+---
+import { getCollection } from 'astro:content';
+import CategoryPage from '../../components/CategoryPage.astro';
+
+const articles = (await getCollection('articles')).filter(
+  (a) => a.data.subcategory === 'overseas-funds'
+);
+---
+
+<CategoryPage
+  title="海外基金債券"
+  description="海外資產配置與分散風險，拓展國際投資視野。"
+  articles={articles}
+/>

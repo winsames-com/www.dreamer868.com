@@ -1,0 +1,14 @@
+---
+import { getCollection } from 'astro:content';
+import CategoryPage from '../../components/CategoryPage.astro';
+
+const articles = (await getCollection('articles')).filter(
+  (a) => a.data.subcategory === 'family-governance'
+);
+---
+
+<CategoryPage
+  title="家族治理"
+  description="建立家族辦公室與治理機制，守護家族永續經營。"
+  articles={articles}
+/>

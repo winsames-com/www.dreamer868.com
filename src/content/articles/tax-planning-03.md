@@ -1,0 +1,184 @@
+---
+title: 傳承相關稅務（遺贈稅）
+date: 2026-03-19
+author: Writer
+status: draft
+version: 1
+task: 一-C-3 傳承相關稅務（遺贈稅）
+category: 稅務規劃
+
+images:
+  hero:
+    pexels_id: 8441812
+    url: "https://images.pexels.com/photos/8441812/pexels-photo-8441812.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
+    alt: "家族傳承與稅務規劃"
+    photographer: "Kampus Production"
+    photographer_url: "https://www.pexels.com/@kampus"
+    credit: "Photo by Kampus Production on Pexels"
+
+section: "existing"
+subcategory: "tax-planning"
+order: 3
+slug: "tax-planning-03"
+---
+
+# 傳承相關稅務：遺產稅與贈與稅
+
+![家族傳承與稅務規劃](https://images.pexels.com/photos/8441812/pexels-photo-8441812.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200)
+*Photo by [Kampus Production](https://www.pexels.com/@kampus) on [Pexels](https://www.pexels.com)*
+
+遺產稅和贈與稅，是財富傳承中最重要的稅務議題。
+
+很多人努力一輩子累積的資產，如果沒有提前規劃，可能有相當比例會變成稅金。更麻煩的是，遺產稅需要在六個月內繳清，如果資產都是不動產，子女可能面臨「有房沒錢繳稅」的窘境。
+
+**這篇文章帶你了解遺贈稅的基本規則，以及為什麼「提前規劃」這麼重要。**
+
+---
+
+## 遺產稅基本架構
+
+![遺產稅的計算邏輯](https://images.pexels.com/photos/7821671/pexels-photo-7821671.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [RDNE Stock project](https://www.pexels.com/@rdne) on [Pexels](https://www.pexels.com)*
+
+遺產稅是在一個人身故後，對其遺留資產課徵的稅。
+
+**計算公式：**
+```
+應納稅額 =（遺產總額 - 免稅額 - 扣除額）× 稅率
+```
+
+**現行免稅額與扣除額：**
+| 項目 | 金額 |
+|------|------|
+| 免稅額 | 1,333 萬 |
+| 配偶扣除額 | 553 萬 |
+| 直系血親卑親屬扣除額 | 每人 56 萬 |
+| 父母扣除額 | 每人 138 萬 |
+| 重度以上身心障礙扣除額 | 每人 693 萬 |
+| 喪葬費 | 138 萬 |
+
+**稅率：**
+| 課稅遺產淨額 | 稅率 |
+|--------------|------|
+| 5,000 萬以下 | 10% |
+| 5,000 萬 - 1 億 | 15% |
+| 1 億以上 | 20% |
+
+這代表什麼？如果你的遺產淨額超過 5,000 萬，稅率就開始往上跳。
+
+---
+
+## 贈與稅基本架構
+
+![贈與稅的運作方式](https://images.pexels.com/photos/6863332/pexels-photo-6863332.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [Karolina Kaboompics](https://www.pexels.com/@karolina-grabowska) on [Pexels](https://www.pexels.com)*
+
+贈與稅是對「生前無償移轉資產」課徵的稅。
+
+**每年免稅額：244 萬**
+
+這表示每個人每年可以贈與 244 萬以內的資產，不需要繳贈與稅。
+
+**超過免稅額的稅率：**
+| 贈與淨額 | 稅率 |
+|----------|------|
+| 2,500 萬以下 | 10% |
+| 2,500 萬 - 5,000 萬 | 15% |
+| 5,000 萬以上 | 20% |
+
+**贈與稅的特點是「贈與人繳稅」。**所以當父母贈與財產給子女，稅是由父母來繳。
+
+---
+
+## 遺產稅 vs 贈與稅：選哪個？
+
+![比較兩種稅的策略考量](https://images.pexels.com/photos/8441861/pexels-photo-8441861.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [Kampus Production](https://www.pexels.com/@kampus) on [Pexels](https://www.pexels.com)*
+
+很多人會問：「我應該生前贈與，還是等到身故再處理？」
+
+**贈與的優點：**
+- 可以利用每年 244 萬免稅額，分年贈與
+- 提前移轉資產，避免未來增值後稅負更重
+- 可以確保資產按你的意願分配
+
+**遺產的優點：**
+- 免稅額較高（1,333 萬 vs 244 萬/年）
+- 保留資產在自己名下，保有控制權
+- 某些扣除額只有遺產稅才能使用
+
+**沒有絕對的答案。**最佳策略取決於你的資產結構、家庭狀況、以及你對「控制權」的考量。
+
+一般來說，**分年贈與加上遺產規劃的組合**，通常比只用單一方式效果更好。
+
+---
+
+## 容易被忽略的課稅資產
+
+![容易被忽略的遺產項目](https://images.pexels.com/photos/6802042/pexels-photo-6802042.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [Karolina Kaboompics](https://www.pexels.com/@karolina-grabowska) on [Pexels](https://www.pexels.com)*
+
+很多人只想到「房子」和「存款」，但遺產稅的範圍比你想像的廣：
+
+**常被忽略的項目：**
+- 保險金（受益人設定不當時）
+- 上市櫃股票
+- 未上市公司股權
+- 海外資產
+- 死亡前兩年內的贈與
+- 信託資產（視情況）
+
+特別要注意的是**「死亡前兩年內的贈與」**——這些會被併入遺產計算。所以如果想透過贈與來節稅，要提早規劃，不是最後關頭才做。
+
+---
+
+## 常見的規劃工具
+
+![遺贈稅規劃的常見工具](https://images.pexels.com/photos/8293778/pexels-photo-8293778.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [RDNE Stock project](https://www.pexels.com/@rdne) on [Pexels](https://www.pexels.com)*
+
+遺贈稅規劃不只是「少繳稅」，更重要的是確保資產能順利移轉。
+
+**常見的規劃工具：**
+
+| 工具 | 用途 |
+|------|------|
+| 分年贈與 | 利用每年免稅額，逐步移轉 |
+| 保險規劃 | 指定受益人，避免納入遺產 |
+| 不動產移轉 | 用較低的公告現值計算 |
+| 信託 | 控制資產使用方式 |
+| 公司股權規劃 | 適用於有公司的家庭 |
+
+每種工具都有它的適用情境和限制。**重點不是用哪個工具，而是整體規劃的邏輯是否完整。**
+
+---
+
+## 為什麼要提前規劃
+
+傳承稅務規劃最重要的是「時間」。
+
+**提前規劃的好處：**
+- 有時間分年贈與，充分利用免稅額
+- 有時間調整資產結構
+- 有時間準備繳稅的現金
+- 避免臨時決策的風險
+
+**拖延的代價：**
+- 死亡前兩年贈與會被追回
+- 子女可能沒有現金繳稅
+- 資產可能被迫低價出售
+- 家族可能因分配問題起爭議
+
+**傳承的不只是財富，更是精神文化與愛。**提前規劃，才能確保你的心意被完整傳達。
+
+---
+
+## 下一步
+
+想知道你的傳承規劃是否完整？歡迎與我們的專業團隊聊聊，我們會協助你做全面的檢視。
+
+📞 0909-230140
+📧 dreamer88888888888@gmail.com
+📍 臺中市南屯區同心里文心路一段186號9樓之1
+
+**賦予人們宏觀永續的財商新思路**

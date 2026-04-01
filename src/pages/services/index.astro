@@ -1,0 +1,99 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageBanner from '../../components/PageBanner.astro';
+
+const services = [
+  { slug: 'financial-planning', label: '理財規劃', desc: '專屬財務計劃，實現人生各階段目標。' },
+  { slug: 'tax-planning', label: '稅務規劃', desc: '合法節稅策略，降低稅務負擔。' },
+  { slug: 'wealth-inheritance', label: '財富傳承', desc: '跨代財富規劃，確保資產安全傳承。' },
+  { slug: 'overseas-banking', label: '海外銀行開戶', desc: '新加坡、香港銀行開戶代辦。' },
+  { slug: 'family-governance', label: '家族治理', desc: '家族辦公室與治理機制建立。' },
+  { slug: 'insurance', label: '保險服務', desc: '保障、傳承與節稅的重要工具。' },
+  { slug: 'trust-planning', label: '信託規劃', desc: '客製化信託方案設計。' },
+  { slug: 'immigration', label: '移民規劃', desc: '第二國身份與跨境資產配置。' },
+  { slug: 'next-gen-training', label: '二代培訓', desc: '企業二代接班培訓與輔導。' },
+  { slug: 'tax-services', label: '租稅服務', desc: '稅務總覽與合法節稅策略。' },
+  { slug: 'land-administration', label: '地政士服務', desc: '不動產移轉與土地開發。' },
+  { slug: 'international-trade', label: '國際貿易', desc: '跨境貿易財務規劃。' },
+  { slug: 'overseas-funds', label: '海外基金債券', desc: '海外資產配置與分散風險。' },
+];
+---
+
+<BaseLayout title="服務項目">
+  <PageBanner title="服務項目" />
+
+  <section class="services-page">
+    <div class="services-list">
+      {services.map((svc) => (
+        <a href={`/services/${svc.slug}`} class="service-item">
+          <h3>{svc.label}</h3>
+          <p>{svc.desc}</p>
+          <span class="arrow">&rarr;</span>
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .services-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px 100px;
+  }
+
+  .services-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .service-item {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    border-left: 4px solid var(--color-primary);
+  }
+
+  .service-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  }
+
+  .service-item h3 {
+    font-size: var(--f20);
+    color: var(--color-primary);
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .service-item p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.8;
+  }
+
+  .arrow {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    color: var(--color-accent);
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  @media (max-width: 1024px) {
+    .services-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .services-list {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

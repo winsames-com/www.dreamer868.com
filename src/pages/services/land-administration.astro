@@ -1,0 +1,14 @@
+---
+import { getCollection } from 'astro:content';
+import CategoryPage from '../../components/CategoryPage.astro';
+
+const articles = (await getCollection('articles')).filter(
+  (a) => a.data.subcategory === 'land-administration'
+);
+---
+
+<CategoryPage
+  title="地政士服務"
+  description="不動產移轉、過戶流程與土地開發的專業服務。"
+  articles={articles}
+/>

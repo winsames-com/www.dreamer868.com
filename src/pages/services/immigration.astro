@@ -1,0 +1,14 @@
+---
+import { getCollection } from 'astro:content';
+import CategoryPage from '../../components/CategoryPage.astro';
+
+const articles = (await getCollection('articles')).filter(
+  (a) => a.data.subcategory === 'immigration'
+);
+---
+
+<CategoryPage
+  title="移民規劃"
+  description="第二國身份規劃，移民前的財務檢視與跨境資產配置。"
+  articles={articles}
+/>

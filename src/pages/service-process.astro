@@ -1,0 +1,14 @@
+---
+import { getCollection } from 'astro:content';
+import CategoryPage from '../components/CategoryPage.astro';
+
+const articles = (await getCollection('articles')).filter(
+  (a) => a.data.subcategory === 'service-process'
+);
+---
+
+<CategoryPage
+  title="服務流程"
+  description="六步驟專業服務流程，從目標設定到定期追蹤。"
+  articles={articles}
+/>

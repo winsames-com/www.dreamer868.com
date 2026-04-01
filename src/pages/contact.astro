@@ -1,0 +1,195 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageBanner from '../components/PageBanner.astro';
+import { contactInfo } from '../data/navigation';
+---
+
+<BaseLayout title="聯絡我們">
+  <PageBanner title="聯絡我們" />
+
+  <section class="contact-page">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h2>聯絡資訊</h2>
+        <ul>
+          <li>
+            <i class="fas fa-phone"></i>
+            <div>
+              <strong>電話</strong>
+              <a href={`tel:${contactInfo.phone}`}>{contactInfo.phone}</a>
+            </div>
+          </li>
+          <li>
+            <i class="fab fa-line"></i>
+            <div>
+              <strong>LINE ID</strong>
+              <a href={contactInfo.lineUrl} target="_blank">{contactInfo.lineId}</a>
+            </div>
+          </li>
+          <li>
+            <i class="fas fa-envelope"></i>
+            <div>
+              <strong>Email</strong>
+              <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
+            </div>
+          </li>
+          <li>
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <strong>地址</strong>
+              <span>{contactInfo.address}</span>
+            </div>
+          </li>
+          <li>
+            <i class="fas fa-building"></i>
+            <div>
+              <strong>統一編號</strong>
+              <span>{contactInfo.taxId}</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="contact-form">
+        <h2>預約諮詢</h2>
+        <form>
+          <div class="form-group">
+            <label for="name">姓名 *</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">電話</label>
+              <input type="tel" id="phone" name="phone" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message">諮詢內容 *</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">送出</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .contact-page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 20px 100px;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+  }
+
+  .contact-info h2,
+  .contact-form h2 {
+    font-size: var(--f26);
+    color: var(--color-primary);
+    font-family: var(--font-serif);
+    margin-bottom: 30px;
+    padding-bottom: 12px;
+    border-bottom: 3px solid var(--color-primary);
+  }
+
+  .contact-info ul {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .contact-info li {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .contact-info i {
+    font-size: 20px;
+    color: var(--color-primary);
+    margin-top: 4px;
+    width: 24px;
+    text-align: center;
+  }
+
+  .contact-info strong {
+    display: block;
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 4px;
+  }
+
+  .contact-info a:hover {
+    color: var(--color-accent);
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: #333;
+  }
+
+  input, textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: var(--font-sans);
+    transition: border-color 0.3s;
+  }
+
+  input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+  }
+
+  .submit-btn {
+    display: inline-block;
+    padding: 12px 40px;
+    background: var(--color-primary);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .submit-btn:hover {
+    background: var(--color-accent);
+  }
+
+  @media (max-width: 768px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

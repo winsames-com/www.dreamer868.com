@@ -1,0 +1,14 @@
+---
+import { getCollection } from 'astro:content';
+import CategoryPage from '../../components/CategoryPage.astro';
+
+const articles = (await getCollection('articles')).filter(
+  (a) => a.data.subcategory === 'next-gen-training'
+);
+---
+
+<CategoryPage
+  title="二代培訓"
+  description="協助企業二代順利接班，提供培訓與創業輔導。"
+  articles={articles}
+/>
