@@ -1,0 +1,14 @@
+---
+import { getCollection } from 'astro:content';
+import CategoryPage from '../../components/CategoryPage.astro';
+
+const articles = (await getCollection('articles')).filter(
+  (a) => a.data.subcategory === 'financial-planning'
+);
+---
+
+<CategoryPage
+  title="理財規劃"
+  description="根據每位客戶的個別需求，提供全面的理財諮詢和建議，協助實現財務目標。"
+  articles={articles}
+/>

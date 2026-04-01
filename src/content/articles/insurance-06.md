@@ -1,0 +1,174 @@
+---
+title: 保險常見迷思與錯誤
+date: 2026-03-19
+author: Writer
+status: draft
+version: 1
+task: 三-B-6 保險常見迷思
+category: 保險服務
+
+images:
+  hero:
+    pexels_id: 7821487
+    url: "https://images.pexels.com/photos/7821487/pexels-photo-7821487.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
+    alt: "保險常見迷思"
+    photographer: "RDNE Stock project"
+    photographer_url: "https://www.pexels.com/@rdne"
+    credit: "Photo by RDNE Stock project on Pexels"
+
+section: "services"
+subcategory: "insurance"
+order: 6
+slug: "insurance-06"
+---
+
+# 保險常見迷思與錯誤
+
+![保險常見迷思](https://images.pexels.com/photos/7821487/pexels-photo-7821487.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200)
+*Photo by [RDNE Stock project](https://www.pexels.com/@rdne) on [Pexels](https://www.pexels.com)*
+
+很多人對保險有些錯誤的認知，導致買錯、買多、或該買沒買。
+
+這篇文章整理常見的迷思和錯誤，幫你避開這些陷阱。
+
+---
+
+## 迷思一：保險就是投資
+
+![保險不是投資](https://images.pexels.com/photos/6863332/pexels-photo-6863332.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [Karolina Kaboompics](https://www.pexels.com/@karolina-grabowska) on [Pexels](https://www.pexels.com)*
+
+**迷思**：買保險可以賺錢、保險是投資的一種。
+
+**事實**：
+
+| 保險 | 投資 |
+|------|------|
+| 主要功能是風險轉移 | 主要功能是資產增值 |
+| 付保費換保障 | 承擔風險換報酬 |
+| 報酬率通常較低 | 報酬率可能較高 |
+
+有些保險產品有儲蓄或投資功能，但這不是保險的核心價值。
+
+**正確觀念**：保險是保障工具，不是投資工具。想投資，有更適合的工具。
+
+---
+
+## 迷思二：有保險就夠了
+
+![有保不代表夠](https://images.pexels.com/photos/8441778/pexels-photo-8441778.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [Kampus Production](https://www.pexels.com/@kampus) on [Pexels](https://www.pexels.com)*
+
+**迷思**：我有買保險，所以保障夠了。
+
+**事實**：
+- 有保不代表保額足夠
+- 可能有些風險沒有保
+- 可能重複買了不需要的
+
+**常見情況**：
+- 壽險只有 100 萬，但家庭需要 500 萬
+- 有住院日額，但沒有實支實付
+- 買了很多儲蓄險，但純保障不夠
+
+**正確觀念**：定期檢視保障是否足夠，不只是「有沒有」，而是「夠不夠」。
+
+---
+
+## 迷思三：小孩的保險最重要
+
+![小孩 vs 大人](https://images.pexels.com/photos/8441812/pexels-photo-8441812.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [Kampus Production](https://www.pexels.com/@kampus) on [Pexels](https://www.pexels.com)*
+
+**迷思**：要先把小孩的保險買好，大人以後再說。
+
+**事實**：
+
+從經濟責任來看：
+- 大人是家庭經濟支柱
+- 大人出事，影響更大
+- 小孩出事，悲傷但經濟影響較小
+
+**正確的優先順序**：
+1. 先保經濟支柱（通常是父母）
+2. 再保其他成人
+3. 最後才是小孩
+
+**正確觀念**：誰的經濟責任大，誰先保。小孩的保險重要，但不是最優先。
+
+---
+
+## 迷思四：年輕不需要保險
+
+![年輕也需要保險](https://images.pexels.com/photos/7821671/pexels-photo-7821671.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [RDNE Stock project](https://www.pexels.com/@rdne) on [Pexels](https://www.pexels.com)*
+
+**迷思**：我還年輕，不會出事，不需要保險。
+
+**事實**：
+- 風險不分年齡
+- 年輕時保費較便宜
+- 年輕時身體較健康，容易投保
+- 等到需要時可能買不到
+
+**年輕投保的好處**：
+- 保費固定在較低的費率
+- 身體狀況好，不用擔心加費或拒保
+- 累積保障的時間更長
+
+**正確觀念**：越年輕投保越有利，不要等到「需要」才買。
+
+---
+
+## 迷思五：買越多越好
+
+![不是越多越好](https://images.pexels.com/photos/6802042/pexels-photo-6802042.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [Karolina Kaboompics](https://www.pexels.com/@karolina-grabowska) on [Pexels](https://www.pexels.com)*
+
+**迷思**：保險買越多越安心、多多益善。
+
+**事實**：
+- 同類型保險不需要重複買
+- 保費也是支出，會影響現金流
+- 應該根據需求決定保額
+
+**常見錯誤**：
+- 買了五六張醫療險，其實一兩張就夠
+- 保費佔收入太高，影響生活
+- 買了不需要的險種
+
+**正確觀念**：根據需求決定要買什麼、買多少。不是越多越好，是剛剛好最好。
+
+---
+
+## 迷思六：保險金一定免稅
+
+![保險金不一定免稅](https://images.pexels.com/photos/8441861/pexels-photo-8441861.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [Kampus Production](https://www.pexels.com/@kampus) on [Pexels](https://www.pexels.com)*
+
+**迷思**：保險金不用繳遺產稅，可以節稅。
+
+**事實**：
+- 保險金是否免稅有條件限制
+- 實質課稅原則下，可能被認定為遺產
+- 帶病投保、高齡投保、鉅額投保等可能被查
+
+**可能被課稅的情況**：
+- 投保目的是規避稅務
+- 帶病投保
+- 高齡（如 70 歲以上）投保
+- 短期密集、大額投保
+
+**正確觀念**：保險的稅務處理需要專業評估，不要自己假設一定免稅。
+
+---
+
+## 下一步
+
+想避免這些迷思和錯誤？最好的方式是讓專業的顧問檢視你的保險配置。歡迎預約諮詢。
+
+📞 0909-230140
+📧 dreamer88888888888@gmail.com
+📍 臺中市南屯區同心里文心路一段186號9樓之1
+
+**賦予人們宏觀永續的財商新思路**

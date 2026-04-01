@@ -1,0 +1,204 @@
+---
+title: 步驟六：定期追蹤
+date: 2026-03-19
+author: Writer
+status: draft
+version: 1
+task: 二-B-7 步驟六：定期追蹤
+category: 服務流程
+
+images:
+  hero:
+    pexels_id: 8441812
+    url: "https://images.pexels.com/photos/8441812/pexels-photo-8441812.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
+    alt: "定期追蹤與調整規劃"
+    photographer: "Kampus Production"
+    photographer_url: "https://www.pexels.com/@kampus"
+    credit: "Photo by Kampus Production on Pexels"
+
+section: "new"
+subcategory: "service-process"
+order: 7
+slug: "service-process-07"
+---
+
+# 步驟六：定期追蹤
+
+![定期追蹤與調整規劃](https://images.pexels.com/photos/8441812/pexels-photo-8441812.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200)
+*Photo by [Kampus Production](https://www.pexels.com/@kampus) on [Pexels](https://www.pexels.com)*
+
+財務規劃不是做完就結束。
+
+你的生活會變化：收入可能增加、家庭狀況可能改變、市場環境會波動、法規會調整。如果規劃一成不變，很快就會跟不上你的實際情況。
+
+**這就是為什麼「定期追蹤」這麼重要——它確保你的規劃始終適合你。**
+
+---
+
+## 為什麼需要定期追蹤
+
+![定期追蹤的必要性](https://images.pexels.com/photos/7821671/pexels-photo-7821671.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [RDNE Stock project](https://www.pexels.com/@rdne) on [Pexels](https://www.pexels.com)*
+
+想像一下這些情況：
+
+**個人變化**
+- 結婚或離婚
+- 生孩子
+- 換工作或創業
+- 收入大幅變動
+- 健康狀況改變
+
+**家庭變化**
+- 子女成長、升學
+- 父母需要照顧
+- 購屋或換屋
+- 家庭成員增減
+
+**外部環境變化**
+- 利率大幅變動
+- 稅法修改
+- 市場重大波動
+- 通膨變化
+
+每一個變化，都可能影響你原本的規劃。**定期檢視，才能及時調整。**
+
+---
+
+## 追蹤的頻率和內容
+
+![追蹤的方式](https://images.pexels.com/photos/8441778/pexels-photo-8441778.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [Kampus Production](https://www.pexels.com/@kampus) on [Pexels](https://www.pexels.com)*
+
+我們的追蹤服務：
+
+**定期檢視（每年至少一次）**
+| 項目 | 內容 |
+|------|------|
+| 目標檢視 | 目標有沒有改變？ |
+| 現況更新 | 收支、資產有什麼變化？ |
+| 進度追蹤 | 各目標的達成進度 |
+| 方向調整 | 需不需要修改策略？ |
+
+**重大變化時（隨時）**
+- 發生重大人生事件
+- 有重要的財務決定要做
+- 市場或法規有重大變動
+- 你有任何疑問或擔憂
+
+**你不需要等到年度檢視——有問題隨時可以聯繫。**
+
+---
+
+## 追蹤會議的內容
+
+![追蹤會議的流程](https://images.pexels.com/photos/8441861/pexels-photo-8441861.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [Kampus Production](https://www.pexels.com/@kampus) on [Pexels](https://www.pexels.com)*
+
+每年的追蹤會議，我們會：
+
+**回顧過去一年**
+- 發生了什麼變化？
+- 執行進度如何？
+- 有沒有遇到問題？
+
+**更新財務現況**
+- 收支有沒有變化？
+- 資產負債的變動？
+- 保障還足夠嗎？
+
+**評估目標達成度**
+- 各目標的進度
+- 還在軌道上嗎？
+- 需不需要調整目標？
+
+**調整策略和工具**
+- 有沒有需要修改的方向？
+- 有沒有新的工具可以運用？
+- 下一年的行動項目
+
+---
+
+## 什麼時候需要調整
+
+![需要調整的情況](https://images.pexels.com/photos/6863332/pexels-photo-6863332.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [Karolina Kaboompics](https://www.pexels.com/@karolina-grabowska) on [Pexels](https://www.pexels.com)*
+
+常見需要調整規劃的情況：
+
+**保險方面**
+- 責任增加（結婚、生子）→ 可能需要加保
+- 責任減少（子女成年、貸款還清）→ 可能可以減保
+- 保單到期 → 需要決定續保或轉換
+
+**投資方面**
+- 接近目標時間 → 可能需要降低風險
+- 市場大幅變動 → 可能需要再平衡
+- 收入增加 → 可能可以增加投資
+
+**整體方面**
+- 目標改變 → 整體策略可能需要調整
+- 家庭結構變化 → 需要重新評估
+- 稅法變動 → 稅務策略可能需要調整
+
+**不是每次都要大改——小幅度的微調，讓規劃持續適合你。**
+
+---
+
+## 長期陪伴的承諾
+
+![長期的服務關係](https://images.pexels.com/photos/8441820/pexels-photo-8441820.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [Kampus Production](https://www.pexels.com/@kampus) on [Pexels](https://www.pexels.com)*
+
+定期追蹤，體現的是我們「長期陪伴」的承諾。
+
+**我們不是：**
+- 做完規劃就消失
+- 只有要賣東西才聯絡
+- 等你來找才回應
+
+**我們會：**
+- 主動聯繫追蹤
+- 隨時回應你的問題
+- 持續關心你的狀況
+- 把你的利益放在心上
+
+這就是「財務顧問」和「銷售人員」的區別。我們是你財務旅程中的長期夥伴，不是一次性的交易對象。
+
+---
+
+## 這意味著什麼
+
+![長期服務的意義](https://images.pexels.com/photos/6802042/pexels-photo-6802042.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [Karolina Kaboompics](https://www.pexels.com/@karolina-grabowska) on [Pexels](https://www.pexels.com)*
+
+有了定期追蹤，你會得到：
+
+**安心感**
+- 知道有人在幫你看著
+- 不用自己時時擔心
+- 有問題有人可以問
+
+**適應性**
+- 規劃隨著你的生活調整
+- 不會和現實脫節
+- 總是保持適用
+
+**效率**
+- 不用每次從頭開始
+- 顧問了解你的歷史
+- 溝通更有效率
+
+**這就是「財務規劃」和「買保險」的區別——一個是持續的過程，一個是一次性的交易。**
+
+---
+
+## 下一步
+
+準備好開始一段長期的財務規劃旅程了嗎？從第一步「設定目標」開始，讓我們一起規劃、一起調整、一起走過人生的每個階段。
+
+📞 0909-230140
+📧 dreamer88888888888@gmail.com
+📍 臺中市南屯區同心里文心路一段186號9樓之1
+
+**賦予人們宏觀永續的財商新思路**

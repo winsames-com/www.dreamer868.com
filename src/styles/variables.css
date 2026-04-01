@@ -1,0 +1,49 @@
+:root {
+  /* Colors */
+  --color-primary: #003A93;
+  --color-accent: #D1482A;
+  --color-bg-light: #F4F4F4;
+  --color-text: #1F1F1F;
+  --color-white: #ffffff;
+
+  /* Typography scale */
+  --f75: 75px;
+  --f70: 70px;
+  --f40: 40px;
+  --f32: 32px;
+  --f28: 28px;
+  --f26: 26px;
+  --f22: 22px;
+  --f20: 20px;
+  --f18: 18px;
+
+  /* Fonts */
+  --font-sans: 'Noto Sans TC', sans-serif;
+  --font-serif: 'Noto Serif TC', serif;
+  --font-decorative: 'Tiro Devanagari Hindi', serif;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --f75: 60px;
+    --f70: 60px;
+    --f32: 28px;
+    --f26: 24px;
+    --f22: 20px;
+    --f20: 20px;
+    --f18: 18px;
+    letter-spacing: 0.05em;
+  }
+}
+
+@media (max-width: 600px) {
+  :root {
+    --f75: 48px;
+    --f70: 48px;
+    --f32: 24px;
+    --f26: 20px;
+    --f22: 18px;
+    --f20: 18px;
+    --f18: 16px;
+  }
+}

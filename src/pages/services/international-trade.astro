@@ -1,0 +1,14 @@
+---
+import { getCollection } from 'astro:content';
+import CategoryPage from '../../components/CategoryPage.astro';
+
+const articles = (await getCollection('articles')).filter(
+  (a) => a.data.subcategory === 'international-trade'
+);
+---
+
+<CategoryPage
+  title="國際貿易"
+  description="跨境貿易的財務規劃，海外公司設立與整廠搬遷。"
+  articles={articles}
+/>

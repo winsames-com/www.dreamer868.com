@@ -1,0 +1,193 @@
+---
+title: 步驟四：擬定策略
+date: 2026-03-19
+author: Writer
+status: draft
+version: 1
+task: 二-B-5 步驟四：擬定策略
+category: 服務流程
+
+images:
+  hero:
+    pexels_id: 8124410
+    url: "https://images.pexels.com/photos/8124410/pexels-photo-8124410.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
+    alt: "擬定財務策略方向"
+    photographer: "RDNE Stock project"
+    photographer_url: "https://www.pexels.com/@rdne"
+    credit: "Photo by RDNE Stock project on Pexels"
+
+section: "new"
+subcategory: "service-process"
+order: 5
+slug: "service-process-05"
+---
+
+# 步驟四：擬定策略
+
+![擬定財務策略方向](https://images.pexels.com/photos/8124410/pexels-photo-8124410.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200)
+*Photo by [RDNE Stock project](https://www.pexels.com/@rdne) on [Pexels](https://www.pexels.com)*
+
+診斷出問題之後，下一步是想辦法解決。
+
+這個步驟會根據你的情況，提出具體的策略建議。不是給你「一個答案」，而是讓你了解各種選擇的優缺點，做出適合你的決定。
+
+---
+
+## 策略的三個時間維度
+
+![短中長期策略規劃](https://images.pexels.com/photos/8441778/pexels-photo-8441778.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [Kampus Production](https://www.pexels.com/@kampus) on [Pexels](https://www.pexels.com)*
+
+我們的策略建議會分成三個時間維度：
+
+**短期行動（現在就可以做）**
+- 調整保險配置
+- 建立緊急預備金
+- 優化固定支出
+- 處理高利率負債
+
+**中期規劃（未來 3-5 年）**
+- 投資配置調整
+- 儲蓄目標設定
+- 購房或其他大額支出準備
+- 稅務結構優化
+
+**長期目標（5 年以上）**
+- 退休金準備計劃
+- 傳承規劃方向
+- 資產配置長期策略
+- 家族整體規劃
+
+**不是所有事情都要現在做。有些事情急、有些事情可以等。策略要有優先順序。**
+
+---
+
+## 策略建議的內容
+
+![策略建議的呈現方式](https://images.pexels.com/photos/8441861/pexels-photo-8441861.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [Kampus Production](https://www.pexels.com/@kampus) on [Pexels](https://www.pexels.com)*
+
+對於每一項建議，我們會說明：
+
+| 項目 | 說明 |
+|------|------|
+| 問題 | 針對什麼問題 |
+| 建議 | 具體的行動方案 |
+| 原因 | 為什麼這樣建議 |
+| 優點 | 這樣做的好處 |
+| 缺點 | 可能的代價或風險 |
+| 替代方案 | 如果不這樣，還有什麼選擇 |
+
+**我們不會只說「你應該這樣做」，而是讓你了解來龍去脈，自己做判斷。**
+
+---
+
+## 策略範例
+
+![實際的策略案例](https://images.pexels.com/photos/7821671/pexels-photo-7821671.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [RDNE Stock project](https://www.pexels.com/@rdne) on [Pexels](https://www.pexels.com)*
+
+以下是一個策略建議的範例（細節已調整）：
+
+**問題：退休金準備嚴重不足**
+
+診斷結果：
+- 目標：60 歲退休，需要 1,500 萬
+- 現有：300 萬
+- 差距：1,200 萬
+- 現有儲蓄率：15%
+
+**策略建議：**
+
+| 行動 | 說明 |
+|------|------|
+| 提高儲蓄率到 25% | 每月多存 1 萬 |
+| 優化投資配置 | 增加股票型基金比例 |
+| 延後退休到 63 歲 | 多準備 3 年 |
+| 調整退休生活預期 | 從月需 5 萬降到 4.5 萬 |
+
+**分析：**
+- 單靠提高儲蓄可能還不夠
+- 需要搭配適度的投資報酬
+- 也可以考慮調整目標（延後退休或降低需求）
+- 最終選擇取決於你的優先順序
+
+---
+
+## 策略會議
+
+![策略討論會議](https://images.pexels.com/photos/8441812/pexels-photo-8441812.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [Kampus Production](https://www.pexels.com/@kampus) on [Pexels](https://www.pexels.com)*
+
+策略建議會在一次正式的會議中說明。
+
+**會議流程：**
+1. 回顧你的目標和診斷結果
+2. 逐項說明策略建議
+3. 討論你的疑問和想法
+4. 根據討論調整方向
+5. 確認你同意的行動項目
+
+**會議中你可以：**
+- 對任何建議提出疑問
+- 表達你的優先順序考量
+- 拒絕你不想做的事
+- 要求更多的說明或時間考慮
+
+**你是決策者，我們是顧問。我們給建議，你做決定。**
+
+---
+
+## 策略的彈性
+
+![策略可以調整](https://images.pexels.com/photos/6863332/pexels-photo-6863332.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [Karolina Kaboompics](https://www.pexels.com/@karolina-grabowska) on [Pexels](https://www.pexels.com)*
+
+策略不是一成不變的。
+
+**策略會根據以下情況調整：**
+- 你的目標改變了
+- 你的收入或支出改變了
+- 市場環境改變了
+- 法規改變了（如稅法）
+- 家庭狀況改變了
+
+**這就是為什麼後面還有「定期追蹤」這個步驟。**
+
+現在制定的策略，是根據現在的情況做出的最佳判斷。未來情況變了，策略也可以調整。
+
+---
+
+## 這個步驟的產出
+
+![策略擬定的成果](https://images.pexels.com/photos/6802042/pexels-photo-6802042.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [Karolina Kaboompics](https://www.pexels.com/@karolina-grabowska) on [Pexels](https://www.pexels.com)*
+
+完成這個步驟後，你會得到：
+
+**一份策略建議書**
+- 問題總結
+- 各項策略建議
+- 優先順序說明
+- 預期效果
+
+**清楚的行動方向**
+- 知道現在該做什麼
+- 知道未來要往哪走
+- 知道每個決定的理由
+
+**進入下一步的準備**
+- 策略確定後，就可以選擇執行工具
+- 知道要用什麼方式來達成目標
+
+---
+
+## 下一步
+
+準備好聽取專業的策略建議了嗎？我們會根據你的情況，提出最適合的方案。
+
+📞 0909-230140
+📧 dreamer88888888888@gmail.com
+📍 臺中市南屯區同心里文心路一段186號9樓之1
+
+**賦予人們宏觀永續的財商新思路**

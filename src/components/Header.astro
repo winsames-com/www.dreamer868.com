@@ -1,0 +1,309 @@
+---
+import { mainNav, contactInfo } from '../data/navigation';
+---
+
+<header class="header">
+  <div class="header-inner">
+    <div class="header-container">
+      <a class="logo" href="/">
+        <img src="https://www.doing-housework.com/store_image/dreamer868/L173380840389.png" alt="尊茂財務規劃" />
+      </a>
+
+      <div class="header-right">
+        <div class="social-links">
+          <a href={contactInfo.lineUrl} target="_blank" aria-label="LINE">
+            <i class="fa-brands fa-line"></i>
+          </a>
+          <a href={`tel:${contactInfo.phone}`} aria-label="電話">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+          <a href={`mailto:${contactInfo.email}`} aria-label="Email">
+            <i class="far fa-envelope"></i>
+          </a>
+        </div>
+
+        <nav class="nav-desktop">
+          <ul class="nav-list">
+            {mainNav.map((item) => (
+              <li class={item.children ? 'has-children' : ''}>
+                <a href={item.href}>
+                  <b>{item.label}</b>
+                  <b>{item.label}</b>
+                </a>
+                {item.children && (
+                  <ul class="dropdown">
+                    {item.children.map((child) => (
+                      <li><a href={child.href}>{child.label}</a></li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        <button class="hamburger" aria-label="選單" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobile-menu">
+  <nav>
+    <ul>
+      {mainNav.map((item) => (
+        <li class={item.children ? 'has-children' : ''}>
+          <a href={item.href}>{item.label}</a>
+          {item.children && (
+            <ul class="mobile-dropdown">
+              {item.children.map((child) => (
+                <li><a href={child.href}>{child.label}</a></li>
+              ))}
+            </ul>
+          )}
+        </li>
+      ))}
+    </ul>
+  </nav>
+</div>
+
+<script is:inline>
+  // Sticky header on scroll
+  const header = document.querySelector('.header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('sticky', window.scrollY > 50);
+  });
+
+  // Mobile menu toggle
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    mobileMenu.classList.toggle('open');
+    document.body.classList.toggle('menu-open');
+  });
+
+  // Mobile dropdown toggle
+  document.querySelectorAll('.mobile-menu .has-children > a').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      link.parentElement.classList.toggle('open');
+    });
+  });
+</script>
+
+<style>
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    transition: all 0.3s ease;
+  }
+
+  .header-inner {
+    background: linear-gradient(to bottom, rgba(0,0,0,.5) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0) 100%);
+    transition: all 0.3s ease;
+  }
+
+  .header.sticky .header-inner {
+    background: rgba(0, 58, 147, 0.95);
+    backdrop-filter: blur(10px);
+  }
+
+  .header-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 14px 20px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo img {
+    height: 50px;
+    width: auto;
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  /* Social links */
+  .social-links {
+    display: flex;
+    gap: 12px;
+  }
+
+  .social-links a {
+    color: #fff;
+    font-size: 20px;
+    transition: opacity 0.3s;
+  }
+
+  .social-links a:hover {
+    opacity: 0.7;
+  }
+
+  /* Desktop nav */
+  .nav-list {
+    display: flex;
+    gap: 0;
+  }
+
+  .nav-list > li {
+    position: relative;
+    padding: 8px 0;
+  }
+
+  .nav-list > li > a {
+    display: block;
+    overflow: hidden;
+    height: 28px;
+    padding: 0 14px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    transition: color 0.3s;
+    white-space: nowrap;
+  }
+
+  .nav-list > li > a b {
+    display: block;
+    font-weight: 500;
+    line-height: 28px;
+    transition: transform 0.3s ease;
+  }
+
+  .nav-list > li > a:hover b {
+    transform: translateY(-28px);
+  }
+
+  /* Dropdown */
+  .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    background: rgba(0, 58, 147, 0.95);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+  }
+
+  .has-children:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .dropdown li a {
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 14px;
+    white-space: nowrap;
+    transition: background 0.2s;
+  }
+
+  .dropdown li a:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  /* Hamburger */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: #fff;
+    transition: all 0.3s;
+  }
+
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  /* Mobile menu */
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 360px;
+    height: 100vh;
+    background: var(--color-accent);
+    z-index: 9998;
+    padding: 80px 30px 30px;
+    transition: right 0.3s ease;
+    overflow-y: auto;
+  }
+
+  .mobile-menu.open {
+    right: 0;
+  }
+
+  .mobile-menu a {
+    display: block;
+    color: #fff;
+    padding: 12px 0;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+  }
+
+  .mobile-dropdown {
+    display: none;
+    padding-left: 20px;
+  }
+
+  .mobile-menu .has-children.open .mobile-dropdown {
+    display: block;
+  }
+
+  .mobile-dropdown a {
+    font-size: 14px;
+    border-bottom-color: rgba(255,255,255,0.1);
+  }
+
+  @media (max-width: 1024px) {
+    .nav-desktop {
+      display: none;
+    }
+
+    .hamburger {
+      display: flex;
+    }
+
+    .social-links {
+      display: none;
+    }
+  }
+</style>

@@ -1,0 +1,205 @@
+---
+title: 傳承工具介紹 - 保險
+date: 2026-03-19
+author: Writer
+status: draft
+version: 1
+task: 一-D-4 傳承工具介紹 - 保險
+category: 財富傳承
+
+images:
+  hero:
+    pexels_id: 7821671
+    url: "https://images.pexels.com/photos/7821671/pexels-photo-7821671.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
+    alt: "保險在傳承規劃中的角色"
+    photographer: "RDNE Stock project"
+    photographer_url: "https://www.pexels.com/@rdne"
+    credit: "Photo by RDNE Stock project on Pexels"
+
+section: "existing"
+subcategory: "wealth-inheritance"
+order: 4
+slug: "wealth-inheritance-04"
+---
+
+# 傳承工具介紹：保險
+
+![保險在傳承規劃中的角色](https://images.pexels.com/photos/7821671/pexels-photo-7821671.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200)
+*Photo by [RDNE Stock project](https://www.pexels.com/@rdne) on [Pexels](https://www.pexels.com)*
+
+保險，是傳承規劃中最常用的工具之一。
+
+它有幾個獨特的優勢：**指定受益人、快速給付、可能免計入遺產。**這些特點讓保險在傳承規劃中扮演不可替代的角色。
+
+但保險的傳承功能，很多人並不完全了解。這篇文章說明保險在傳承中的應用，以及需要注意的事項。
+
+---
+
+## 保險在傳承中的角色
+
+![保險傳承的核心功能](https://images.pexels.com/photos/8441861/pexels-photo-8441861.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [Kampus Production](https://www.pexels.com/@kampus) on [Pexels](https://www.pexels.com)*
+
+保險的傳承功能主要有三個：
+
+**1. 準備遺產稅**
+
+遺產稅要在短時間內繳清。如果遺產大部分是不動產，繼承人可能沒有現金繳稅。
+
+壽險可以在身故時立即給付一筆錢，讓繼承人有資金繳稅。
+
+**2. 指定受益人**
+
+保險金直接給付給指定的受益人，不需要經過遺產分配程序。
+
+這代表你可以完全按自己的意願決定誰拿多少，不受法定繼承或特留分的限制。
+
+**3. 快速取得資金**
+
+一般遺產在程序完成前會被凍結，可能要幾個月甚至更久。
+
+保險金在文件齊全後通常幾週內就能給付，讓家人有資金應急。
+
+---
+
+## 哪些保險適合傳承規劃
+
+![適合傳承的保險類型](https://images.pexels.com/photos/8441778/pexels-photo-8441778.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [Kampus Production](https://www.pexels.com/@kampus) on [Pexels](https://www.pexels.com)*
+
+不是所有保險都適合用於傳承。
+
+**適合傳承規劃的保險：**
+
+| 類型 | 特點 | 適用情境 |
+|------|------|----------|
+| 終身壽險 | 保障終身、身故必定理賠 | 最常用的傳承工具 |
+| 增額型壽險 | 保額逐年增加 | 對抗通膨 |
+| 利變型壽險 | 保單價值隨利率變動 | 兼顧增值 |
+| 年金險 | 退休後定期給付 | 搭配傳承規劃使用 |
+
+**不適合傳承的保險：**
+- 定期壽險（保障期間有限）
+- 純醫療險（沒有身故給付）
+- 意外險（限意外身故）
+
+**傳承用的保險，關鍵是「身故時一定會理賠」。**
+
+---
+
+## 受益人設定的重要性
+
+![受益人設定的技巧](https://images.pexels.com/photos/8441812/pexels-photo-8441812.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [Kampus Production](https://www.pexels.com/@kampus) on [Pexels](https://www.pexels.com)*
+
+受益人設定是保險傳承的關鍵。設定不當，可能讓原本的規劃完全失效。
+
+**常見的受益人設定方式：**
+- 指定一人（如配偶）
+- 指定多人並分配比例（如子女各 50%）
+- 順位受益人（如配偶為第一順位，子女為第二順位）
+
+**要避免的設定：**
+- 「法定繼承人」：等於沒有指定，會併入遺產處理
+- 只寫一個人且無順位：如果那人比你早走，保險金變遺產
+- 沒有定期檢視：家庭狀況變化後忘了更新
+
+**建議：定期檢視受益人設定，確保符合你目前的意願。**
+
+---
+
+## 保險的稅務考量
+
+![保險的稅務規劃](https://images.pexels.com/photos/6863332/pexels-photo-6863332.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [Karolina Kaboompics](https://www.pexels.com/@karolina-grabowska) on [Pexels](https://www.pexels.com)*
+
+很多人以為「保險金不用繳遺產稅」，這不完全正確。
+
+**保險金免計入遺產的條件：**
+- 要保人 ≠ 被保險人
+- 或：要保人 = 被保險人，但有指定受益人
+
+**但是，有「實質課稅原則」：**
+
+國稅局會審視保險是否有「規避稅負」的意圖。以下情況可能被課稅：
+- 高齡投保（如 70、80 歲）
+- 帶病投保
+- 短期內高額投保
+- 躉繳高額保費
+
+**判斷標準：**
+- 投保年齡
+- 健康狀況
+- 投保動機
+- 保費來源
+
+**重點：保險傳承要提早規劃，不是臨時抱佛腳的工具。**
+
+---
+
+## 保險金信託
+
+![保險與信託的結合](https://images.pexels.com/photos/7821487/pexels-photo-7821487.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [RDNE Stock project](https://www.pexels.com/@rdne) on [Pexels](https://www.pexels.com)*
+
+保險金信託，是把保險和信託結合的規劃方式。
+
+**運作方式：**
+1. 投保壽險，指定受益人
+2. 同時設立保險金信託
+3. 身故時，保險金直接進入信託
+4. 信託依規定分期給付受益人
+
+**優點：**
+- 避免受益人一次拿到大筆錢就揮霍
+- 可以設定使用條件（如教育費專款）
+- 確保長期照顧受益人
+
+**適用情境：**
+- 受益人是未成年子女
+- 受益人有特殊需求
+- 擔心受益人理財能力
+- 想跨代傳承
+
+保險金信託結合了保險的「快速給付」和信託的「條件控制」，是很有效的傳承工具。
+
+---
+
+## 保險規劃的注意事項
+
+![規劃保險時的考量](https://images.pexels.com/photos/6694543/pexels-photo-6694543.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [Karolina Kaboompics](https://www.pexels.com/@karolina-grabowska) on [Pexels](https://www.pexels.com)*
+
+用保險做傳承規劃，有幾個重要的注意事項：
+
+**不是越早越好，是「適當的時間點」**
+- 太年輕可能保費負擔太重
+- 太晚可能被視為規避稅負
+- 要根據整體財務規劃來決定
+
+**保額要配合需求**
+- 遺產稅需要多少？
+- 家人生活費需要多少？
+- 不是越多越好，而是足夠就好
+
+**要考慮流動性**
+- 保費繳得起嗎？
+- 會不會影響生活品質？
+- 長期繳費的能力？
+
+**定期檢視**
+- 家庭狀況變化（結婚、離婚、生子）
+- 資產狀況變化
+- 稅法變化
+
+---
+
+## 下一步
+
+想了解保險在你的傳承規劃中應該扮演什麼角色？歡迎與我們討論，我們會根據你的整體狀況給予建議。
+
+📞 0909-230140
+📧 dreamer88888888888@gmail.com
+📍 臺中市南屯區同心里文心路一段186號9樓之1
+
+**賦予人們宏觀永續的財商新思路**

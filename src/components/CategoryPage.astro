@@ -1,0 +1,86 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageBanner from './PageBanner.astro';
+import ArticleCard from './ArticleCard.astro';
+
+interface Article {
+  data: {
+    title: string;
+    slug: string;
+    category: string;
+    order: number;
+    images: {
+      hero: {
+        url: string;
+        alt: string;
+      };
+    };
+  };
+}
+
+interface Props {
+  title: string;
+  description?: string;
+  bannerImage?: string;
+  articles: Article[];
+}
+
+const { title, description, bannerImage, articles } = Astro.props;
+const sorted = [...articles].sort((a, b) => a.data.order - b.data.order);
+---
+
+<BaseLayout title={title} description={description}>
+  <PageBanner title={title} backgroundImage={bannerImage} />
+
+  <section class="category-content">
+    {description && <p class="category-desc">{description}</p>}
+
+    <div class="articles-grid">
+      {sorted.map((article) => (
+        <ArticleCard
+          title={article.data.title}
+          href={`/articles/${article.data.slug}`}
+          image={article.data.images.hero.url}
+          imageAlt={article.data.images.hero.alt}
+          category={article.data.category}
+        />
+      ))}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .category-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px 100px;
+  }
+
+  .category-desc {
+    font-size: var(--f20);
+    text-align: center;
+    color: #666;
+    margin-bottom: 50px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .articles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  @media (max-width: 1024px) {
+    .articles-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .articles-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

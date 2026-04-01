@@ -1,0 +1,209 @@
+---
+title: 合法節稅策略概述
+date: 2026-03-19
+author: Writer
+status: draft
+version: 1
+task: 一-C-5 合法節稅策略概述
+category: 稅務規劃
+
+images:
+  hero:
+    pexels_id: 6694543
+    url: "https://images.pexels.com/photos/6694543/pexels-photo-6694543.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
+    alt: "合法節稅策略"
+    photographer: "Karolina Kaboompics"
+    photographer_url: "https://www.pexels.com/@karolina-grabowska"
+    credit: "Photo by Karolina Kaboompics on Pexels"
+
+section: "existing"
+subcategory: "tax-planning"
+order: 5
+slug: "tax-planning-05"
+---
+
+# 合法節稅策略概述
+
+![合法節稅策略](https://images.pexels.com/photos/6694543/pexels-photo-6694543.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200)
+*Photo by [Karolina Kaboompics](https://www.pexels.com/@karolina-grabowska) on [Pexels](https://www.pexels.com)*
+
+節稅不是逃稅。
+
+在法律允許的範圍內，合理安排你的財務結構，讓稅負最小化——這是每個人的權利，也是財務規劃的重要一環。
+
+但很多人不知道有哪些合法的節稅方式，或是知道但不知道怎麼運用。
+
+**這篇文章整理了常見的節稅策略類型，幫助你建立基本概念。**
+
+---
+
+## 節稅的基本邏輯
+
+![節稅的核心概念](https://images.pexels.com/photos/7681091/pexels-photo-7681091.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [Mikhail Nilov](https://www.pexels.com/@mikhail-nilov) on [Pexels](https://www.pexels.com)*
+
+所有的節稅策略，都可以歸納為幾個基本邏輯：
+
+| 策略類型 | 說明 |
+|----------|------|
+| 降低稅基 | 減少被課稅的金額 |
+| 降低稅率 | 適用較低的稅率 |
+| 延後課稅 | 把繳稅時間往後推 |
+| 利用免稅額 | 善用法律給予的免稅空間 |
+| 分散所得 | 避免所得集中在高稅率區間 |
+
+**重點是：這些都必須在法律允許的範圍內進行。**
+
+「節稅」和「逃稅」的界線在於：你有沒有依法申報、有沒有虛偽陳述。只要據實申報，運用法律允許的方式安排財務，就是合法節稅。
+
+---
+
+## 個人所得稅的節稅策略
+
+![個人節稅的常見方式](https://images.pexels.com/photos/6863332/pexels-photo-6863332.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [Karolina Kaboompics](https://www.pexels.com/@karolina-grabowska) on [Pexels](https://www.pexels.com)*
+
+對一般受薪階級來說，常見的節稅方式包括：
+
+**充分運用扣除額**
+- 標準扣除額 vs 列舉扣除額，選較高的
+- 保險費扣除額（每人每年 2.4 萬）
+- 醫療費扣除額（無上限）
+- 房貸利息扣除額（每戶 30 萬）
+- 房租扣除額（每戶 18 萬）
+- 長照特別扣除額（每人 12 萬）
+
+**善用特別扣除額**
+- 薪資特別扣除額（21.8 萬）
+- 儲蓄投資特別扣除額（27 萬）
+- 身心障礙特別扣除額（21.8 萬）
+- 幼兒學前特別扣除額（12 萬/人）
+
+**很多人沒有把這些扣除額用滿。**每年報稅前檢視一下，確保沒有遺漏。
+
+---
+
+## 投資相關的節稅考量
+
+![投資的稅務規劃](https://images.pexels.com/photos/6802042/pexels-photo-6802042.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [Karolina Kaboompics](https://www.pexels.com/@karolina-grabowska) on [Pexels](https://www.pexels.com)*
+
+投資所得的稅務處理，會影響你的實質報酬。
+
+**股票投資**
+- 股利所得可選擇「合併計稅」或「分離課稅」（28%）
+- 所得稅率較低的人，合併計稅通常較有利
+- 證券交易所得目前停徵
+
+**海外投資**
+- 海外所得超過 100 萬，納入基本所得額
+- 基本所得額超過 750 萬，才需要繳最低稅負
+- 海外已繳稅款可以扣抵
+
+**退休金帳戶**
+- 勞退自提（最高 6%）可以延後課稅
+- 提領時再併入所得計算
+
+**投資的稅務規劃，要和你的整體所得一起考量。**同樣的投資，對不同所得水準的人，稅負影響不同。
+
+---
+
+## 遺贈稅的節稅策略
+
+![傳承節稅的規劃](https://images.pexels.com/photos/8441812/pexels-photo-8441812.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [Kampus Production](https://www.pexels.com/@kampus) on [Pexels](https://www.pexels.com)*
+
+遺產稅和贈與稅是高資產家庭最需要規劃的項目。
+
+**常見策略：**
+
+**分年贈與**
+- 每年 244 萬免稅額
+- 夫妻可以分別贈與，等於每年 488 萬
+- 10 年就可以移轉近 5,000 萬
+
+**善用保險**
+- 指定受益人的壽險給付，不計入遺產
+- 但要注意「實質課稅原則」，帶病投保可能被追稅
+
+**不動產移轉**
+- 以「公告現值」計算贈與稅，通常低於市價
+- 但要注意未來出售時的成本計算
+
+**信託規劃**
+- 可以控制資產使用方式
+- 某些信託有節稅效果，但規則複雜
+
+**遺贈稅規劃需要時間。提早開始，才有足夠的空間運用這些策略。**
+
+---
+
+## 企業節稅策略
+
+![企業的稅務規劃](https://images.pexels.com/photos/6863515/pexels-photo-6863515.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [Karolina Kaboompics](https://www.pexels.com/@karolina-grabowska) on [Pexels](https://www.pexels.com)*
+
+如果你有自己的公司，節稅空間會更大。
+
+**費用認列最大化**
+- 所有與業務相關的合理支出
+- 員工福利、教育訓練、設備折舊
+- 研發支出的加成扣除
+
+**薪資與盈餘分配的平衡**
+- 股東薪資可以當公司費用
+- 但薪資要繳個人所得稅
+- 找到最佳平衡點
+
+**投資抵減**
+- 研發投資抵減
+- 智慧財產投資抵減
+- 產業創新條例的各種優惠
+
+**組織架構規劃**
+- 控股公司的運用
+- 關係企業的交易安排
+- 但要注意移轉訂價的規定
+
+**企業節稅需要專業會計師的協助，因為規則複雜，而且稽查風險較高。**
+
+---
+
+## 節稅規劃的注意事項
+
+![規劃時的重要提醒](https://images.pexels.com/photos/7821671/pexels-photo-7821671.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [RDNE Stock project](https://www.pexels.com/@rdne) on [Pexels](https://www.pexels.com)*
+
+節稅規劃有幾個重要原則：
+
+**合法為前提**
+- 絕不虛偽申報
+- 絕不隱匿所得
+- 所有安排都要有真實的商業目的
+
+**整體考量**
+- 不只看單一稅種
+- 考慮所有相關稅負的淨效果
+- 今天省的稅，未來會不會變成更大的稅？
+
+**成本效益分析**
+- 節稅方案本身也有成本
+- 設立公司、信託、保險⋯⋯都有費用
+- 省下的稅要大於付出的成本
+
+**風險評估**
+- 稅法會變
+- 過於激進的規劃可能被挑戰
+- 穩健的規劃比激進的規劃更可靠
+
+---
+
+## 下一步
+
+想知道有哪些節稅策略適合你的情況？歡迎與我們的團隊聊聊，我們會根據你的實際狀況提供建議。
+
+📞 0909-230140
+📧 dreamer88888888888@gmail.com
+📍 臺中市南屯區同心里文心路一段186號9樓之1
+
+**賦予人們宏觀永續的財商新思路**

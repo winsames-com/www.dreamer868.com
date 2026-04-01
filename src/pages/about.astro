@@ -1,0 +1,14 @@
+---
+import { getCollection } from 'astro:content';
+import CategoryPage from '../components/CategoryPage.astro';
+
+const articles = (await getCollection('articles')).filter(
+  (a) => a.data.subcategory === 'about-us' || a.data.subcategory === 'philosophy'
+);
+---
+
+<CategoryPage
+  title="關於尊茂財務"
+  description="品牌故事、願景使命與核心價值。"
+  articles={articles}
+/>

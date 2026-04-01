@@ -1,0 +1,153 @@
+---
+title: 適用對象（誰需要財務規劃）
+date: 2026-03-19
+author: Writer
+status: draft
+version: 1
+task: 一-B-2 適用對象
+category: 理財規劃
+
+images:
+  hero:
+    pexels_id: 6801639
+    url: "https://images.pexels.com/photos/6801639/pexels-photo-6801639.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
+    alt: "不同人生階段都需要財務規劃"
+    photographer: "Hanna Pad"
+    photographer_url: "https://www.pexels.com/@anna-nekrashevich"
+    credit: "Photo by Hanna Pad on Pexels"
+
+section: "existing"
+subcategory: "financial-planning"
+order: 2
+slug: "financial-planning-02"
+---
+
+# 誰需要財務規劃？
+
+![不同人生階段都需要財務規劃](https://images.pexels.com/photos/6801639/pexels-photo-6801639.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200)
+*Photo by [Hanna Pad](https://www.pexels.com/@anna-nekrashevich) on [Pexels](https://www.pexels.com)*
+
+無論你是剛出社會的新鮮人，還是準備退休的資深工作者——財務規劃都與你有關。
+
+**但「有關」不代表「一樣」。**
+
+不同的人生階段、不同的家庭狀況、不同的目標，需要的規劃方向也不同。這篇文章幫你判斷：你現在的情況，最需要關注什麼。
+
+---
+
+## 剛出社會的年輕人
+
+![年輕人開始財務規劃](https://images.pexels.com/photos/5466812/pexels-photo-5466812.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [olia danilevich](https://www.pexels.com/@olia-danilevich) on [Pexels](https://www.pexels.com)*
+
+你可能覺得：「我才剛開始工作，哪有什麼好規劃的？」
+
+但這其實是最重要的階段。
+
+**這個階段的重點：**
+- 建立正確的財務觀念
+- 養成儲蓄習慣
+- 了解基本的風險保障
+- 開始思考長期目標
+
+你現在養成的習慣，會影響未來幾十年。趁早建立好的基礎，比之後努力彌補容易得多。
+
+---
+
+## 成家立業的家庭
+
+![家庭財務規劃的重要性](https://images.pexels.com/photos/8441778/pexels-photo-8441778.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [Kampus Production](https://www.pexels.com/@kampus) on [Pexels](https://www.pexels.com)*
+
+結婚、買房、生小孩——每一步都是財務的重大轉折。
+
+**這個階段的重點：**
+
+| 議題 | 需要考慮的事 |
+|------|-------------|
+| 房貸 | 負擔是否合理？利率選擇？ |
+| 保險 | 家庭責任增加，保障是否足夠？ |
+| 教育 | 孩子的教育基金何時開始準備？ |
+| 夫妻財務 | 如何分工？共同帳戶？ |
+
+這個階段容易「忙到沒時間想」，但其實最需要有人幫你整理全局。
+
+---
+
+## 事業有成的中年人
+
+![中年人的財務規劃需求](https://images.pexels.com/photos/8441861/pexels-photo-8441861.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [Kampus Production](https://www.pexels.com/@kampus) on [Pexels](https://www.pexels.com)*
+
+收入穩定、有一定積蓄，但也開始感受到壓力。
+
+**這個階段的重點：**
+- 退休規劃是否在軌道上？
+- 子女教育與創業基金
+- 父母的照護與醫療
+- 稅務規劃與資產配置
+
+中年是「夾心」世代：上有老、下有小。財務壓力最大，但也是最有能力做調整的時候。
+
+---
+
+## 準備退休的銀髮族
+
+![退休規劃與財務安排](https://images.pexels.com/photos/9052188/pexels-photo-9052188.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [SHVETS production](https://www.pexels.com/@shvets-production) on [Pexels](https://www.pexels.com)*
+
+即將離開職場，或已經退休——這時候的重點是「守護」。
+
+**這個階段的重點：**
+- 退休金是否足夠？
+- 醫療與長照準備
+- 資產如何傳承？
+- 如何維持生活品質？
+
+這個階段最怕的是「做錯決定」。因為沒有時間重來。找一位專業的財務顧問，幫你把關每一個重大決策。
+
+---
+
+## 企業主與高資產人士
+
+![企業主的財務規劃需求](https://images.pexels.com/photos/8124410/pexels-photo-8124410.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [RDNE Stock project](https://www.pexels.com/@rdne) on [Pexels](https://www.pexels.com)*
+
+當財務狀況變複雜，需要的就不只是單一面向的建議。
+
+**企業主常見的需求：**
+- 個人與公司財務如何區隔？
+- 企業傳承怎麼規劃？
+- 股權架構如何設計？
+- 跨國資產如何配置？
+
+這些議題涉及稅務、法律、會計等多個領域，需要跨領域的專業團隊協助。
+
+**這就是尊茂「全球性家族辦公室生態圈」的服務範圍。**
+
+---
+
+## 你適合哪一種服務？
+
+不確定自己需要什麼？沒關係。
+
+我們的第一步永遠是「先聽你說」。
+
+透過初步的對談，我們會幫你釐清：
+- 你目前最需要關注的是什麼
+- 哪些議題可以等一等
+- 如何排列優先順序
+
+**財務規劃不是越多越好，而是越適合越好。**
+
+---
+
+## 下一步
+
+想知道你的情況適合什麼樣的規劃？歡迎預約一次免費諮詢。
+
+📞 0909-230140
+📧 dreamer88888888888@gmail.com
+📍 臺中市南屯區同心里文心路一段186號9樓之1
+
+**賦予人們宏觀永續的財商新思路**

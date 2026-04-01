@@ -1,0 +1,80 @@
+---
+interface Props {
+  title: string;
+  href: string;
+  image: string;
+  imageAlt: string;
+  category?: string;
+}
+
+const { title, href, image, imageAlt, category } = Astro.props;
+---
+
+<a href={href} class="article-card">
+  <div class="card-image">
+    <img src={image} alt={imageAlt} loading="lazy" />
+  </div>
+  <div class="card-body">
+    {category && <span class="card-category">{category}</span>}
+    <h3 class="card-title">{title}</h3>
+  </div>
+</a>
+
+<style>
+  .article-card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .article-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  }
+
+  .card-image {
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+  }
+
+  .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+  }
+
+  .article-card:hover .card-image img {
+    transform: scale(1.05);
+  }
+
+  .card-body {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .card-category {
+    display: inline-block;
+    width: fit-content;
+    background: var(--color-primary);
+    color: #fff;
+    padding: 2px 10px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  .card-title {
+    font-size: var(--f20);
+    font-weight: 700;
+    color: var(--color-text);
+    line-height: 1.5;
+  }
+</style>

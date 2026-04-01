@@ -1,0 +1,180 @@
+---
+title: 誰需要家族辦公室？（適用對象）
+date: 2026-03-19
+author: Writer
+status: draft
+version: 1
+task: 三-A-2 誰需要家族辦公室
+category: 家族治理
+
+images:
+  hero:
+    pexels_id: 4262424
+    url: "https://images.pexels.com/photos/4262424/pexels-photo-4262424.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
+    alt: "家族辦公室的適用對象"
+    photographer: "Askar Abayev"
+    photographer_url: "https://www.pexels.com/@askar-abayev"
+    credit: "Photo by Askar Abayev on Pexels"
+
+section: "services"
+subcategory: "family-governance"
+order: 2
+slug: "family-governance-02"
+---
+
+# 誰需要家族辦公室？（適用對象）
+
+![家族辦公室的適用對象](https://images.pexels.com/photos/4262424/pexels-photo-4262424.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200)
+*Photo by [Askar Abayev](https://www.pexels.com/@askar-abayev) on [Pexels](https://www.pexels.com)*
+
+提到家族辦公室，很多人第一個反應是：「那不是有錢人的事嗎？」
+
+確實，傳統上家族辦公室服務的是超高資產家族。但這個概念正在改變——重點不只是資產多少，而是需求複雜度。
+
+**如果你的家族面臨複雜的財務、傳承、或治理問題，家族辦公室的概念就對你有幫助。**
+
+---
+
+## 傳統的適用標準
+
+![傳統的資產標準](https://images.pexels.com/photos/4386326/pexels-photo-4386326.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [Karolina Kaboompics](https://www.pexels.com/@karolina-grabowska) on [Pexels](https://www.pexels.com)*
+
+傳統上，家族辦公室有一個資產門檻：
+
+| 類型 | 典型資產規模 |
+|------|-------------|
+| 單一家族辦公室 | 10 億以上 |
+| 聯合家族辦公室 | 1 億以上 |
+| 家族辦公室服務 | 數千萬以上 |
+
+但這只是一個參考。真正決定你需不需要的，不是帳面上的數字，而是你面對的問題複雜度。
+
+**資產 5000 萬但問題複雜的家族，可能比資產 5 億但結構簡單的家族更需要專業協助。**
+
+---
+
+## 從需求判斷
+
+![根據需求判斷](https://images.pexels.com/photos/7821487/pexels-photo-7821487.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [RDNE Stock project](https://www.pexels.com/@rdne) on [Pexels](https://www.pexels.com)*
+
+以下這些情況，意味著你可能需要家族辦公室的服務：
+
+**資產結構複雜**
+- 有多種類型的資產（不動產、股票、公司股權、海外資產）
+- 資產分散在不同國家
+- 有多個家族成員共同持有的資產
+
+**家族企業相關**
+- 家族擁有一個或多個企業
+- 企業即將面臨接班問題
+- 企業和家庭財務混在一起
+
+**傳承議題**
+- 一代想把財富傳給下一代
+- 擔心財富沒有妥善安排
+- 希望減少遺產稅負擔
+
+**家族關係考量**
+- 有多個子女或繼承人
+- 家族成員對財務有不同期待
+- 擔心將來會有爭議
+
+---
+
+## 典型的適用對象
+
+![適用對象類型](https://images.pexels.com/photos/4262418/pexels-photo-4262418.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [Askar Abayev](https://www.pexels.com/@askar-abayev) on [Pexels](https://www.pexels.com)*
+
+以下是幾種典型需要家族辦公室服務的對象：
+
+**企業主**
+- 創辦人想安排接班
+- 企業和家庭財務需要分離
+- 股權結構需要優化
+
+**專業人士**
+- 醫師、律師、會計師等高收入者
+- 累積了可觀財富
+- 需要整合管理
+
+**繼承者**
+- 已經或即將繼承大筆資產
+- 不知道如何管理
+- 需要專業協助
+
+**多代家族**
+- 家族已經傳了兩三代
+- 成員眾多、資產複雜
+- 需要建立制度
+
+**海外資產持有者**
+- 在多個國家有資產
+- 面臨跨國稅務問題
+- 需要整合管理
+
+---
+
+## 不同階段的需求
+
+![不同階段的考量](https://images.pexels.com/photos/6802042/pexels-photo-6802042.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [Karolina Kaboompics](https://www.pexels.com/@karolina-grabowska) on [Pexels](https://www.pexels.com)*
+
+需求會隨著家族發展階段而變化：
+
+| 階段 | 典型需求 |
+|------|---------|
+| 創業期 | 企業與家庭財務分離、基本保障 |
+| 成長期 | 稅務規劃、投資配置 |
+| 成熟期 | 傳承規劃、家族治理 |
+| 傳承期 | 接班安排、資產移轉 |
+| 多代期 | 家族制度、持續治理 |
+
+**不是到了「多代期」才需要，而是越早開始越好。**
+
+很多問題是在早期就種下的——等到爆發時，可能已經來不及。
+
+---
+
+## 自我評估
+
+![自我評估清單](https://images.pexels.com/photos/8441778/pexels-photo-8441778.jpeg?auto=compress&cs=tinysrgb&h=650&w=940)
+*Photo by [Kampus Production](https://www.pexels.com/@kampus) on [Pexels](https://www.pexels.com)*
+
+你可以用以下問題自我評估：
+
+**資產面**
+- [ ] 總資產超過 3000 萬？
+- [ ] 有三種以上不同類型的資產？
+- [ ] 有海外資產？
+- [ ] 有家族企業股權？
+
+**家族面**
+- [ ] 有兩個以上的繼承人？
+- [ ] 有跨代的傳承考量？
+- [ ] 家族成員對財務有不同期待？
+- [ ] 擔心將來的家族關係？
+
+**複雜度**
+- [ ] 需要和三個以上的專業人士打交道？
+- [ ] 覺得現在的財務管理很累？
+- [ ] 花很多時間處理財務相關的事？
+- [ ] 不確定現在的安排是否最優？
+
+**如果勾選超過 5 項，家族辦公室的服務可能對你有幫助。**
+
+---
+
+## 下一步
+
+不確定自己是否需要家族辦公室的服務？最簡單的方式是預約一次諮詢，讓我們了解你的狀況，評估你的需求。
+
+諮詢本身不代表要購買任何服務，只是一個了解的機會。
+
+📞 0909-230140
+📧 dreamer88888888888@gmail.com
+📍 臺中市南屯區同心里文心路一段186號9樓之1
+
+**賦予人們宏觀永續的財商新思路**

@@ -1,0 +1,72 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import PageBanner from '../components/PageBanner.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  heroImage?: string;
+  heroAlt?: string;
+  credit?: string;
+  category?: string;
+  date?: Date;
+}
+
+const { title, description, heroImage, heroAlt, credit, category, date } = Astro.props;
+---
+
+<BaseLayout title={title} description={description} ogImage={heroImage}>
+  <PageBanner title={title} backgroundImage={heroImage} />
+
+  <article class="article-page">
+    <div class="article-meta">
+      {category && <span class="category-tag">{category}</span>}
+      {date && <time datetime={date.toISOString()}>{date.toLocaleDateString('zh-TW')}</time>}
+    </div>
+
+    <div class="prose">
+      <slot />
+    </div>
+
+    {credit && <p class="photo-credit">{credit}</p>}
+  </article>
+</BaseLayout>
+
+<style>
+  .article-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 20px 100px;
+  }
+
+  .article-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--color-bg-light);
+  }
+
+  .category-tag {
+    display: inline-block;
+    background: var(--color-primary);
+    color: #fff;
+    padding: 4px 14px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  time {
+    color: #999;
+    font-size: 14px;
+  }
+
+  .photo-credit {
+    text-align: center;
+    font-size: 12px;
+    color: #999;
+    margin-top: 40px;
+  }
+</style>

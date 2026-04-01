@@ -1,0 +1,14 @@
+---
+import { getCollection } from 'astro:content';
+import CategoryPage from '../components/CategoryPage.astro';
+
+const articles = (await getCollection('articles')).filter(
+  (a) => a.data.subcategory === 'service-targets'
+);
+---
+
+<CategoryPage
+  title="服務對象"
+  description="從個人到家族的全方位財務規劃服務。"
+  articles={articles}
+/>

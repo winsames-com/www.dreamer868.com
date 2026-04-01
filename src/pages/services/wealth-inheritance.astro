@@ -1,0 +1,14 @@
+---
+import { getCollection } from 'astro:content';
+import CategoryPage from '../../components/CategoryPage.astro';
+
+const articles = (await getCollection('articles')).filter(
+  (a) => a.data.subcategory === 'wealth-inheritance'
+);
+---
+
+<CategoryPage
+  title="財富傳承"
+  description="跨代財富規劃，運用信託、保險等工具，確保家族資產安全傳承。"
+  articles={articles}
+/>
