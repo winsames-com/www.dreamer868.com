@@ -1,5 +1,6 @@
 ---
 import { mainNav, contactInfo } from '../data/navigation';
+import { url } from '../utils/url';
 ---
 
 <footer class="footer">
@@ -14,12 +15,12 @@ import { mainNav, contactInfo } from '../data/navigation';
         <div class="footer-nav">
           <h4>服務項目</h4>
           <ul>
-            <li><a href="/services/financial-planning">理財規劃</a></li>
-            <li><a href="/services/tax-planning">稅務規劃</a></li>
-            <li><a href="/services/wealth-inheritance">財富傳承</a></li>
-            <li><a href="/services/overseas-banking">海外銀行開戶</a></li>
-            <li><a href="/services/family-governance">家族治理</a></li>
-            <li><a href="/services/trust-planning">信託規劃</a></li>
+            <li><a href={url('/services/financial-planning')}>理財規劃</a></li>
+            <li><a href={url('/services/tax-planning')}>稅務規劃</a></li>
+            <li><a href={url('/services/wealth-inheritance')}>財富傳承</a></li>
+            <li><a href={url('/services/overseas-banking')}>海外銀行開戶</a></li>
+            <li><a href={url('/services/family-governance')}>家族治理</a></li>
+            <li><a href={url('/services/trust-planning')}>信託規劃</a></li>
           </ul>
         </div>
 

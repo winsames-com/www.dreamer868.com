@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { url } from '../utils/url';
 
 const serviceCategories = [
   { slug: 'financial-planning', label: '理財規劃', icon: '01', desc: '根據個人需求，制定專屬財務計劃，實現人生各階段目標。' },
@@ -25,7 +26,7 @@ const moreServices = [
     <div class="hero-content">
       <h1 data-animate-in="up">專業財務規劃</h1>
       <p data-animate-in="up">守護您的財富，規劃您的未來</p>
-      <a href="/contact" class="hero-cta" data-animate-in="up">免費諮詢</a>
+      <a href={url('/contact')} class="hero-cta" data-animate-in="up">免費諮詢</a>
     </div>
   </section>
 
@@ -37,7 +38,7 @@ const moreServices = [
         <h2 class="section-heading">關於尊茂財務規劃</h2>
         <p>尊茂財務規劃，不只是一間財務顧問公司——我們是您的「財務醫生」。</p>
         <p>我們不銷售商品，而是站在客戶的立場，先診斷、再處方、持續追蹤，提供「理性客觀、全面整合、長期有效」的財務規劃服務。</p>
-        <a href="/about" class="text-link">了解更多 →</a>
+        <a href={url('/about')} class="text-link">了解更多 →</a>
       </div>
     </div>
   </section>
@@ -46,7 +47,7 @@ const moreServices = [
   <section class="section services-section">
     <div class="services-grid">
       {serviceCategories.map((svc) => (
-        <a href={`/services/${svc.slug}`} class="service-card" data-animate-in="up">
+        <a href={url(`/services/${svc.slug}`)} class="service-card" data-animate-in="up">
           <span class="service-number">{svc.icon}</span>
           <h3>{svc.label}</h3>
           <p>{svc.desc}</p>
@@ -60,7 +61,7 @@ const moreServices = [
     <h2 class="section-heading centered" data-animate-in="up">更多服務項目</h2>
     <div class="more-services-grid">
       {moreServices.map((svc) => (
-        <a href={`/services/${svc.slug}`} class="more-service-card" data-animate-in="up">
+        <a href={url(`/services/${svc.slug}`)} class="more-service-card" data-animate-in="up">
           <h4>{svc.label}</h4>
           <p>{svc.desc}</p>
           <span class="card-arrow">→</span>
@@ -74,7 +75,7 @@ const moreServices = [
     <div class="cta-inner" data-animate-in="up">
       <h2>讓我們一起守護您的財富人生</h2>
       <p>不論您是個人、家庭或企業，尊茂都能提供最適合的財務規劃方案。</p>
-      <a href="/contact" class="cta-button">立即諮詢</a>
+      <a href={url('/contact')} class="cta-button">立即諮詢</a>
     </div>
   </section>
 </BaseLayout>

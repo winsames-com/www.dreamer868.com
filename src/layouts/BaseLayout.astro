@@ -2,6 +2,7 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import FloatingButtons from '../components/FloatingButtons.astro';
+import { url } from '../utils/url';
 import '../styles/global.css';
 
 interface Props {
@@ -38,7 +39,7 @@ const siteTitle = `${title} | 尊茂財務規劃`;
   {ogImage && <meta property="og:image" content={ogImage} />}
 
   <title>{siteTitle}</title>
-  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="shortcut icon" href={url('/favicon.ico')} />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
