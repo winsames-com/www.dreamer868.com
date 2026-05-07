@@ -16,6 +16,7 @@ concurrency:
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+  SITE_URL: https://www.dreamer868.com
 
 jobs:
   build:
@@ -49,3 +50,47 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+
+  verify:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait for Pages CDN propagation
+        run: sleep 15
+
+      - name: Fetch sitemap and verify all URLs
+        run: |
+          echo "Fetching sitemap index..."
+          SITEMAPS=$(curl -sf "$SITE_URL/sitemap-index.xml" \
+            | grep -oP '(?<=<loc>)[^<]+')
+
+          URLS=""
+          for sm in $SITEMAPS; do
+            echo "Fetching $sm ..."
+            URLS="$URLS $(curl -sf "$sm" | grep -oP '(?<=<loc>)[^<]+')"
+          done
+
+          TOTAL=0
+          FAILED=0
+          FAIL_LIST=""
+
+          for u in $URLS; do
+            TOTAL=$((TOTAL + 1))
+            CODE=$(curl -sf -o /dev/null -w '%{http_code}' "$u")
+            if [ "$CODE" != "200" ]; then
+              FAILED=$((FAILED + 1))
+              FAIL_LIST="$FAIL_LIST\n  ✗ $CODE $u"
+            fi
+          done
+
+          echo ""
+          echo "===== Verification Result ====="
+          echo "Total URLs: $TOTAL"
+          echo "Failed: $FAILED"
+
+          if [ "$FAILED" -gt 0 ]; then
+            echo -e "\nFailed URLs:$FAIL_LIST"
+            exit 1
+          else
+            echo "All URLs returned 200 ✓"
+          fi
