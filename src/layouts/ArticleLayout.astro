@@ -10,12 +10,54 @@ interface Props {
   credit?: string;
   category?: string;
   date?: Date;
+  slug?: string;
 }
 
-const { title, description, heroImage, heroAlt, credit, category, date } = Astro.props;
+const { title, description, heroImage, heroAlt, credit, category, date, slug } = Astro.props;
+
+const articleLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  ...(description && { description }),
+  ...(heroImage && { image: heroImage }),
+  ...(date && {
+    datePublished: date.toISOString(),
+    dateModified: date.toISOString(),
+  }),
+  author: {
+    '@type': 'Organization',
+    name: '尊茂財務規劃',
+    url: 'https://www.dreamer868.com',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: '尊茂財務規劃',
+    url: 'https://www.dreamer868.com',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://www.doing-housework.com/store_image/dreamer868/A1173399369764.jpg',
+    },
+  },
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': `https://www.dreamer868.com/articles/${slug || ''}`,
+  },
+};
+
+const breadcrumbs = [
+  ...(category ? [{ name: category, href: '/services' }] : []),
+  { name: title, href: `/articles/${slug || ''}` },
+];
 ---
 
-<BaseLayout title={title} description={description} ogImage={heroImage}>
+<BaseLayout
+  title={title}
+  description={description}
+  ogImage={heroImage}
+  jsonLd={articleLd}
+  breadcrumbs={breadcrumbs}
+>
   <PageBanner title={title} backgroundImage={heroImage} />
 
   <article class="article-page">

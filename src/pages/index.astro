@@ -1,6 +1,31 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { url } from '../utils/url';
+import { contactInfo } from '../data/navigation';
+
+const organizationLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FinancialService',
+  name: '尊茂財務規劃',
+  url: 'https://www.dreamer868.com',
+  logo: 'https://www.doing-housework.com/store_image/dreamer868/A1173399369764.jpg',
+  description: '台中專業財務規劃公司，提供理財規劃、稅務規劃、財富傳承、海外銀行開戶、家族治理、信託規劃等全方位財務顧問服務。',
+  telephone: contactInfo.phone,
+  email: contactInfo.email,
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '向心南路186巷9弄之1',
+    addressLocality: '南屯區',
+    addressRegion: '台中市',
+    addressCountry: 'TW',
+  },
+  sameAs: [contactInfo.lineUrl],
+  areaServed: {
+    '@type': 'Country',
+    name: 'Taiwan',
+  },
+  serviceType: ['理財規劃', '稅務規劃', '財富傳承', '海外銀行開戶', '家族治理', '信託規劃', '保險服務', '移民規劃'],
+};
 
 const serviceCategories = [
   { slug: 'financial-planning', label: '理財規劃', icon: '01', desc: '根據個人需求，制定專屬財務計劃，實現人生各階段目標。' },
@@ -16,7 +41,7 @@ const moreServices = [
 ];
 ---
 
-<BaseLayout title="首頁">
+<BaseLayout title="首頁" jsonLd={organizationLd}>
   <!-- Hero Banner -->
   <section class="hero">
     <div class="hero-bg">
