@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="找不到頁面">
+  <section class="not-found">
+    <h1>404</h1>
+    <p>抱歉，您所尋找的頁面不存在。</p>
+    <a href="/" class="back-home">返回首頁</a>
+  </section>
+</BaseLayout>
+
+<style>
+  .not-found {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 20px;
+  }
+
+  .not-found h1 {
+    font-family: var(--font-serif);
+    font-size: 120px;
+    color: var(--color-primary);
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+
+  .not-found p {
+    font-size: var(--f20);
+    color: #666;
+    margin-bottom: 40px;
+  }
+
+  .back-home {
+    display: inline-block;
+    padding: 12px 40px;
+    background: var(--color-primary);
+    color: #fff;
+    font-size: var(--f18);
+    font-weight: 700;
+    border-radius: 4px;
+    transition: background 0.3s;
+  }
+
+  .back-home:hover {
+    background: var(--color-accent);
+  }
+</style>
