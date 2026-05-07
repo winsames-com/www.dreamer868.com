@@ -22,3 +22,10 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# old site source
+source/
+
+# database & logs
+*.db
+*.log

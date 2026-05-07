@@ -52,7 +52,7 @@ import { contactInfo } from '../data/navigation';
 
       <div class="contact-form">
         <h2>預約諮詢</h2>
-        <form>
+        <form id="contact-form">
           <div class="form-group">
             <label for="name">姓名 *</label>
             <input type="text" id="name" name="name" required />
@@ -193,3 +193,21 @@ import { contactInfo } from '../data/navigation';
     }
   }
 </style>
+
+<script is:inline>
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+    const subject = encodeURIComponent('諮詢預約 - ' + name);
+    const body = encodeURIComponent(
+      '姓名：' + name + '\n' +
+      '電話：' + phone + '\n' +
+      'Email：' + email + '\n\n' +
+      '諮詢內容：\n' + message
+    );
+    window.location.href = 'mailto:dreamer88888888888@gmail.com?subject=' + subject + '&body=' + body;
+  });
+</script>

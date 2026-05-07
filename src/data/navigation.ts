@@ -1,5 +1,3 @@
-import { url } from '../utils/url';
-
 export interface NavItem {
   label: string;
   href: string;
@@ -7,40 +5,40 @@ export interface NavItem {
 }
 
 export const mainNav: NavItem[] = [
-  { label: '首頁', href: url('/') },
-  { label: '關於尊茂財務', href: url('/about') },
+  { label: '首頁', href: '/' },
+  { label: '關於尊茂財務', href: '/about' },
   {
     label: '服務對象',
-    href: url('/service-targets'),
+    href: '/service-targets',
   },
   {
     label: '服務項目',
-    href: url('/services'),
+    href: '/services',
     children: [
-      { label: '理財規劃', href: url('/services/financial-planning') },
-      { label: '稅務規劃', href: url('/services/tax-planning') },
-      { label: '財富傳承', href: url('/services/wealth-inheritance') },
-      { label: '海外銀行開戶', href: url('/services/overseas-banking') },
-      { label: '家族治理', href: url('/services/family-governance') },
-      { label: '保險服務', href: url('/services/insurance') },
-      { label: '信託規劃', href: url('/services/trust-planning') },
-      { label: '移民規劃', href: url('/services/immigration') },
-      { label: '二代培訓', href: url('/services/next-gen-training') },
-      { label: '租稅服務', href: url('/services/tax-services') },
-      { label: '地政士服務', href: url('/services/land-administration') },
-      { label: '國際貿易', href: url('/services/international-trade') },
-      { label: '海外基金債券', href: url('/services/overseas-funds') },
+      { label: '理財規劃', href: '/services/financial-planning' },
+      { label: '稅務規劃', href: '/services/tax-planning' },
+      { label: '財富傳承', href: '/services/wealth-inheritance' },
+      { label: '海外銀行開戶', href: '/services/overseas-banking' },
+      { label: '家族治理', href: '/services/family-governance' },
+      { label: '保險服務', href: '/services/insurance' },
+      { label: '信託規劃', href: '/services/trust-planning' },
+      { label: '移民規劃', href: '/services/immigration' },
+      { label: '二代培訓', href: '/services/next-gen-training' },
+      { label: '租稅服務', href: '/services/tax-services' },
+      { label: '地政士服務', href: '/services/land-administration' },
+      { label: '國際貿易', href: '/services/international-trade' },
+      { label: '海外基金債券', href: '/services/overseas-funds' },
     ],
   },
-  { label: '服務流程', href: url('/service-process') },
-  { label: '專業團隊', href: url('/team') },
-  { label: '最新消息', href: url('/news') },
-  { label: '聯絡我們', href: url('/contact') },
+  { label: '服務流程', href: '/service-process' },
+  { label: '專業團隊', href: '/team' },
+  { label: '最新消息', href: '/news' },
+  { label: '聯絡我們', href: '/contact' },
 ];
 
 export const contactInfo = {
   lineId: 'irich168',
-  lineUrl: 'http://line.naver.jp/ti/p/~irich168',
+  lineUrl: 'https://line.me/ti/p/~irich168',
   phone: '0909-230140',
   email: 'dreamer88888888888@gmail.com',
   taxId: '94163195',
