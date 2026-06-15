@@ -1,14 +1,81 @@
 ---
 import { getCollection } from 'astro:content';
-import CategoryPage from '../components/CategoryPage.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageBanner from '../components/PageBanner.astro';
+import ArticleCard from '../components/ArticleCard.astro';
 
-const articles = (await getCollection('articles')).filter(
-  (a) => a.data.subcategory === 'service-targets'
-);
+const all = await getCollection('articles');
+
+const targets = [
+  { subcat: 'personal-stories', href: '/service-targets/personal' },
+  { subcat: 'family-stories', href: '/service-targets/family' },
+  { subcat: 'corporate-stories', href: '/service-targets/corporate' },
+  { subcat: 'wealth-tax-stories', href: '/service-targets/wealth-tax' },
+];
+
+const cards = targets
+  .map((t) => ({
+    ...t,
+    lead: all.find((a) => a.data.subcategory === t.subcat && a.data.order === 1),
+  }))
+  .filter((c) => c.lead);
+
+const overview = all.find((a) => a.data.slug === 'service-targets-01');
 ---
 
-<CategoryPage
-  title="服務對象"
-  description="從個人到家族的全方位財務規劃服務。"
-  articles={articles}
-/>
+<BaseLayout title="服務對象" description="從個人、家庭、公司到財富稅務，尊茂以真實判決改編的案例陪你看懂財務規劃。">
+  <PageBanner title="服務對象" />
+
+  <section class="targets-hub">
+    <p class="hub-intro">
+      從個人到家族企業，我們用改編自真實法院判決的案例，帶你看懂常見的財務與法律盲點。
+      {overview && <a href={`/articles/${overview.data.slug}`}>完整服務對象介紹 →</a>}
+    </p>
+
+    <div class="cards-grid">
+      {cards.map((c) => (
+        <ArticleCard
+          title={c.lead.data.title}
+          href={c.href}
+          image={c.lead.data.images.hero.url}
+          imageAlt={c.lead.data.images.hero.alt}
+        />
+      ))}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .targets-hub {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px 100px;
+  }
+
+  .hub-intro {
+    font-size: var(--f20);
+    text-align: center;
+    color: #666;
+    max-width: 760px;
+    margin: 0 auto 50px;
+    line-height: 1.8;
+  }
+
+  .hub-intro a {
+    color: var(--color-primary);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  @media (max-width: 600px) {
+    .cards-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
