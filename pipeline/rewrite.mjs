@@ -1,13 +1,8 @@
 // pipeline/rewrite.mjs
 // 改編引擎：用 Claude Code CLI 的 `claude -p`（headless / print 模式），以本機登入的
 // 訂閱帳戶執行，不走 Anthropic API 計費。每日候選 ≤4 件，逐件同步呼叫即可。
-//
-// `claude -p --output-format json` 回傳信封：{type:"result", result:"<助手最終文字>", ...}。
-// prompt 要求模型只輸出 JSON 物件，故 envelope.result 即我們要的 JSON 字串（再 parse）。
-// 已於本機實測此機制可運作。
 
-import { spawn } from 'node:child_process';
-import { MODEL } from './config.mjs';
+import { askJson } from './claude.mjs';
 
 function promptFor(candidate) {
   const { doc, category, fullTextStr } = candidate;
@@ -31,48 +26,13 @@ function promptFor(candidate) {
 ${fullTextStr.slice(0, 12000)}`;
 }
 
-function parseJsonLoose(s) {
-  const t = String(s).trim()
-    .replace(/^```json\s*/i, '')
-    .replace(/^```\s*/, '')
-    .replace(/```\s*$/, '')
-    .trim();
-  return JSON.parse(t);
-}
-
-function claudePrint(prompt, { timeoutMs = 180000 } = {}) {
-  return new Promise((resolve, reject) => {
-    const child = spawn('claude', ['-p', '--output-format', 'json', '--model', MODEL], {
-      stdio: ['pipe', 'pipe', 'pipe'],
-    });
-    let out = '', err = '';
-    const timer = setTimeout(() => { child.kill('SIGKILL'); reject(new Error('claude -p timeout')); }, timeoutMs);
-    child.stdout.on('data', (d) => { out += d; });
-    child.stderr.on('data', (d) => { err += d; });
-    child.on('error', reject);
-    child.on('close', (code) => {
-      clearTimeout(timer);
-      if (code !== 0) return reject(new Error(`claude exit ${code}: ${err.slice(0, 200)}`));
-      resolve(out);
-    });
-    child.stdin.write(prompt);
-    child.stdin.end();
-  });
-}
-
 // 逐件呼叫 claude -p，回傳 Map：custom_id（cand-${i}）-> 解析後物件或 {error}。
 export async function rewriteCandidates(candidates) {
   const out = new Map();
   for (let i = 0; i < candidates.length; i++) {
     const id = `cand-${i}`;
     try {
-      const raw = await claudePrint(promptFor(candidates[i]));
-      const envelope = JSON.parse(raw);
-      if (envelope.is_error || typeof envelope.result !== 'string') {
-        out.set(id, { error: 'claude_error' });
-        continue;
-      }
-      out.set(id, parseJsonLoose(envelope.result));
+      out.set(id, await askJson(promptFor(candidates[i])));
     } catch (e) {
       out.set(id, { error: String((e && e.message) || e) });
     }

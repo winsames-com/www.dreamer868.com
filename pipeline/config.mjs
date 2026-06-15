@@ -1,13 +1,13 @@
 // pipeline/config.mjs
-// 四分眾的分類規則、門檻、每日上限、固定 hero 圖、Batch 設定。
+// 四分眾的分類規則、門檻、每日上限、固定 hero 圖、模型設定。
 
 export const MODEL = 'claude-sonnet-4-6';
 
 // 每分眾每日最多 1 篇、全站每日最多 4 篇
 export const LIMITS = { perCategoryPerDay: 1, perDayTotal: 4 };
 
-// 閘門門檻（模型自評 1–5）
-export const THRESHOLDS = { relevanceMin: 4, qualityMin: 4 };
+// 閘門門檻（1–5）：relevance/quality 為改編自評；worthiness 為獨立查核的故事性
+export const THRESHOLDS = { relevanceMin: 4, qualityMin: 4, worthinessMin: 3 };
 
 // 裁判類別（JID 第一段最後一字）：V=民事 M=刑事 A=行政
 export const ALLOWED_COURT_TYPES = new Set(['V', 'A']);
