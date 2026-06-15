@@ -17,8 +17,8 @@ images:
     credit: "Photo by olia danilevich on Pexels"
 
 section: "new"
-subcategory: "service-targets"
-order: 2
+subcategory: "personal-stories"
+order: 1
 slug: "service-targets-02"
 ---
 

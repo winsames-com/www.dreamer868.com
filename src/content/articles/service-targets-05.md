@@ -17,8 +17,8 @@ images:
     credit: "Photo by cottonbro studio on Pexels"
 
 section: "new"
-subcategory: "service-targets"
-order: 5
+subcategory: "wealth-tax-stories"
+order: 1
 slug: "service-targets-05"
 ---
 
