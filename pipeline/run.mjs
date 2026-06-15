@@ -1,7 +1,8 @@
 // pipeline/run.mjs
 // 全流程：auth -> JList -> 字別預過濾 -> dedup -> JDoc -> 分類 -> 取每分眾上限 ->
-//         batch 改編 -> 化名正則 + 自評閘門 -> 寫檔/隔離 -> 更新帳本 -> summary。
-// 環境變數：JUD_USER, JUD_PASS, ANTHROPIC_API_KEY, DRY_RUN（"1" 則不寫正式檔、不更新帳本）。
+//         claude -p 改編 -> 化名正則 + 自評閘門 -> 寫檔/隔離 -> 更新帳本 -> summary。
+// 環境變數：JUD_USER, JUD_PASS, DRY_RUN（"1" 則不寫正式檔、不更新帳本）。
+// 改編用 claude -p（本機訂閱帳戶），須先 `claude` 登入；無需 ANTHROPIC_API_KEY。
 
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
@@ -9,7 +10,7 @@ import { CATEGORIES, LIMITS, PATHS } from './config.mjs';
 import { auth, getChangeList, getDoc, fullText, caseSourceOf } from './judicial.mjs';
 import { prefilterJids, classifyDoc } from './classify.mjs';
 import { loadSeen, saveSeen } from './state.mjs';
-import { runBatch } from './rewrite.mjs';
+import { rewriteCandidates } from './rewrite.mjs';
 import { scanAnonymization, passesGates } from './guard.mjs';
 import { buildArticle, nextSlug } from './markdown.mjs';
 
@@ -25,7 +26,6 @@ async function existingSlugs() {
 async function main() {
   const user = process.env.JUD_USER, pass = process.env.JUD_PASS;
   if (!user || !pass) throw new Error('Missing JUD_USER / JUD_PASS');
-  if (!process.env.ANTHROPIC_API_KEY) throw new Error('Missing ANTHROPIC_API_KEY');
 
   const today = new Date();
   const dateStr = today.toISOString().slice(0, 10);
@@ -66,7 +66,7 @@ async function main() {
     return;
   }
 
-  const results = await runBatch(candidates);
+  const results = await rewriteCandidates(candidates);
 
   const slugs = await existingSlugs();
   const published = [];
