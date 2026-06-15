@@ -11,8 +11,11 @@ import { mainNav, contactInfo } from '../data/navigation';
 
       <div class="header-right">
         <div class="social-links">
-          <a href={contactInfo.lineUrl} target="_blank" aria-label="LINE">
+          <a href={contactInfo.lineUrl} target="_blank" rel="noopener noreferrer" aria-label="LINE">
             <i class="fa-brands fa-line"></i>
+          </a>
+          <a href={contactInfo.facebookUrl} target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
           </a>
           <a href={`tel:${contactInfo.phone}`} aria-label="電話">
             <i class="fa-brands fa-whatsapp"></i>
