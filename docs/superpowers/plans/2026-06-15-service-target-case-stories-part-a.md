@@ -736,7 +736,7 @@ git commit -m "content: add corporate case story 01 (share nominee dispute)"
 
 ```markdown
 ---
-title: 爸爸生前把三億股票送給媽媽，六歲女兒卻背上五千萬遺產稅
+title: 爸爸生前把三億股票送給媽媽，六歲女兒卻背上近六千萬遺產稅
 date: 2026-06-16
 author: Writer
 status: draft
@@ -762,7 +762,7 @@ order: 10
 slug: "wealth-tax-story-01"
 ---
 
-# 爸爸生前把三億股票送給媽媽，六歲女兒卻背上五千萬遺產稅
+# 爸爸生前把三億股票送給媽媽，六歲女兒卻背上近六千萬遺產稅
 
 ![財富人士的財務規劃](https://images.pexels.com/photos/5911971/pexels-photo-5911971.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200)
 *Photo by [cottonbro studio](https://www.pexels.com/@cottonbro) on [Pexels](https://www.pexels.com)*
