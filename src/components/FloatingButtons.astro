@@ -3,7 +3,10 @@ import { contactInfo } from '../data/navigation';
 ---
 
 <div class="floating-buttons">
-  <a href={contactInfo.lineUrl} target="_blank" class="float-btn line" aria-label="LINE聯繫">
+  <a href={contactInfo.facebookUrl} target="_blank" rel="noopener noreferrer" class="float-btn facebook" aria-label="前往Facebook粉絲頁">
+    <i class="fa-brands fa-facebook-f"></i>
+  </a>
+  <a href={contactInfo.lineUrl} target="_blank" rel="noopener noreferrer" class="float-btn line" aria-label="LINE聯繫">
     <i class="fa-brands fa-line"></i>
   </a>
   <a href={`tel:${contactInfo.phone}`} class="float-btn phone" aria-label="撥打電話">
@@ -41,6 +44,10 @@ import { contactInfo } from '../data/navigation';
   .float-btn:hover {
     transform: scale(1.1);
     box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+  }
+
+  .float-btn.facebook {
+    background: #1877F2;
   }
 
   .float-btn.line {
