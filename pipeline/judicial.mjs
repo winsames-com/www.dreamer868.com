@@ -4,27 +4,69 @@
 //   POST .../JList  body {token} -> [{date, list:[jid...]}] | "驗證失敗"
 //   POST .../JDoc   body {token, j:jid} -> {JID,JYEAR,JCASE,JNO,JDATE,JTITLE,JFULLX:{JFULLTYPE,JFULLCONTENT,JFULLPDF},ATTACHMENTS} | {error}
 // 服務時間僅每日 00:00–06:00（台灣）。
+//
+// DNS 註記：本機系統 DNS（如阿里 223.6.6.6）對 *.judicial.gov.tw 回 SERVFAIL，
+// 故此 client 用 node:https 搭配自訂 lookup，改走公共 DNS（1.1.1.1 / 8.8.8.8）解析。
+// 已於本機實測 node:https + 此 lookup 可連到 data.judicial.gov.tw。
 
-const BASE = 'https://data.judicial.gov.tw/jdg/api';
+import https from 'node:https';
+import { Resolver } from 'node:dns';
 
-async function postJson(path, body, { retries = 3 } = {}) {
+const BASE_HOST = 'data.judicial.gov.tw';
+const BASE_PATH = '/jdg/api';
+
+const resolver = new Resolver();
+resolver.setServers(['1.1.1.1', '8.8.8.8']);
+
+function dnsLookup(hostname, options, cb) {
+  resolver.resolve4(hostname, (err, addrs) => {
+    if (err) return cb(err);
+    if (!addrs || addrs.length === 0) return cb(new Error(`no A record for ${hostname}`));
+    if (options && options.all) return cb(null, addrs.map((a) => ({ address: a, family: 4 })));
+    cb(null, addrs[0], 4);
+  });
+}
+
+function once(path, payload, timeoutMs) {
+  return new Promise((resolve, reject) => {
+    const req = https.request(
+      {
+        hostname: BASE_HOST,
+        path: `${BASE_PATH}/${path}`,
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Content-Length': Buffer.byteLength(payload),
+        },
+        lookup: dnsLookup,
+        timeout: timeoutMs,
+      },
+      (res) => {
+        let data = '';
+        res.on('data', (c) => { data += c; });
+        res.on('end', () => {
+          let parsed;
+          try { parsed = JSON.parse(data); } catch { parsed = data; }
+          if (res.statusCode < 200 || res.statusCode >= 300) {
+            return reject(new Error(`${path} HTTP ${res.statusCode}: ${String(data).slice(0, 200)}`));
+          }
+          resolve(parsed);
+        });
+      }
+    );
+    req.on('error', reject);
+    req.on('timeout', () => { req.destroy(new Error(`${path} timeout`)); });
+    req.write(payload);
+    req.end();
+  });
+}
+
+async function postJson(path, body, { retries = 3, timeoutMs = 30000 } = {}) {
+  const payload = JSON.stringify(body);
   let lastErr;
   for (let i = 0; i < retries; i++) {
-    try {
-      const res = await fetch(`${BASE}/${path}`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(body),
-      });
-      const text = await res.text();
-      let data;
-      try { data = JSON.parse(text); } catch { data = text; }
-      if (!res.ok) throw new Error(`${path} HTTP ${res.status}: ${text.slice(0, 200)}`);
-      return data;
-    } catch (err) {
-      lastErr = err;
-      await new Promise((r) => setTimeout(r, 2000 * (i + 1)));
-    }
+    try { return await once(path, payload, timeoutMs); }
+    catch (err) { lastErr = err; await new Promise((r) => setTimeout(r, 2000 * (i + 1))); }
   }
   throw lastErr;
 }
@@ -38,7 +80,6 @@ export async function auth(user, password) {
 export async function getChangeList(token) {
   const data = await postJson('JList', { token });
   if (!Array.isArray(data)) throw new Error(`JList failed: ${JSON.stringify(data).slice(0, 200)}`);
-  // 攤平成單一 jid 陣列
   const jids = [];
   for (const day of data) {
     if (day && Array.isArray(day.list)) jids.push(...day.list);
@@ -60,8 +101,7 @@ export function fullText(doc) {
   return '';
 }
 
-// 由 JDoc 組出可讀字號：例「臺灣高等法院 101 年度上易字第 797 號」需法院中文名，
-// API 未直接提供法院中文名，故以「年度+字別+號」格式記錄，法院別以 court code 註記。
+// 開放 API 不含法院中文全名，以「年度+字別+號（JID）」記錄；JID 內含法院代碼可回溯。
 export function caseSourceOf(doc) {
   const year = doc.JYEAR || '';
   const jcase = doc.JCASE || '';

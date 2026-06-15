@@ -1,37 +1,29 @@
 // pipeline/rewrite.mjs
-import Anthropic from '@anthropic-ai/sdk';
-import { MODEL } from './config.mjs';
+// 改編引擎：用 Claude Code CLI 的 `claude -p`（headless / print 模式），以本機登入的
+// 訂閱帳戶執行，不走 Anthropic API 計費。每日候選 ≤4 件，逐件同步呼叫即可。
+//
+// `claude -p --output-format json` 回傳信封：{type:"result", result:"<助手最終文字>", ...}。
+// prompt 要求模型只輸出 JSON 物件，故 envelope.result 即我們要的 JSON 字串（再 parse）。
+// 已於本機實測此機制可運作。
 
-const SCHEMA = {
-  type: 'object',
-  additionalProperties: false,
-  properties: {
-    title: { type: 'string' },
-    body_markdown: { type: 'string' },
-    relevance_score: { type: 'integer', enum: [1, 2, 3, 4, 5] },
-    quality_score: { type: 'integer', enum: [1, 2, 3, 4, 5] },
-    anonymization_ok: { type: 'boolean' },
-    residual_identifiers: { type: 'array', items: { type: 'string' } },
-  },
-  required: ['title', 'body_markdown', 'relevance_score', 'quality_score', 'anonymization_ok', 'residual_identifiers'],
-};
+import { spawn } from 'node:child_process';
+import { MODEL } from './config.mjs';
 
 function promptFor(candidate) {
   const { doc, category, fullTextStr } = candidate;
   return `你是台灣尊茂財務規劃公司的內容編輯。以下是一則真實法院判決，請改編成「${category.label}」分眾的客戶案例故事。
 
+只輸出一個 JSON 物件（不要任何其他文字、不要 markdown 程式碼圍欄），欄位如下：
+- title：字串，吸引人但不誇大、與內文金額/事實一致。
+- body_markdown：字串，約 500–800 字繁體中文，結構為 困境 → 問題剖析 → 正確規劃做法 → 啟示，用 Markdown ## 小標。不要寫聯絡資訊或 CTA（系統會自動附加）。
+- relevance_score：整數 1–5，此判決情境與「${category.label}」的契合度。
+- quality_score：整數 1–5，故事完整性與可讀性。
+- anonymization_ok：布林，是否確實完全化名、無殘留可辨識資訊。
+- residual_identifiers：字串陣列，若有殘留可辨識資訊則列出，無則空陣列。
+
 嚴格要求：
 1. 完全化名：所有人物用化名（如陳小姐、王先生），不得出現任何真實姓名、公司全名、身分證、統一編號、電話、完整地址門牌。
 2. 改編情節、不影射特定可辨識企業或個人，只取法律與財務情境骨架。
-3. 結構：困境 → 問題剖析 → 正確規劃做法 → 啟示。用 Markdown，## 小標。不要寫聯絡資訊或 CTA（系統會自動附加）。
-4. 標題吸引人但不誇大、與內文金額/事實一致。
-5. body_markdown 約 500–800 字，繁體中文。
-
-請同時自評：
-- relevance_score：此判決情境與「${category.label}」的契合度（1–5）。
-- quality_score：故事完整性與可讀性（1–5）。
-- anonymization_ok：是否確實完全化名、無殘留可辨識資訊。
-- residual_identifiers：若有殘留，列出；無則空陣列。
 
 判決案由：${doc.JTITLE || ''}
 判決字號（JID）：${doc.JID}
@@ -39,45 +31,51 @@ function promptFor(candidate) {
 ${fullTextStr.slice(0, 12000)}`;
 }
 
-export function buildRequests(candidates) {
-  return candidates.map((c, i) => ({
-    custom_id: `cand-${i}`,
-    params: {
-      model: MODEL,
-      max_tokens: 4000,
-      messages: [{ role: 'user', content: promptFor(c) }],
-      output_config: { format: { type: 'json_schema', schema: SCHEMA } },
-    },
-  }));
+function parseJsonLoose(s) {
+  const t = String(s).trim()
+    .replace(/^```json\s*/i, '')
+    .replace(/^```\s*/, '')
+    .replace(/```\s*$/, '')
+    .trim();
+  return JSON.parse(t);
 }
 
-export async function runBatch(candidates, { pollMs = 60000, maxPolls = 60 } = {}) {
-  const client = new Anthropic(); // 讀 ANTHROPIC_API_KEY
-  const requests = buildRequests(candidates);
-  const batch = await client.messages.batches.create({ requests });
+function claudePrint(prompt, { timeoutMs = 180000 } = {}) {
+  return new Promise((resolve, reject) => {
+    const child = spawn('claude', ['-p', '--output-format', 'json', '--model', MODEL], {
+      stdio: ['pipe', 'pipe', 'pipe'],
+    });
+    let out = '', err = '';
+    const timer = setTimeout(() => { child.kill('SIGKILL'); reject(new Error('claude -p timeout')); }, timeoutMs);
+    child.stdout.on('data', (d) => { out += d; });
+    child.stderr.on('data', (d) => { err += d; });
+    child.on('error', reject);
+    child.on('close', (code) => {
+      clearTimeout(timer);
+      if (code !== 0) return reject(new Error(`claude exit ${code}: ${err.slice(0, 200)}`));
+      resolve(out);
+    });
+    child.stdin.write(prompt);
+    child.stdin.end();
+  });
+}
 
-  let status = batch;
-  for (let i = 0; i < maxPolls; i++) {
-    status = await client.messages.batches.retrieve(batch.id);
-    if (status.processing_status === 'ended') break;
-    await new Promise((r) => setTimeout(r, pollMs));
-  }
-  if (status.processing_status !== 'ended') {
-    throw new Error(`Batch ${batch.id} did not end within poll window`);
-  }
-
-  // custom_id -> 解析後的 JSON
+// 逐件呼叫 claude -p，回傳 Map：custom_id（cand-${i}）-> 解析後物件或 {error}。
+export async function rewriteCandidates(candidates) {
   const out = new Map();
-  for await (const result of await client.messages.batches.results(batch.id)) {
-    if (result.result.type !== 'succeeded') {
-      out.set(result.custom_id, { error: result.result.type });
-      continue;
+  for (let i = 0; i < candidates.length; i++) {
+    const id = `cand-${i}`;
+    try {
+      const raw = await claudePrint(promptFor(candidates[i]));
+      const envelope = JSON.parse(raw);
+      if (envelope.is_error || typeof envelope.result !== 'string') {
+        out.set(id, { error: 'claude_error' });
+        continue;
+      }
+      out.set(id, parseJsonLoose(envelope.result));
+    } catch (e) {
+      out.set(id, { error: String((e && e.message) || e) });
     }
-    const msg = result.result.message;
-    const textBlock = msg.content.find((b) => b.type === 'text');
-    let parsed = null;
-    try { parsed = JSON.parse(textBlock.text); } catch { parsed = { error: 'parse_failed', raw: textBlock?.text }; }
-    out.set(result.custom_id, parsed);
   }
   return out;
 }

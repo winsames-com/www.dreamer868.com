@@ -13,7 +13,6 @@
     "test:pipeline": "node --test pipeline/*.test.mjs"
   },
   "dependencies": {
-    "@anthropic-ai/sdk": "^0.104.2",
     "@astrojs/sitemap": "^3.7.2",
     "astro": "^6.1.2"
   }
