@@ -17,8 +17,8 @@ images:
     credit: "Photo by Yan Krukau on Pexels"
 
 section: "new"
-subcategory: "service-targets"
-order: 4
+subcategory: "corporate-stories"
+order: 1
 slug: "service-targets-04"
 ---
 
