@@ -44,8 +44,15 @@ cron 每日從司法院開放資料 API 擷取最新相關判決，用 **`claude
 ## 乾跑（首次驗證）
 在 `pipeline/.env` 設 `DRY_RUN=1`，於台灣 0–6 點執行 `pipeline/cron.sh`（或 `node pipeline/run.mjs`）。會全跑但不寫正式檔、不 commit、不更新帳本；結果在 `pipeline/quarantine/` 供檢視。確認品質後移除 `DRY_RUN` 再交給 cron。
 
+## 開發/離線測試（不需即時 API）
+即時 API 限台灣 0–6 點，但開發不必等。`pipeline/fixtures/judgments.mjs` 是合成範例判決（無真實個資），`pipeline/dev-run.mjs` 用它跑「分類 → claude -p 改編 → 雙關卡 → 產出」整條，**不碰 API、不發佈、不 commit**，結果寫到 `pipeline/quarantine/dev-*.md`：
+```
+node pipeline/dev-run.mjs   # 需 claude 已登入
+```
+用來驗證改編品質、閘門行為、字號擷取等，與正式流程共用同一批模組。
+
 ## 本機測試
-`pnpm test:pipeline`（純函式單元測試 jid/classify/guard/state/markdown，不呼叫網路或 claude）。
+`pnpm test:pipeline`（純函式單元測試 jid/classify/guard/state/markdown/courts/verify，不呼叫網路或 claude）。
 
 ## 檔案
 - `config.mjs` — 四分眾關鍵字/門檻/上限/hero 圖/模型
