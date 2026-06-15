@@ -15,6 +15,8 @@ const articles = defineCollection({
     subcategory: z.string(),
     order: z.number(),
     slug: z.string(),
+    caseStory: z.boolean().optional(),
+    caseSource: z.string().optional(),
     images: z.object({
       hero: z.object({
         pexels_id: z.number(),
