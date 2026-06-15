@@ -1112,7 +1112,7 @@ git commit -m "ci: schedule daily judgment pipeline workflow"
 
 在 `scripts` 加入：
 ```json
-    "test:pipeline": "node --test pipeline/"
+    "test:pipeline": "node --test pipeline/*.test.mjs"
 ```
 
 - [ ] **Step 2: 跑全部純函式測試**
