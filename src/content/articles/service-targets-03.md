@@ -17,8 +17,8 @@ images:
     credit: "Photo by Ivan S on Pexels"
 
 section: "new"
-subcategory: "service-targets"
-order: 3
+subcategory: "family-stories"
+order: 1
 slug: "service-targets-03"
 ---
 
