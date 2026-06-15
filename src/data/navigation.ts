@@ -10,6 +10,12 @@ export const mainNav: NavItem[] = [
   {
     label: '服務對象',
     href: '/service-targets',
+    children: [
+      { label: '個人財務規劃', href: '/service-targets/personal' },
+      { label: '家庭財務規劃', href: '/service-targets/family' },
+      { label: '公司財務規劃', href: '/service-targets/corporate' },
+      { label: '財富稅務規劃', href: '/service-targets/wealth-tax' },
+    ],
   },
   {
     label: '服務項目',
