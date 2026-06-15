@@ -1,16 +1,18 @@
 // pipeline/run.mjs
 // 全流程：auth -> JList -> 字別預過濾 -> dedup -> JDoc -> 分類 -> 取每分眾上限 ->
-//         claude -p 改編 -> 化名正則 + 自評閘門 -> 寫檔/隔離 -> 更新帳本 -> summary。
+//         claude -p 改編 -> 第一關(化名正則+自評) -> 第二關(獨立 claude -p 查核+故事性) ->
+//         寫檔/隔離 -> 更新帳本 -> summary。
 // 環境變數：JUD_USER, JUD_PASS, DRY_RUN（"1" 則不寫正式檔、不更新帳本）。
 // 改編用 claude -p（本機訂閱帳戶），須先 `claude` 登入；無需 ANTHROPIC_API_KEY。
 
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
-import { CATEGORIES, LIMITS, PATHS } from './config.mjs';
+import { CATEGORIES, LIMITS, PATHS, THRESHOLDS } from './config.mjs';
 import { auth, getChangeList, getDoc, fullText, caseSourceOf } from './judicial.mjs';
 import { prefilterJids, classifyDoc } from './classify.mjs';
 import { loadSeen, saveSeen } from './state.mjs';
 import { rewriteCandidates } from './rewrite.mjs';
+import { verifyDraft, verifyPasses } from './verify.mjs';
 import { scanAnonymization, passesGates } from './guard.mjs';
 import { buildArticle, nextSlug } from './markdown.mjs';
 
@@ -72,11 +74,23 @@ async function main() {
   const published = [];
   const quarantined = [];
 
-  candidates.forEach((cand, i) => {
+  for (let i = 0; i < candidates.length; i++) {
+    const cand = candidates[i];
     const a = results.get(`cand-${i}`);
-    if (!a || a.error) { quarantined.push({ cand, reason: `batch:${a && a.error}` }); return; }
+    if (!a || a.error) { quarantined.push({ cand, reason: `rewrite:${a && a.error}` }); continue; }
+
+    // 第一關：改編自評 + 確定性化名正則
     const scan = scanAnonymization(a.body_markdown);
-    const ok = passesGates(a, scan) && typeof a.title === 'string' && a.title.length > 0;
+    const gate1 = passesGates(a, scan) && typeof a.title === 'string' && a.title.length > 0;
+
+    // 第二關（獨立查核）：僅對第一關通過者呼叫，省 claude -p
+    let verdict = null;
+    let gate2 = false;
+    if (gate1) {
+      verdict = await verifyDraft(cand, a);
+      gate2 = verifyPasses(verdict, THRESHOLDS.worthinessMin);
+    }
+    const ok = gate1 && gate2;
 
     const slug = nextSlug(cand.category, slugs);
     slugs.push(slug);
@@ -86,7 +100,7 @@ async function main() {
       slug,
       title: a.title || `${cand.category.label}案例`,
       bodyMarkdown: a.body_markdown || '',
-      caseSource: caseSourceOf(cand.doc),
+      caseSource: caseSourceOf(cand.doc, cand.fullTextStr),
       order,
       dateStr,
     });
@@ -94,9 +108,14 @@ async function main() {
     if (ok && !DRY_RUN) {
       published.push({ slug, path: path.join(PATHS.articles, `${slug}.md`), md });
     } else {
-      quarantined.push({ cand, slug, md, reason: ok ? 'dry_run' : `gate(rel=${a.relevance_score},qual=${a.quality_score},anon=${a.anonymization_ok},scan=${scan.ok})` });
+      const reason = !gate1
+        ? `gate1(rel=${a.relevance_score},qual=${a.quality_score},anon=${a.anonymization_ok},scan=${scan.ok})`
+        : !gate2
+          ? `gate2(${verdict && verdict.error ? verdict.error : `anon=${verdict.anonymization_ok},faithful=${verdict.faithful},relevant=${verdict.relevant},worth=${verdict.worthiness}`})`
+          : 'dry_run';
+      quarantined.push({ cand, slug, md, reason });
     }
-  });
+  }
 
   // 寫檔
   for (const p of published) await fs.writeFile(p.path, p.md, 'utf8');
