@@ -12,7 +12,7 @@
    ```
 
 ## 流程
-`auth → JList(7日前異動) → 字別預過濾(民事V/行政A) → 比對帳本去重 → JDoc 取全文 → 關鍵字分類 → 每分眾上限 → claude -p 改編 → 化名正則+模型自評雙閘門 → 寫檔/隔離 → git commit+push`
+`auth → JList(7日前異動) → 字別預過濾(民事V/行政A) → 比對帳本去重 → JDoc 取全文 → 關鍵字分類 → 每分眾上限 → claude -p 改編 → 第一關(化名正則+自評) → 第二關(獨立 claude -p 查核+故事性) → 寫檔/隔離 → git commit+push`
 
 ## 改編引擎
 `pipeline/rewrite.mjs` 以 `claude -p --output-format json --model claude-sonnet-4-6` 逐件呼叫（每日 ≤4 件），用本機訂閱身分；prompt 要求只輸出 JSON，解析信封的 `result` 欄位。
@@ -20,16 +20,16 @@
 ## DNS 注意
 本機系統 DNS（如阿里 223.6.6.6）對 `*.judicial.gov.tw` 回 SERVFAIL。`pipeline/judicial.mjs` 用 `node:https` + 自訂 lookup 走公共 DNS（1.1.1.1 / 8.8.8.8）解析，已實測可連。無需改本機 DNS 設定。
 
-## 防護閘門（寧缺勿濫）
-- 化名正則掃描（身分證/統編/手機/遮蔽殘留/門牌地址）→ 命中即隔離
-- 模型自評 relevance/quality（門檻見 `config.mjs`）+ anonymization_ok
-- 任一不過 → 寫入 `pipeline/quarantine/`（不發佈，已 gitignore）
+## 防護閘門（雙關卡，寧缺勿濫）
+- **第一關**：化名正則掃描（身分證/統編/手機/遮蔽殘留/門牌地址）+ 改編自評 relevance/quality（門檻見 `config.mjs`）。
+- **第二關（獨立查核）**：第一關通過者再用**另一次 `claude -p`** 以不同視角獨立判斷 anonymization/faithful（忠於原判決）/relevant/worthiness（故事性 1–5）。對抗同一模型自評盲點，並挑掉「最新但無故事性」的判決。
+- 任一不過 → 寫入 `pipeline/quarantine/`（不發佈，已 gitignore）。每件最多 2 次 `claude -p`（改編+查核），每日 ≤8 次。
 
 ## 上限
 每分眾每日 ≤ 1 篇、全站每日 ≤ 4 篇（`pipeline/config.mjs` 的 `LIMITS`）。
 
 ## 字號
-開放 API 不含法院中文全名，`caseSource` 以「年度+字別+號（JID）」記錄；JID 內含法院代碼可回溯。
+法院中文名從判決全文開頭擷取（`courts.mjs`），產出如「臺灣臺中地方法院 113 年度家繼訴字第 5 號」；取不到才退回「年度+字別+號（JID）」。
 
 ## 乾跑（首次驗證）
 在 `pipeline/.env` 設 `DRY_RUN=1`，於台灣 0–6 點執行 `pipeline/cron.sh`（或 `node pipeline/run.mjs`）。會全跑但不寫正式檔、不 commit、不更新帳本；結果在 `pipeline/quarantine/` 供檢視。確認品質後移除 `DRY_RUN` 再交給 cron。
@@ -45,7 +45,10 @@
 - `state.mjs` — 已處理 JID 帳本（`state/seen-jids.json`）
 - `markdown.mjs` — 文章 frontmatter/CTA 產生器
 - `judicial.mjs` — 司法院 API client（node:https + 公共 DNS）
+- `courts.mjs` — 從全文擷取法院中文名
+- `claude.mjs` — 共用 `claude -p` 呼叫（askJson）
 - `rewrite.mjs` — `claude -p` 改編引擎
+- `verify.mjs` — 獨立 `claude -p` 查核關卡
 - `run.mjs` — 全流程編排（entry point）
 - `cron.sh` — 本機 cron 包裝（載入 .env、跑 run、commit+push）
 - `quarantine/` — 未過閘門的草稿（gitignore 內容、保留目錄）

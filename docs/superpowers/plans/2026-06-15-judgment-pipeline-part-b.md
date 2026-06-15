@@ -1198,8 +1198,10 @@ Expected: `[build] Complete!`（pipeline 不影響 Astro 建置）
 - 觀察數日輸出無誤後，讓 cron 正式自動發佈。
 
 ## 已知限制（誠實揭露）
-- **模型自評**為同一模型評自己的稿，非獨立驗證；化名正則為獨立的第二層防護。未來可加「獨立 LLM 驗證」batch 二輪強化。
-- **「最新 ≠ 最有故事性」**：JList 只給異動清單，分類靠關鍵字，品質閘門擋掉弱稿，但仍可能多日無產出（正常）。
-- **字號可讀性**：缺法院中文名（見 README）。
+> 下列前三項已於強化階段（feature/pipeline-hardening）處理：加獨立 `claude -p` 查核關卡（`verify.mjs`，含 worthiness 故事性評分）、字號改從全文擷取法院中文名（`courts.mjs`）。
+- ~~**模型自評**非獨立驗證~~ → 已加第二關獨立查核。
+- ~~**「最新 ≠ 最有故事性」**~~ → 第二關 worthiness 門檻過濾。
+- ~~**字號可讀性**缺法院中文名~~ → 已從全文擷取。
+- **仍可能多日無產出**（無相關判決或皆未過關），屬正常。
 - **API 服務窗 0–6 點**：cron 已對齊；手動乾跑須在此時段。
 - **Actions runner IP**：本環境（雲端）可連 `data.judicial.gov.tw`（回 405＝可連），但首次乾跑仍是對 Actions runner IP 的實測；若被擋，改用 self-hosted runner（台灣）或本機 cron。

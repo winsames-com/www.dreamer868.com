@@ -11,6 +11,7 @@
 
 import https from 'node:https';
 import { Resolver } from 'node:dns';
+import { extractCourtName } from './courts.mjs';
 
 const BASE_HOST = 'data.judicial.gov.tw';
 const BASE_PATH = '/jdg/api';
@@ -101,10 +102,12 @@ export function fullText(doc) {
   return '';
 }
 
-// 開放 API 不含法院中文全名，以「年度+字別+號（JID）」記錄；JID 內含法院代碼可回溯。
-export function caseSourceOf(doc) {
+// 字號：法院中文名取自全文開頭（extractCourtName）；取不到時退回 JID 以利回溯。
+export function caseSourceOf(doc, fullTextStr = '') {
   const year = doc.JYEAR || '';
   const jcase = doc.JCASE || '';
   const no = doc.JNO || '';
-  return `${year} 年度${jcase}字第 ${no} 號（${doc.JID}）`;
+  const court = extractCourtName(fullTextStr) || extractCourtName(fullText(doc));
+  const tail = `${year} 年度${jcase}字第 ${no} 號`;
+  return court ? `${court} ${tail}` : `${tail}（${doc.JID}）`;
 }
