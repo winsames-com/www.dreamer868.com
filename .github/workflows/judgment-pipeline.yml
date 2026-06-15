@@ -1,0 +1,63 @@
+name: judgment-pipeline
+
+on:
+  schedule:
+    - cron: '0 17 * * *' # 17:00 UTC = 台灣 01:00（落在 API 服務窗 0–6 時）
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: '乾跑（不發佈、不更新帳本）'
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: judgment-pipeline
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: Run pipeline
+        env:
+          JUD_USER: ${{ secrets.JUD_USER }}
+          JUD_PASS: ${{ secrets.JUD_PASS }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          DRY_RUN: ${{ (github.event_name == 'workflow_dispatch' && inputs.dry_run) && '1' || '' }}
+        run: node pipeline/run.mjs
+
+      - name: Commit new articles
+        if: ${{ !(github.event_name == 'workflow_dispatch' && inputs.dry_run) }}
+        run: |
+          git config user.name "judgment-pipeline[bot]"
+          git config user.email "actions@users.noreply.github.com"
+          git add src/content/articles pipeline/state/seen-jids.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "content: auto-publish judgment case stories ($(date -u +%F))"
+            git push
+          fi
+
+      - name: Upload quarantine artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: quarantine-${{ github.run_id }}
+          path: pipeline/quarantine/
+          if-no-files-found: ignore
