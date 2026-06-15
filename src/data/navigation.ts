@@ -37,8 +37,9 @@ export const mainNav: NavItem[] = [
 ];
 
 export const contactInfo = {
-  lineId: 'irich168',
-  lineUrl: 'https://line.me/ti/p/~irich168',
+  lineId: 'agu1352u',
+  lineUrl: 'https://line.me/R/ti/p/@agu1352u',
+  lineQrImage: 'https://qr-official.line.me/gs/M_agu1352u_GW.png?oat_content=qr',
   facebookUrl: 'https://www.facebook.com/profile.php?id=61590731308717&locale=zh_TW',
   phone: '0909-230140',
   email: 'dreamer88888888888@gmail.com',
