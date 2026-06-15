@@ -44,6 +44,6 @@ export const contactInfo = {
   phone: '0909-230140',
   email: 'dreamer88888888888@gmail.com',
   taxId: '94163195',
-  address: '台中市南屯區向心南路186巷9弄之1',
+  address: '408 臺中市南屯區文心路一段186號9樓之1',
   googleAnalyticsId: 'G-TT5Y5BH5V2',
 };
