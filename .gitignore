@@ -29,3 +29,7 @@ source/
 # database & logs
 *.db
 *.log
+
+# pipeline quarantine drafts (not for publishing) & test scratch
+pipeline/quarantine/*.md
+pipeline/state/__test-*.json

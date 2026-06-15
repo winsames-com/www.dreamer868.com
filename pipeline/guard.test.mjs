@@ -21,6 +21,22 @@ test('scanAnonymization passes clean anonymized text', () => {
   assert.equal(r.hits.length, 0);
 });
 
+test('scanAnonymization does not flag a monetary amount', () => {
+  const r = scanAnonymization('國稅局核定遺產稅 12345678 元。');
+  assert.equal(r.ok, true);
+});
+
+test('scanAnonymization does not flag an ordinal 號', () => {
+  const r = scanAnonymization('依方案第3號附表辦理，另見第12號決議。');
+  assert.equal(r.ok, true);
+});
+
+test('scanAnonymization flags a real street address with floor', () => {
+  const r = scanAnonymization('地址為文心路一段186號9樓。');
+  assert.equal(r.ok, false);
+  assert.ok(r.hits.some((h) => h.kind === 'address'));
+});
+
 test('passesGates requires scores and clean scan', () => {
   const clean = { ok: true, hits: [] };
   assert.equal(passesGates({ relevance_score: 5, quality_score: 4, anonymization_ok: true }, clean), true);
