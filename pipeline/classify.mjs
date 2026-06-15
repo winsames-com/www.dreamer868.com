@@ -24,7 +24,7 @@ export function classifyDoc(doc) {
       best = { category: cat, score };
     }
   }
-  // 至少需要一次關鍵字命中（score>0）
-  if (!best || best.score < 1) return null;
+  // 至少需要案由命中一次（+3）或全文多次命中（>=2），避免單一弱命中送進改編
+  if (!best || best.score < 2) return null;
   return best;
 }

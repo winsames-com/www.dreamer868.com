@@ -37,7 +37,7 @@ export const CATEGORIES = [
     subcategory: 'family-stories',
     slugPrefix: 'family-story',
     courtTypes: ['V'],
-    keywords: ['遺產分割', '繼承', '扶養', '夫妻', '剩餘財產', '監護', '遺囑', '特留分'],
+    keywords: ['遺產', '分割', '繼承', '扶養', '夫妻', '剩餘財產', '監護', '遺囑', '特留分'],
     hero: {
       pexels_id: 4783976,
       url: 'https://images.pexels.com/photos/4783976/pexels-photo-4783976.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200',
