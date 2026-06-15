@@ -1,0 +1,14 @@
+---
+import { getCollection } from 'astro:content';
+import CategoryPage from '../../components/CategoryPage.astro';
+
+const articles = (await getCollection('articles')).filter(
+  (a) => a.data.subcategory === 'family-stories'
+);
+---
+
+<CategoryPage
+  title="家庭財務規劃"
+  description="改編自真實法院判決的家庭理財案例，人物均為化名、情節經改編，僅供情境參考。"
+  articles={articles}
+/>
