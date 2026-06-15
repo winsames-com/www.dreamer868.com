@@ -39,6 +39,7 @@ export const mainNav: NavItem[] = [
 export const contactInfo = {
   lineId: 'irich168',
   lineUrl: 'https://line.me/ti/p/~irich168',
+  facebookUrl: 'https://www.facebook.com/profile.php?id=61590731308717&locale=zh_TW',
   phone: '0909-230140',
   email: 'dreamer88888888888@gmail.com',
   taxId: '94163195',
