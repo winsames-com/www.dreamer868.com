@@ -13,9 +13,10 @@ const organizationLd = {
   email: contactInfo.email,
   address: {
     '@type': 'PostalAddress',
-    streetAddress: '向心南路186巷9弄之1',
+    streetAddress: '文心路一段186號9樓之1',
     addressLocality: '南屯區',
     addressRegion: '台中市',
+    postalCode: '408',
     addressCountry: 'TW',
   },
   sameAs: [contactInfo.lineUrl],
@@ -333,7 +334,7 @@ const moreServices = [
   }
 
   .cta-inner {
-    max-width: 700px;
+    max-width: 900px;
     margin: 0 auto;
     text-align: center;
     color: #fff;
@@ -341,22 +342,21 @@ const moreServices = [
 
   .cta-inner h2 {
     font-family: var(--font-serif);
-    font-size: var(--f32);
-    margin-bottom: 16px;
+    font-size: var(--f48);
+    margin-bottom: 20px;
   }
 
   .cta-inner p {
     font-size: var(--f18);
-    opacity: 0.85;
     margin-bottom: 30px;
+    opacity: 0.9;
   }
 
   .cta-button {
     display: inline-block;
-    padding: 14px 50px;
+    padding: 14px 40px;
     background: var(--color-accent);
     color: #fff;
-    font-size: var(--f18);
     font-weight: 700;
     border-radius: 4px;
     transition: background 0.3s;
@@ -366,31 +366,16 @@ const moreServices = [
     background: #b83b20;
   }
 
-  /* Responsive */
-  @media (max-width: 1024px) {
+  @media (max-width: 900px) {
     .about-inner {
-      flex-direction: column-reverse;
+      flex-direction: column;
     }
-
     .about-inner > img {
       width: 100%;
     }
-
     .services-grid {
       grid-template-columns: 1fr;
-      gap: 20px;
     }
-
-    .more-services-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  @media (max-width: 600px) {
-    .section {
-      padding: 60px 16px;
-    }
-
     .more-services-grid {
       grid-template-columns: 1fr;
     }
