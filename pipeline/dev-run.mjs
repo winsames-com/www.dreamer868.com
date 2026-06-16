@@ -16,6 +16,8 @@ import { verifyDraft, verifyPasses } from './verify.mjs';
 import { scanAnonymization, passesGates } from './guard.mjs';
 import { buildArticle, nextSlug } from './markdown.mjs';
 import { FIXTURES } from './fixtures/judgments.mjs';
+import { FIXTURE_QUERY_ROWS } from './insights/fixtures/queries.mjs';
+import { bucketize } from './insights/buckets.mjs';
 
 function log(...a) { console.log('[dev-run]', ...a); }
 
@@ -33,7 +35,9 @@ async function main() {
 
   // claude -p 改編
   log(`改編 ${candidates.length} 件（claude -p，可能需數十秒/件）…`);
-  const results = await rewriteCandidates(candidates);
+  const termsByCategory = bucketize(FIXTURE_QUERY_ROWS);
+  log('GSC 字詞分流(fixture)：', Object.entries(termsByCategory).map(([k, v]) => `${k}=${v.length}`).join(' '));
+  const results = await rewriteCandidates(candidates, termsByCategory);
 
   await fs.mkdir(PATHS.quarantine, { recursive: true });
   const slugs = [];
