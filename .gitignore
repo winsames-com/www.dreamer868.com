@@ -40,3 +40,6 @@ pipeline/.secrets/
 
 # insights reports (本機產出，可隨時重產)
 pipeline/insights/reports/
+
+# checkup 每日驗收報告（本機私有，不公開）
+pipeline/checkup/reports/*.md
