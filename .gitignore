@@ -36,3 +36,7 @@ pipeline/state/__test-*.json
 
 # pipeline local secrets
 pipeline/.env
+pipeline/.secrets/
+
+# insights reports (本機產出，可隨時重產)
+pipeline/insights/reports/
