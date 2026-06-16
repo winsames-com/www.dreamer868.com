@@ -37,6 +37,10 @@ pnpm insights         # 拉資料並產報告到 pipeline/insights/reports/insig
 - GSC：`sc-domain:dreamer868.com` 為新資源，Google 索引 + 搜尋資料需時間累積（且 API 資料約延遲 2–3 天）。
 - 連線/授權已於建置時驗證成功（`pnpm insights:probe` 與 `pnpm insights` 皆正常回應，僅暫無資料）。
 
+### judgment pipeline 即時拉 GSC（②）
+
+判決 pipeline（`pipeline/run.mjs`）每次啟動會拉一次 GSC 字詞融入改編。**在 server 跑判決 pipeline 時，需把同一把 service account 金鑰部署到 server 的 `pipeline/.secrets/ga4-insights.json`**（或設 `GOOGLE_INSIGHTS_KEY` 指向絕對路徑）。拉取失敗會自動降級為「無字詞」，判決照常發佈。
+
 ## 定期執行（資料累積後）
 
 可加 cron（與 judgment pipeline 同機）每週拉一次報告供撰寫參考，例如每週一 09:00：

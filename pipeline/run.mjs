@@ -15,6 +15,7 @@ import { rewriteCandidates } from './rewrite.mjs';
 import { verifyDraft, verifyPasses } from './verify.mjs';
 import { scanAnonymization, passesGates } from './guard.mjs';
 import { buildArticle, nextSlug } from './markdown.mjs';
+import { fetchBucketedQueries } from './insights/queries.mjs';
 
 const DRY_RUN = process.env.DRY_RUN === '1';
 
@@ -68,7 +69,9 @@ async function main() {
     return;
   }
 
-  const results = await rewriteCandidates(candidates);
+  const termsByCategory = await fetchBucketedQueries();
+  log('GSC 字詞分流：', Object.entries(termsByCategory).map(([k, v]) => `${k}=${v.length}`).join(' '));
+  const results = await rewriteCandidates(candidates, termsByCategory);
 
   const slugs = await existingSlugs();
   const published = [];
