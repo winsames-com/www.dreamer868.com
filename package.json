@@ -10,7 +10,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "test:pipeline": "node --test pipeline/*.test.mjs",
+    "test:pipeline": "node --test 'pipeline/**/*.test.mjs'",
     "insights": "node pipeline/insights/run.mjs",
     "insights:probe": "node pipeline/insights/probe.mjs"
   },
