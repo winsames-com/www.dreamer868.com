@@ -10,10 +10,13 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "test:pipeline": "node --test pipeline/*.test.mjs"
+    "test:pipeline": "node --test pipeline/*.test.mjs",
+    "insights": "node pipeline/insights/run.mjs",
+    "insights:probe": "node pipeline/insights/probe.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.2",
-    "astro": "^6.1.2"
+    "astro": "^6.1.2",
+    "google-auth-library": "^10.7.0"
   }
 }
