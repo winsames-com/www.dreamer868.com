@@ -51,5 +51,5 @@ export const contactInfo = {
   email: 'dreamer88888888888@gmail.com',
   taxId: '94163195',
   address: '408 臺中市南屯區文心路一段186號9樓之1',
-  googleAnalyticsId: 'G-TT5Y5BH5V2',
+  googleAnalyticsId: 'G-YE9TBVK70Y',
 };
