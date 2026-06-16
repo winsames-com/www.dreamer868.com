@@ -9,6 +9,9 @@ import { postJson } from './auth.mjs';
 import {
   GA4_PROPERTY_ID, GSC_SITE, REPORTS_DIR, WINDOW_DAYS, GSC_LAG_DAYS, TOP_N,
 } from './config.mjs';
+import { bucketize } from './buckets.mjs';
+import { gapAnalysis } from './gap.mjs';
+import { CATEGORIES } from '../config.mjs';
 
 const fmtDate = (d) => d.toISOString().slice(0, 10);
 
@@ -52,6 +55,21 @@ async function main() {
   const { startDate, endDate } = windowDates();
   console.log(`[insights] GSC 窗 ${startDate} ~ ${endDate}；GA4 窗 ${WINDOW_DAYS}daysAgo ~ today`);
 
+  // 依分眾收集現有文章標題（用 subcategory 對應 category.key）
+  const subToKey = Object.fromEntries(CATEGORIES.map((c) => [c.subcategory, c.key]));
+  const titlesByCat = {};
+  try {
+    const dir = 'src/content/articles';
+    for (const f of await fs.readdir(dir)) {
+      if (!f.endsWith('.md')) continue;
+      const txt = await fs.readFile(`${dir}/${f}`, 'utf8');
+      const sub = (txt.match(/^subcategory:\s*"?([^"\n]+)"?/m) || [])[1];
+      const title = (txt.match(/^title:\s*(.+)$/m) || [])[1];
+      const key = subToKey[sub];
+      if (key && title) (titlesByCat[key] ||= []).push(title.trim());
+    }
+  } catch (e) { console.log('[insights] 讀文章標題失敗，缺口分析略過涵蓋比對:', e.message); }
+
   const [queries, pages, ga4] = await Promise.all([
     gscTop('query', startDate, endDate),
     gscTop('page', startDate, endDate),
@@ -68,6 +86,19 @@ async function main() {
   ]);
   const gRows = (ga4.rows || []).map((r) => [r.dimensionValues[0].value, r.metricValues[0].value]);
 
+  const bucketed = bucketize((queries.rows || []).map((r) => ({
+    query: r.keys[0], clicks: r.clicks, impressions: r.impressions,
+  })));
+  const gaps = gapAnalysis(bucketed, titlesByCat);
+  const gapSection = Object.entries(gaps)
+    .map(([cat, rows]) => `### ${cat}\n` + (rows.length
+      ? mdTable(['缺口字詞', '曝光'], rows.map((r) => [r.query, r.impressions]))
+      : '（無缺口）'))
+    .join('\n\n');
+  const unbucketed = bucketed._unbucketed.length
+    ? mdTable(['字詞', '曝光'], bucketed._unbucketed.map((r) => [r.query, r.impressions]))
+    : '（無）';
+
   const report = [
     `# 內容洞察報告（${startDate} ~ ${endDate}）`,
     '',
@@ -81,6 +112,12 @@ async function main() {
     '',
     '## GA4 熱門頁（站內瀏覽）',
     ga4.error ? `⚠️ ${ga4.error}` : mdTable(['頁面路徑', '瀏覽數'], gRows),
+    '',
+    '## ③ 選題缺口（有人搜、站上分眾文章標題未涵蓋）',
+    gapSection,
+    '',
+    '## 未分類搜尋詞（潛在全新主題線索）',
+    unbucketed,
     '',
   ].join('\n');
 
