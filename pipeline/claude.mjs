@@ -29,8 +29,10 @@ export function claudePrint(prompt, { timeoutMs = 180000 } = {}) {
       if (code !== 0) return reject(new Error(`claude exit ${code}: ${err.slice(0, 200)}`));
       resolve(out);
     });
-    child.stdin.write(prompt);
-    child.stdin.end();
+    // claude 提早結束時，寫入 stdin 會噴 EPIPE：吞掉它，交由 'close'（非零 exit）統一 reject，
+    // 避免未處理的 socket 'error' 事件讓整個 process 崩潰。
+    child.stdin.on('error', () => {});
+    try { child.stdin.write(prompt); child.stdin.end(); } catch { /* close 會處理 */ }
   });
 }
 
