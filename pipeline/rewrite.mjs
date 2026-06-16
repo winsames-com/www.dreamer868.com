@@ -1,4 +1,7 @@
 // pipeline/rewrite.mjs
+// 改編引擎：用 Claude Code CLI 的 `claude -p`（headless / print 模式），以本機登入的
+// 訂閱帳戶執行，不走 Anthropic API 計費。每日候選 ≤4 件，逐件同步呼叫即可。
+// 可選的 searchTerms（由 insights/queries.mjs 分流而來）會融入改編 prompt 引導標題措辭。
 import { askJson } from './claude.mjs';
 
 export function promptFor(candidate, searchTerms = []) {
