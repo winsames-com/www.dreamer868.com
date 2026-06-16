@@ -25,9 +25,9 @@
 ```json
     "test:pipeline": "node --test pipeline/*.test.mjs",
 ```
-改為（給目錄，Node test runner 會遞迴尋找 `*.test.mjs`，涵蓋 `pipeline/insights/`）：
+改為（遞迴 glob，涵蓋 `pipeline/insights/`；註：Node 22 不接受目錄參數，需用 glob 形式）：
 ```json
-    "test:pipeline": "node --test pipeline/",
+    "test:pipeline": "node --test 'pipeline/**/*.test.mjs'",
 ```
 
 - [ ] **Step 2: 確認既有測試仍可跑**
