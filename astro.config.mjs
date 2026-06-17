@@ -8,5 +8,5 @@ export default defineConfig({
   build: {
     format: 'directory',
   },
-  integrations: [sitemap()],
+  integrations: [sitemap({ changefreq: 'weekly', priority: 0.7 })],
 });

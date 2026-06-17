@@ -93,3 +93,33 @@ jobs:
           else
             echo "All URLs returned 200 ✓"
           fi
+
+  indexnow:
+    needs: verify
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+
+      - name: Submit changed URLs to IndexNow
+        # 金鑰本就公開託管於 /<key>.txt，非機密，可直接寫在此
+        env:
+          INDEXNOW_KEY: c5a3697eb65d33f5f4c44efd86d879fb
+        run: |
+          BEFORE="${{ github.event.before }}"
+          AFTER="${{ github.sha }}"
+          if [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then
+            BEFORE="${AFTER}~1"
+          fi
+          CHANGED=$(git diff --name-only "$BEFORE" "$AFTER" -- 'src/content/articles/*.md' 'src/pages/' || true)
+          echo "Changed content files:"; echo "$CHANGED"
+          if [ -z "$CHANGED" ]; then
+            echo "No content/page changes; skipping IndexNow."
+            exit 0
+          fi
+          node scripts/indexnow-submit.mjs $CHANGED

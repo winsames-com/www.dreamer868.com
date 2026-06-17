@@ -6,24 +6,39 @@ export async function getStaticPaths() {
   const articles = await getCollection('articles');
   return articles.map((article) => ({
     params: { slug: article.data.slug },
-    props: { article },
+    props: { article, all: articles },
   }));
 }
 
-const { article } = Astro.props;
+const { article, all } = Astro.props;
 const { Content } = await render(article);
+
+// 相關閱讀：同分類其他文章（建主題叢集、強化內部連結與主題權威）
+const related = all
+  .filter((a) => a.data.subcategory === article.data.subcategory && a.data.slug !== article.data.slug)
+  .sort((a, b) => a.data.order - b.data.order)
+  .slice(0, 4)
+  .map((a) => ({ title: a.data.title, slug: a.data.slug }));
 ---
 
 <ArticleLayout
   title={article.data.title}
+  description={article.data.description}
   heroImage={article.data.images.hero.url}
   heroAlt={article.data.images.hero.alt}
   credit={article.data.images.hero.credit}
   category={article.data.category}
   date={article.data.date}
+  updatedDate={article.data.updatedDate}
+  tags={article.data.tags}
+  author={article.data.author}
+  authorTitle={article.data.authorTitle}
+  authorUrl={article.data.authorUrl}
   slug={article.data.slug}
   caseStory={article.data.caseStory}
   caseSource={article.data.caseSource}
+  faq={article.data.faq}
+  related={related}
 >
   <Content />
 </ArticleLayout>

@@ -42,6 +42,16 @@ export const mainNav: NavItem[] = [
   { label: '聯絡我們', href: '/contact' },
 ];
 
+// 主顧問（作者 E-E-A-T）。所有文章預設掛此人；資料取自站內既有署名與「財務醫生」理念，
+// 未填入未經證實的證照/年資。若日後提供 CFP/RFP/年資等可在此補強。
+export const principalAuthor = {
+  name: '吳芳圳',
+  title: '財務醫師',
+  url: '/author/wu-fang-jun',
+  personId: 'https://www.dreamer868.com/author/wu-fang-jun/#person',
+  bio: '吳芳圳，尊茂財務規劃財務醫師。秉持「財務醫生」理念——先替客戶診斷財務體質、再開立合適處方，而非以銷售商品為導向。整合財務顧問、律師、會計師、地政士與海外顧問等跨領域專業，協助個人、家庭與企業在理財、稅務、保險、財富傳承與家族治理等面向，建立安全且能永續的財務架構。',
+};
+
 export const contactInfo = {
   lineId: 'agu1352u',
   lineUrl: 'https://line.me/R/ti/p/@agu1352u',

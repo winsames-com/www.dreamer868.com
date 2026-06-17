@@ -15,8 +15,10 @@ interface Props {
   description?: string;
   keywords?: string;
   ogImage?: string;
+  ogType?: string;
+  author?: string;
   breadcrumbs?: BreadcrumbItem[];
-  jsonLd?: Record<string, unknown>;
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 }
 
 const defaultOgImage = 'https://www.doing-housework.com/store_image/dreamer868/A1173399369764.jpg';
@@ -26,12 +28,55 @@ const {
   description = '台中稅務規劃公司,台中財產繼承規劃,我們利用專業的理財規劃知識，根據每位客戶的個別需求，提供全面的理財諮詢和建議，協助他們實現財務目標。',
   keywords = '稅務規劃,理財規劃,財富傳承,財務顧問,台中理財顧問,海外銀行開戶,家族治理,信託規劃',
   ogImage = defaultOgImage,
+  ogType = 'website',
+  author,
   breadcrumbs = [],
   jsonLd,
 } = Astro.props;
 
 const siteTitle = `${title} | 尊茂財務規劃`;
 const canonicalUrl = Astro.url.href;
+
+// 頁面專用 JSON-LD 統一成陣列，方便逐一輸出 <script>
+const jsonLdList = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
+
+// 全站實體錨點：Organization + WebSite（每頁輸出，幫 AI/搜尋引擎辨識「尊茂財務規劃」這個實體）
+const orgLd = {
+  '@context': 'https://schema.org',
+  '@type': ['Organization', 'FinancialService'],
+  '@id': 'https://www.dreamer868.com/#organization',
+  name: '尊茂財務規劃',
+  url: 'https://www.dreamer868.com',
+  logo: defaultOgImage,
+  image: defaultOgImage,
+  telephone: contactInfo.phone,
+  email: contactInfo.email,
+  taxID: contactInfo.taxId,
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '文心路一段186號9樓之1',
+    addressLocality: '南屯區',
+    addressRegion: '台中市',
+    postalCode: '408',
+    addressCountry: 'TW',
+  },
+  areaServed: [
+    { '@type': 'City', name: '台中市' },
+    { '@type': 'Country', name: 'Taiwan' },
+  ],
+  knowsAbout: ['理財規劃', '稅務規劃', '財富傳承', '海外銀行開戶', '家族治理', '信託規劃', '保險服務', '移民規劃', '二代培訓', '租稅服務', '地政士服務', '國際貿易', '海外基金債券'],
+  sameAs: [contactInfo.lineUrl, contactInfo.facebookUrl],
+};
+
+const websiteLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': 'https://www.dreamer868.com/#website',
+  name: '尊茂財務規劃',
+  url: 'https://www.dreamer868.com',
+  inLanguage: 'zh-Hant-TW',
+  publisher: { '@id': 'https://www.dreamer868.com/#organization' },
+};
 
 const breadcrumbItems: BreadcrumbItem[] = [
   { name: '首頁', href: '/' },
@@ -57,11 +102,13 @@ const breadcrumbLd = {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content={description} />
   <meta name="keywords" content={keywords} />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  {author && <meta name="author" content={author} />}
 
   <link rel="canonical" href={canonicalUrl} />
 
   <meta property="og:locale" content="zh_TW" />
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content={ogType} />
   <meta property="og:site_name" content="尊茂財務規劃" />
   <meta property="og:title" content={siteTitle} />
   <meta property="og:description" content={description} />
@@ -75,6 +122,8 @@ const breadcrumbLd = {
 
   <title>{siteTitle}</title>
   <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="alternate" type="application/rss+xml" title="尊茂財務規劃 — 文章 RSS" href="/rss.xml" />
+  <link rel="alternate" type="text/plain" title="llms.txt" href="/llms.txt" />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -90,11 +139,15 @@ const breadcrumbLd = {
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
   />
 
+  <!-- 全站實體：Organization + WebSite -->
+  <script type="application/ld+json" set:html={JSON.stringify(orgLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(websiteLd)} />
+
   <!-- BreadcrumbList JSON-LD -->
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
 
   <!-- Page-specific JSON-LD -->
-  {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
+  {jsonLdList.map((ld) => <script type="application/ld+json" set:html={JSON.stringify(ld)} />)}
 
   <!-- Google Analytics (ID 單一來源：src/data/navigation.ts) -->
   <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${contactInfo.googleAnalyticsId}`}></script>
