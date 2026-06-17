@@ -17,7 +17,8 @@ cron 每日從司法院開放資料 API 擷取最新相關判決，用 **`claude
 2. **claude 認證（無互動登入）**：在已登入的機器執行 `claude setup-token`，把產生的長效 token 設為 `.env` 的 `CLAUDE_CODE_OAUTH_TOKEN`（`cron.sh` 會 source `.env`，`claude -p` 自動讀取）。
 3. **cron 時區**：API 服務窗以**台灣時間** 0–6 點為準。
    - 伺服器時區為台灣：用上面 `0 1 * * *`。
-   - 伺服器為 UTC：用 `0 17 * * *`（=台灣 01:00），或在 crontab 上方加 `TZ=Asia/Taipei` 再用 `0 1 * * *`。
+   - 伺服器為 UTC（本部署環境）：把時間**換算成 UTC 寫死**，例如台灣 01:11 → `11 17 * * *`（17:11 UTC）。
+   - ⚠️ **不要靠 `CRON_TZ=Asia/Taipei`／`TZ=Asia/Taipei` 改排程時區**：Debian/Ubuntu 的 Vixie cron（`cron 3.0pl1`）**不支援 `CRON_TZ`**，那行會被無視，排程仍照系統 UTC 解讀——曾因此讓 pipeline 落在台灣 09:11（服務窗外）而 auth 失敗。建議寫 UTC 時間並加 `CRON_TZ=UTC` 作前瞻保險（未來 cron 若支援亦正確）。
 4. **git push 認證**：伺服器需有對本 repo 的 push 權限（部署金鑰 / PAT），`cron.sh` 才能 `git push` 觸發網站部署。
 5. **連線**：伺服器需連得到 `data.judicial.gov.tw`（本環境實測非台灣雲端 IP 亦可連；DNS 解析由 `judicial.mjs` 內建公共 DNS 處理）。首次以 `DRY_RUN=1` 於服務窗內驗證。
 
