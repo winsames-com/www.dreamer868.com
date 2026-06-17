@@ -27,9 +27,37 @@ interface Props {
 
 const { title, description, bannerImage, articles } = Astro.props;
 const sorted = [...articles].sort((a, b) => a.data.order - b.data.order);
+
+// Service JSON-LD：把每個分類頁標成尊茂提供的服務（provider 指向全站 Organization 實體）
+const serviceLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: title,
+  serviceType: title,
+  ...(description && { description }),
+  provider: { '@id': 'https://www.dreamer868.com/#organization' },
+  areaServed: [
+    { '@type': 'City', name: '台中市' },
+    { '@type': 'Country', name: 'Taiwan' },
+  ],
+  inLanguage: 'zh-Hant-TW',
+};
+
+// ItemList：列出該分類下文章，幫 AI 理解此主題的內容深度與結構
+const itemListLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: `${title}相關文章`,
+  itemListElement: sorted.map((a, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    url: `https://www.dreamer868.com/articles/${a.data.slug}`,
+    name: a.data.title,
+  })),
+};
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title} description={description} jsonLd={[serviceLd, itemListLd]}>
   <PageBanner title={title} backgroundImage={bannerImage} />
 
   <section class="category-content">

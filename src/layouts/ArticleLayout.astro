@@ -1,6 +1,10 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 import PageBanner from '../components/PageBanner.astro';
+import { principalAuthor } from '../data/navigation';
+
+interface FaqItem { q: string; a: string; }
+interface RelatedItem { title: string; slug: string; }
 
 interface Props {
   title: string;
@@ -10,12 +14,41 @@ interface Props {
   credit?: string;
   category?: string;
   date?: Date;
+  updatedDate?: Date;
+  tags?: string[];
+  author?: string;
+  authorTitle?: string;
+  authorUrl?: string;
   slug?: string;
   caseStory?: boolean;
   caseSource?: string;
+  faq?: FaqItem[];
+  related?: RelatedItem[];
 }
 
-const { title, description, heroImage, heroAlt, credit, category, date, slug, caseStory, caseSource } = Astro.props;
+const {
+  title, description, heroImage, heroAlt, credit, category, date, updatedDate,
+  tags, author, authorTitle, authorUrl, slug, caseStory, caseSource, faq, related,
+} = Astro.props;
+
+const url = `https://www.dreamer868.com/articles/${slug || ''}`;
+const published = date ? date.toISOString() : undefined;
+const modified = (updatedDate || date)?.toISOString();
+
+// 具名作者：frontmatter 有指定具名作者(含頭銜)則用之，否則一律掛主顧問（吳芳圳）。
+// YMYL 不捏造資歷，作者資料集中於 navigation.ts 的 principalAuthor。
+const hasFrontmatterAuthor = !!author && author !== 'Writer' && !!authorTitle;
+const eff = hasFrontmatterAuthor
+  ? { name: author!, title: authorTitle!, url: authorUrl, personId: undefined as string | undefined }
+  : principalAuthor;
+const authorLd = {
+  '@type': 'Person',
+  ...(eff.personId && { '@id': eff.personId }),
+  name: eff.name,
+  jobTitle: eff.title,
+  ...(eff.url && { url: `https://www.dreamer868.com${eff.url}` }),
+  worksFor: { '@type': 'Organization', name: '尊茂財務規劃', url: 'https://www.dreamer868.com' },
+};
 
 const articleLd = {
   '@context': 'https://schema.org',
@@ -23,15 +56,11 @@ const articleLd = {
   headline: title,
   ...(description && { description }),
   ...(heroImage && { image: heroImage }),
-  ...(date && {
-    datePublished: date.toISOString(),
-    dateModified: date.toISOString(),
-  }),
-  author: {
-    '@type': 'Organization',
-    name: '尊茂財務規劃',
-    url: 'https://www.dreamer868.com',
-  },
+  ...(published && { datePublished: published, dateModified: modified }),
+  ...(category && { articleSection: category }),
+  ...(tags && tags.length && { keywords: tags.join(', ') }),
+  inLanguage: 'zh-Hant-TW',
+  author: authorLd,
   publisher: {
     '@type': 'Organization',
     name: '尊茂財務規劃',
@@ -41,11 +70,23 @@ const articleLd = {
       url: 'https://www.doing-housework.com/store_image/dreamer868/A1173399369764.jpg',
     },
   },
-  mainEntityOfPage: {
-    '@type': 'WebPage',
-    '@id': `https://www.dreamer868.com/articles/${slug || ''}`,
-  },
+  mainEntityOfPage: { '@type': 'WebPage', '@id': url },
 };
+
+// FAQPage：有問答對才輸出，讓 AI 答題引擎直接抽取
+const faqLd = faq && faq.length
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faq.map((f) => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
+    }
+  : null;
+
+const jsonLd = faqLd ? [articleLd, faqLd] : articleLd;
 
 const breadcrumbs = [
   ...(category ? [{ name: category, href: '/services' }] : []),
@@ -56,8 +97,11 @@ const breadcrumbs = [
 <BaseLayout
   title={title}
   description={description}
+  keywords={tags && tags.length ? tags.join(',') : undefined}
+  author={eff.name}
   ogImage={heroImage}
-  jsonLd={articleLd}
+  ogType="article"
+  jsonLd={jsonLd}
   breadcrumbs={breadcrumbs}
 >
   <PageBanner title={title} backgroundImage={heroImage} />
@@ -65,7 +109,13 @@ const breadcrumbs = [
   <article class="article-page">
     <div class="article-meta">
       {category && <span class="category-tag">{category}</span>}
-      {date && <time datetime={date.toISOString()}>{date.toLocaleDateString('zh-TW')}</time>}
+      <span class="byline" itemscope itemtype="https://schema.org/Person">
+        {eff.url
+          ? <a href={eff.url} itemprop="url"><span itemprop="name">{eff.name}</span></a>
+          : <span itemprop="name">{eff.name}</span>}
+        <span class="author-title" itemprop="jobTitle">{eff.title}</span>
+      </span>
+      {date && <time datetime={(updatedDate || date).toISOString()}>{(updatedDate || date).toLocaleDateString('zh-TW')}{updatedDate && ' 更新'}</time>}
     </div>
 
     {caseStory && (
@@ -78,6 +128,29 @@ const breadcrumbs = [
     <div class="prose">
       <slot />
     </div>
+
+    {faq && faq.length > 0 && (
+      <section class="faq" aria-labelledby="faq-heading">
+        <h2 id="faq-heading">常見問答</h2>
+        {faq.map((f) => (
+          <details class="faq-item">
+            <summary>{f.q}</summary>
+            <p>{f.a}</p>
+          </details>
+        ))}
+      </section>
+    )}
+
+    {related && related.length > 0 && (
+      <nav class="related" aria-label="相關閱讀">
+        <h2>相關閱讀</h2>
+        <ul>
+          {related.map((r) => (
+            <li><a href={`/articles/${r.slug}`}>{r.title}</a></li>
+          ))}
+        </ul>
+      </nav>
+    )}
 
     {credit && <p class="photo-credit">{credit}</p>}
   </article>
@@ -114,12 +187,88 @@ const breadcrumbs = [
     font-size: 14px;
   }
 
+  .byline {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 8px;
+    font-size: 14px;
+    color: #555;
+  }
+
+  .byline a { color: var(--color-primary); text-decoration: none; font-weight: 600; }
+  .byline a:hover { text-decoration: underline; }
+  .byline .author-title { color: #999; font-size: 13px; }
+
   .photo-credit {
     text-align: center;
     font-size: 12px;
     color: #999;
     margin-top: 40px;
   }
+
+  .faq {
+    margin-top: 56px;
+    padding-top: 32px;
+    border-top: 2px solid var(--color-bg-light);
+  }
+
+  .faq h2 {
+    font-size: var(--f28, 1.6rem);
+    margin-bottom: 24px;
+    color: var(--color-primary);
+  }
+
+  .faq-item {
+    border-bottom: 1px solid var(--color-bg-light);
+    padding: 16px 0;
+  }
+
+  .faq-item summary {
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 1.6;
+    color: #333;
+    list-style: none;
+  }
+
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::before { content: '＋ '; color: var(--color-primary); font-weight: 700; }
+  .faq-item[open] summary::before { content: '－ '; }
+
+  .faq-item p {
+    margin: 12px 0 0;
+    padding-left: 1.4em;
+    color: #555;
+    line-height: 1.8;
+  }
+
+  .related {
+    margin-top: 56px;
+    padding-top: 32px;
+    border-top: 2px solid var(--color-bg-light);
+  }
+
+  .related h2 {
+    font-size: var(--f28, 1.6rem);
+    margin-bottom: 20px;
+    color: var(--color-primary);
+  }
+
+  .related ul { list-style: none; padding: 0; margin: 0; }
+
+  .related li {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--color-bg-light);
+  }
+
+  .related a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .related a:hover { color: var(--color-primary); text-decoration: underline; }
 
   .case-disclaimer {
     background: var(--color-bg-light);
