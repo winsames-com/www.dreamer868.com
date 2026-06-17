@@ -10,7 +10,7 @@ faq:
     a: "文章提出三個方向：以遺囑明確指定房產歸屬與補償方式、預留現金做財產平衡、若注定共有則事先約定使用與處分規則。提早規劃能大幅減少協議破局的機會。"
 date: 2026-06-16
 author: Writer
-status: draft
+status: published
 version: 1
 task: 二-A-案例 家庭遺產分割
 category: 服務對象

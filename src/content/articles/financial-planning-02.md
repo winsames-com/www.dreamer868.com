@@ -12,7 +12,7 @@ faq:
     a: "退休前仍需規劃退休金是否足夠、醫療與長照準備、資產傳承等課題。這個階段最怕做錯決定，因為沒有時間重來，專業顧問可以幫你把關每一個重大決策。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 一-B-2 適用對象
 category: 理財規劃

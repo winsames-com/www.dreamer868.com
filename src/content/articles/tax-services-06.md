@@ -12,7 +12,7 @@ faq:
     a: "差別很大。若提早十年開始每年贈與，善用年度免稅額，十年下來可免稅移轉近 2,500 萬資產；若等到人走了才處理，繼承人可能面臨幾百萬遺產稅且措手不及。早規劃選項多、彈性高，晚規劃往往只能接受。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-F-6 什麼時候需要稅務規劃
 category: 租稅服務

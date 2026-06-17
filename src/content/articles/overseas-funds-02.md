@@ -10,7 +10,7 @@ faq:
     a: "需要定期再平衡。市場波動會讓各類資產的實際比例偏離原本的目標配置，定期調整回預設比例，可以避免風險再度過度集中在某一類資產上。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-I-2 分散風險的重要性
 category: 海外基金債券

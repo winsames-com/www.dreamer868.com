@@ -10,7 +10,7 @@ faq:
     a: "保險屬於財務規劃中的防守層面，優先於投資累積。文章指出防守要先做好，進攻才有意義，因為一場意外或疾病可能讓多年積累歸零，所以應先把風險處理好，再談投資和資產累積。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-B-1 保險在財務規劃中的角色
 category: 保險服務

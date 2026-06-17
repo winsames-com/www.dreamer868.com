@@ -10,7 +10,7 @@ faq:
     a: "尊茂提供持續性服務，不是做完就消失。顧問會定期追蹤、主動聯繫，有問題隨時可以找，是長期夥伴而非一次性交易對象。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 二-D-1 品牌理念介紹
 category: 品牌理念

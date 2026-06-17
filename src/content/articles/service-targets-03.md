@@ -12,7 +12,7 @@ faq:
     a: "常見錯誤有四：把所有資源給孩子而犧牲自己的退休、只幫孩子投保卻忽略主要收入者的保障、房貸過重沒有緊急備用金，以及夫妻之間缺乏財務溝通。提前規劃都可以避免。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 二-A-3 家庭
 category: 服務對象

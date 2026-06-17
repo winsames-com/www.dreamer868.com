@@ -10,7 +10,7 @@ faq:
     a: "不一定，需要評估。國際貿易專家會和財務顧問、會計師一起分析跨境交易的稅務安排、移轉定價的合規性，以及設立海外公司的架構是否能合法優化稅負，再給出整體建議。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 二-C-7 國際貿易
 category: 專業團隊

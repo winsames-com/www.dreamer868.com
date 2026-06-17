@@ -10,7 +10,7 @@ faq:
     a: "信託生效後需持續管理，建議至少每年檢視一次。受託人會依契約管理資產並定期提供報告，你或監察人需審閱報告、支付管理費，如有需要可要求調整，確保信託持續符合目的。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-C-7 設立信託的流程
 category: 信託規劃

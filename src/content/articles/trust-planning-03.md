@@ -10,7 +10,7 @@ faq:
     a: "信託監察人負責監督受託人的執行，保護受益人的權益，在受益人無法自己監督時（如年幼或身心障礙者）尤其重要。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-C-3 信託的三方角色
 category: 信託規劃

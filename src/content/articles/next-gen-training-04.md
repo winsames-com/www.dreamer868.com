@@ -10,7 +10,7 @@ faq:
     a: "可以，這是文章提到的平行創業模式，但需要注意時間與精力的平衡，也可能出現利益衝突。此外還有內部創業（在家族企業內立新事業）和先創業後接班等混合模式可以考慮。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-E-4 企業培訓 vs 創業輔導
 category: 二代培訓

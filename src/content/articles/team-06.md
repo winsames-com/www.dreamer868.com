@@ -10,7 +10,7 @@ faq:
     a: "常見目的包括希望子女接受國外教育並提早取得身份、希望資產國際化或分散地緣政治風險、退休後想住在國外追求不同生活品質，以及生意需要跨國運作的商業考量。每種目的適合的移民方案可能不同。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 二-C-6 海外移民
 category: 專業團隊

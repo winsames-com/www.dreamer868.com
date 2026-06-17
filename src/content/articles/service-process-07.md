@@ -10,7 +10,7 @@ faq:
     a: "主要分四個部分：回顧過去一年發生的變化與執行進度、更新財務現況（收支與資產負債變動）、評估各目標的達成程度，以及根據評估結果調整策略與工具，並確認下一年的具體行動項目。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 二-B-7 步驟六：定期追蹤
 category: 服務流程

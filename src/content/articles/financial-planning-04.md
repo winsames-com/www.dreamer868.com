@@ -10,7 +10,7 @@ faq:
     a: "報告完成後，顧問會舉行說明會議逐項解釋內容，協助討論執行順序與落實建議，並每年定期追蹤一次，根據生活變化調整規劃方向。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 一-B-4 我們的方法論
 category: 理財規劃

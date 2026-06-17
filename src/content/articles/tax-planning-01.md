@@ -12,7 +12,7 @@ faq:
     a: "因為各種稅務問題經常交織在一起。例如把公司傳給下一代，就同時涉及股權規劃、遺贈稅和營利事業所得稅，只處理其中一塊往往影響整體稅負，甚至產生意外成本。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 一-C-1 常見稅務問題類型
 category: 稅務規劃

@@ -12,7 +12,7 @@ faq:
     a: "可以，但必須先向地政事務所申請補發權狀，補發手續會增加辦理時間和費用，建議事前確認權狀是否保管完好。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-G-3 過戶流程與所需文件
 category: 地政士服務

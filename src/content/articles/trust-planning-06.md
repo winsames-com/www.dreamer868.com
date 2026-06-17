@@ -12,7 +12,7 @@ faq:
     a: "選擇信託分三步：先釐清要解決什麼問題、想保護誰；再評估有多少資產可放入及能承擔的費用；最後諮詢專業顧問量身設計。信託不是標準化商品，需根據個人情況規劃。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-C-6 什麼情況適合哪種信託
 category: 信託規劃

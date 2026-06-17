@@ -12,7 +12,7 @@ faq:
     a: "視信託類型而定。自益信託中你是受益人，可依約定領取；他益信託則通常不能再動用。設計信託時應考慮日常現金需求，並在契約中保留必要的領取權利，不建議把所有資金全部放入。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-C-8 信託規劃 Q&A
 category: 信託規劃

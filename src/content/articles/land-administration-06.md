@@ -12,7 +12,7 @@ faq:
     a: "至少要確認四件事：農地面積是否達 0.25 公頃、自己是否符合農民資格、名下是否已有農舍、以及該地塊是否曾有人興建農舍（已有農舍的地可能無法再建）。買地之前一定要查清楚，切勿衝動。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-G-6 農地農舍的規定與申請
 category: 地政士服務

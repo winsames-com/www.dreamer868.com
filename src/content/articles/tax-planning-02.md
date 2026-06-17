@@ -12,7 +12,7 @@ faq:
     a: "文章建議，年收入穩定且較高、有大量可認列的業務費用、想區隔個人與事業風險，或有長期事業發展計劃者，才較適合成立公司。同時也須考量記帳費、會計師費等額外行政成本。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 一-C-2 個人 vs 企業稅務規劃
 category: 稅務規劃

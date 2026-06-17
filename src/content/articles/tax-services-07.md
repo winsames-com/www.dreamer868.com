@@ -12,7 +12,7 @@ faq:
     a: "財務顧問扮演整體規劃者與協調者的角色，從你的整體財務狀況出發制定策略，整合各專業意見，並把專業術語翻譯成你能理解的語言，陪伴你走過整個執行流程。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-F-7 與會計師、地政士的協作
 category: 租稅服務

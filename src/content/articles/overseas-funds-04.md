@@ -12,7 +12,7 @@ faq:
     a: "是的。外幣存款的利息與匯兌損益都屬於海外所得，和海外基金、ETF、債券、股票的配息及賣出價差一樣，都要計入基本所得，超過門檻就需申報。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-I-4 海外投資的稅務考量
 category: 海外基金債券

@@ -10,7 +10,7 @@ faq:
     a: "跨領域協作能確保方案的完整性（不漏面向、不留盲點）、一致性（各專業方向統一、建議不互相矛盾）與效率（一個窗口溝通、不用自己協調各方），長期合作的默契也讓執行品質更有保障。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 二-C-1 專業團隊介紹
 category: 專業團隊

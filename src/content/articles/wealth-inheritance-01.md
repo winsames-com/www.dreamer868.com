@@ -10,7 +10,7 @@ faq:
     a: "不需要等。只要有想保護的人、累積了一定資產，或開始意識到人生有限，就是思考傳承的好時機。傳承是一個持續進行的過程，不是一次性的決定，越早開始對話越能避免遺憾。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 一-D-1 傳承的真正意義
 category: 財富傳承

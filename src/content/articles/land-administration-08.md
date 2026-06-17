@@ -12,7 +12,7 @@ faq:
     a: "不是。尊茂協調合作的專業地政士為客戶服務，同時整合財務與稅務規劃的整體考量，提供從諮詢評估到全程協調追蹤的支援，而非單純的登記代辦。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-G-8 地政士服務 Q&A
 category: 地政士服務

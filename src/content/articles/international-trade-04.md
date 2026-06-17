@@ -10,7 +10,7 @@ faq:
     a: "流程包含評估選址、準備文件、向當地政府申請、取得營業登記、開立銀行帳戶及稅務登記，一般需要數週到數個月，各國速度不一。通常需要當地律師、當地會計師和秘書公司協助處理。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-H-4 海外公司設立的考量
 category: 國際貿易

@@ -12,7 +12,7 @@ faq:
     a: "星展銀行（DBS）是最大本地銀行，數位服務領先；大華銀行（UOB）服務穩健，中小企業客戶較多；華僑銀行（OCBC）歷史悠久，財富管理服務較強。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 一-E-2 新加坡開戶優勢與流程
 category: 海外銀行開戶

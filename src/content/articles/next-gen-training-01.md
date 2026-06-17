@@ -10,7 +10,7 @@ faq:
     a: "常見原因有四：太晚開始準備、一代與二代缺乏溝通各有盤算、沒有系統性培訓二代能力，以及多個繼承人之間出現利益衝突。其中太晚開始最難補救，因為培養接班人需要長達十年以上的時間。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-E-1 傳承的挑戰：不只是交棒
 category: 二代培訓

@@ -12,7 +12,7 @@ faq:
     a: "共六個步驟：由家族領導人發起並邀請成員參與、舉辦家族會議討論各項議題、將共識起草為文字、所有成員閱讀並提出修改意見、正式簽署表示承諾、最後依據憲章運作並定期檢視修訂。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-A-4 家族憲章
 category: 家族治理

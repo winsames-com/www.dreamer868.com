@@ -10,7 +10,7 @@ faq:
     a: "資產有一定規模、子女計劃海外求學、本人有移民打算、企業主希望分散個人與企業風險，或有跨國傳承規劃需求的人，都特別適合提前布局海外資產。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-I-1 為什麼要配置海外資產
 category: 海外基金債券

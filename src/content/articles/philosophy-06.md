@@ -12,7 +12,7 @@ faq:
     a: "可逐步進行四件事：召開家庭會議討論傳承並達成共識、記錄對財產分配與醫療決定等的意願、準備遺囑與信託等法律文件，以及寫家書或錄製影像留下想說的話。不需要一次全部做完。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 二-D-6 生前告別式概念
 category: 品牌理念
