@@ -17,7 +17,7 @@ function verifyPrompt(candidate, draft) {
 
 原判決案由：${doc.JTITLE || ''}
 原判決全文（節錄）：
-${fullTextStr.slice(0, 8000)}
+${fullTextStr.slice(0, 12000)}
 
 改編稿標題：${draft.title || ''}
 改編稿內文：
