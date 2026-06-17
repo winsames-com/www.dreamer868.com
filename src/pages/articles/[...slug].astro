@@ -11,7 +11,10 @@ export async function getStaticPaths() {
 }
 
 const { article, all } = Astro.props;
-const { Content } = await render(article);
+const { Content, headings } = await render(article);
+
+// 目錄：取 h2/h3（Astro 會自動為標題加 id，slug 即錨點）
+const toc = headings.filter((h) => h.depth === 2 || h.depth === 3);
 
 // 相關閱讀：同分類其他文章（建主題叢集、強化內部連結與主題權威）
 const related = all
@@ -39,6 +42,7 @@ const related = all
   caseSource={article.data.caseSource}
   faq={article.data.faq}
   related={related}
+  toc={toc}
 >
   <Content />
 </ArticleLayout>
