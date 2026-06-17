@@ -10,7 +10,7 @@ faq:
     a: "不一定。取得台灣身份證並不需要放棄香港永久居民資格，但需注意香港對長期不在港居民可能有相關規定，建議事先了解兩地規定再做安排。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-D-6 港澳居民移入台灣
 category: 移民規劃

@@ -10,7 +10,7 @@ faq:
     a: "企業主傳承通常需要財務顧問統籌，加上會計師負責股權估值與稅務、律師處理股東協議與遺囑、地政士辦理不動產移轉、保險顧問準備遺產稅資金，若有海外資產還需海外顧問團隊協助。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 一-D-5 跨領域團隊優勢
 category: 財富傳承

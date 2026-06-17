@@ -10,7 +10,7 @@ faq:
     a: "不一定。保險金是否課稅取決於要保人、被保險人、受益人三方的架構。高額躉繳或被認定為規避稅捐的保單，國稅局會依實質課稅原則追繳遺產稅，不能只聽信保險金免稅的說法。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-F-3 常見的稅務風險情境
 category: 租稅服務

@@ -10,7 +10,7 @@ faq:
     a: "不需要。傳承規劃同時涉及稅務、法律、股權、不動產等多個領域，你只需向財務顧問說明需求，他會判斷要調動哪些專業資源，並在專家會診後提供一份整合性方案，不需要在不同專家之間來回溝通。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 一-A-6 團隊簡介（跨領域專業）
 category: 關於我們

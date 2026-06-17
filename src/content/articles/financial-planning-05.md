@@ -10,7 +10,7 @@ faq:
     a: "如果只是要購買特定商品，找專業業務員即可。但若需要全局性的財務規劃、有人把保險、投資、稅務等面向都串起來思考，才需要獨立的財務顧問。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 一-B-5 與一般理專的差異
 category: 理財規劃

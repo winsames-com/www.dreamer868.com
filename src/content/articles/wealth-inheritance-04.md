@@ -12,7 +12,7 @@ faq:
     a: "一般保險身故後保險金一次給付給受益人；保險金信託則讓理賠金先進入信託，再依設定條件分期給付，可避免受益人揮霍，也能設定教育費專款等用途限制，適合受益人是未成年子女的情況。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 一-D-4 傳承工具介紹 - 保險
 category: 財富傳承

@@ -10,7 +10,7 @@ faq:
     a: "若子女定居海外或配偶為外國籍，海外帳戶可讓資產直接留在當地，減少跨國移轉的複雜度。某些地區的遺產處理較簡便，可搭配當地信託或保險做整體規劃。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 一-E-1 為什麼需要海外銀行帳戶
 category: 海外銀行開戶

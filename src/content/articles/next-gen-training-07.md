@@ -12,7 +12,7 @@ faq:
     a: "不一定。能力不足可以加強培訓、搭配專業經理人，或調整角色不擔任 CEO，也可以考慮其他傳承方案。能力可以培養，但也要務實評估最適合的方式。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-E-7 二代培訓 Q&A
 category: 二代培訓

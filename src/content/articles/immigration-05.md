@@ -10,7 +10,7 @@ faq:
     a: "需從個人與家庭因素（移民目的、語言能力、文化偏好）、財務因素（預算、稅務、生活成本）、實際可行性及長期規劃等面向綜合評估，並建議實際去住一段時間再做最終決定。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-D-5 熱門移民國家比較
 category: 移民規劃

@@ -12,7 +12,7 @@ faq:
     a: "遺產稅需在六個月內繳清。若資產大多是不動產而現金不足，子女可能被迫低價出售資產籌措稅款，這正是提前準備繳稅現金的主要原因。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 一-C-3 傳承相關稅務（遺贈稅）
 category: 稅務規劃

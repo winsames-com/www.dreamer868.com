@@ -10,7 +10,7 @@ faq:
     a: "你有權要求尊茂刪除你的個人資料。此外還有查詢權（隨時確認保有哪些資料）、更正權（資料有誤可要求更正）、知情權（了解資料如何被使用）。尊茂承諾尊重並保障這些權利。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 一-A-5 隱私保護承諾
 category: 關於我們

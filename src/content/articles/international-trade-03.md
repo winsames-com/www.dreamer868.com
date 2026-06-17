@@ -12,7 +12,7 @@ faq:
     a: "文章建議定期對帳確認平台撥款金額、適時換匯並保留外幣、控制庫存水位避免過度積壓，以及預留資金因應退貨和稅款。由於平台撥款有時間差、又需要先備貨，備足周轉金是關鍵。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-H-3 跨境電商的財務規劃
 category: 國際貿易

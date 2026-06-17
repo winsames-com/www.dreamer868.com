@@ -12,7 +12,7 @@ faq:
     a: "不一定。要免稅需同時符合要保人與被保險人相同、已指定受益人，且不是臨終前才投保等條件。高額保單被認定實質課稅的案例越來越多，不能只聽業務說免稅就放心。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-F-8 租稅服務 Q&A
 category: 租稅服務

@@ -10,7 +10,7 @@ faq:
     a: "文章建議三個方向：認知上理解差異是正常的、目標其實一致；制度上建立定期溝通機制並明確角色分工、漸進式移轉決策權；必要時引入第三方，提供客觀視角與專業引導，協助化解情緒包袱。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-E-2 一代與二代的常見衝突
 category: 二代培訓

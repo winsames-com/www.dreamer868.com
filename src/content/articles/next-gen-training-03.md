@@ -12,7 +12,7 @@ faq:
     a: "不夠。文章強調知識要配合實務經驗，心態的塑造更不是上課可以教的，需要在成長過程中培養。責任感、謙卑學習的態度、對家族使命的認同，都需要長期累積。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-E-3 二代培訓包含什麼
 category: 二代培訓

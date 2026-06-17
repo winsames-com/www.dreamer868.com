@@ -12,7 +12,7 @@ faq:
     a: "有。尊茂提供長期陪伴：定期主動聯繫確認規劃是否符合現況、根據結婚生子或職涯等生活變化彈性調整，以及遇到突發狀況或重大決定時可以隨時找顧問討論。目標是成為長期財務夥伴，而非一次性交易。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 一-A-4 服務理念（不銷售、解決問題）
 category: 關於我們

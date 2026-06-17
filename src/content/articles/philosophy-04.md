@@ -10,7 +10,7 @@ faq:
     a: "不會。顧問的角色是提供資訊和建議，最終決定權在客戶手上。尊茂不強迫、不施壓，而是讓你充分了解各選項的優缺點後，自己做出適合的選擇。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 二-D-4 財務顧問理念
 category: 品牌理念

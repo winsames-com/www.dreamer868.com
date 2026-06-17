@@ -10,7 +10,7 @@ faq:
     a: "通常分五個階段：初次諮詢了解基本狀況、深入訪談收集財務資料與目標、分析診斷找出問題與差距、提出方案討論各種選項，最後協助執行並定期追蹤、視情況調整方向。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 二-C-2 財務顧問
 category: 專業團隊

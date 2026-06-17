@@ -10,7 +10,7 @@ faq:
     a: "不一定。文章指出需符合受益人非被繼承人本人、符合實質課稅原則且無規避稅務意圖等條件，才可能不計入遺產。帶病投保、高齡投保或短期密集投保等情況可能被認定為規避稅務，需要專業顧問評估。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-B-2 保險作為傳承工具
 category: 保險服務

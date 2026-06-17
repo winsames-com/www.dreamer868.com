@@ -10,7 +10,7 @@ faq:
     a: "透過尊茂，海外服務是整體財務規劃的一部分，和台灣的安排保持一致，不會有衝突或遺漏。海外顧問是篩選過的長期合作夥伴，客戶只需用中文和財務顧問溝通，不用自己聯繫各地，也不用擔心語言問題。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 二-C-8 海外顧問團隊
 category: 專業團隊

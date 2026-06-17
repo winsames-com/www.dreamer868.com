@@ -10,7 +10,7 @@ faq:
     a: "文章建議創造自然的參與機會：辦定期家族會議並讓二代有發言權、給予具體職責、讓他們負責感興趣的項目並給予自主權。同時建立家族憲章等制度化框架，讓參與有明確規則，成為習慣。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-E-5 如何讓二代參與家族事務
 category: 二代培訓

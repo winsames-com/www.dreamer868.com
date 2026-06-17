@@ -10,7 +10,7 @@ faq:
     a: "可以。地政士會確認繼承人和應繼分、處理繼承登記，如果繼承人之間需要分割共有不動產，也可以協助辦理，並配合會計師處理相關稅務申報。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 二-C-5 地政士
 category: 專業團隊

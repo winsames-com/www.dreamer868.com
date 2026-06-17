@@ -12,7 +12,7 @@ faq:
     a: "不夠。文章強調，很多財富在第二代就大幅縮水，原因是下一代缺乏財富管理能力。傳承應包含財務知識、投資觀念、家族事業了解，以及責任與價值觀的培育。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 二-A-5 財富
 category: 服務對象

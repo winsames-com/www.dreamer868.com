@@ -12,7 +12,7 @@ faq:
     a: "文章觀察到四個共同特質：公私分明、稅務與傳承提前規劃、願意投資在好的專業顧問，以及具備全局觀——同時看個人與公司、現在與未來、數字與人。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 二-A-4 公司
 category: 服務對象

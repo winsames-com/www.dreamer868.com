@@ -12,7 +12,7 @@ faq:
     a: "風險不分年齡，且年輕時投保保費較低、身體健康更容易核保，還能鎖定較低費率。等年紀大或有病史時，可能面臨加費、除外或拒保的問題。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-B-6 保險常見迷思
 category: 保險服務

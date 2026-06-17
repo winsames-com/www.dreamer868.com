@@ -12,7 +12,7 @@ faq:
     a: "台灣已與日本、英國、德國等多國簽訂租稅協定。好處包括降低扣繳稅率、避免同一筆所得被兩國重複課稅，以及提供跨國稅務爭議的解決機制。適用時需提出申請並符合相關資格條件。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-H-6 國際貿易的稅務議題
 category: 國際貿易

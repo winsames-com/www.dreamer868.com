@@ -10,7 +10,7 @@ faq:
     a: "尊茂擔任財務顧問，協調包含新加坡、香港等主要金融中心的海外顧問網絡，整合台灣與海外的需求，全程追蹤協調，確保客戶利益——定位是解決問題，不是銷售產品。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-I-6 與海外顧問團隊的協作
 category: 海外基金債券

@@ -10,7 +10,7 @@ faq:
     a: "建議先保經濟支柱的身故保障，其次是醫療與意外保障，再來是失能與長照，傳承規劃則排在最後，不必一次買齊，根據預算逐步規劃。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-B-5 家族保險配置
 category: 保險服務

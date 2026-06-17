@@ -10,7 +10,7 @@ faq:
     a: "文章整理出五個共同因素：提早規劃讓時間充裕、家族成員充分溝通並形成共識、採漸進式交接而非一次性交棒、做法彈性務實不拘泥傳統，以及有專業顧問參與、建立制度化的治理架構。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-E-6 成功傳承的案例情境
 category: 二代培訓

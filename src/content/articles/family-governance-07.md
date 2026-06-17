@@ -12,7 +12,7 @@ faq:
     a: "文章建議避免直接用傳承一詞，改強調這是為了保護家人，讓長輩主導規劃，並從不敏感的事項先切入。讓他們感覺是在主動交代而非被動接受安排，往往更容易開啟對話。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-A-7 家族治理 Q&A
 category: 家族治理

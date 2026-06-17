@@ -12,7 +12,7 @@ faq:
     a: "沒有。台灣只和部分國家簽有租稅協定。如果目的地國家沒有和台灣簽約，就可能面臨同一筆所得被兩國重複課稅的問題，需要透過其他方式處理。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-D-3 移民與稅務的關係
 category: 移民規劃

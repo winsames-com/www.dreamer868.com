@@ -10,7 +10,7 @@ faq:
     a: "不是。結婚、生子、離婚後，原本的受益人安排可能已不符合實際需求，建議在人生重大變動後都要重新檢視受益人欄位，確保保障能送到真正想照顧的人手上。"
 date: 2026-06-16
 author: Writer
-status: draft
+status: published
 version: 2
 task: 二-A-案例 個人保險受益人
 category: 服務對象

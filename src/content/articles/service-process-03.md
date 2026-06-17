@@ -10,7 +10,7 @@ faq:
     a: "尊茂承諾所有資料僅供規劃使用，不分享給任何第三方，並安全儲存。若有需要，你可以隨時要求刪除資料。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 二-B-3 步驟二：建立財報
 category: 服務流程

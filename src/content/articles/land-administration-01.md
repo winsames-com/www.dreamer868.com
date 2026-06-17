@@ -10,7 +10,7 @@ faq:
     a: "若親人間的交易價格明顯低於市價，可能被認定為贈與而課徵贈與稅；因此需有實際的金流紀錄，銀行貸款通常也會核對實際成交價。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-G-1 不動產移轉的三種方式
 category: 地政士服務

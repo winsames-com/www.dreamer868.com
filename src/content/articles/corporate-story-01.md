@@ -10,7 +10,7 @@ faq:
     a: "事前預防最有效：借名或信託都應簽訂書面契約，載明真正所有權人與返還條件；同時可透過特別股、表決權契約或控股公司架構，確保經營權不因持股分散而旁落。"
 date: 2026-06-16
 author: Writer
-status: draft
+status: published
 version: 1
 task: 二-A-案例 公司股權借名
 category: 服務對象

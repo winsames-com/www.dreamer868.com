@@ -10,7 +10,7 @@ faq:
     a: "需列出金融資產（存款、投資帳戶、保險、退休帳戶）、不動產、事業資產及其他資產，同時也要列出房貸、車貸等所有負債，才能掌握完整財務全貌。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-D-2 移民前的財務檢視清單
 category: 移民規劃

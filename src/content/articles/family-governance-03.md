@@ -10,7 +10,7 @@ faq:
     a: "不需要。尊茂提供的是家族辦公室服務，而非協助設立獨立機構。你不需要自行聘請整個專業團隊，而是根據需求選擇服務內容，費用上也更有效率，我們會是長期合作夥伴，而非一次性交易。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-A-3 家族辦公室服務範圍
 category: 家族治理

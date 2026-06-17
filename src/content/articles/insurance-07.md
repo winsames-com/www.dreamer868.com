@@ -10,7 +10,7 @@ faq:
     a: "沒有絕對好壞，取決於需求。定期險保費較低、彈性高，適合特定時期的需求（例如房貸期間）；終身險保費較高但保障終身，適合傳承規劃，通常是搭配使用。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-B-7 保險服務 Q&A
 category: 保險服務

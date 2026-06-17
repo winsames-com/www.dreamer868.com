@@ -10,7 +10,7 @@ faq:
     a: "台灣財務市場存在三個問題：消費者資訊不對稱、推薦取決於佣金的銷售導向，以及保險、投資、稅務各做各的缺乏整合，導致方案可能互相矛盾。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 二-D-2 願景
 category: 品牌理念

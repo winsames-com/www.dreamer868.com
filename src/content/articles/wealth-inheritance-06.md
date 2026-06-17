@@ -10,7 +10,7 @@ faq:
     a: "共六個步驟：初步諮詢、資料收集與分析、跨領域會診、方案設計與報告、執行落實、定期檢視。全程由財務顧問擔任統一窗口，你不需要自己協調各方專業人員。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 一-D-6 服務流程概述
 category: 財富傳承

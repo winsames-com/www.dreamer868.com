@@ -10,7 +10,7 @@ faq:
     a: "若資產主要在台灣、受益人也在台灣生活、需求單純，國內信託通常已足夠，設立和維護成本也較低。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-C-5 國內信託 vs 離岸信託
 category: 信託規劃

@@ -10,7 +10,7 @@ faq:
     a: "文章中並未設定資產門檻。尊茂服務的對象從個人上班族到高資產族群都有，差別在於面對的問題不同、需要的工具不同。你可以先預約諮詢，了解你目前的情況適合哪種規劃方向。"
 date: 2026-03-18
 author: Writer
-status: final
+status: published
 version: 1
 task: 二-A-1 服務對象介紹
 category: 服務對象

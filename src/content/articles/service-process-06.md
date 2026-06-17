@@ -12,7 +12,7 @@ faq:
     a: "不需要。選擇工具是重要決定，你可以把資料帶回去研究、與家人討論、提出更多問題或要求比較其他選項，顧問不會催促。謹慎的決定比倉促的決定更重要。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 二-B-6 步驟五：選擇工具
 category: 服務流程

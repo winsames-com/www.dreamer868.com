@@ -82,8 +82,9 @@ async function main() {
     const a = results.get(`cand-${i}`);
     if (!a || a.error) { quarantined.push({ cand, reason: `rewrite:${a && a.error}` }); continue; }
 
-    // 第一關：改編自評 + 確定性化名正則
-    const scan = scanAnonymization(a.body_markdown);
+    // 第一關：改編自評 + 確定性化名正則（含 description / faq，避免殘留可辨識資訊漏掃）
+    const faqText = Array.isArray(a.faq) ? a.faq.map((f) => `${f.q || ''} ${f.a || ''}`).join(' ') : '';
+    const scan = scanAnonymization([a.body_markdown, a.description, faqText].filter(Boolean).join('\n'));
     const gate1 = passesGates(a, scan) && typeof a.title === 'string' && a.title.length > 0;
 
     // 第二關（獨立查核）：僅對第一關通過者呼叫，省 claude -p
@@ -103,6 +104,8 @@ async function main() {
       slug,
       title: a.title || `${cand.category.label}案例`,
       bodyMarkdown: a.body_markdown || '',
+      description: a.description,
+      faq: a.faq,
       caseSource: caseSourceOf(cand.doc, cand.fullTextStr),
       order,
       dateStr,

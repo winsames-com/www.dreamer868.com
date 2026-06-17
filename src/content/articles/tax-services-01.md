@@ -12,7 +12,7 @@ faq:
     a: "不一定。遺產稅免稅額為1,333萬，另有配偶、子女等各項扣除額，扣除後若課稅遺產淨額為零則無需繳稅；超過部分才依10%-20%累進稅率計算。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-F-1 常見的稅務類型總覽
 category: 租稅服務
