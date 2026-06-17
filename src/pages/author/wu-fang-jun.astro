@@ -1,0 +1,76 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageBanner from '../../components/PageBanner.astro';
+import { principalAuthor, contactInfo } from '../../data/navigation';
+
+const expertise = ['理財規劃', '稅務規劃', '財富傳承', '信託規劃', '家族治理', '保險服務', '海外銀行開戶', '移民規劃', '二代培訓'];
+
+// ProfilePage + Person：建立作者實體，強化 E-E-A-T 與 AI 對「誰寫的」之信任
+const personLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  '@id': principalAuthor.personId,
+  name: principalAuthor.name,
+  jobTitle: principalAuthor.title,
+  url: `https://www.dreamer868.com${principalAuthor.url}`,
+  description: principalAuthor.bio,
+  knowsAbout: expertise,
+  worksFor: { '@id': 'https://www.dreamer868.com/#organization' },
+  email: `mailto:${contactInfo.email}`,
+  telephone: contactInfo.phone,
+};
+
+const profileLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfilePage',
+  mainEntity: { '@id': principalAuthor.personId },
+  about: { '@id': principalAuthor.personId },
+};
+
+const breadcrumbs = [{ name: '專業團隊', href: '/team' }, { name: principalAuthor.name, href: principalAuthor.url }];
+---
+
+<BaseLayout
+  title={`${principalAuthor.name}｜${principalAuthor.title}`}
+  description={principalAuthor.bio}
+  author={principalAuthor.name}
+  jsonLd={[personLd, profileLd]}
+  breadcrumbs={breadcrumbs}
+>
+  <PageBanner title={`${principalAuthor.name}｜${principalAuthor.title}`} />
+
+  <section class="author-page" itemscope itemtype="https://schema.org/Person">
+    <h1 itemprop="name">{principalAuthor.name}</h1>
+    <p class="title" itemprop="jobTitle">{principalAuthor.title}</p>
+    <p class="bio" itemprop="description">{principalAuthor.bio}</p>
+
+    <h2>專業領域</h2>
+    <ul class="expertise">
+      {expertise.map((e) => <li>{e}</li>)}
+    </ul>
+
+    <h2>聯絡與預約</h2>
+    <p>歡迎預約「財務健檢諮詢」，由 {principalAuthor.name} {principalAuthor.title}協助您釐清財務問題。</p>
+    <ul class="contact">
+      <li>電話：<a href={`tel:${contactInfo.phone}`}>{contactInfo.phone}</a></li>
+      <li>LINE：<a href={contactInfo.lineUrl} rel="noopener" target="_blank">{contactInfo.lineId}</a></li>
+      <li>地址：{contactInfo.address}</li>
+    </ul>
+  </section>
+</BaseLayout>
+
+<style>
+  .author-page {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 60px 20px 100px;
+  }
+  .author-page h1 { font-size: var(--f36, 2rem); margin-bottom: 6px; }
+  .author-page .title { color: var(--color-primary); font-weight: 600; margin-bottom: 28px; }
+  .author-page .bio { font-size: 18px; line-height: 1.9; color: #444; }
+  .author-page h2 { margin-top: 44px; margin-bottom: 16px; color: var(--color-primary); font-size: var(--f24, 1.4rem); }
+  .expertise { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; padding: 0; }
+  .expertise li { background: var(--color-bg-light); padding: 6px 16px; border-radius: 20px; font-size: 15px; }
+  .contact { list-style: none; padding: 0; line-height: 2.2; }
+  .contact a { color: var(--color-primary); }
+</style>
