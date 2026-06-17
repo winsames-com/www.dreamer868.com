@@ -1,5 +1,6 @@
 ---
 title: 進出口的基本流程
+description: "進出口各有七個標準步驟，涵蓋合約簽訂、文件準備、出口報關到收付款；說明向海關申報的實務，以及 FOB、CIF 等貿易條款如何劃定運費、保險與風險責任的歸屬。"
 date: 2026-03-19
 author: Writer
 status: draft
