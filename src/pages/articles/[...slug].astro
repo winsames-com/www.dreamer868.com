@@ -16,14 +16,21 @@ const { Content } = await render(article);
 
 <ArticleLayout
   title={article.data.title}
+  description={article.data.description}
   heroImage={article.data.images.hero.url}
   heroAlt={article.data.images.hero.alt}
   credit={article.data.images.hero.credit}
   category={article.data.category}
   date={article.data.date}
+  updatedDate={article.data.updatedDate}
+  tags={article.data.tags}
+  author={article.data.author}
+  authorTitle={article.data.authorTitle}
+  authorUrl={article.data.authorUrl}
   slug={article.data.slug}
   caseStory={article.data.caseStory}
   caseSource={article.data.caseSource}
+  faq={article.data.faq}
 >
   <Content />
 </ArticleLayout>
