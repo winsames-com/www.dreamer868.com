@@ -46,7 +46,8 @@ async function main() {
     const a = results.get(`cand-${i}`);
     if (!a || a.error) { log(`✗ ${cand.doc.JID} 改編失敗:`, a && a.error); continue; }
 
-    const scan = scanAnonymization(a.body_markdown);
+    const faqText = Array.isArray(a.faq) ? a.faq.map((f) => `${f.q || ''} ${f.a || ''}`).join(' ') : '';
+    const scan = scanAnonymization([a.body_markdown, a.description, faqText].filter(Boolean).join('\n'));
     const gate1 = passesGates(a, scan) && typeof a.title === 'string' && a.title.length > 0;
     let verdict = null, gate2 = false;
     if (gate1) { verdict = await verifyDraft(cand, a); gate2 = verifyPasses(verdict, THRESHOLDS.worthinessMin); }
@@ -58,6 +59,8 @@ async function main() {
       slug,
       title: a.title || `${cand.category.label}案例`,
       bodyMarkdown: a.body_markdown || '',
+      description: a.description,
+      faq: a.faq,
       caseSource: caseSourceOf(cand.doc, cand.fullTextStr),
       order: 10 + i,
       dateStr,
