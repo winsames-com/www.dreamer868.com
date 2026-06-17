@@ -11,11 +11,19 @@ const personLd = {
   '@type': 'Person',
   '@id': principalAuthor.personId,
   name: principalAuthor.name,
-  jobTitle: principalAuthor.title,
-  url: `https://www.dreamer868.com${principalAuthor.url}`,
+  jobTitle: [principalAuthor.title, ...principalAuthor.roles],
   description: principalAuthor.bio,
+  url: `https://www.dreamer868.com${principalAuthor.url}`,
   knowsAbout: expertise,
-  worksFor: { '@id': 'https://www.dreamer868.com/#organization' },
+  hasCredential: {
+    '@type': 'EducationalOccupationalCredential',
+    credentialCategory: 'professional certification',
+    name: principalAuthor.credential,
+  },
+  worksFor: [
+    { '@type': 'Organization', name: principalAuthor.company },
+    { '@id': 'https://www.dreamer868.com/#organization' },
+  ],
   email: `mailto:${contactInfo.email}`,
   telephone: contactInfo.phone,
 };
@@ -42,7 +50,21 @@ const breadcrumbs = [{ name: '專業團隊', href: '/team' }, { name: principalA
   <section class="author-page" itemscope itemtype="https://schema.org/Person">
     <h1 itemprop="name">{principalAuthor.name}</h1>
     <p class="title" itemprop="jobTitle">{principalAuthor.title}</p>
+
+    <ul class="creds">
+      <li><strong>證照</strong>：<span itemprop="hasCredential">{principalAuthor.credential}</span></li>
+      <li><strong>經驗</strong>：{principalAuthor.experienceYears} 年以上財務規劃與資產配置實務</li>
+      {principalAuthor.roles.map((r) => <li><strong>現任</strong>：{r}</li>)}
+    </ul>
+
     <p class="bio" itemprop="description">{principalAuthor.bio}</p>
+
+    <blockquote class="statement">
+      <p>很多人以為財務規劃是在規劃錢，其實財務規劃規劃的是人生。</p>
+      <p>因為真正重要的，不是你賺了多少錢，而是當你退休、生病、傳承的那一天，你的家人是否依然能夠安心生活。</p>
+      <p>我是吳芳圳，財務醫師，專門幫助客戶把財富變成一套能夠世代延續的系統。</p>
+      <p class="motto">「{principalAuthor.motto}」</p>
+    </blockquote>
 
     <h2>專業領域</h2>
     <ul class="expertise">
@@ -68,6 +90,19 @@ const breadcrumbs = [{ name: '專業團隊', href: '/team' }, { name: principalA
   .author-page h1 { font-size: var(--f36, 2rem); margin-bottom: 6px; }
   .author-page .title { color: var(--color-primary); font-weight: 600; margin-bottom: 28px; }
   .author-page .bio { font-size: 18px; line-height: 1.9; color: #444; }
+  .creds { list-style: none; padding: 0; margin: 0 0 28px; }
+  .creds li { padding: 4px 0; color: #444; line-height: 1.7; }
+  .creds strong { color: var(--color-primary); margin-right: 6px; }
+  .statement {
+    border-left: 4px solid var(--color-primary);
+    background: var(--color-bg-light);
+    margin: 32px 0;
+    padding: 20px 24px;
+    border-radius: 4px;
+  }
+  .statement p { margin: 0 0 12px; color: #444; line-height: 1.9; }
+  .statement p:last-child { margin-bottom: 0; }
+  .statement .motto { font-weight: 700; color: var(--color-primary); font-size: 18px; }
   .author-page h2 { margin-top: 44px; margin-bottom: 16px; color: var(--color-primary); font-size: var(--f24, 1.4rem); }
   .expertise { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; padding: 0; }
   .expertise li { background: var(--color-bg-light); padding: 6px 16px; border-radius: 20px; font-size: 15px; }
