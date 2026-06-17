@@ -5,6 +5,7 @@ import { principalAuthor } from '../data/navigation';
 
 interface FaqItem { q: string; a: string; }
 interface RelatedItem { title: string; slug: string; }
+interface Heading { depth: number; slug: string; text: string; }
 
 interface Props {
   title: string;
@@ -24,11 +25,12 @@ interface Props {
   caseSource?: string;
   faq?: FaqItem[];
   related?: RelatedItem[];
+  toc?: Heading[];
 }
 
 const {
   title, description, heroImage, heroAlt, credit, category, date, updatedDate,
-  tags, author, authorTitle, authorUrl, slug, caseStory, caseSource, faq, related,
+  tags, author, authorTitle, authorUrl, slug, caseStory, caseSource, faq, related, toc,
 } = Astro.props;
 
 const url = `https://www.dreamer868.com/articles/${slug || ''}`;
@@ -117,6 +119,17 @@ const breadcrumbs = [
       </span>
       {date && <time datetime={(updatedDate || date).toISOString()}>{(updatedDate || date).toLocaleDateString('zh-TW')}{updatedDate && ' 更新'}</time>}
     </div>
+
+    {toc && toc.length >= 3 && (
+      <nav class="toc" aria-label="本文目錄">
+        <p class="toc-title">本文目錄</p>
+        <ul>
+          {toc.map((h) => (
+            <li class={`toc-d${h.depth}`}><a href={`#${h.slug}`}>{h.text}</a></li>
+          ))}
+        </ul>
+      </nav>
+    )}
 
     {caseStory && (
       <aside class="case-disclaimer" role="note" aria-label="案例免責聲明">
@@ -269,6 +282,28 @@ const breadcrumbs = [
   }
 
   .related a:hover { color: var(--color-primary); text-decoration: underline; }
+
+  .toc {
+    background: var(--color-bg-light);
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-bottom: 36px;
+  }
+
+  .toc-title {
+    font-weight: 700;
+    color: var(--color-primary);
+    margin: 0 0 12px;
+    font-size: 16px;
+  }
+
+  .toc ul { list-style: none; padding: 0; margin: 0; }
+  .toc li { padding: 4px 0; line-height: 1.6; }
+  .toc-d3 { padding-left: 1.4em; font-size: 14px; }
+  .toc a { color: #555; text-decoration: none; }
+  .toc a:hover { color: var(--color-primary); text-decoration: underline; }
+
+  html { scroll-behavior: smooth; }
 
   .case-disclaimer {
     background: var(--color-bg-light);

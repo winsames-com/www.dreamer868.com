@@ -12,7 +12,7 @@ faq:
     a: "出口是找買家、出貨、收款；進口是找供應商、付款或開信用狀、等貨到港後報關繳納關稅再提貨。兩者都需要商業發票、裝箱單和提單，進口還可能需要其他許可文件。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-H-2 進出口的基本流程
 category: 國際貿易

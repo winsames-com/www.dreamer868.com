@@ -10,7 +10,7 @@ faq:
     a: "會。長期陪伴是尊茂使命的一部分，定期追蹤聯繫、根據變化調整，有問題隨時可以找，而非完成方案後就消失。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 二-D-3 使命
 category: 品牌理念

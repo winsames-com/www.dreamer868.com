@@ -12,7 +12,7 @@ faq:
     a: "取得其他國家的護照通常需要放棄台灣國籍，但若只取得海外居留權而非申請入籍，就可以保留台灣國籍。居留權和公民權是不同的概念，想保留台灣國籍就要選擇只取得居留權的移民方式。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-D-8 移民規劃 Q&A
 category: 移民規劃

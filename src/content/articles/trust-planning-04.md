@@ -10,7 +10,7 @@ faq:
     a: "遺囑信託讓身故後的遺產進入信託長期管理，有受託人持續執行，可照顧無法自理的繼承人，而非一次性分配了事。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-C-4 常見信託類型比較
 category: 信託規劃

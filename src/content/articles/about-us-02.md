@@ -12,7 +12,7 @@ faq:
     a: "在服務流程上，諮詢從了解客戶開始而非介紹商品；在團隊組成上，整合財務顧問、律師、會計師、地政士與海外顧問；在長期關係上，定期追蹤財務狀況變化，不追求一次性交易。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 一-A-2 願景使命完整闘述
 category: 關於我們

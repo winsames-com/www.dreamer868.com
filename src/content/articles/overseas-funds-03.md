@@ -10,7 +10,7 @@ faq:
     a: "主要考量五點：投資目標（保值、成長或固定收益）、風險承受度、可投入金額、自身的研究能力，以及能花多少時間管理。不熟悉的話，建議從基金或 ETF 入手，並與財務顧問討論適合的配置。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-I-3 常見的海外投資工具
 category: 海外基金債券

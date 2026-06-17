@@ -10,7 +10,7 @@ faq:
     a: "共六個階段：需求評估、方案規劃、文件準備（前三階段在台灣完成）、海外顧問介入、開戶執行（可親赴當地或遠端視訊）、帳戶啟用後的持續支援。全程由尊茂財務顧問協調。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 一-E-6 與海外顧問團隊的協作
 category: 海外銀行開戶

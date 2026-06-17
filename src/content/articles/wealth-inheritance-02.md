@@ -12,7 +12,7 @@ faq:
     a: "不行。一個人身故後，銀行帳戶與股票帳戶都會被凍結，直到遺產稅繳清且繼承程序完成才能動用。保險金可直接給付受益人而不受凍結，提前規劃能避免家人在過渡期間陷入生活困難。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 一-D-2 常見傳承問題與風險
 category: 財富傳承

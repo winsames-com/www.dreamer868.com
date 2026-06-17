@@ -10,7 +10,7 @@ faq:
     a: "兩者各有特性：股票成長潛力大但波動也大，債券相對穩定但報酬較低。通常建議兩者都配置，再依個人風險屬性調整比例，不必只選一種。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-I-7 海外基金債券 Q&A
 category: 海外基金債券

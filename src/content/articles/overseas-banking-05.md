@@ -12,7 +12,7 @@ faq:
     a: "可能會。台灣參與 CRS（共同申報準則），會與其他國家和地區進行金融帳戶資訊交換，新加坡和香港都是 CRS 參與地區。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 一-E-5 常見問題 Q&A
 category: 海外銀行開戶

@@ -12,7 +12,7 @@ faq:
     a: "需準確估算遺產稅並定期調整保額，確認保費不影響現在的生活；同時建議趁年輕健康時投保，因為有病史可能被加費或拒保。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-B-4 保險預留稅源
 category: 保險服務

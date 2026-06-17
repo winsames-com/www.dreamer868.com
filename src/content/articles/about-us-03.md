@@ -12,7 +12,7 @@ faq:
     a: "當你面臨收入增加不知如何配置、即將結婚生子、父母年邁需規劃傳承、創業使財務結構變複雜，或想退休但不確定準備是否足夠時，這些情況同時涉及稅務、法律、保險等多個領域，需要整合性的專業建議。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 一-A-3 「財務醫生」概念說明
 category: 關於我們

@@ -12,7 +12,7 @@ faq:
     a: "主要費用包含三類：設立時的簽約費、每年按信託資產一定比例收取的管理費，以及修改契約時可能收取的費用。具體金額因信託公司和信託內容而異，設立前應清楚了解所有費用並評估是否值得。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-B-3 什麼是保險信託
 category: 保險服務

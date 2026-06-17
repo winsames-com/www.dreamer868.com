@@ -10,7 +10,7 @@ faq:
     a: "尊茂認為傳承不只是錢和稅的問題。他們協助家族建立生前告別式的概念，讓上一代有機會向子女述說白手起家的過程、打拼的故事，以及想說的話。傳承的不只是財富，更是精神文化與愛。"
 date: 2026-03-18
 author: Writer
-status: final
+status: published
 version: 1
 task: 一-A-1 品牌故事（為什麼創辦尊茂）
 category: 關於我們

@@ -10,7 +10,7 @@ faq:
     a: "傳統方式包括電匯、信用狀、押匯；新興方式有第三方支付平台、跨境電商金流和虛擬帳戶。選擇時需考量交易金額大小、雙方信任程度，以及速度與成本的平衡。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-H-1 跨境貿易的財務挑戰
 category: 國際貿易

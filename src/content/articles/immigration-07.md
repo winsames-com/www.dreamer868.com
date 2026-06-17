@@ -12,7 +12,7 @@ faq:
     a: "財務規劃師可協助移民前的財務檢視與現金流規劃、跨國稅務評估，並整合移民律師和海外顧問等各方資源。移民後也提供持續的財務追蹤與定期檢視，扮演跨領域整合的角色。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-D-7 移民規劃的流程
 category: 移民規劃

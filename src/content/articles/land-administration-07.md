@@ -10,7 +10,7 @@ faq:
     a: "重點看四項：確認對方持有合法地政士執照、有處理類似案件的經驗、溝通順暢且主動告知進度，以及委託前講清楚費用包含哪些服務、有無額外收費。事先問清楚能避免事後糾紛。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-G-7 找地政士 vs 自己辦理
 category: 地政士服務

@@ -12,7 +12,7 @@ faq:
     a: "文章指出顧問是中立的第三方，能引導家族會議、協助溝通調解、提供架構工具並協助起草文件，但不代替家族做決定，最終決定權仍在家族手中。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-A-6 如何開始建立家族治理
 category: 家族治理

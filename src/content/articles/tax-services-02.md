@@ -12,7 +12,7 @@ faq:
     a: "不行。夫妻各自的財產都是遺產，只是計算時可以扣除 553 萬的配偶扣除額。把財產移到配偶名下並不能免除遺產稅，且移轉時若超過年度免稅額，還可能需要申報贈與稅。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-F-2 遺產稅與贈與稅基礎知識
 category: 租稅服務

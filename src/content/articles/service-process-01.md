@@ -12,7 +12,7 @@ faq:
     a: "適合想全面檢視財務、有具體目標但不知如何達成，或準備做重大財務決定的人。服務需要雙方共同投入，不適合只想被推薦產品或不願分享財務狀況的人。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 二-B-1 服務流程介紹
 category: 服務流程

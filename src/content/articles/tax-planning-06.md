@@ -10,7 +10,7 @@ faq:
     a: "可以。尊茂可以和你現有的會計師協作，重點是讓稅務規劃和整體財務規劃方向一致，不一定需要換掉現有的會計師。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 一-C-6 與會計師團隊協作說明
 category: 稅務規劃

@@ -12,7 +12,7 @@ faq:
     a: "適合的。文章指出有些國家反而歡迎退休移民，不同年齡有不同適合的移民方式，重點是依家庭狀況、財務條件與生活目標找到合適的選項。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-D-1 為什麼考慮第二國家身份
 category: 移民規劃

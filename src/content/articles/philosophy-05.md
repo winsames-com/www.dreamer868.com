@@ -10,7 +10,7 @@ faq:
     a: "包含財務顧問、律師、會計師、地政士及海外專家，各專業協作而非各做各的，確保整體方案一致、不互相矛盾，並考慮各面向的長期影響。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 二-D-5 核心價值
 category: 品牌理念

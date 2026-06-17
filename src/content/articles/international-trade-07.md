@@ -12,7 +12,7 @@ faq:
     a: "視各國規定而定，達到一定門檻可能需要在當地註冊繳稅，例如歐盟有 VAT、美國各州有銷售稅，很多平台會代扣代繳。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-H-7 國際貿易 Q&A
 category: 國際貿易

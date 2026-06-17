@@ -10,7 +10,7 @@ faq:
     a: "常見選擇有移民目的地（生活最實用）、香港（國際金融中心、服務完善）、新加坡（穩定安全、私人銀行服務）。選擇時需綜合考量開戶門檻、費用、便利性及帳戶穩定度。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-D-4 資產如何跨境配置
 category: 移民規劃

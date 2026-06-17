@@ -10,7 +10,7 @@ faq:
     a: "每年將房子的部分持分贈與子女，每次價值控制在免稅額 244 萬以內。以公告現值 1,200 萬的房子為例，每年贈與 20% 約 240 萬，五年下來可免稅完成整棟移轉，但房子期間會變成共有狀態。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-F-4 合法節稅的常見策略
 category: 租稅服務

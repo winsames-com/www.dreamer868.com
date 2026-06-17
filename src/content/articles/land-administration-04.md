@@ -10,7 +10,7 @@ faq:
     a: "費用依面積和複雜度而定，簡單的複丈約數千元，分割測量則可能需數千到數萬元；申請後約 2 到 4 週安排測量，現場測量本身通常一天完成。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-G-4 土地測量是什麼
 category: 地政士服務
