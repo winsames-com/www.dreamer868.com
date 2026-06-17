@@ -3,8 +3,15 @@
 
 export const MODEL = 'claude-sonnet-4-6';
 
-// 每分眾每日最多 1 篇、全站每日最多 4 篇
-export const LIMITS = { perCategoryPerDay: 1, perDayTotal: 4 };
+// 每分眾每日最多 1 篇、全站每日最多 4 篇。
+// 重試：每分眾最多備 maxPoolPerCategory 件候選逐件嘗試（選到的不過就換下一件），
+// 全日改編嘗試上限 maxRewriteAttemptsPerDay（每件改編1次+查核至多1次）。
+export const LIMITS = {
+  perCategoryPerDay: 1,
+  perDayTotal: 4,
+  maxPoolPerCategory: 6,
+  maxRewriteAttemptsPerDay: 14,
+};
 
 // 閘門門檻（1–5）：relevance/quality 為改編自評；worthiness 為獨立查核的故事性
 export const THRESHOLDS = { relevanceMin: 4, qualityMin: 4, worthinessMin: 3 };

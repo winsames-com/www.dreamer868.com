@@ -98,8 +98,11 @@ export async function getDoc(token, jid) {
 // 由 JDoc 取純文字全文（型態為 file 的 PDF 略過，回空字串）。
 export function fullText(doc) {
   const x = doc.JFULLX || {};
-  if (x.JFULLTYPE === 'text') return (x.JFULLCONTENT || '').toString();
-  return '';
+  // 司法院 API 的 JFULLTYPE 實務上多為 'file'（少數 'text'），兩者的 JFULLCONTENT 都帶判決全文文字。
+  // 早期只認 'text' 會把絕大多數 'file' 型判決的全文丟成空字串 → 改編引擎拿到空白 → 模型瞎編
+  // → 第二關 faithful=false／品質過低 → 0 發佈。故改為：只要 JFULLCONTENT 有文字就採用。
+  const content = (x.JFULLCONTENT || '').toString();
+  return content.trim() ? content : '';
 }
 
 // 字號：法院中文名取自全文開頭（extractCourtName）；取不到時退回 JID 以利回溯。
