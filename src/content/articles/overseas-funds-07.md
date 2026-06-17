@@ -1,5 +1,6 @@
 ---
 title: 海外基金債券 Q&A
+description: "整理海外基金債券最常見問答，涵蓋最低投資門檻、海外所得申報規則、複委託與海外券商開戶流程，以及股票與債券搭配配置的取捨考量。"
 date: 2026-03-19
 author: Writer
 status: draft

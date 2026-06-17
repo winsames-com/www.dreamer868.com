@@ -1,5 +1,6 @@
 ---
 title: 個人財務規劃
+description: "個人財務規劃協助不同人生階段的工作者釐清退休、保障與資產累積等核心問題，從財務健檢到定期追蹤，讓每一分收入發揮最大效用。"
 date: 2026-03-19
 author: Writer
 status: draft
