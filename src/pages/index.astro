@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { contactInfo } from '../data/navigation';
+import { contactInfo, principalAuthor } from '../data/navigation';
 
 // 全站 Organization/FinancialService JSON-LD 已於 BaseLayout 統一輸出（含 @id、地址、areaServed、knowsAbout、sameAs）
 
@@ -42,6 +42,24 @@ const moreServices = [
         <p>我們不銷售商品，而是站在客戶的立場，先診斷、再處方、持續追蹤，提供「理性客觀、全面整合、長期有效」的財務規劃服務。</p>
         <a href="/about" class="text-link">了解更多 →</a>
       </div>
+    </div>
+  </section>
+
+  <!-- Founder / 財務醫師 -->
+  <section class="section founder-section">
+    <div class="founder-inner" data-animate-in="up">
+      <p class="founder-label">財務醫師</p>
+      <h2 class="founder-name">{principalAuthor.name}</h2>
+      <p class="founder-cred">{principalAuthor.credential}　｜　{principalAuthor.experienceYears} 年以上財務規劃與資產配置實務</p>
+      <p class="founder-roles">{principalAuthor.roles.join('　・　')}</p>
+
+      <div class="founder-words">
+        <p>很多人以為財務規劃是在規劃錢，其實財務規劃規劃的是人生。</p>
+        <p>真正重要的，不是你賺了多少錢，而是當你退休、生病、傳承的那一天，你的家人是否依然能夠安心生活。</p>
+      </div>
+
+      <p class="founder-motto">「{principalAuthor.motto}」</p>
+      <a href={principalAuthor.url} class="text-link">認識 {principalAuthor.name} 財務醫師 →</a>
     </div>
   </section>
 
@@ -190,6 +208,48 @@ const moreServices = [
 
   .text-link:hover {
     color: var(--color-accent);
+  }
+
+  /* Founder / 財務醫師 */
+  .founder-section {
+    background: var(--color-bg-light);
+  }
+  .founder-inner {
+    max-width: 820px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .founder-label {
+    color: var(--color-primary);
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin: 0 0 6px;
+  }
+  .founder-name {
+    font-size: var(--f36, 2.2rem);
+    margin: 0 0 12px;
+  }
+  .founder-cred {
+    color: #555;
+    font-weight: 500;
+    margin: 0 0 6px;
+  }
+  .founder-roles {
+    color: #888;
+    font-size: 15px;
+    margin: 0 0 28px;
+  }
+  .founder-words p {
+    font-size: 18px;
+    line-height: 1.95;
+    color: #444;
+    margin: 0 0 10px;
+  }
+  .founder-motto {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin: 24px 0 16px;
   }
 
   /* Services grid */
