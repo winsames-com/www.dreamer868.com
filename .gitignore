@@ -43,3 +43,6 @@ pipeline/insights/reports/
 
 # checkup 每日驗收報告（本機私有，不公開）
 pipeline/checkup/reports/*.md
+
+# pipeline 判決快取（測試用，勿入庫）
+pipeline/.cache/

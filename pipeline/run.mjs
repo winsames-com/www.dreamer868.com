@@ -11,7 +11,7 @@ import { CATEGORIES, LIMITS, PATHS, THRESHOLDS } from './config.mjs';
 import { auth, getChangeList, getDoc, fullText, caseSourceOf } from './judicial.mjs';
 import { prefilterJids, classifyDoc } from './classify.mjs';
 import { loadSeen, saveSeen } from './state.mjs';
-import { rewriteCandidates } from './rewrite.mjs';
+import { rewriteOne, termsForCategory } from './rewrite.mjs';
 import { verifyDraft, verifyPasses } from './verify.mjs';
 import { scanAnonymization, passesGates } from './guard.mjs';
 import { buildArticle, nextSlug } from './markdown.mjs';
@@ -43,10 +43,10 @@ async function main() {
   const candidatesJids = prefilterJids(rawJids).filter((j) => !seen.has(j));
   log('after prefilter+dedup', candidatesJids.length);
 
-  // 取文 + 分類，依分眾收集（每分眾收到上限即停）
+  // 取文 + 分類，依分眾收集「候選池」（每分眾最多 maxPoolPerCategory 件，供逐件重試）
   const perCategory = new Map(CATEGORIES.map((c) => [c.key, []]));
   for (const jid of candidatesJids) {
-    const allFull = [...perCategory.values()].every((arr) => arr.length >= LIMITS.perCategoryPerDay);
+    const allFull = [...perCategory.values()].every((arr) => arr.length >= LIMITS.maxPoolPerCategory);
     if (allFull) break;
     let doc;
     try { doc = await getDoc(token, jid); } catch (e) { log('getDoc err', jid, e.message); continue; }
@@ -54,16 +54,19 @@ async function main() {
     seen.add(jid); // 已檢視即記錄，避免重複處理
     const cls = classifyDoc(doc);
     if (!cls) continue;
+    const ftStr = fullText(doc);
+    if (!ftStr.trim()) continue; // 無判決全文則跳過，避免改編引擎拿空白瞎編
     const bucket = perCategory.get(cls.category.key);
-    if (bucket.length >= LIMITS.perCategoryPerDay) continue;
-    bucket.push({ doc, category: cls.category, fullTextStr: fullText(doc), score: cls.score });
+    if (bucket.length >= LIMITS.maxPoolPerCategory) continue;
+    bucket.push({ doc, category: cls.category, fullTextStr: ftStr, score: cls.score });
   }
+  // 每分眾依分類分數高→低排序，較契合者先試
+  for (const arr of perCategory.values()) arr.sort((a, b) => b.score - a.score);
 
-  let candidates = [].concat(...perCategory.values());
-  if (candidates.length > LIMITS.perDayTotal) candidates = candidates.slice(0, LIMITS.perDayTotal);
-  log('candidates to rewrite', candidates.length);
+  const poolTotal = [...perCategory.values()].reduce((n, a) => n + a.length, 0);
+  log('候選池', poolTotal, [...perCategory.entries()].map(([k, a]) => `${k}=${a.length}`).join(' '));
 
-  if (candidates.length === 0) {
+  if (poolTotal === 0) {
     if (!DRY_RUN) await saveSeen(PATHS.seen, seen);
     log('nothing to do');
     return;
@@ -71,57 +74,67 @@ async function main() {
 
   const termsByCategory = await fetchBucketedQueries();
   log('GSC 字詞分流：', Object.entries(termsByCategory).map(([k, v]) => `${k}=${v.length}`).join(' '));
-  const results = await rewriteCandidates(candidates, termsByCategory);
 
   const slugs = await existingSlugs();
   const published = [];
   const quarantined = [];
+  let attempts = 0;
 
-  for (let i = 0; i < candidates.length; i++) {
-    const cand = candidates[i];
-    const a = results.get(`cand-${i}`);
-    if (!a || a.error) { quarantined.push({ cand, reason: `rewrite:${a && a.error}` }); continue; }
+  // 逐分眾、逐件重試：選到的不過關就換池中下一件，直到該分眾產出 1 篇或池用盡；
+  // 受全站每日上限 perDayTotal 與全日改編嘗試上限 maxRewriteAttemptsPerDay 約束。
+  for (const cat of CATEGORIES) {
+    if (published.length >= LIMITS.perDayTotal || attempts >= LIMITS.maxRewriteAttemptsPerDay) break;
+    const pool = perCategory.get(cat.key) || [];
+    const terms = termsForCategory(termsByCategory, cat.key);
+    let okInCat = 0;
+    for (const cand of pool) {
+      if (okInCat >= LIMITS.perCategoryPerDay || published.length >= LIMITS.perDayTotal) break;
+      if (attempts >= LIMITS.maxRewriteAttemptsPerDay) { log('達全日改編嘗試上限'); break; }
+      attempts++;
 
-    // 第一關：改編自評 + 確定性化名正則（含 description / faq，避免殘留可辨識資訊漏掃）
-    const faqText = Array.isArray(a.faq) ? a.faq.map((f) => `${f.q || ''} ${f.a || ''}`).join(' ') : '';
-    const scan = scanAnonymization([a.body_markdown, a.description, faqText].filter(Boolean).join('\n'));
-    const gate1 = passesGates(a, scan) && typeof a.title === 'string' && a.title.length > 0;
+      const a = await rewriteOne(cand, terms);
+      if (!a || a.error) { quarantined.push({ cand, reason: `rewrite:${a && a.error}` }); continue; }
 
-    // 第二關（獨立查核）：僅對第一關通過者呼叫，省 claude -p
-    let verdict = null;
-    let gate2 = false;
-    if (gate1) {
-      verdict = await verifyDraft(cand, a);
-      gate2 = verifyPasses(verdict, THRESHOLDS.worthinessMin);
-    }
-    const ok = gate1 && gate2;
+      // 第一關：改編自評 + 確定性化名正則（含 description / faq，避免殘留可辨識資訊漏掃）
+      const faqText = Array.isArray(a.faq) ? a.faq.map((f) => `${f.q || ''} ${f.a || ''}`).join(' ') : '';
+      const scan = scanAnonymization([a.body_markdown, a.description, faqText].filter(Boolean).join('\n'));
+      const gate1 = passesGates(a, scan) && typeof a.title === 'string' && a.title.length > 0;
 
-    const slug = nextSlug(cand.category, slugs);
-    slugs.push(slug);
-    const order = 10 + slugs.filter((s) => s.startsWith(cand.category.slugPrefix)).length; // 確保 >10 且遞增
-    const md = buildArticle({
-      category: cand.category,
-      slug,
-      title: a.title || `${cand.category.label}案例`,
-      bodyMarkdown: a.body_markdown || '',
-      description: a.description,
-      faq: a.faq,
-      caseSource: caseSourceOf(cand.doc, cand.fullTextStr),
-      order,
-      dateStr,
-    });
+      // 第二關（獨立查核）：僅對第一關通過者呼叫，省 claude -p
+      let verdict = null, gate2 = false;
+      if (gate1) { verdict = await verifyDraft(cand, a); gate2 = verifyPasses(verdict, THRESHOLDS.worthinessMin); }
+      const ok = gate1 && gate2;
 
-    if (ok && !DRY_RUN) {
-      published.push({ slug, path: path.join(PATHS.articles, `${slug}.md`), md });
-    } else {
-      const reason = !gate1
-        ? `gate1(rel=${a.relevance_score},qual=${a.quality_score},anon=${a.anonymization_ok},scan=${scan.ok})`
-        : !gate2
-          ? `gate2(${verdict && verdict.error ? verdict.error : `anon=${verdict.anonymization_ok},faithful=${verdict.faithful},relevant=${verdict.relevant},worth=${verdict.worthiness}`})`
-          : 'dry_run';
-      quarantined.push({ cand, slug, md, reason });
+      const slug = nextSlug(cand.category, slugs);
+      slugs.push(slug);
+      const order = 10 + slugs.filter((s) => s.startsWith(cand.category.slugPrefix)).length; // 確保 >10 且遞增
+      const md = buildArticle({
+        category: cand.category,
+        slug,
+        title: a.title || `${cand.category.label}案例`,
+        bodyMarkdown: a.body_markdown || '',
+        description: a.description,
+        faq: a.faq,
+        caseSource: caseSourceOf(cand.doc, cand.fullTextStr),
+        order,
+        dateStr,
+      });
+
+      if (ok && !DRY_RUN) {
+        published.push({ slug, path: path.join(PATHS.articles, `${slug}.md`), md });
+        okInCat++;
+      } else {
+        const reason = !gate1
+          ? `gate1(rel=${a.relevance_score},qual=${a.quality_score},anon=${a.anonymization_ok},scan=${scan.ok})`
+          : !gate2
+            ? `gate2(${verdict && verdict.error ? verdict.error : `anon=${verdict.anonymization_ok},faithful=${verdict.faithful},relevant=${verdict.relevant},worth=${verdict.worthiness}`})`
+            : 'dry_run';
+        quarantined.push({ cand, slug, md, reason });
+        if (ok && DRY_RUN) okInCat++; // dry-run：通過即視為該分眾完成，避免空跑整池
+      }
     }
   }
+  log(`改編嘗試 ${attempts} 次`);
 
   // 寫檔
   for (const p of published) await fs.writeFile(p.path, p.md, 'utf8');
@@ -136,7 +149,7 @@ async function main() {
   const summary = [
     `## 判決 pipeline ${dateStr}`,
     `- 異動清單：${rawJids.length}`,
-    `- 候選：${candidates.length}`,
+    `- 候選：${poolTotal}（池）；改編嘗試：${attempts}`,
     `- 發佈：${published.length}（${published.map((p) => p.slug).join(', ') || '—'}）`,
     `- 隔離：${quarantined.length}（${quarantined.map((q) => q.reason).join('; ') || '—'}）`,
     DRY_RUN ? '- 模式：DRY_RUN（未寫正式檔、未更新帳本）' : '- 模式：正式',
