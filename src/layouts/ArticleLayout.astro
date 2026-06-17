@@ -4,6 +4,7 @@ import PageBanner from '../components/PageBanner.astro';
 import { principalAuthor } from '../data/navigation';
 
 interface FaqItem { q: string; a: string; }
+interface RelatedItem { title: string; slug: string; }
 
 interface Props {
   title: string;
@@ -22,11 +23,12 @@ interface Props {
   caseStory?: boolean;
   caseSource?: string;
   faq?: FaqItem[];
+  related?: RelatedItem[];
 }
 
 const {
   title, description, heroImage, heroAlt, credit, category, date, updatedDate,
-  tags, author, authorTitle, authorUrl, slug, caseStory, caseSource, faq,
+  tags, author, authorTitle, authorUrl, slug, caseStory, caseSource, faq, related,
 } = Astro.props;
 
 const url = `https://www.dreamer868.com/articles/${slug || ''}`;
@@ -139,6 +141,17 @@ const breadcrumbs = [
       </section>
     )}
 
+    {related && related.length > 0 && (
+      <nav class="related" aria-label="相關閱讀">
+        <h2>相關閱讀</h2>
+        <ul>
+          {related.map((r) => (
+            <li><a href={`/articles/${r.slug}`}>{r.title}</a></li>
+          ))}
+        </ul>
+      </nav>
+    )}
+
     {credit && <p class="photo-credit">{credit}</p>}
   </article>
 </BaseLayout>
@@ -229,6 +242,33 @@ const breadcrumbs = [
     color: #555;
     line-height: 1.8;
   }
+
+  .related {
+    margin-top: 56px;
+    padding-top: 32px;
+    border-top: 2px solid var(--color-bg-light);
+  }
+
+  .related h2 {
+    font-size: var(--f28, 1.6rem);
+    margin-bottom: 20px;
+    color: var(--color-primary);
+  }
+
+  .related ul { list-style: none; padding: 0; margin: 0; }
+
+  .related li {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--color-bg-light);
+  }
+
+  .related a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .related a:hover { color: var(--color-primary); text-decoration: underline; }
 
   .case-disclaimer {
     background: var(--color-bg-light);
