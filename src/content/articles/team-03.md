@@ -12,7 +12,7 @@ faq:
     a: "律師負責選擇適合的信託類型、草擬信託契約，並明確規範受託人的權責，確保契約條款能確實保護你的意願，讓信託在法律上有效執行，避免日後產生爭議或漏洞。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 二-C-3 律師
 category: 專業團隊

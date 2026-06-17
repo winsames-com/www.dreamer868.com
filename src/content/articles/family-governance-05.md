@@ -12,7 +12,7 @@ faq:
     a: "文章強調，家族問題一旦爆發，損失不只是金錢，更是難以修復的親屬關係。事先建立溝通與決策機制的成本，遠低於出事後補救的代價。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-A-5 家族治理問題案例
 category: 家族治理

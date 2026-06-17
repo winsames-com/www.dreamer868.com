@@ -10,7 +10,7 @@ faq:
     a: "模糊的目標可以透過對話具體化。例如退休後過得好，會進一步轉化為每月需要多少生活費、幾歲退休；孩子念好學校，會轉化為需要準備多少教育基金，有了具體數字才能計算所需資源。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 二-B-2 步驟一：設定目標
 category: 服務流程

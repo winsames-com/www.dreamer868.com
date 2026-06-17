@@ -12,7 +12,7 @@ faq:
     a: "台灣端需要會計師處理稅務和清算、律師處理合約與勞資；當地端需要律師、當地會計師和落地顧問。此外還需要工程顧問規劃廠房、設備商協助安裝調試，以及物流公司負責設備運輸。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-H-5 整廠搬遷的規劃
 category: 國際貿易

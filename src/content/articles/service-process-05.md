@@ -12,7 +12,7 @@ faq:
     a: "可以。策略不是一成不變的，會隨著目標改變、收支變動、市場環境、法規調整或家庭狀況的變化而修正。這也是為什麼流程後段還有定期追蹤這個步驟，確保規劃始終跟得上你的實際情況。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 二-B-5 步驟四：擬定策略
 category: 服務流程

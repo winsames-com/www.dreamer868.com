@@ -10,7 +10,7 @@ faq:
     a: "夫妻各自擁有244萬的贈與免稅額，合計每年可贈與488萬而無需繳贈與稅，若持續10年，合計可移轉近5,000萬。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 一-C-5 合法節稅策略概述
 category: 稅務規劃

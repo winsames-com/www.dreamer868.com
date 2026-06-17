@@ -12,7 +12,7 @@ faq:
     a: "文章說明財務健檢報告涵蓋收入、支出、資產（存款、投資、不動產、保險）與負債（房貸、車貸、信用卡等）四大項目，是後續所有分析與規劃的基礎，少了它就無法做出合理的規劃。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 一-B-1 服務流程簡述
 category: 理財規劃

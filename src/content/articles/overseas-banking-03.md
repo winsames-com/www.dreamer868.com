@@ -10,7 +10,7 @@ faq:
     a: "香港沒有資本利得稅，也沒有遺產稅，稅制簡單且稅率相對低，對跨國資產配置與傳承規劃有一定吸引力。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 一-E-3 香港開戶優勢與流程
 category: 海外銀行開戶

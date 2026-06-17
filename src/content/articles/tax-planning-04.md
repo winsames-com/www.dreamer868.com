@@ -12,7 +12,7 @@ faq:
     a: "買方需繳契稅（稅率6%，計算基礎為契價）及印花稅（稅率0.1%，買賣雙方各半）。這些費用要在過戶時備妥，許多人只準備頭期款而忽略了這筆過戶成本。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 一-C-4 不動產相關稅務
 category: 稅務規劃

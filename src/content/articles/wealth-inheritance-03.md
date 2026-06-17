@@ -12,7 +12,7 @@ faq:
     a: "會。他益信託可能涉及贈與稅，某些信託收益也仍需課所得稅。設立前需要專業評估，稅務影響因個案情況不同，不能一概而論。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 一-D-3 傳承工具介紹 - 信託
 category: 財富傳承

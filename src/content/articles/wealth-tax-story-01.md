@@ -10,7 +10,7 @@ faq:
     a: "文章建議三個方向：及早分年贈與、善用每年免稅額拉長時間軸；以保險等工具預先準備繳稅現金；在做拋棄繼承等重大決定前，先試算整體稅負落點，避免顧此失彼。"
 date: 2026-06-16
 author: Writer
-status: draft
+status: published
 version: 1
 task: 二-A-案例 財富稅務遺產稅
 category: 服務對象

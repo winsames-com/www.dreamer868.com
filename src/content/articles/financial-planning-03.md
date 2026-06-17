@@ -12,7 +12,7 @@ faq:
     a: "文章將勞退和勞保歸類為退休基礎保障，但明確提醒可能不足，建議同時考慮商業年金險、長期投資組合或不動產租金等工具搭配使用。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 一-B-3 規劃目標類型
 category: 理財規劃

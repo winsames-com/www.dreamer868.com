@@ -10,7 +10,7 @@ faq:
     a: "台灣銀行或券商的優點是中文服務、操作方便，缺點是商品選擇較少、費用較高；海外券商選擇多、費用低，但需要具備英文能力，稅務也較複雜。剛開始建議先用台灣管道入手。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-I-5 如何開始海外資產配置
 category: 海外基金債券

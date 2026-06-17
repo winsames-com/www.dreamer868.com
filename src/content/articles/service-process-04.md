@@ -10,7 +10,7 @@ faq:
     a: "常見問題包括：壽險保額不足、失能與長照幾乎零準備、退休金儲備遠遠不夠、資產過度集中於房子或定存，以及沒有緊急預備金（建議至少準備3到6個月的支出）。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 二-B-4 步驟三：需求分析
 category: 服務流程

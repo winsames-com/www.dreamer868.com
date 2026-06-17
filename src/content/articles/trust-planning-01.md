@@ -12,7 +12,7 @@ faq:
     a: "遺囑在身故後才生效，且沒有持續管理機制；信託設立時或特定時間即可生效，由受託人持續管理，彈性較高。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-C-1 信託是什麼
 category: 信託規劃

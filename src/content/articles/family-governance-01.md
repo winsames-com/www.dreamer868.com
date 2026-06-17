@@ -10,7 +10,7 @@ faq:
     a: "分為單一家族辦公室（SFO，只服務一個家族）和聯合家族辦公室（MFO，多個家族共享專業團隊）。對大多數台灣家族而言，MFO 是更務實的選擇，能享有專業服務又不需獨立設立的成本。"
 date: 2026-03-18
 author: Writer
-status: final
+status: published
 version: 1
 task: 三-A-1 什麼是家族辦公室？（定義與起源）
 category: 家族治理

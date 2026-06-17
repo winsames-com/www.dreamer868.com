@@ -10,7 +10,7 @@ faq:
     a: "可從資產面、家族面、複雜度三個面向做自我評估，涵蓋總資產規模、資產種類、繼承人數量、跨代傳承考量等約十二項指標。若勾選超過五項，就代表家族辦公室服務可能對你有實質幫助。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-A-2 誰需要家族辦公室
 category: 家族治理

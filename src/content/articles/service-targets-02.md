@@ -12,7 +12,7 @@ faq:
     a: "主要涵蓋四個面向：財務健檢（整理收支、檢視保障與資產配置）、目標規劃（計算所需資源、設定里程碑）、方案建議（說明各選項優缺點並協助執行），以及每年至少一次的定期追蹤與長期陪伴。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 二-A-2 個人
 category: 服務對象

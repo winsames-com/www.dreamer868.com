@@ -10,7 +10,7 @@ faq:
     a: "持有時間決定稅率：2 年以內 45%、2 到 5 年 35%、5 到 10 年 20%、10 年以上 15%。若符合自用住宅條件（設籍居住滿 6 年），課稅所得 400 萬以下免稅，超過部分僅課 10%。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-F-5 不動產移轉的稅務考量
 category: 租稅服務

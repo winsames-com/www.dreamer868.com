@@ -10,7 +10,7 @@ faq:
     a: "地址證明通常需要 3 個月內的文件，包括水電費帳單、電信帳單或銀行對帳單，且必須顯示姓名與地址。建議多準備 2 到 3 份備用，以防某份被拒絕。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 一-E-4 開戶條件與準備文件
 category: 海外銀行開戶

@@ -10,7 +10,7 @@ faq:
     a: "可成立特殊需求信託，由受託人負責照護費用，確保生活品質，同時設計成不影響社會福利資格，一直到終老。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-C-2 為什麼需要信託
 category: 信託規劃

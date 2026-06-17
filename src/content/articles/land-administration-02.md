@@ -10,7 +10,7 @@ faq:
     a: "有可能，因為公告現值通常低於市價，以公告現值作為取得成本計算，日後出售時獲利金額較高，要繳的房地合一稅也相對較多。"
 date: 2026-03-19
 author: Writer
-status: draft
+status: published
 version: 1
 task: 三-G-2 各種方式的稅務比較
 category: 地政士服務
