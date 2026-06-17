@@ -2,6 +2,8 @@
 import BaseLayout from './BaseLayout.astro';
 import PageBanner from '../components/PageBanner.astro';
 
+interface FaqItem { q: string; a: string; }
+
 interface Props {
   title: string;
   description?: string;
@@ -10,12 +12,37 @@ interface Props {
   credit?: string;
   category?: string;
   date?: Date;
+  updatedDate?: Date;
+  tags?: string[];
+  author?: string;
+  authorTitle?: string;
+  authorUrl?: string;
   slug?: string;
   caseStory?: boolean;
   caseSource?: string;
+  faq?: FaqItem[];
 }
 
-const { title, description, heroImage, heroAlt, credit, category, date, slug, caseStory, caseSource } = Astro.props;
+const {
+  title, description, heroImage, heroAlt, credit, category, date, updatedDate,
+  tags, author, authorTitle, authorUrl, slug, caseStory, caseSource, faq,
+} = Astro.props;
+
+const url = `https://www.dreamer868.com/articles/${slug || ''}`;
+const published = date ? date.toISOString() : undefined;
+const modified = (updatedDate || date)?.toISOString();
+
+// 具名作者（有頭銜才升級為 Person，否則沿用機構作者）——YMYL 不捏造資歷，只用實際填入的資料
+const isNamedAuthor = !!author && author !== 'Writer' && !!authorTitle;
+const authorLd = isNamedAuthor
+  ? {
+      '@type': 'Person',
+      name: author,
+      jobTitle: authorTitle,
+      ...(authorUrl && { url: `https://www.dreamer868.com${authorUrl}` }),
+      worksFor: { '@type': 'Organization', name: '尊茂財務規劃', url: 'https://www.dreamer868.com' },
+    }
+  : { '@type': 'Organization', name: '尊茂財務規劃', url: 'https://www.dreamer868.com' };
 
 const articleLd = {
   '@context': 'https://schema.org',
@@ -23,15 +50,11 @@ const articleLd = {
   headline: title,
   ...(description && { description }),
   ...(heroImage && { image: heroImage }),
-  ...(date && {
-    datePublished: date.toISOString(),
-    dateModified: date.toISOString(),
-  }),
-  author: {
-    '@type': 'Organization',
-    name: '尊茂財務規劃',
-    url: 'https://www.dreamer868.com',
-  },
+  ...(published && { datePublished: published, dateModified: modified }),
+  ...(category && { articleSection: category }),
+  ...(tags && tags.length && { keywords: tags.join(', ') }),
+  inLanguage: 'zh-Hant-TW',
+  author: authorLd,
   publisher: {
     '@type': 'Organization',
     name: '尊茂財務規劃',
@@ -41,11 +64,23 @@ const articleLd = {
       url: 'https://www.doing-housework.com/store_image/dreamer868/A1173399369764.jpg',
     },
   },
-  mainEntityOfPage: {
-    '@type': 'WebPage',
-    '@id': `https://www.dreamer868.com/articles/${slug || ''}`,
-  },
+  mainEntityOfPage: { '@type': 'WebPage', '@id': url },
 };
+
+// FAQPage：有問答對才輸出，讓 AI 答題引擎直接抽取
+const faqLd = faq && faq.length
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faq.map((f) => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
+    }
+  : null;
+
+const jsonLd = faqLd ? [articleLd, faqLd] : articleLd;
 
 const breadcrumbs = [
   ...(category ? [{ name: category, href: '/services' }] : []),
@@ -56,8 +91,11 @@ const breadcrumbs = [
 <BaseLayout
   title={title}
   description={description}
+  keywords={tags && tags.length ? tags.join(',') : undefined}
+  author={isNamedAuthor ? author : undefined}
   ogImage={heroImage}
-  jsonLd={articleLd}
+  ogType="article"
+  jsonLd={jsonLd}
   breadcrumbs={breadcrumbs}
 >
   <PageBanner title={title} backgroundImage={heroImage} />
@@ -65,7 +103,15 @@ const breadcrumbs = [
   <article class="article-page">
     <div class="article-meta">
       {category && <span class="category-tag">{category}</span>}
-      {date && <time datetime={date.toISOString()}>{date.toLocaleDateString('zh-TW')}</time>}
+      {isNamedAuthor && (
+        <span class="byline" itemscope itemtype="https://schema.org/Person">
+          {authorUrl
+            ? <a href={authorUrl} itemprop="url"><span itemprop="name">{author}</span></a>
+            : <span itemprop="name">{author}</span>}
+          <span class="author-title" itemprop="jobTitle">{authorTitle}</span>
+        </span>
+      )}
+      {date && <time datetime={(updatedDate || date).toISOString()}>{(updatedDate || date).toLocaleDateString('zh-TW')}{updatedDate && ' 更新'}</time>}
     </div>
 
     {caseStory && (
@@ -113,6 +159,18 @@ const breadcrumbs = [
     color: #999;
     font-size: 14px;
   }
+
+  .byline {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 8px;
+    font-size: 14px;
+    color: #555;
+  }
+
+  .byline a { color: var(--color-primary); text-decoration: none; font-weight: 600; }
+  .byline a:hover { text-decoration: underline; }
+  .byline .author-title { color: #999; font-size: 13px; }
 
   .photo-credit {
     text-align: center;
