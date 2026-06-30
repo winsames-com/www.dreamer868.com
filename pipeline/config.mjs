@@ -1,7 +1,7 @@
 // pipeline/config.mjs
 // 四分眾的分類規則、門檻、每日上限、固定 hero 圖、模型設定。
 
-export const MODEL = 'claude-sonnet-4-6';
+export const MODEL = 'claude-sonnet-5';
 
 // 每分眾每日最多 1 篇、全站每日最多 4 篇。
 // 重試：每分眾最多備 maxPoolPerCategory 件候選逐件嘗試（選到的不過就換下一件），
