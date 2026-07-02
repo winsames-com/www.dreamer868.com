@@ -16,6 +16,13 @@ const moreServices = [
   { slug: 'trust-planning', label: '信託規劃', desc: '客製化信託方案，確保資產按照您的意願分配。' },
   { slug: 'insurance', label: '保險服務', desc: '保險不只是保障，也是傳承與節稅的重要工具。' },
 ];
+
+const caseCategories = [
+  { href: '/service-targets/personal', label: '個人財務規劃', desc: '個人保障與退休規劃相關案例情境。' },
+  { href: '/service-targets/family', label: '家庭財務規劃', desc: '家庭資產保護與傳承相關案例情境。' },
+  { href: '/service-targets/corporate', label: '公司財務規劃', desc: '企業主資產與稅務規劃相關案例情境。' },
+  { href: '/service-targets/wealth-tax', label: '財富稅務規劃', desc: '財富傳承與稅務規劃相關案例情境。' },
+];
 ---
 
 <BaseLayout title="首頁">
@@ -84,6 +91,20 @@ const moreServices = [
         <a href={`/services/${svc.slug}`} class="more-service-card" data-animate-in="up">
           <h4>{svc.label}</h4>
           <p>{svc.desc}</p>
+          <span class="card-arrow">→</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- Case stories by audience -->
+  <section class="section case-section">
+    <h2 class="section-heading centered" data-animate-in="up">找到跟您相似情境的案例</h2>
+    <div class="case-grid">
+      {caseCategories.map((c) => (
+        <a href={c.href} class="case-card" data-animate-in="up">
+          <h4>{c.label}</h4>
+          <p>{c.desc}</p>
           <span class="card-arrow">→</span>
         </a>
       ))}
@@ -365,6 +386,42 @@ const moreServices = [
     font-weight: 700;
   }
 
+  /* Case stories by audience */
+  .case-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+
+  .case-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+  }
+
+  .case-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  }
+
+  .case-card h4 {
+    font-size: var(--f20);
+    color: var(--color-primary);
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .case-card p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.8;
+  }
+
   /* CTA */
   .cta-section {
     background: var(--color-primary);
@@ -414,6 +471,9 @@ const moreServices = [
       grid-template-columns: 1fr;
     }
     .more-services-grid {
+      grid-template-columns: 1fr;
+    }
+    .case-grid {
       grid-template-columns: 1fr;
     }
   }
