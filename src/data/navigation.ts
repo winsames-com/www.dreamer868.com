@@ -11,10 +11,10 @@ export const mainNav: NavItem[] = [
     label: '服務對象',
     href: '/service-targets',
     children: [
-      { label: '個人財務規劃', href: '/service-targets/personal' },
-      { label: '家庭財務規劃', href: '/service-targets/family' },
-      { label: '公司財務規劃', href: '/service-targets/corporate' },
-      { label: '財富稅務規劃', href: '/service-targets/wealth-tax' },
+      { label: '個人財務規劃', href: '/service-targets/personal/' },
+      { label: '家庭財務規劃', href: '/service-targets/family/' },
+      { label: '公司財務規劃', href: '/service-targets/corporate/' },
+      { label: '財富稅務規劃', href: '/service-targets/wealth-tax/' },
     ],
   },
   {
@@ -46,7 +46,7 @@ export const mainNav: NavItem[] = [
 export const principalAuthor = {
   name: '吳芳圳',
   title: '財務醫師',
-  url: '/author/wu-fang-jun',
+  url: '/author/wu-fang-jun/',
   personId: 'https://www.dreamer868.com/author/wu-fang-jun/#person',
   company: '尊茂國際有限公司',
   credential: 'IARFC 國際認證財務規劃師',
