@@ -46,3 +46,9 @@ pipeline/checkup/reports/*.md
 
 # pipeline 判決快取（測試用，勿入庫）
 pipeline/.cache/
+
+# Slack 通報 glue（機器/工作區專屬 cron 設定，含頻道 ID；token 在 /root/.config/dreamer868/）
+pipeline/slack/
+
+# seo-ops 每日私密數據（GA4/GSC 分析，本機產出；repo 為 public，絕不入庫）
+data/seo-daily/
