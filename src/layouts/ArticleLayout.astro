@@ -33,7 +33,7 @@ const {
   tags, author, authorTitle, authorUrl, slug, caseStory, caseSource, faq, related, toc,
 } = Astro.props;
 
-const url = `https://www.dreamer868.com/articles/${slug || ''}`;
+const url = `https://www.dreamer868.com/articles/${slug || ''}/`;
 const published = date ? date.toISOString() : undefined;
 const modified = (updatedDate || date)?.toISOString();
 
