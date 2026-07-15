@@ -156,6 +156,30 @@ async function main() {
   ].join('\n');
   log(summary);
   if (process.env.GITHUB_STEP_SUMMARY) await fs.appendFile(process.env.GITHUB_STEP_SUMMARY, summary + '\n');
+
+  // 機器可讀摘要（給 Slack 心跳等下游讀；.cache 已 gitignore）。
+  try {
+    const outDir = path.resolve(process.cwd(), 'pipeline/.cache');
+    await fs.mkdir(outDir, { recursive: true });
+    const facts = {
+      date: dateStr,
+      changeListSize: rawJids.length,
+      poolTotal,
+      attempts,
+      published: published.length,
+      publishedSlugs: published.map((p) => p.slug),
+      quarantined: quarantined.length,
+      quarantineReasons: quarantined.map((q) => q.reason),
+      gscBuckets: Object.fromEntries(
+        Object.entries(termsByCategory || {}).map(([k, v]) => [k, Array.isArray(v) ? v.length : 0]),
+      ),
+      dryRun: !!DRY_RUN,
+      finishedAt: new Date().toISOString(),
+    };
+    await fs.writeFile(path.join(outDir, 'last-run.json'), JSON.stringify(facts, null, 2), 'utf8');
+  } catch (e) {
+    log('寫 last-run.json 失敗（不影響發佈）', e.message);
+  }
 }
 
 main().catch((e) => { console.error('[pipeline] FATAL', e); process.exit(1); });
