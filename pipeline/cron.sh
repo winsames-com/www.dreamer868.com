@@ -10,6 +10,21 @@ set -euo pipefail
 REPO="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$REPO"
 
+# ── 與 seo-ops 反思/大腦共用的 per-站鎖（2026-07-15 新增）─────────────────────────
+# 第三個寫這個工作樹的人：/root/seo-ops 的反思（台 15:30）與大腦（台 16:05）會改本 repo
+# 的經營層/內容檔，且反思失敗時會回退它碰過的檔。本腳本台 01:11 跑，離反思有 14 小時，
+# 正常撞不到 —— 但「靠時間錯開」不是保險：pipeline 變慢、或哪天改 cron 時間就會撞上。
+# 撞上的後果有實例：姊妹站 yao.care 的產線（台 04:30、跑 45~50 分）把反思（台 04:55）整個
+# 包住 → 反思連 5 天全被回退，且反思舊版的整棵樹 `git clean -fdq` 刪掉產線 3 篇文章。
+# 見 /root/seo-ops/MAINTENANCE.md §二（含 9 站第三方寫入者盤點表）。
+# 等 1800s：本 job 一天一次，等一下也不該直接放棄整晚的判決稿。
+# ⚠ 鎖檔名與 fd 必須與 seo-reflect.sh / seo-brain.sh 一致（/tmp/seo-claude-<站>.lock、fd 200）。
+exec 200>/tmp/seo-claude-dreamer868.com.lock
+if ! flock -w 1800 200; then
+  echo "[cron] 等 seo-ops（反思/大腦）讓出工作樹逾時（>30 分），本次放棄"
+  exit 1
+fi
+
 # 載入環境變數（JUD_USER / JUD_PASS，選配 DRY_RUN）
 set -a
 [ -f pipeline/.env ] && . pipeline/.env
