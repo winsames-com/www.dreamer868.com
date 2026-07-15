@@ -30,11 +30,12 @@ set -a
 [ -f pipeline/.env ] && . pipeline/.env
 set +a
 
-node pipeline/run.mjs
+# run.mjs 失敗也不中斷：仍要發 Slack 告警（heartbeat 會偵測缺 last-run.json）。
+node pipeline/run.mjs || echo "[cron] run.mjs 非零退出（續行：commit 判斷 + Slack 告警）"
 
-# 乾跑不發佈
+# 乾跑不發佈、不發心跳（避免測試噪音）
 if [ "${DRY_RUN:-}" = "1" ]; then
-  echo "[cron] DRY_RUN — 不 commit"
+  echo "[cron] DRY_RUN — 不 commit、不發 Slack"
   exit 0
 fi
 
@@ -46,3 +47,7 @@ else
   git push
   echo "[cron] 已發佈並推送"
 fi
+
+# Slack 心跳：✍️ 文章撰寫（今晚生產戰報；非 LLM、缺檔/失敗都不中斷）。
+# 📊 數據心跳改由早上獨立 cron（pipeline/slack/data-cron.sh）發，與此處脫鉤、零重疊。
+pipeline/slack/heartbeat-publish.sh || true

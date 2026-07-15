@@ -17,4 +17,7 @@ set -a
 set +a
 
 echo "[checkup-cron] === $(date '+%F %T %Z') ==="
-node pipeline/checkup/run.mjs
+node pipeline/checkup/run.mjs || echo "[checkup-cron] run.mjs 非零退出（續行發心跳）"
+
+# 🤖 大腦優化心跳（每日一次；內建當日去重，故兩條 checkup cron 只會發一則）
+pipeline/slack/heartbeat-brain.sh || true
