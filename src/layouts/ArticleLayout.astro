@@ -90,8 +90,32 @@ const faqLd = faq && faq.length
 
 const jsonLd = faqLd ? [articleLd, faqLd] : articleLd;
 
+// 分類名稱 → 實際對應頁面（避免全部文章的麵包屑都指向籠統的 /services/，
+// 即使分類根本不是服務項目，例如「服務對象」案例故事)
+const categoryHrefMap: Record<string, string> = {
+  '理財規劃': '/services/financial-planning/',
+  '稅務規劃': '/services/tax-planning/',
+  '財富傳承': '/services/wealth-inheritance/',
+  '海外銀行開戶': '/services/overseas-banking/',
+  '家族治理': '/services/family-governance/',
+  '保險服務': '/services/insurance/',
+  '信託規劃': '/services/trust-planning/',
+  '移民規劃': '/services/immigration/',
+  '二代培訓': '/services/next-gen-training/',
+  '租稅服務': '/services/tax-services/',
+  '地政士服務': '/services/land-administration/',
+  '國際貿易': '/services/international-trade/',
+  '海外基金債券': '/services/overseas-funds/',
+  '服務對象': '/service-targets/',
+  '關於我們': '/about/',
+  '品牌理念': '/about/',
+  '服務流程': '/service-process/',
+  '專業團隊': '/team/',
+  '最新消息': '/news/',
+};
+
 const breadcrumbs = [
-  ...(category ? [{ name: category, href: '/services/' }] : []),
+  ...(category ? [{ name: category, href: categoryHrefMap[category] ?? '/services/' }] : []),
   { name: title, href: `/articles/${slug || ''}/` },
 ];
 ---
