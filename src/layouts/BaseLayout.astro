@@ -125,19 +125,7 @@ const breadcrumbLd = {
   <link rel="alternate" type="application/rss+xml" title="尊茂財務規劃 — 文章 RSS" href="/rss.xml" />
   <link rel="alternate" type="text/plain" title="llms.txt" href="/llms.txt" />
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@400;700&family=Tiro+Devanagari+Hindi&display=swap"
-    rel="stylesheet"
-  />
-
-  <!-- Font Awesome -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-  />
+  <!-- 字型走系統堆疊（variables.css --font-*），圖示走自託管 Icon.astro：依設計規範禁外部 CDN -->
 
   <!-- 全站實體：Organization + WebSite -->
   <script type="application/ld+json" set:html={JSON.stringify(orgLd)} />

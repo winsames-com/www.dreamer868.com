@@ -148,8 +148,8 @@ const caseCategories = [
     inset: 0;
     background: linear-gradient(
       135deg,
-      rgba(0, 58, 147, 0.6) 0%,
-      rgba(0, 0, 0, 0.3) 100%
+      var(--color-primary-a60) 0%,
+      var(--scrim-30) 100%
     );
   }
 
@@ -157,19 +157,19 @@ const caseCategories = [
     position: relative;
     z-index: 1;
     text-align: center;
-    color: #fff;
+    color: var(--color-white);
   }
 
   .hero-content h1 {
     font-family: var(--font-serif);
-    font-size: var(--f75);
+    font-size: var(--text-3xl);
     font-weight: 700;
     margin-bottom: 16px;
-    text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+    text-shadow: var(--shadow-text);
   }
 
   .hero-content p {
-    font-size: var(--f22);
+    font-size: var(--text-lg);
     margin-bottom: 40px;
     opacity: 0.9;
   }
@@ -178,15 +178,15 @@ const caseCategories = [
     display: inline-block;
     padding: 14px 40px;
     background: var(--color-accent);
-    color: #fff;
-    font-size: var(--f18);
+    color: var(--color-white);
+    font-size: var(--text-sm);
     font-weight: 700;
     border-radius: 4px;
     transition: background 0.3s;
   }
 
   .hero-cta:hover {
-    background: #b83b20;
+    background: var(--color-accent-dark);
   }
 
   /* Sections */
@@ -199,12 +199,13 @@ const caseCategories = [
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 60px;
   }
 
   .about-inner > img {
-    width: 45%;
+    width: 100%;
     border-radius: 8px;
     aspect-ratio: 4/3;
     object-fit: cover;
@@ -247,27 +248,27 @@ const caseCategories = [
     margin: 0 0 6px;
   }
   .founder-name {
-    font-size: var(--f36, 2.2rem);
+    font-size: var(--text-xl);
     margin: 0 0 12px;
   }
   .founder-cred {
-    color: #555;
+    color: var(--color-ink-soft);
     font-weight: 500;
     margin: 0 0 6px;
   }
   .founder-roles {
-    color: #888;
-    font-size: 15px;
+    color: var(--color-ink-muted);
+    font-size: var(--text-xs);
     margin: 0 0 28px;
   }
   .founder-words p {
-    font-size: 18px;
+    font-size: var(--text-sm);
     line-height: 1.95;
-    color: #444;
+    color: var(--color-ink-soft);
     margin: 0 0 10px;
   }
   .founder-motto {
-    font-size: 22px;
+    font-size: var(--text-base);
     font-weight: 700;
     color: var(--color-primary);
     margin: 24px 0 16px;
@@ -283,7 +284,7 @@ const caseCategories = [
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(0, 58, 147, 0.85);
+    background: var(--color-primary-a85);
   }
 
   .services-grid {
@@ -292,12 +293,12 @@ const caseCategories = [
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     gap: 40px;
   }
 
   .service-card {
-    color: #fff;
+    color: var(--color-white);
     text-align: center;
     padding: 40px 30px;
     transition: transform 0.3s;
@@ -310,20 +311,20 @@ const caseCategories = [
   .service-number {
     display: block;
     font-family: var(--font-decorative);
-    font-size: var(--f75);
+    font-size: var(--text-3xl);
     color: var(--color-accent);
     line-height: 1;
     margin-bottom: 20px;
   }
 
   .service-card h3 {
-    font-size: var(--f22);
+    font-size: var(--text-lg);
     margin-bottom: 16px;
     font-weight: 700;
   }
 
   .service-card p {
-    font-size: 15px;
+    font-size: var(--text-xs);
     opacity: 0.85;
     line-height: 1.8;
   }
@@ -346,34 +347,34 @@ const caseCategories = [
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr;
     gap: 24px;
   }
 
   .more-service-card {
-    background: #fff;
+    background: var(--color-white);
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    box-shadow: var(--shadow-card);
     transition: transform 0.3s, box-shadow 0.3s;
     position: relative;
   }
 
   .more-service-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    box-shadow: var(--shadow-card-hover);
   }
 
   .more-service-card h4 {
-    font-size: var(--f20);
+    font-size: var(--text-lg);
     color: var(--color-primary);
     font-weight: 700;
     margin-bottom: 10px;
   }
 
   .more-service-card p {
-    font-size: 14px;
-    color: #666;
+    font-size: var(--text-xs);
+    color: var(--color-ink-soft);
     line-height: 1.8;
   }
 
@@ -382,7 +383,7 @@ const caseCategories = [
     bottom: 20px;
     right: 20px;
     color: var(--color-accent);
-    font-size: 20px;
+    font-size: var(--text-base);
     font-weight: 700;
   }
 
@@ -391,34 +392,34 @@ const caseCategories = [
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr;
     gap: 24px;
   }
 
   .case-card {
-    background: #fff;
+    background: var(--color-white);
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    box-shadow: var(--shadow-card);
     transition: transform 0.3s, box-shadow 0.3s;
     position: relative;
   }
 
   .case-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    box-shadow: var(--shadow-card-hover);
   }
 
   .case-card h4 {
-    font-size: var(--f20);
+    font-size: var(--text-lg);
     color: var(--color-primary);
     font-weight: 700;
     margin-bottom: 10px;
   }
 
   .case-card p {
-    font-size: 14px;
-    color: #666;
+    font-size: var(--text-xs);
+    color: var(--color-ink-soft);
     line-height: 1.8;
   }
 
@@ -431,17 +432,17 @@ const caseCategories = [
     max-width: 900px;
     margin: 0 auto;
     text-align: center;
-    color: #fff;
+    color: var(--color-white);
   }
 
   .cta-inner h2 {
     font-family: var(--font-serif);
-    font-size: var(--f48);
+    font-size: var(--text-2xl);
     margin-bottom: 20px;
   }
 
   .cta-inner p {
-    font-size: var(--f18);
+    font-size: var(--text-base);
     margin-bottom: 30px;
     opacity: 0.9;
   }
@@ -450,31 +451,31 @@ const caseCategories = [
     display: inline-block;
     padding: 14px 40px;
     background: var(--color-accent);
-    color: #fff;
+    color: var(--color-white);
     font-weight: 700;
     border-radius: 4px;
     transition: background 0.3s;
   }
 
   .cta-button:hover {
-    background: #b83b20;
+    background: var(--color-accent-dark);
   }
 
-  @media (max-width: 900px) {
+  @media (min-width: 1024px) {
     .about-inner {
-      flex-direction: column;
+      flex-direction: row;
     }
     .about-inner > img {
-      width: 100%;
+      width: 45%;
     }
     .services-grid {
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(3, 1fr);
     }
     .more-services-grid {
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(4, 1fr);
     }
     .case-grid {
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(4, 1fr);
     }
   }
 </style>

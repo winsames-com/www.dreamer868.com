@@ -1,49 +1,86 @@
+/* 尊茂設計 token（全站唯一來源）。
+ * 規範（團隊網站共用）：
+ * - 顏色一律在此定義：oklch 為準、hex 為 fallback；元件只准 var(--…)，不寫 hex/rgb。
+ * - 字級一律 --text-* 階梯（最小 18px；內文不得小於 --text-base），禁 px 硬編字級、禁 important 覆寫。
+ * - 字型自託管或系統堆疊，禁外部 CDN。
+ * - RWD mobile-first，斷點只用 min-width（sm 640 / md 768 / lg 1024 / xl 1280）。
+ * 守門：scripts/check-design.mjs（pnpm build 自動先跑，違規直接 fail）。 */
+
 :root {
-  /* Colors */
-  --color-primary: #003A93;
-  --color-accent: #D1482A;
-  --color-bg-light: #F4F4F4;
-  --color-text: #1F1F1F;
+  /* ── 色彩（hex fallback；下方 @supports 區塊以 oklch 覆寫） ── */
+  --color-primary: #003A93;      /* 品牌深藍 */
+  --color-accent: #D1482A;       /* 品牌橘紅 */
+  --color-accent-dark: #b83b20;  /* 橘紅 hover */
+  --color-bg-light: #F4F4F4;     /* 淺灰底 */
+  --color-text: #1F1F1F;         /* 主文字 */
   --color-white: #ffffff;
+  --color-ink-soft: #555555;     /* 次要文字 */
+  --color-ink-muted: #999999;    /* 註記/弱化文字 */
+  --color-line: #dddddd;         /* 邊線/分隔 */
+  --color-social-fb: #1877F2;    /* Facebook 品牌色 */
+  --color-social-line: #06C755;  /* LINE 品牌色 */
 
-  /* Typography scale */
-  --f75: 75px;
-  --f70: 70px;
-  --f40: 40px;
-  --f32: 32px;
-  --f28: 28px;
-  --f26: 26px;
-  --f22: 22px;
-  --f20: 20px;
-  --f18: 18px;
+  /* ── 透明度變體與陰影（元件內禁 rgba/hex，一律引用這些） ── */
+  --color-primary-a95: rgba(0, 58, 147, 0.95);
+  --color-primary-a85: rgba(0, 58, 147, 0.85);
+  --color-primary-a80: rgba(0, 58, 147, 0.8);
+  --color-primary-a60: rgba(0, 58, 147, 0.6);
+  --color-primary-a40: rgba(0, 58, 147, 0.4);
+  --color-white-a20: rgba(255, 255, 255, 0.2);
+  --color-white-a10: rgba(255, 255, 255, 0.1);
+  --scrim-50: rgba(0, 0, 0, 0.5);
+  --scrim-30: rgba(0, 0, 0, 0.3);
+  --scrim-20: rgba(0, 0, 0, 0.2);
+  --scrim-0: rgba(0, 0, 0, 0);
+  --shadow-card: 0 2px 12px rgba(0, 0, 0, 0.08);
+  --shadow-card-hover: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --shadow-float: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-float-hover: 0 6px 20px rgba(0, 0, 0, 0.4);
+  --shadow-text: 0 2px 12px rgba(0, 0, 0, 0.3);
 
-  /* Fonts */
-  --font-sans: 'Noto Sans TC', sans-serif;
-  --font-serif: 'Noto Serif TC', serif;
-  --font-decorative: 'Tiro Devanagari Hindi', serif;
+  /* ── 字級階梯（rem；最小 18px；--text-base 為內文下限） ── */
+  --text-xs: 1.125rem;   /* 18px 標籤/徽章/免責註記 */
+  --text-sm: 1.25rem;    /* 20px 導覽/輔助資訊 */
+  --text-base: 1.375rem; /* 22px 內文 */
+  --text-lg: 1.625rem;   /* 26px 小標/卡片標題 */
+  --text-xl: 2rem;       /* 32px 段落標題 */
+  --text-2xl: clamp(2rem, 1.5rem + 2vw, 2.75rem);   /* 32→44px 頁面主標 */
+  --text-3xl: clamp(2.75rem, 2rem + 3.5vw, 4.5rem); /* 44→72px Hero/裝飾大字 */
+
+  /* ── 字型（系統堆疊，不載外部字型） ── */
+  --font-sans: 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', system-ui, sans-serif;
+  --font-serif: 'Noto Serif TC', 'PingFang TC', 'Microsoft JhengHei', serif;
+  --font-decorative: Georgia, 'Times New Roman', serif;
 }
 
-@media (max-width: 1024px) {
+@supports (color: oklch(0.5 0.1 250)) {
   :root {
-    --f75: 60px;
-    --f70: 60px;
-    --f32: 28px;
-    --f26: 24px;
-    --f22: 20px;
-    --f20: 20px;
-    --f18: 18px;
-    letter-spacing: 0.05em;
-  }
-}
-
-@media (max-width: 600px) {
-  :root {
-    --f75: 48px;
-    --f70: 48px;
-    --f32: 24px;
-    --f26: 20px;
-    --f22: 18px;
-    --f20: 18px;
-    --f18: 16px;
+    --color-primary: oklch(0.379 0.156 260.2);
+    --color-accent: oklch(0.588 0.178 33.9);
+    --color-accent-dark: oklch(0.531 0.166 33.7);
+    --color-bg-light: oklch(0.967 0 0);
+    --color-text: oklch(0.239 0 0);
+    --color-white: oklch(1 0 0);
+    --color-ink-soft: oklch(0.45 0 0);
+    --color-ink-muted: oklch(0.683 0 0);
+    --color-line: oklch(0.898 0 0);
+    --color-social-fb: oklch(0.589 0.203 257.9);
+    --color-social-line: oklch(0.724 0.205 148.6);
+    --color-primary-a95: oklch(0.379 0.156 260.2 / 0.95);
+    --color-primary-a85: oklch(0.379 0.156 260.2 / 0.85);
+    --color-primary-a80: oklch(0.379 0.156 260.2 / 0.8);
+    --color-primary-a60: oklch(0.379 0.156 260.2 / 0.6);
+    --color-primary-a40: oklch(0.379 0.156 260.2 / 0.4);
+    --color-white-a20: oklch(1 0 0 / 0.2);
+    --color-white-a10: oklch(1 0 0 / 0.1);
+    --scrim-50: oklch(0 0 0 / 0.5);
+    --scrim-30: oklch(0 0 0 / 0.3);
+    --scrim-20: oklch(0 0 0 / 0.2);
+    --scrim-0: oklch(0 0 0 / 0);
+    --shadow-card: 0 2px 12px oklch(0 0 0 / 0.08);
+    --shadow-card-hover: 0 8px 24px oklch(0 0 0 / 0.12);
+    --shadow-float: 0 4px 12px oklch(0 0 0 / 0.3);
+    --shadow-float-hover: 0 6px 20px oklch(0 0 0 / 0.4);
+    --shadow-text: 0 2px 12px oklch(0 0 0 / 0.3);
   }
 }

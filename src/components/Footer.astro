@@ -1,5 +1,6 @@
 ---
 import { mainNav, contactInfo } from '../data/navigation';
+import Icon from './Icon.astro';
 ---
 
 <footer class="footer">
@@ -27,27 +28,27 @@ import { mainNav, contactInfo } from '../data/navigation';
           <h4>聯絡資訊</h4>
           <ul>
             <li>
-              <i class="fas fa-phone"></i>
+              <Icon name="phone" />
               <a href={`tel:${contactInfo.phone}`}>{contactInfo.phone}</a>
             </li>
             <li>
-              <i class="fas fa-envelope"></i>
+              <Icon name="envelope" />
               <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
             </li>
             <li>
-              <i class="fas fa-map-marker-alt"></i>
+              <Icon name="location-dot" />
               <span>{contactInfo.address}</span>
             </li>
             <li>
-              <i class="fab fa-line"></i>
+              <Icon name="line" />
               <span>LINE ID: {contactInfo.lineId}</span>
             </li>
             <li>
-              <i class="fab fa-facebook-f"></i>
+              <Icon name="facebook-f" />
               <a href={contactInfo.facebookUrl} target="_blank" rel="noopener noreferrer">Facebook</a>
             </li>
             <li>
-              <i class="fas fa-building"></i>
+              <Icon name="building" />
               <span>統編: {contactInfo.taxId}</span>
             </li>
           </ul>
@@ -64,7 +65,7 @@ import { mainNav, contactInfo } from '../data/navigation';
 <style>
   .footer {
     background-color: var(--color-primary);
-    color: #fff;
+    color: var(--color-white);
     padding: 60px 0 0;
   }
 
@@ -76,13 +77,15 @@ import { mainNav, contactInfo } from '../data/navigation';
 
   .footer-top {
     display: flex;
-    gap: 60px;
+    flex-direction: column;
+    gap: 30px;
     padding-bottom: 40px;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid var(--color-white-a20);
   }
 
   .footer-brand {
-    flex: 0 0 250px;
+    flex: none;
+    text-align: center;
   }
 
   .footer-brand img {
@@ -92,7 +95,7 @@ import { mainNav, contactInfo } from '../data/navigation';
   }
 
   .footer-slogan {
-    font-size: 14px;
+    font-size: var(--text-xs);
     opacity: 0.8;
     line-height: 1.6;
   }
@@ -100,7 +103,8 @@ import { mainNav, contactInfo } from '../data/navigation';
   .footer-links {
     flex: 1;
     display: flex;
-    gap: 60px;
+    flex-direction: column;
+    gap: 30px;
   }
 
   .footer-nav,
@@ -109,7 +113,7 @@ import { mainNav, contactInfo } from '../data/navigation';
   }
 
   .footer h4 {
-    font-size: 18px;
+    font-size: var(--text-sm);
     font-weight: 700;
     margin-bottom: 20px;
     position: relative;
@@ -133,7 +137,7 @@ import { mainNav, contactInfo } from '../data/navigation';
   }
 
   .footer-nav a {
-    font-size: 14px;
+    font-size: var(--text-xs);
     opacity: 0.8;
     transition: opacity 0.2s;
   }
@@ -152,11 +156,11 @@ import { mainNav, contactInfo } from '../data/navigation';
     display: flex;
     align-items: flex-start;
     gap: 10px;
-    font-size: 14px;
+    font-size: var(--text-xs);
     opacity: 0.8;
   }
 
-  .footer-contact i {
+  .footer-contact .icon {
     margin-top: 4px;
     width: 16px;
     text-align: center;
@@ -169,24 +173,24 @@ import { mainNav, contactInfo } from '../data/navigation';
   .footer-bottom {
     padding: 20px 0;
     text-align: center;
-    font-size: 13px;
+    font-size: var(--text-xs);
     opacity: 0.6;
   }
 
-  @media (max-width: 768px) {
+  @media (min-width: 768px) {
     .footer-top {
-      flex-direction: column;
-      gap: 30px;
+      flex-direction: row;
+      gap: 60px;
     }
 
     .footer-brand {
-      flex: none;
-      text-align: center;
+      flex: 0 0 250px;
+      text-align: left;
     }
 
     .footer-links {
-      flex-direction: column;
-      gap: 30px;
+      flex-direction: row;
+      gap: 60px;
     }
   }
 </style>

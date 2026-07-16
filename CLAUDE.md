@@ -37,6 +37,16 @@
 
 > 機密憑證一律在 `pipeline/.env`、`pipeline/.secrets/`（皆 gitignore，**絕不進 repo**）。本機/伺服器部署的 cron 時間、deploy key 等屬機器專屬設定，不寫進這個 public repo。
 
+## 設計規範（全站強制，2026-07-16 起由 `scripts/check-design.mjs` 守門）
+
+團隊網站共用規範（同 credo/folk.tw/yao.care），`pnpm build` 會自動先跑守門腳本，違規直接 fail：
+
+- **顏色**：唯一來源 `src/styles/variables.css`（oklch 為準、hex 為 fallback，`@supports` 覆寫）；元件一律 `var(--color-*)` / `var(--scrim-*)` / `var(--shadow-*)`，禁 hex/rgb/hsl 硬編。
+- **字級**：只用 `--text-xs…--text-3xl` 階梯（最小 18px；內文不得小於 `--text-base` = 22px），禁 px 硬編 `font-size`。
+- **禁**：`!important`、外部 CDN（字型走系統堆疊 `--font-*`；圖示用自託管 `src/components/Icon.astro`，Font Awesome Free 路徑內嵌）。
+- **RWD**：mobile-first，斷點只用 `min-width`（640 / 768 / 1024 / 1280）。
+- 手動檢查：`pnpm check:design`。
+
 ## 技術棧
 
 - **框架**: Astro 6.x（靜態輸出）

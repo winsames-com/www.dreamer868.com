@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageBanner from '../components/PageBanner.astro';
+import Icon from '../components/Icon.astro';
 import { contactInfo } from '../data/navigation';
 ---
 
@@ -13,35 +14,35 @@ import { contactInfo } from '../data/navigation';
         <h2>聯絡資訊</h2>
         <ul>
           <li>
-            <i class="fas fa-phone"></i>
+            <Icon name="phone" />
             <div>
               <strong>電話</strong>
               <a href={`tel:${contactInfo.phone}`}>{contactInfo.phone}</a>
             </div>
           </li>
           <li>
-            <i class="fab fa-line"></i>
+            <Icon name="line" />
             <div>
               <strong>LINE ID</strong>
               <a href={contactInfo.lineUrl} target="_blank">{contactInfo.lineId}</a>
             </div>
           </li>
           <li>
-            <i class="fas fa-envelope"></i>
+            <Icon name="envelope" />
             <div>
               <strong>Email</strong>
               <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
             </div>
           </li>
           <li>
-            <i class="fas fa-map-marker-alt"></i>
+            <Icon name="location-dot" />
             <div>
               <strong>地址</strong>
               <span>{contactInfo.address}</span>
             </div>
           </li>
           <li>
-            <i class="fas fa-building"></i>
+            <Icon name="building" />
             <div>
               <strong>統一編號</strong>
               <span>{contactInfo.taxId}</span>
@@ -87,13 +88,13 @@ import { contactInfo } from '../data/navigation';
 
   .contact-grid {
     display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 60px;
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
 
   .contact-info h2,
   .contact-form h2 {
-    font-size: var(--f26);
+    font-size: var(--text-lg);
     color: var(--color-primary);
     font-family: var(--font-serif);
     margin-bottom: 30px;
@@ -111,10 +112,12 @@ import { contactInfo } from '../data/navigation';
     display: flex;
     gap: 16px;
     align-items: flex-start;
+    min-width: 0;
+    overflow-wrap: anywhere;
   }
 
-  .contact-info i {
-    font-size: 20px;
+  .contact-info .icon {
+    font-size: var(--text-base);
     color: var(--color-primary);
     margin-top: 4px;
     width: 24px;
@@ -123,8 +126,8 @@ import { contactInfo } from '../data/navigation';
 
   .contact-info strong {
     display: block;
-    font-size: 14px;
-    color: #999;
+    font-size: var(--text-xs);
+    color: var(--color-ink-muted);
     margin-bottom: 4px;
   }
 
@@ -138,24 +141,24 @@ import { contactInfo } from '../data/navigation';
 
   .form-row {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 20px;
   }
 
   label {
     display: block;
-    font-size: 14px;
+    font-size: var(--text-xs);
     font-weight: 500;
     margin-bottom: 6px;
-    color: #333;
+    color: var(--color-ink-soft);
   }
 
   input, textarea {
     width: 100%;
     padding: 10px 14px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--color-line);
     border-radius: 4px;
-    font-size: 16px;
+    font-size: var(--text-sm);
     font-family: var(--font-sans);
     transition: border-color 0.3s;
   }
@@ -169,8 +172,8 @@ import { contactInfo } from '../data/navigation';
     display: inline-block;
     padding: 12px 40px;
     background: var(--color-primary);
-    color: #fff;
-    font-size: 16px;
+    color: var(--color-white);
+    font-size: var(--text-sm);
     font-weight: 700;
     border: none;
     border-radius: 4px;
@@ -182,14 +185,14 @@ import { contactInfo } from '../data/navigation';
     background: var(--color-accent);
   }
 
-  @media (max-width: 768px) {
+  @media (min-width: 768px) {
     .contact-grid {
-      grid-template-columns: 1fr;
-      gap: 40px;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 60px;
     }
 
     .form-row {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr 1fr;
     }
   }
 </style>

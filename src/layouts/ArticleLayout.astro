@@ -188,34 +188,34 @@ const breadcrumbs = [
   .category-tag {
     display: inline-block;
     background: var(--color-primary);
-    color: #fff;
+    color: var(--color-white);
     padding: 4px 14px;
     border-radius: 4px;
-    font-size: 14px;
+    font-size: var(--text-xs);
     font-weight: 500;
   }
 
   time {
-    color: #999;
-    font-size: 14px;
+    color: var(--color-ink-muted);
+    font-size: var(--text-xs);
   }
 
   .byline {
     display: inline-flex;
     align-items: baseline;
     gap: 8px;
-    font-size: 14px;
-    color: #555;
+    font-size: var(--text-xs);
+    color: var(--color-ink-soft);
   }
 
   .byline a { color: var(--color-primary); text-decoration: none; font-weight: 600; }
   .byline a:hover { text-decoration: underline; }
-  .byline .author-title { color: #999; font-size: 13px; }
+  .byline .author-title { color: var(--color-ink-muted); font-size: var(--text-xs); }
 
   .photo-credit {
     text-align: center;
-    font-size: 12px;
-    color: #999;
+    font-size: var(--text-xs);
+    color: var(--color-ink-muted);
     margin-top: 40px;
   }
 
@@ -226,7 +226,7 @@ const breadcrumbs = [
   }
 
   .faq h2 {
-    font-size: var(--f28, 1.6rem);
+    font-size: var(--text-xl);
     margin-bottom: 24px;
     color: var(--color-primary);
   }
@@ -239,9 +239,9 @@ const breadcrumbs = [
   .faq-item summary {
     cursor: pointer;
     font-weight: 600;
-    font-size: 17px;
+    font-size: var(--text-sm);
     line-height: 1.6;
-    color: #333;
+    color: var(--color-ink-soft);
     list-style: none;
   }
 
@@ -252,7 +252,7 @@ const breadcrumbs = [
   .faq-item p {
     margin: 12px 0 0;
     padding-left: 1.4em;
-    color: #555;
+    color: var(--color-ink-soft);
     line-height: 1.8;
   }
 
@@ -263,7 +263,7 @@ const breadcrumbs = [
   }
 
   .related h2 {
-    font-size: var(--f28, 1.6rem);
+    font-size: var(--text-xl);
     margin-bottom: 20px;
     color: var(--color-primary);
   }
@@ -276,7 +276,7 @@ const breadcrumbs = [
   }
 
   .related a {
-    color: #333;
+    color: var(--color-ink-soft);
     text-decoration: none;
     font-weight: 500;
   }
@@ -294,13 +294,13 @@ const breadcrumbs = [
     font-weight: 700;
     color: var(--color-primary);
     margin: 0 0 12px;
-    font-size: 16px;
+    font-size: var(--text-sm);
   }
 
   .toc ul { list-style: none; padding: 0; margin: 0; }
   .toc li { padding: 4px 0; line-height: 1.6; }
-  .toc-d3 { padding-left: 1.4em; font-size: 14px; }
-  .toc a { color: #555; text-decoration: none; }
+  .toc-d3 { padding-left: 1.4em; font-size: var(--text-xs); }
+  .toc a { color: var(--color-ink-soft); text-decoration: none; }
   .toc a:hover { color: var(--color-primary); text-decoration: underline; }
 
   html { scroll-behavior: smooth; }
@@ -314,8 +314,8 @@ const breadcrumbs = [
   }
 
   .case-disclaimer p {
-    font-size: 14px;
-    color: #555;
+    font-size: var(--text-xs);
+    color: var(--color-ink-soft);
     line-height: 1.7;
     margin: 0;
   }

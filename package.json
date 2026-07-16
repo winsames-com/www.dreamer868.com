@@ -7,7 +7,8 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "node scripts/check-design.mjs && astro build",
+    "check:design": "node scripts/check-design.mjs",
     "preview": "astro preview",
     "astro": "astro",
     "test:pipeline": "node --test 'pipeline/**/*.test.mjs'",
