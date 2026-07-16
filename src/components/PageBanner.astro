@@ -18,7 +18,7 @@ const { title, backgroundImage = 'https://images.pexels.com/photos/7433853/pexel
 <style>
   .page-banner {
     position: relative;
-    height: 400px;
+    height: 220px;
     display: flex;
     align-items: flex-end;
     overflow: hidden;
@@ -36,8 +36,8 @@ const { title, backgroundImage = 'https://images.pexels.com/photos/7433853/pexel
     inset: 0;
     background: linear-gradient(
       to right,
-      rgba(0, 58, 147, 0.8) 0%,
-      rgba(0, 58, 147, 0.4) 100%
+      var(--color-primary-a80) 0%,
+      var(--color-primary-a40) 100%
     );
   }
 
@@ -47,34 +47,34 @@ const { title, backgroundImage = 'https://images.pexels.com/photos/7433853/pexel
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 40px 60px;
+    padding: 0 20px 30px;
   }
 
   .banner-content h1 {
     font-family: var(--font-serif);
-    font-size: var(--f40);
-    color: #fff;
+    font-size: var(--text-xl);
+    color: var(--color-white);
     font-weight: 700;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    text-shadow: var(--shadow-text);
   }
 
-  @media (max-width: 1024px) {
+  @media (min-width: 768px) {
     .page-banner {
       height: 300px;
     }
-  }
-
-  @media (max-width: 768px) {
-    .page-banner {
-      height: 220px;
-    }
 
     .banner-content {
-      padding: 0 20px 30px;
+      padding: 0 40px 60px;
     }
 
     .banner-content h1 {
-      font-size: var(--f28);
+      font-size: var(--text-2xl);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .page-banner {
+      height: 400px;
     }
   }
 </style>

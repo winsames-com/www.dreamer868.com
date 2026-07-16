@@ -53,9 +53,9 @@ const overview = all.find((a) => a.data.slug === 'service-targets-01');
   }
 
   .hub-intro {
-    font-size: var(--f20);
+    font-size: var(--text-base);
     text-align: center;
-    color: #666;
+    color: var(--color-ink-soft);
     max-width: 760px;
     margin: 0 auto 50px;
     line-height: 1.8;
@@ -69,13 +69,13 @@ const overview = all.find((a) => a.data.slug === 'service-targets-01');
 
   .cards-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 30px;
   }
 
-  @media (max-width: 600px) {
+  @media (min-width: 640px) {
     .cards-grid {
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 </style>

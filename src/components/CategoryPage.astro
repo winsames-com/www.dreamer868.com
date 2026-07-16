@@ -85,9 +85,9 @@ const itemListLd = {
   }
 
   .category-desc {
-    font-size: var(--f20);
+    font-size: var(--text-base);
     text-align: center;
-    color: #666;
+    color: var(--color-ink-soft);
     margin-bottom: 50px;
     max-width: 700px;
     margin-left: auto;
@@ -96,19 +96,19 @@ const itemListLd = {
 
   .articles-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     gap: 30px;
   }
 
-  @media (max-width: 1024px) {
+  @media (min-width: 640px) {
     .articles-grid {
       grid-template-columns: repeat(2, 1fr);
     }
   }
 
-  @media (max-width: 600px) {
+  @media (min-width: 1024px) {
     .articles-grid {
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 </style>

@@ -88,6 +88,7 @@ public/                 # CNAME、robots.txt、favicon、IndexNow 金鑰檔
 ```bash
 # 情境 A：開發 / 建置 / 測試
 pnpm dev / build / preview
+pnpm check:design                        # 設計規範守門（oklch token/--text-* 階梯/禁 px 字級，build 前自動跑；規範細節見 CLAUDE.md「設計規範」）
 pnpm test:pipeline                       # pipeline + checkup 純函式單元測試
 
 # 情境 A：替既有文章補 GEO/AEO 欄位（需 claude 已登入）

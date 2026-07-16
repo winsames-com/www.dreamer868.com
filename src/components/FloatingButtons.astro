@@ -1,27 +1,28 @@
 ---
 import { contactInfo } from '../data/navigation';
+import Icon from './Icon.astro';
 ---
 
 <div class="floating-buttons">
   <a href={contactInfo.facebookUrl} target="_blank" rel="noopener noreferrer" class="float-btn facebook" aria-label="前往Facebook粉絲頁">
-    <i class="fa-brands fa-facebook-f"></i>
+    <Icon name="facebook-f" />
   </a>
   <a href={contactInfo.lineUrl} target="_blank" rel="noopener noreferrer" class="float-btn line" aria-label="LINE聯繫">
-    <i class="fa-brands fa-line"></i>
+    <Icon name="line" />
   </a>
   <a href={`tel:${contactInfo.phone}`} class="float-btn phone" aria-label="撥打電話">
-    <i class="fas fa-phone"></i>
+    <Icon name="phone" />
   </a>
   <a href={`mailto:${contactInfo.email}`} class="float-btn mail" aria-label="寄送Email">
-    <i class="fas fa-envelope"></i>
+    <Icon name="envelope" />
   </a>
 </div>
 
 <style>
   .floating-buttons {
     position: fixed;
-    right: 20px;
-    bottom: 100px;
+    right: 12px;
+    bottom: 20px;
     z-index: 999;
     display: flex;
     flex-direction: column;
@@ -29,29 +30,29 @@ import { contactInfo } from '../data/navigation';
   }
 
   .float-btn {
-    width: 50px;
-    height: 50px;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
-    font-size: 22px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    color: var(--color-white);
+    font-size: var(--text-sm);
+    box-shadow: var(--shadow-float);
     transition: transform 0.3s, box-shadow 0.3s;
   }
 
   .float-btn:hover {
     transform: scale(1.1);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    box-shadow: var(--shadow-float-hover);
   }
 
   .float-btn.facebook {
-    background: #1877F2;
+    background: var(--color-social-fb);
   }
 
   .float-btn.line {
-    background: #06C755;
+    background: var(--color-social-line);
   }
 
   .float-btn.phone {
@@ -62,16 +63,16 @@ import { contactInfo } from '../data/navigation';
     background: var(--color-accent);
   }
 
-  @media (max-width: 768px) {
+  @media (min-width: 768px) {
     .floating-buttons {
-      right: 12px;
-      bottom: 20px;
+      right: 20px;
+      bottom: 100px;
     }
 
     .float-btn {
-      width: 44px;
-      height: 44px;
-      font-size: 18px;
+      width: 50px;
+      height: 50px;
+      font-size: var(--text-base);
     }
   }
 </style>

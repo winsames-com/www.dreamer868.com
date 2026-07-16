@@ -23,15 +23,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   .not-found h1 {
     font-family: var(--font-serif);
-    font-size: 120px;
+    font-size: var(--text-3xl);
     color: var(--color-primary);
     line-height: 1;
     margin-bottom: 16px;
   }
 
   .not-found p {
-    font-size: var(--f20);
-    color: #666;
+    font-size: var(--text-base);
+    color: var(--color-ink-soft);
     margin-bottom: 40px;
   }
 
@@ -39,8 +39,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     display: inline-block;
     padding: 12px 40px;
     background: var(--color-primary);
-    color: #fff;
-    font-size: var(--f18);
+    color: var(--color-white);
+    font-size: var(--text-sm);
     font-weight: 700;
     border-radius: 4px;
     transition: background 0.3s;

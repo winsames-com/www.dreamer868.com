@@ -24,16 +24,16 @@ const { title, href, image, imageAlt, category } = Astro.props;
   .article-card {
     display: flex;
     flex-direction: column;
-    background: #fff;
+    background: var(--color-white);
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    box-shadow: var(--shadow-card);
     transition: transform 0.3s, box-shadow 0.3s;
   }
 
   .article-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    box-shadow: var(--shadow-card-hover);
   }
 
   .card-image {
@@ -64,15 +64,15 @@ const { title, href, image, imageAlt, category } = Astro.props;
     display: inline-block;
     width: fit-content;
     background: var(--color-primary);
-    color: #fff;
+    color: var(--color-white);
     padding: 2px 10px;
     border-radius: 3px;
-    font-size: 12px;
+    font-size: var(--text-xs);
     font-weight: 500;
   }
 
   .card-title {
-    font-size: var(--f20);
+    font-size: var(--text-base);
     font-weight: 700;
     color: var(--color-text);
     line-height: 1.5;

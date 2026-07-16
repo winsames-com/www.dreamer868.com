@@ -1,5 +1,6 @@
 ---
 import { mainNav, contactInfo } from '../data/navigation';
+import Icon from './Icon.astro';
 ---
 
 <header class="header">
@@ -12,16 +13,16 @@ import { mainNav, contactInfo } from '../data/navigation';
       <div class="header-right">
         <div class="social-links">
           <a href={contactInfo.lineUrl} target="_blank" rel="noopener noreferrer" aria-label="LINE">
-            <i class="fa-brands fa-line"></i>
+            <Icon name="line" />
           </a>
           <a href={contactInfo.facebookUrl} target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-            <i class="fa-brands fa-facebook-f"></i>
+            <Icon name="facebook-f" />
           </a>
           <a href={`tel:${contactInfo.phone}`} aria-label="電話">
-            <i class="fa-brands fa-whatsapp"></i>
+            <Icon name="whatsapp" />
           </a>
           <a href={`mailto:${contactInfo.email}`} aria-label="Email">
-            <i class="far fa-envelope"></i>
+            <Icon name="envelope" />
           </a>
         </div>
 
@@ -111,12 +112,12 @@ import { mainNav, contactInfo } from '../data/navigation';
   }
 
   .header-inner {
-    background: linear-gradient(to bottom, rgba(0,0,0,.5) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0) 100%);
+    background: linear-gradient(to bottom, var(--scrim-50) 0%, var(--scrim-20) 50%, var(--scrim-0) 100%);
     transition: all 0.3s ease;
   }
 
   .header.sticky .header-inner {
-    background: rgba(0, 58, 147, 0.95);
+    background: var(--color-primary-a95);
     backdrop-filter: blur(10px);
   }
 
@@ -142,13 +143,13 @@ import { mainNav, contactInfo } from '../data/navigation';
 
   /* Social links */
   .social-links {
-    display: flex;
+    display: none;
     gap: 12px;
   }
 
   .social-links a {
-    color: #fff;
-    font-size: 20px;
+    color: var(--color-white);
+    font-size: var(--text-base);
     transition: opacity 0.3s;
   }
 
@@ -157,6 +158,10 @@ import { mainNav, contactInfo } from '../data/navigation';
   }
 
   /* Desktop nav */
+  .nav-desktop {
+    display: none;
+  }
+
   .nav-list {
     display: flex;
     gap: 0;
@@ -172,8 +177,8 @@ import { mainNav, contactInfo } from '../data/navigation';
     overflow: hidden;
     height: 28px;
     padding: 0 14px;
-    color: #fff;
-    font-size: 14px;
+    color: var(--color-white);
+    font-size: var(--text-xs);
     font-weight: 500;
     letter-spacing: 0.05em;
     transition: color 0.3s;
@@ -197,7 +202,7 @@ import { mainNav, contactInfo } from '../data/navigation';
     top: 100%;
     left: 0;
     min-width: 180px;
-    background: rgba(0, 58, 147, 0.95);
+    background: var(--color-primary-a95);
     backdrop-filter: blur(10px);
     opacity: 0;
     visibility: hidden;
@@ -214,19 +219,19 @@ import { mainNav, contactInfo } from '../data/navigation';
   .dropdown li a {
     display: block;
     padding: 10px 20px;
-    color: #fff;
-    font-size: 14px;
+    color: var(--color-white);
+    font-size: var(--text-xs);
     white-space: nowrap;
     transition: background 0.2s;
   }
 
   .dropdown li a:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--color-white-a10);
   }
 
   /* Hamburger */
   .hamburger {
-    display: none;
+    display: flex;
     flex-direction: column;
     gap: 5px;
     background: none;
@@ -239,7 +244,7 @@ import { mainNav, contactInfo } from '../data/navigation';
     display: block;
     width: 25px;
     height: 2px;
-    background: #fff;
+    background: var(--color-white);
     transition: all 0.3s;
   }
 
@@ -276,10 +281,10 @@ import { mainNav, contactInfo } from '../data/navigation';
 
   .mobile-menu a {
     display: block;
-    color: #fff;
+    color: var(--color-white);
     padding: 12px 0;
-    font-size: 16px;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
+    font-size: var(--text-sm);
+    border-bottom: 1px solid var(--color-white-a20);
   }
 
   .mobile-dropdown {
@@ -292,21 +297,21 @@ import { mainNav, contactInfo } from '../data/navigation';
   }
 
   .mobile-dropdown a {
-    font-size: 14px;
-    border-bottom-color: rgba(255,255,255,0.1);
+    font-size: var(--text-xs);
+    border-bottom-color: var(--color-white-a10);
   }
 
-  @media (max-width: 1024px) {
+  @media (min-width: 1024px) {
     .nav-desktop {
-      display: none;
+      display: block;
     }
 
     .hamburger {
-      display: flex;
+      display: none;
     }
 
     .social-links {
-      display: none;
+      display: flex;
     }
   }
 </style>
