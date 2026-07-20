@@ -1,16 +1,20 @@
-// 設計規範守門（比照 credo/olderkkk 的 check-fontsize，加強版）：
-// 掃 src/ 下所有 .css/.astro，違規即 exit 1（pnpm build 前自動跑）。
+// 設計規範守門 v2（團隊共用；v1 源自 dreamer868，v2 加 css 白名單＋掃 .svelte）：
+// 掃 src/ 下所有 .css/.astro/.svelte，違規即 exit 1（pnpm build 前自動跑）。
 // 規則（見 src/styles/variables.css 檔頭）：
 // 1. font-size 禁用 px（一律 var(--text-*) 階梯）
 // 2. 顏色（hex / rgb() / hsl()）只准出現在 src/styles/variables.css
 // 3. 禁 !important
 // 4. 禁外部 CDN（fonts.googleapis / cdnjs / unpkg / jsdelivr）
+// 5. 統一 css 檔案：src/ 下的 .css 只准 src/styles/ 白名單那幾檔，新增即 fail
+//    （元件樣式寫 Astro/Svelte scoped <style> 或進 global.css）
 import { readdirSync, readFileSync, statSync } from "node:fs";
-import { join, extname, relative } from "node:path";
+import { join, extname, relative, basename } from "node:path";
 
 const ROOT = "src";
 const TOKEN_FILE = join("src", "styles", "variables.css");
-const exts = new Set([".css", ".astro"]);
+// 舊站遷移期可暫加既有檔（凍結用，禁再擴充）；新站一律只有這兩檔。
+const STYLE_WHITELIST = new Set(["variables.css", "global.css"]);
+const exts = new Set([".css", ".astro", ".svelte"]);
 const violations = [];
 
 function walk(dir) {
@@ -22,10 +26,18 @@ function walk(dir) {
 }
 
 function scan(file) {
-  const isTokenFile = relative(".", file) === TOKEN_FILE;
+  const rel = relative(".", file);
+  if (extname(file) === ".css") {
+    const inStyles = rel.startsWith(join("src", "styles") + "/");
+    if (!inStyles || !STYLE_WHITELIST.has(basename(file)))
+      violations.push(
+        `${rel} css 檔不在白名單（統一 css：src/styles/{${[...STYLE_WHITELIST].join(",")}}；元件樣式用 scoped <style>）`
+      );
+  }
+  const isTokenFile = rel === TOKEN_FILE;
   const lines = readFileSync(file, "utf8").split("\n");
   lines.forEach((line, i) => {
-    const loc = `${file}:${i + 1}`;
+    const loc = `${rel}:${i + 1}`;
     if (/font-size\s*:\s*[0-9.]+px/i.test(line))
       violations.push(`${loc} px 字級（改用 var(--text-*)）: ${line.trim()}`);
     if (!isTokenFile && /(#[0-9a-fA-F]{3,8}\b|rgba?\(|hsla?\()/.test(line) && !/url\(/.test(line))
@@ -42,4 +54,4 @@ if (violations.length) {
   console.error(`設計規範違規 ${violations.length} 處：\n` + violations.join("\n"));
   process.exit(1);
 }
-console.log("設計規範檢查通過：無 px 字級、無 token 外顏色、無 !important、無外部 CDN。");
+console.log("設計規範檢查通過：css 白名單、無 px 字級、無 token 外顏色、無 !important、無外部 CDN。");
