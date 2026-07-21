@@ -39,6 +39,35 @@ if [ "${DRY_RUN:-}" = "1" ]; then
   exit 0
 fi
 
+# ── 內容守門（去 AI 味）：封堵「pipeline 直推繞過守門」漏洞（2026-07-21）──
+# run.mjs 產出的新文章是 untracked 檔（新 slug）；git add 前逐檔跑 check-content（explicit-file
+# 模式，命中 ERROR 即 exit 1）。過關的留下 commit；沒過的移進 pipeline/quarantine/（該站既有隔離區、
+# 已 gitignore），並記 log＋Slack，逐檔判定——不讓一篇 AI 味擋掉整批。
+# 只 gate untracked 新檔：pipeline 只新增文章、不改既有文章（改既有內容的是 seo-ops 反思/大腦，走各自
+# build+check gate），故不動 modified/tracked 檔，避免誤刪既有好文。
+AI_QUARANTINED=()
+NEW_ARTICLES="$(git ls-files --others --exclude-standard -- 'src/content/articles' | grep -E '\.mdx?$' || true)"
+if [ -n "$NEW_ARTICLES" ]; then
+  mkdir -p pipeline/quarantine
+  while IFS= read -r f; do
+    [ -z "$f" ] && continue
+    if node scripts/check-content.mjs "$f"; then
+      echo "[cron][gate] 去 AI 味過關：$f"
+    else
+      dest="pipeline/quarantine/$(basename "$f" .md)-aiflavor-$(date -u +%Y%m%d).md"
+      mv "$f" "$dest"
+      AI_QUARANTINED+=("$(basename "$f")")
+      echo "[cron][gate] ✗ 命中去 AI 味 ERROR，隔離不發佈：$f → $dest"
+    fi
+  done <<< "$NEW_ARTICLES"
+fi
+if [ ${#AI_QUARANTINED[@]} -gt 0 ]; then
+  echo "[cron][gate] 本次因去 AI 味隔離 ${#AI_QUARANTINED[@]} 篇：${AI_QUARANTINED[*]}"
+  printf '🛑 *文章撰寫｜去 AI 味守門* — 本次隔離 *%d* 篇（未發佈）：\n%s\n（已移入 pipeline/quarantine/；改法見記憶 content-no-ai-flavor）' \
+    "${#AI_QUARANTINED[@]}" "$(printf '• %s\n' "${AI_QUARANTINED[@]}")" \
+    | pipeline/slack/slack-notify.sh "${DREAMER868_SLACK_CHANNEL:-C0BEZSBJH6U}" || echo "[cron][gate] Slack 告警發送失敗（不中斷）"
+fi
+
 git add src/content/articles pipeline/state/seen-jids.json
 if git diff --cached --quiet; then
   echo "[cron] 無新文章可提交"
