@@ -49,6 +49,18 @@
 
 另（非機械守門）：**RWD** mobile-first，斷點只用 `min-width`（640 / 768 / 1024 / 1280）。手動檢查：`pnpm check:design`。
 
+## 內容守門（去 AI 味，2026-07-21 起由 `scripts/check-content.mjs` 守門）
+
+與設計守門同框架，`pnpm build` 會在 `check-design` 之後、`astro build` 之前自動跑（引擎源 `new-astro-site` 模板，跨站共用單一引擎，站台特化規則自行在腳本內擴充）。掃 `src/**/*.md(x)` 正文（自動遮掉 frontmatter／code／連結 URL），**兩級判定**：
+
+1. **ERROR（擋 build）**：near-zero 誤判的強 AI 指紋，單一命中即擋（如「不是X而是Y」下定義、「不僅…更」排比、「值得注意的是」、模板化開頭、模糊引用「研究顯示」…）。
+2. **WARN（只印不擋）**：高誤判軟訊號，分「詞彙／句式／結構／語氣」四層；**單一檔案跨 ≥3 層**才升級為 ERROR。
+
+**Grandfather 存量**：預設**只掃相對 `origin/main` 的變動檔**（已提交＋工作區＋未追蹤），既有文章不動不擋；抓不到 git base（CI 淺 checkout）→ 掃 0 檔、exit 0，永不誤擋。改法見「AI 出初稿、人味靠最後 20% 手動微調」。
+
+- `pnpm check:content`：只掃變動檔（同 build 前置）。
+- `pnpm check:content:all`：全站盤點（永遠 exit 0，供人工普查違規分布）。
+
 ## 技術棧
 
 - **框架**: Astro 6.x（靜態輸出）
