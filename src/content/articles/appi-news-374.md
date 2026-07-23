@@ -119,4 +119,4 @@ images:
 2. 行政院主計總處(2026)。中華民國統計資訊網-新聞稿(115年6月消費者物價指數(CPI)年增率漲2.60%)。https://www.stat.gov.tw/News.aspx?n=2668&sms=10980
 3. 政大商學院信義不動產研究中心(2025)。內政部114年第3季房價負擔能力統計。https://www.ncscre.nccu.edu.tw/node/9292
 4. 立法院法制局。房價及教養負擔與少子化之關連性研析。立法院全球資訊網。https://www.ly.gov.tw/Pages/Detail.aspx?nodeid=6590&pid=207027
-5. 遠見雜誌(2026)。2025台灣出生人數雪崩式下跌!跌幅創史上最高,為什麼台灣人都不願意生小孩?遠見雜誌。https://www.gvm.com.tw/article/127667
+5. 遠見雜誌(2026)。2025台灣出生人數雪崩式下跌!跌幅創史上最高,為什麼台灣人都不願意生小孩?https://www.gvm.com.tw/article/127667
