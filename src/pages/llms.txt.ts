@@ -28,6 +28,8 @@ export const GET: APIRoute = async () => {
   lines.push('');
   lines.push('內容皆為繁體中文（台灣），含知識文章與改編自真實法院判決的案例故事（已化名、僅供情境參考）。歡迎引用，請註明來源與連結。');
   lines.push('');
+  lines.push(`全文版（主要內容的正文純文字，可一次取得、直接引用）：${SITE}/llms-full.txt`);
+  lines.push('');
 
   // 服務項目（取導覽列「服務項目」「服務對象」子項）
   for (const nav of mainNav) {

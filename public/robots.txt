@@ -62,3 +62,6 @@ User-agent: Meta-ExternalAgent
 Allow: /
 
 Sitemap: https://www.dreamer868.com/sitemap-index.xml
+
+# 給 AI 助理：連結目錄 https://www.dreamer868.com/llms.txt
+# 給 AI 助理：主要內容全文 https://www.dreamer868.com/llms-full.txt

@@ -42,6 +42,65 @@ export const mainNav: NavItem[] = [
   { label: '聯絡我們', href: '/contact/' },
 ];
 
+// 服務項目總表（slug 同時是文章 subcategory 與 /services/<slug>/ 路由）。
+// 單一來源：/services 列表頁與 /llms-full.txt 共用，改一處兩邊同步。
+export interface ServiceItem {
+  slug: string;
+  label: string;
+  desc: string;
+}
+
+export const serviceCatalog: ServiceItem[] = [
+  { slug: 'financial-planning', label: '理財規劃', desc: '專屬財務計劃，實現人生各階段目標。' },
+  { slug: 'tax-planning', label: '稅務規劃', desc: '合法節稅策略，降低稅務負擔。' },
+  { slug: 'wealth-inheritance', label: '財富傳承', desc: '跨代財富規劃，確保資產安全傳承。' },
+  { slug: 'overseas-banking', label: '海外銀行開戶', desc: '新加坡、香港銀行開戶代辦。' },
+  { slug: 'family-governance', label: '家族治理', desc: '家族辦公室與治理機制建立。' },
+  { slug: 'insurance', label: '保險服務', desc: '保障、傳承與節稅的重要工具。' },
+  { slug: 'trust-planning', label: '信託規劃', desc: '客製化信託方案設計。' },
+  { slug: 'immigration', label: '移民規劃', desc: '第二國身份與跨境資產配置。' },
+  { slug: 'next-gen-training', label: '二代培訓', desc: '企業二代接班培訓與輔導。' },
+  { slug: 'tax-services', label: '租稅服務', desc: '稅務總覽與合法節稅策略。' },
+  { slug: 'land-administration', label: '地政士服務', desc: '不動產移轉與土地開發。' },
+  { slug: 'international-trade', label: '國際貿易', desc: '跨境貿易財務規劃。' },
+  { slug: 'overseas-funds', label: '海外基金債券', desc: '海外資產配置與分散風險。' },
+];
+
+// 服務對象（四分眾）總表：subcat 為文章 subcategory，desc 與各分眾頁 description 一致。
+export interface ServiceTarget {
+  subcat: string;
+  label: string;
+  href: string;
+  desc: string;
+}
+
+export const serviceTargets: ServiceTarget[] = [
+  {
+    subcat: 'personal-stories',
+    label: '個人財務規劃',
+    href: '/service-targets/personal/',
+    desc: '改編自真實法院判決的個人理財案例，人物均為化名、情節經改編，僅供情境參考。',
+  },
+  {
+    subcat: 'family-stories',
+    label: '家庭財務規劃',
+    href: '/service-targets/family/',
+    desc: '改編自真實法院判決的家庭理財案例，人物均為化名、情節經改編，僅供情境參考。',
+  },
+  {
+    subcat: 'corporate-stories',
+    label: '公司財務規劃',
+    href: '/service-targets/corporate/',
+    desc: '改編自真實法院判決的公司理財案例，人物均為化名、情節經改編，僅供情境參考。',
+  },
+  {
+    subcat: 'wealth-tax-stories',
+    label: '財富稅務規劃',
+    href: '/service-targets/wealth-tax/',
+    desc: '改編自真實法院判決的財富與稅務案例，人物均為化名、情節經改編，僅供情境參考。',
+  },
+];
+
 // 主顧問（作者 E-E-A-T）。所有文章預設掛此人。以下為本人提供之真實資歷。
 export const principalAuthor = {
   name: '吳芳圳',

@@ -1,22 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageBanner from '../../components/PageBanner.astro';
-
-const services = [
-  { slug: 'financial-planning', label: '理財規劃', desc: '專屬財務計劃，實現人生各階段目標。' },
-  { slug: 'tax-planning', label: '稅務規劃', desc: '合法節稅策略，降低稅務負擔。' },
-  { slug: 'wealth-inheritance', label: '財富傳承', desc: '跨代財富規劃，確保資產安全傳承。' },
-  { slug: 'overseas-banking', label: '海外銀行開戶', desc: '新加坡、香港銀行開戶代辦。' },
-  { slug: 'family-governance', label: '家族治理', desc: '家族辦公室與治理機制建立。' },
-  { slug: 'insurance', label: '保險服務', desc: '保障、傳承與節稅的重要工具。' },
-  { slug: 'trust-planning', label: '信託規劃', desc: '客製化信託方案設計。' },
-  { slug: 'immigration', label: '移民規劃', desc: '第二國身份與跨境資產配置。' },
-  { slug: 'next-gen-training', label: '二代培訓', desc: '企業二代接班培訓與輔導。' },
-  { slug: 'tax-services', label: '租稅服務', desc: '稅務總覽與合法節稅策略。' },
-  { slug: 'land-administration', label: '地政士服務', desc: '不動產移轉與土地開發。' },
-  { slug: 'international-trade', label: '國際貿易', desc: '跨境貿易財務規劃。' },
-  { slug: 'overseas-funds', label: '海外基金債券', desc: '海外資產配置與分散風險。' },
-];
+import { serviceCatalog as services } from '../../data/navigation';
 ---
 
 <BaseLayout title="服務項目">

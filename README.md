@@ -35,7 +35,7 @@ pnpm preview     # 預覽建置結果
 |---|---|---|
 | 本地開發、改版面/元件/頁面 | `src/`（components / layouts / pages / styles / data） | `pnpm dev` → `pnpm build` |
 | 改導覽列、聯絡資訊、作者 E-E-A-T | `src/data/navigation.ts`（含 `principalAuthor`） | — |
-| 改 SEO/AEO 結構化資料 | `src/layouts/BaseLayout.astro`、`ArticleLayout.astro`、`src/pages/llms.txt.ts`、`rss.xml.ts` | 見「SEO / AEO 配置」 |
+| 改 SEO/AEO 結構化資料 | `src/layouts/BaseLayout.astro`、`ArticleLayout.astro`、`src/pages/llms.txt.ts`、`llms-full.txt.ts`、`rss.xml.ts` | 見「SEO / AEO 配置」 |
 | 替既有文章補 meta description / FAQ | `scripts/gen-descriptions.mjs`、`scripts/gen-faq.mjs` | 見「GEO/AEO 腳本」 |
 | 改 CI / 部署流程 | `.github/workflows/deploy.yml` | 見「CI/CD」 |
 | 維護判決 pipeline 程式 | `pipeline/*.mjs` | `pnpm test:pipeline`；[`pipeline/README.md`](pipeline/README.md) |
@@ -65,7 +65,7 @@ src/
 ├── data/navigation.ts  # 導覽列、聯絡資訊、principalAuthor（作者 E-E-A-T）
 ├── layouts/            # BaseLayout（SEO/JSON-LD）、ArticleLayout（Article/FAQPage）
 ├── pages/              # 路由：articles/[...slug]、service-targets/（四分眾列表）、
-│                       #       services/、author/、llms.txt.ts、rss.xml.ts、404
+│                       #       services/、author/、llms.txt.ts、llms-full.txt.ts、rss.xml.ts、404
 └── styles/             # global.css、variables.css
 scripts/                # 一次性 / CI 內容工具（情境 A、B 共用）
 ├── prepare-content.mjs    # docs/ → content collection（補 frontmatter）
@@ -110,7 +110,7 @@ node pipeline/checkup/run.mjs            # 立即產一次每日品管報告
 - BaseLayout 每頁輸出 canonical、Open Graph、Twitter Card、BreadcrumbList + Organization/FinancialService(@id) + WebSite JSON-LD。
 - 文章頁：Article +（有 `faq:` 時）FAQPage JSON-LD；作者頁：Person + ProfilePage。
 - 作者 E-E-A-T 由 `src/data/navigation.ts` 的 `principalAuthor`（吳芳圳｜財務醫師）集中管理。
-- `/llms.txt`、`/rss.xml`、`robots.txt`（歡迎 AI 爬蟲）、sitemap（`@astrojs/sitemap` 自動產）。
+- `/llms.txt`（連結目錄）、`/llms-full.txt`（主要內容全文純文字）、`/rss.xml`、`robots.txt`（歡迎 AI 爬蟲）、sitemap（`@astrojs/sitemap` 自動產）。
 
 ## GEO/AEO 腳本（`scripts/`）
 

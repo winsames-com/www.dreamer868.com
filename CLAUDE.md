@@ -19,7 +19,7 @@
 |---|---|---|
 | 本地開發、改版面/元件/頁面 | `src/`（components/layouts/pages/styles/data） | `pnpm dev` → `pnpm build` |
 | 改導覽列、聯絡資訊、作者 E-E-A-T | `src/data/navigation.ts`（含 `principalAuthor`） | — |
-| 改 SEO/AEO 結構化資料 | `src/layouts/BaseLayout.astro`、`ArticleLayout.astro`、`src/pages/llms.txt.ts`、`rss.xml.ts` | 見下「SEO/AEO 配置」 |
+| 改 SEO/AEO 結構化資料 | `src/layouts/BaseLayout.astro`、`ArticleLayout.astro`、`src/pages/llms.txt.ts`、`llms-full.txt.ts`、`rss.xml.ts` | 見下「SEO/AEO 配置」 |
 | 替既有文章補 meta description / FAQ | `scripts/gen-descriptions.mjs`、`scripts/gen-faq.mjs` | 見下「GEO/AEO 腳本」 |
 | 改 CI/部署流程 | `.github/workflows/deploy.yml` | 見下「CI/CD 流程」 |
 | 維護判決 pipeline 程式 | `pipeline/*.mjs` | `pnpm test:pipeline`；細節 `pipeline/README.md` |
@@ -81,7 +81,8 @@ src/
 │   ├── service-targets/  # 四分眾案例列表頁（自動撈 content collection）
 │   ├── services/       # 各服務分類頁
 │   ├── author/         # 作者頁（Person + ProfilePage）
-│   ├── llms.txt.ts     # /llms.txt（AI 引擎索引，自動產）
+│   ├── llms.txt.ts     # /llms.txt（AI 引擎索引：連結目錄，自動產）
+│   ├── llms-full.txt.ts # /llms-full.txt（AI 引擎全文：文章正文純文字，自動產、有大小預算）
 │   ├── rss.xml.ts      # /rss.xml
 │   └── 404.astro
 └── styles/             # global.css、variables.css
@@ -142,7 +143,7 @@ node pipeline/checkup/run.mjs      # 立即產一次每日品管報告
 - BaseLayout 每頁內建：canonical URL、Open Graph、Twitter Card、BreadcrumbList + Organization/FinancialService(@id) + WebSite JSON-LD。
 - 首頁：FinancialService JSON-LD；文章頁：Article + （有 `faq:` 時）FAQPage JSON-LD；作者頁：Person + ProfilePage。
 - 作者 E-E-A-T：`src/data/navigation.ts` 的 `principalAuthor`（吳芳圳｜財務醫師）集中管理，所有文章自動掛具名作者。
-- `/llms.txt`、`/rss.xml`、`robots.txt`（明確歡迎 AI 爬蟲）、sitemap（`@astrojs/sitemap` 自動產，含 changefreq/priority）。
+- `/llms.txt`（連結目錄）、`/llms-full.txt`（主要內容全文純文字，讓 AI 一次取得可引用內容；常青內容全收＋案例故事由新到舊填滿 950 KB 預算）、`/rss.xml`、`robots.txt`（明確歡迎 AI 爬蟲）、sitemap（`@astrojs/sitemap` 自動產，含 changefreq/priority）。
 
 ## GEO/AEO 腳本（`scripts/`）
 
