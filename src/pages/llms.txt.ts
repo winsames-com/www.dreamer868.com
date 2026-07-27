@@ -44,10 +44,10 @@ export const GET: APIRoute = async () => {
   // 重要頁面
   lines.push('## 重要頁面');
   lines.push('');
-  lines.push(`- [關於尊茂財務](${SITE}/about)`);
-  lines.push(`- [服務流程](${SITE}/service-process)`);
-  lines.push(`- [專業團隊](${SITE}/team)`);
-  lines.push(`- [聯絡我們](${SITE}/contact)`);
+  lines.push(`- [關於尊茂財務](${SITE}/about/)`);
+  lines.push(`- [服務流程](${SITE}/service-process/)`);
+  lines.push(`- [專業團隊](${SITE}/team/)`);
+  lines.push(`- [聯絡我們](${SITE}/contact/)`);
   lines.push('');
 
   // 全部文章（依分類）
@@ -57,7 +57,7 @@ export const GET: APIRoute = async () => {
     lines.push(`### ${category}`);
     for (const a of list) {
       const desc = a.data.description ? `: ${a.data.description}` : '';
-      lines.push(`- [${a.data.title}](${SITE}/articles/${a.data.slug})${desc}`);
+      lines.push(`- [${a.data.title}](${SITE}/articles/${a.data.slug}/)${desc}`);
     }
     lines.push('');
   }
