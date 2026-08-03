@@ -1,0 +1,41 @@
+<svg viewBox="0 0 960 600" width="960" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="600" fill="#FFFFFF"/>
+  <text x="480" y="55" text-anchor="middle" font-family="sans-serif" font-size="30" font-weight="700" fill="#003A93">銀行存款 vs 穩定幣儲備 比較</text>
+  <line x1="480" y1="90" x2="480" y2="560" stroke="#3D6BB5" stroke-width="2" stroke-dasharray="6,6"/>
+
+  <rect x="60" y="110" width="360" height="60" rx="10" fill="#003A93"/>
+  <text x="240" y="148" text-anchor="middle" font-family="sans-serif" font-size="26" font-weight="700" fill="#FFFFFF">銀行存款</text>
+
+  <rect x="540" y="110" width="360" height="60" rx="10" fill="#D1482A"/>
+  <text x="720" y="148" text-anchor="middle" font-family="sans-serif" font-size="26" font-weight="700" fill="#FFFFFF">穩定幣儲備</text>
+
+  <rect x="60" y="200" width="360" height="150" rx="12" fill="#F4F4F4" stroke="#3D6BB5" stroke-width="2"/>
+  <circle cx="100" cy="240" r="18" fill="#003A93"/>
+  <text x="100" y="247" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#FFFFFF">央</text>
+  <text x="135" y="235" font-family="sans-serif" font-size="19" font-weight="700" fill="#1F1F1F">中央銀行監理</text>
+  <text x="135" y="260" font-family="sans-serif" font-size="15" fill="#6B7280">受金融主管機關規範</text>
+  <text x="135" y="282" font-family="sans-serif" font-size="15" fill="#6B7280">定期監督與資本要求</text>
+
+  <rect x="60" y="370" width="360" height="150" rx="12" fill="#F4F4F4" stroke="#3D6BB5" stroke-width="2"/>
+  <circle cx="100" cy="410" r="18" fill="#003A93"/>
+  <text x="100" y="417" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#FFFFFF">保</text>
+  <text x="135" y="405" font-family="sans-serif" font-size="19" font-weight="700" fill="#1F1F1F">存款保險保障</text>
+  <text x="135" y="430" font-family="sans-serif" font-size="15" fill="#6B7280">法定額度內全額理賠</text>
+  <text x="135" y="452" font-family="sans-serif" font-size="15" fill="#6B7280">機構倒閉仍受保障</text>
+
+  <rect x="540" y="200" width="360" height="150" rx="12" fill="#F4F4F4" stroke="#D1482A" stroke-width="2"/>
+  <circle cx="580" cy="240" r="18" fill="#D1482A"/>
+  <text x="580" y="247" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#FFFFFF">?</text>
+  <text x="615" y="235" font-family="sans-serif" font-size="19" font-weight="700" fill="#1F1F1F">透明度依發行方而定</text>
+  <text x="615" y="260" font-family="sans-serif" font-size="15" fill="#6B7280">儲備揭露標準不一</text>
+  <text x="615" y="282" font-family="sans-serif" font-size="15" fill="#6B7280">缺乏統一稽核規範</text>
+
+  <rect x="540" y="370" width="360" height="150" rx="12" fill="#F4F4F4" stroke="#D1482A" stroke-width="2"/>
+  <circle cx="580" cy="410" r="18" fill="#D1482A"/>
+  <text x="580" y="417" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#FFFFFF">!</text>
+  <text x="615" y="405" font-family="sans-serif" font-size="19" font-weight="700" fill="#1F1F1F">無保證兌付機制</text>
+  <text x="615" y="430" font-family="sans-serif" font-size="15" fill="#6B7280">非存款保險適用範圍</text>
+  <text x="615" y="452" font-family="sans-serif" font-size="15" fill="#6B7280">兌換能力取決發行方償付力</text>
+
+  <text x="480" y="580" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#6B7280">資料來源：一般金融監理架構整理，各國規範細節仍以主管機關公告為準</text>
+<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7280" fill-opacity="0.45" font-weight="600">dreamer868.com</text></svg>
