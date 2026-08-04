@@ -5,7 +5,7 @@
 ## 認證
 
 - service account：`ga4-insights@yaocare.iam.gserviceaccount.com`（project `yaocare`）
-- 金鑰：`pipeline/.secrets/ga4-insights.json`（**已 gitignore，絕不進 repo**）。換機器時把金鑰放到同路徑，或設環境變數 `GOOGLE_INSIGHTS_KEY` 指向金鑰絕對路徑。
+- 金鑰：由環境變數 `GOOGLE_INSIGHTS_KEY` 指向 repo 外的金鑰檔（本機部署在 `pipeline/.env` 設定，cron.sh 會載入；2026-08-04 起金鑰不再放 repo 樹內）。未設時退回 `pipeline/.secrets/ga4-insights.json`（已 gitignore）。
 - 已啟用 API：Google Analytics Admin API、Google Analytics Data API、Search Console API。
 - 已授權資源（見 `config.mjs`）：
   - GA4 property `541900210`（www.dreamer868.com，對應 Measurement ID `G-YE9TBVK70Y`）
@@ -39,7 +39,7 @@ pnpm insights         # 拉資料並產報告到 pipeline/insights/reports/insig
 
 ### judgment pipeline 即時拉 GSC（②）
 
-判決 pipeline（`pipeline/run.mjs`）每次啟動會拉一次 GSC 字詞融入改編。**在 server 跑判決 pipeline 時，需把同一把 service account 金鑰部署到 server 的 `pipeline/.secrets/ga4-insights.json`**（或設 `GOOGLE_INSIGHTS_KEY` 指向絕對路徑）。拉取失敗會自動降級為「無字詞」，判決照常發佈。
+判決 pipeline（`pipeline/run.mjs`）每次啟動會拉一次 GSC 字詞融入改編。**在 server 跑判決 pipeline 時，需在 `pipeline/.env` 設 `GOOGLE_INSIGHTS_KEY` 指向 server 上的金鑰檔**（repo 外；或放 fallback 路徑 `pipeline/.secrets/ga4-insights.json`）。拉取失敗會自動降級為「無字詞」，判決照常發佈。
 
 ## 定期執行（資料累積後）
 

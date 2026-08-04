@@ -5,7 +5,7 @@
 
 import { GoogleAuth } from 'google-auth-library';
 
-const KEY_FILE = 'pipeline/.secrets/ga4-insights.json';
+const KEY_FILE = process.env.GOOGLE_INSIGHTS_KEY || 'pipeline/.secrets/ga4-insights.json';
 
 const auth = new GoogleAuth({
   keyFile: KEY_FILE,

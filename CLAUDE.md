@@ -171,7 +171,7 @@ node pipeline/checkup/run.mjs      # 立即產一次每日品管報告
 
 用 Google service account 拉 **Search Console 搜尋字詞 + GA4 站內行為**，唯讀、不寫網站、不 commit 報告。回饋「使用者實際搜什麼/看什麼」到選題與改標題。
 
-- service account `ga4-insights@yaocare.iam.gserviceaccount.com`；金鑰 `pipeline/.secrets/ga4-insights.json`（**已 gitignore，絕不進 repo**，換機器放同路徑或設 `GOOGLE_INSIGHTS_KEY`）。
+- service account `ga4-insights@yaocare.iam.gserviceaccount.com`；金鑰由 `pipeline/.env` 的 `GOOGLE_INSIGHTS_KEY` 指向 repo 外的檔案（2026-08-04 遷出 repo 樹；fallback `pipeline/.secrets/ga4-insights.json`，已 gitignore）。
 - 資源：GA4 property `541900210`（Measurement ID `G-YE9TBVK70Y`）、Search Console `sc-domain:dreamer868.com`。
 - `pnpm insights` 產報告到 `pipeline/insights/reports/`（gitignore）：搜尋字詞 Top、搜尋到達頁、GA4 熱門頁。
 - **與判決 pipeline 整合**：`run.mjs` 啟動時拉一次 GSC 字詞融入改編 prompt（拉取失敗自動降級為無字詞，判決照常發佈）→ 在伺服器跑判決 pipeline 也要部署同一把金鑰。
