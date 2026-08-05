@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600">
+  <style>
+    .title{font-family:"Noto Sans CJK TC","Noto Sans TC",sans-serif;font-size:30px;font-weight:700;fill:#003A93;}
+    .sub{font-family:"Noto Sans CJK TC","Noto Sans TC",sans-serif;font-size:16px;fill:#6B7280;}
+    .card-title{font-family:"Noto Sans CJK TC","Noto Sans TC",sans-serif;font-size:20px;font-weight:700;fill:#003A93;}
+    .item{font-family:"Noto Sans CJK TC","Noto Sans TC",sans-serif;font-size:15.5px;fill:#1F1F1F;}
+  </style>
+  <rect x="0" y="0" width="960" height="600" fill="#FFFFFF"/>
+  <text x="480" y="52" text-anchor="middle" class="title">外幣資產曝險自我檢視清單</text>
+  <text x="480" y="80" text-anchor="middle" class="sub">投資前先確認以下三項，避免匯率波動影響整體資產配置</text>
+
+  <g transform="translate(50,120)">
+    <rect x="0" y="0" width="270" height="430" rx="14" fill="#F4F4F4" stroke="#3D6BB5" stroke-width="2"/>
+    <circle cx="135" cy="60" r="34" fill="#003A93"/>
+    <circle cx="135" cy="60" r="16" fill="none" stroke="#FFFFFF" stroke-width="3"/>
+    <line x1="135" y1="44" x2="135" y2="60" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+    <line x1="135" y1="60" x2="146" y2="66" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+    <text x="135" y="118" text-anchor="middle" class="card-title">貨幣集中度</text>
+    <line x1="30" y1="140" x2="240" y2="140" stroke="#3D6BB5" stroke-width="1"/>
+    <circle cx="38" cy="175" r="10" fill="#D1482A"/>
+    <path d="M33,175 L37,179 L44,171" stroke="#FFFFFF" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="58" y="172" class="item">檢視日圓、韓元計價</text>
+    <text x="58" y="194" class="item">資產（含保單）</text>
+    <circle cx="38" cy="225" r="10" fill="#D1482A"/>
+    <path d="M33,225 L37,229 L44,221" stroke="#FFFFFF" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="58" y="222" class="item">占可投資資產總額</text>
+    <text x="58" y="244" class="item">之比重</text>
+  </g>
+
+  <g transform="translate(345,120)">
+    <rect x="0" y="0" width="270" height="430" rx="14" fill="#F4F4F4" stroke="#3D6BB5" stroke-width="2"/>
+    <circle cx="135" cy="60" r="34" fill="#003A93"/>
+    <rect x="119" y="48" width="32" height="24" rx="4" fill="none" stroke="#FFFFFF" stroke-width="3"/>
+    <path d="M125,48 v-6 a10,10 0 0 1 20,0 v6" fill="none" stroke="#FFFFFF" stroke-width="3"/>
+    <text x="135" y="118" text-anchor="middle" class="card-title">避險工具與比例</text>
+    <line x1="30" y1="140" x2="240" y2="140" stroke="#3D6BB5" stroke-width="1"/>
+    <circle cx="38" cy="175" r="10" fill="#D1482A"/>
+    <path d="M33,175 L37,179 L44,171" stroke="#FFFFFF" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="58" y="172" class="item">是否已備妥避險</text>
+    <text x="58" y="194" class="item">工具（如遠期外匯）</text>
+    <circle cx="38" cy="225" r="10" fill="#D1482A"/>
+    <path d="M33,225 L37,229 L44,221" stroke="#FFFFFF" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="58" y="222" class="item">既有避險比例</text>
+    <text x="58" y="244" class="item">是否足夠</text>
+  </g>
+
+  <g transform="translate(640,120)">
+    <rect x="0" y="0" width="270" height="430" rx="14" fill="#F4F4F4" stroke="#3D6BB5" stroke-width="2"/>
+    <circle cx="135" cy="60" r="34" fill="#003A93"/>
+    <path d="M117,68 l14,-24 l14,24 z" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round"/>
+    <line x1="131" y1="52" x2="131" y2="58" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="131" cy="63" r="1.6" fill="#FFFFFF"/>
+    <text x="135" y="118" text-anchor="middle" class="card-title">配置目標影響</text>
+    <line x1="30" y1="140" x2="240" y2="140" stroke="#3D6BB5" stroke-width="1"/>
+    <circle cx="38" cy="175" r="10" fill="#D1482A"/>
+    <path d="M33,175 L37,179 L44,171" stroke="#FFFFFF" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="58" y="172" class="item">換匯成本上升</text>
+    <text x="58" y="194" class="item">是否侵蝕原始報酬</text>
+    <circle cx="38" cy="225" r="10" fill="#D1482A"/>
+    <path d="M33,225 L37,229 L44,221" stroke="#FFFFFF" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="58" y="222" class="item">避險成本增加</text>
+    <text x="58" y="244" class="item">是否偏離原配置目標</text>
+  </g>
+<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7280" fill-opacity="0.45" font-weight="600">dreamer868.com</text></svg>
