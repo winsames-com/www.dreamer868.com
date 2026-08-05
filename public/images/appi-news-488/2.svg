@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600">
+  <rect x="0" y="0" width="960" height="600" fill="#FFFFFF"/>
+  <text x="480" y="50" text-anchor="middle" font-family="sans-serif" font-size="26" font-weight="bold" fill="#1F1F1F">日圓、韓元兌美元走勢：聯合干預前後對比</text>
+  <text x="480" y="78" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#6B7280">累計升值幅度（%），2026年7月28日至8月1日</text>
+
+  <rect x="100" y="100" width="780" height="360" fill="#F4F4F4"/>
+  <line x1="100" y1="100" x2="100" y2="460" stroke="#6B7280" stroke-width="1.5"/>
+  <line x1="100" y1="460" x2="880" y2="460" stroke="#6B7280" stroke-width="1.5"/>
+  <line x1="100" y1="357" x2="880" y2="357" stroke="#FFFFFF" stroke-width="1"/>
+  <line x1="100" y1="254" x2="880" y2="254" stroke="#FFFFFF" stroke-width="1"/>
+  <line x1="100" y1="151" x2="880" y2="151" stroke="#FFFFFF" stroke-width="1"/>
+  <text x="90" y="465" text-anchor="end" font-family="sans-serif" font-size="13" fill="#6B7280">0%</text>
+  <text x="90" y="361" text-anchor="end" font-family="sans-serif" font-size="13" fill="#6B7280">1%</text>
+  <text x="90" y="258" text-anchor="end" font-family="sans-serif" font-size="13" fill="#6B7280">2%</text>
+  <text x="90" y="155" text-anchor="end" font-family="sans-serif" font-size="13" fill="#6B7280">3%</text>
+
+  <text x="140" y="482" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#1F1F1F">7/28</text>
+  <text x="320" y="482" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#1F1F1F">7/29</text>
+  <text x="500" y="482" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#1F1F1F">7/30</text>
+  <text x="680" y="482" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#1F1F1F">7/31</text>
+  <text x="860" y="482" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#1F1F1F">8/1</text>
+
+  <line x1="500" y1="100" x2="500" y2="460" stroke="#D1482A" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="506" y="115" font-family="sans-serif" font-size="13" fill="#D1482A" font-weight="bold">美日韓聯合干預</text>
+
+  <path d="M140,460 L320,429 L500,172 L680,163 L860,151" fill="none" stroke="#003A93" stroke-width="3.5"/>
+  <path d="M140,460 L320,408 L500,203 L680,194 L860,186" fill="none" stroke="#D1482A" stroke-width="3.5"/>
+
+  <circle cx="140" cy="460" r="5" fill="#003A93"/>
+  <circle cx="320" cy="429" r="5" fill="#003A93"/>
+  <circle cx="500" cy="172" r="7" fill="#003A93" stroke="#FFFFFF" stroke-width="2"/>
+  <circle cx="680" cy="163" r="5" fill="#003A93"/>
+  <circle cx="860" cy="151" r="5" fill="#003A93"/>
+
+  <circle cx="140" cy="460" r="5" fill="#D1482A"/>
+  <circle cx="320" cy="408" r="5" fill="#D1482A"/>
+  <circle cx="500" cy="203" r="7" fill="#D1482A" stroke="#FFFFFF" stroke-width="2"/>
+  <circle cx="680" cy="194" r="5" fill="#D1482A"/>
+  <circle cx="860" cy="186" r="5" fill="#D1482A"/>
+
+  <text x="512" y="190" font-family="sans-serif" font-size="13" fill="#003A93" font-weight="bold">日圓：近兩年最大單日漲幅</text>
+  <text x="512" y="220" font-family="sans-serif" font-size="13" fill="#D1482A" font-weight="bold">韓元：升值2%，創9個月新高</text>
+  <text x="695" y="150" font-family="sans-serif" font-size="13" fill="#3D6BB5">隔日漲勢停滯，交易者轉趨觀望</text>
+
+  <rect x="660" y="105" width="16" height="16" fill="#003A93"/>
+  <text x="682" y="118" font-family="sans-serif" font-size="14" fill="#1F1F1F">日圓</text>
+  <rect x="740" y="105" width="16" height="16" fill="#D1482A"/>
+  <text x="762" y="118" font-family="sans-serif" font-size="14" fill="#1F1F1F">韓元</text>
+
+  <rect x="100" y="510" width="780" height="60" fill="#F4F4F4" stroke="#3D6BB5" stroke-width="1"/>
+  <text x="490" y="535" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#1F1F1F">備註：韓元單月累計漲幅超過7.5%；圖中曲線為簡化示意，反映事件前後的相對走勢趨勢</text>
+  <text x="490" y="555" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#6B7280">資料來源：市場公開報導整理</text>
+<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7280" fill-opacity="0.45" font-weight="600">dreamer868.com</text></svg>
