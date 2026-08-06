@@ -2,6 +2,7 @@
 title: "畢業潮來了：5 個社會新鮮人該優先累積的職場經驗"
 description: "畢業潮又至，社會新鮮人求職別只看起薪與公司規模。整理新鮮人第一份工作該優先累積的可遷移能力、人脈導師與正確心態，這些才是決定未來職涯高度的關鍵。"
 date: 2026-08-04
+updatedDate: 2026-08-06
 author: "吳芳圳"
 authorTitle: "財務醫師"
 authorUrl: "/author/wu-fang-jun/"
