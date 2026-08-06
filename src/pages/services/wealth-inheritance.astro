@@ -1,14 +1,140 @@
 ---
 import { getCollection } from 'astro:content';
-import CategoryPage from '../../components/CategoryPage.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageBanner from '../../components/PageBanner.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+
+const title = '財富傳承規劃';
+const description = '財富傳承規劃運用信託、保險等工具，確保跨代資產安全交棒。';
 
 const articles = (await getCollection('articles')).filter(
   (a) => a.data.subcategory === 'wealth-inheritance'
 );
+const sorted = [...articles].sort((a, b) => a.data.order - b.data.order);
+
+const serviceLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: title,
+  serviceType: title,
+  description,
+  provider: { '@id': 'https://www.dreamer868.com/#organization' },
+  areaServed: [
+    { '@type': 'City', name: '台中市' },
+    { '@type': 'Country', name: 'Taiwan' },
+  ],
+  inLanguage: 'zh-Hant-TW',
+};
+
+const itemListLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: `${title}相關文章`,
+  itemListElement: sorted.map((a, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    url: `https://www.dreamer868.com/articles/${a.data.slug}`,
+    name: a.data.title,
+  })),
+};
 ---
 
-<CategoryPage
-  title="財富傳承規劃"
-  description="財富傳承規劃運用信託、保險等工具，確保跨代資產安全交棒。"
-  articles={articles}
-/>
+<BaseLayout title={title} description={description} jsonLd={[serviceLd, itemListLd]}>
+  <PageBanner title={title} />
+
+  <section class="category-content">
+    <p class="category-desc">{description}</p>
+
+    <div class="topic-block">
+      <h2>家族辦公室門檻怎麼看</h2>
+      <p>
+        國際間的家族辦公室大多鎖定資產規模龐大的家族，但實務上沒有一套放諸四海皆準的門檻數字。香港與新加坡等鄰近市場的機構各自訂出不同的資產基準，落差可以到數倍，這跟服務範疇、人力配置與管理複雜度本來就不一樣有關。
+      </p>
+      <p>
+        盤點三件事會比糾結單一數字更有幫助：資產分佈的地域與幣別、家族成員橫跨幾個世代，以及需要協調的專業人士（律師、會計師、信託受託人）有多少位。這三項加總起來的複雜度，往往比帳面資產總額更能決定要不要走向正式的家族辦公室架構。資產還沒到達國際機構門檻的家庭，也能透過信託或委託專業資產管理公司，先體驗類似的治理機制。
+      </p>
+      <p>自己的家族適合哪一種規劃方式，直接找顧問討論現況會比較準。</p>
+
+      <h2>財富傳承規劃的收費怎麼抓</h2>
+      <p>
+        信託收費通常拆成三塊：簽約費、管理費，還有修改信託內容時要付的變更費。各家信託業者收費標準不同，資產規模跟信託架構的複雜度都會影響費用高低。
+      </p>
+      <p>
+        保險是另一種常見工具。壽險理賠金符合一定條件不列入遺產，受益人不用等遺產分割程序，能比較快拿到現金，理賠方式也能規劃成一次領取或分期給付。
+      </p>
+      <p>
+        信託、保險、遺囑這些工具常常要搭配著用，實際費用會因為選擇的組合不同而有落差。自己的狀況適合哪種組合、費用大概落在什麼區間，直接找顧問聊聊，依照家族資產狀況與傳承目標抓算會比較準。
+      </p>
+    </div>
+
+    <div class="articles-grid">
+      {sorted.map((article) => (
+        <ArticleCard
+          title={article.data.title}
+          href={`/articles/${article.data.slug}/`}
+          image={article.data.images.hero.url}
+          imageAlt={article.data.images.hero.alt}
+          category={article.data.category}
+        />
+      ))}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .category-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px 100px;
+  }
+
+  .category-desc {
+    font-size: var(--text-base);
+    text-align: center;
+    color: var(--color-ink-soft);
+    margin-bottom: 50px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .topic-block {
+    max-width: 800px;
+    margin: 0 auto 60px;
+  }
+
+  .topic-block h2 {
+    font-size: var(--text-lg);
+    color: var(--color-text);
+    margin-bottom: 16px;
+  }
+
+  .topic-block h2:not(:first-child) {
+    margin-top: 36px;
+  }
+
+  .topic-block p {
+    font-size: var(--text-base);
+    color: var(--color-ink-soft);
+    line-height: 1.8;
+    margin-bottom: 16px;
+  }
+
+  .articles-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  @media (min-width: 640px) {
+    .articles-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .articles-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>
