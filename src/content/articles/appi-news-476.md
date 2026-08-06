@@ -2,6 +2,7 @@
 title: "什麼是股價「利多出盡」？台積電營收創高為何反跌"
 description: "台積電第二季營收獲利雙創新高，股價卻不漲反跌。從「利多出盡」的市場邏輯，看懂訂單滿手與股價表現為何脫鉤，以及一般投資人該建立的判斷習慣。"
 date: 2026-07-31
+updatedDate: 2026-08-06
 author: "吳芳圳"
 authorTitle: "財務醫師"
 authorUrl: "/author/wu-fang-jun/"
