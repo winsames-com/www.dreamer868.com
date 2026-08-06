@@ -5,6 +5,17 @@ import { principalAuthor, contactInfo } from '../../data/navigation';
 
 const expertise = ['理財規劃', '稅務規劃', '財富傳承', '信託規劃', '家族治理', '保險服務', '海外銀行開戶', '移民規劃', '二代培訓'];
 
+// knowsAbout：專業領域＋bio 提及的工具範疇（值一律取自站內既有公開資料）
+const knowsAbout = [...expertise, '資產配置', '海外公司設立', '國際資產配置'];
+
+// 站上四分眾案例（改編自真實法院判決），對應其實務上經常處理的規劃主題
+const caseTypes = [
+  { href: '/service-targets/personal/', label: '個人財務規劃', desc: '個人保障與退休安排的案例情境' },
+  { href: '/service-targets/family/', label: '家庭財務規劃', desc: '家庭資產保護與傳承的案例情境' },
+  { href: '/service-targets/corporate/', label: '公司財務規劃', desc: '企業主資產與稅務的案例情境' },
+  { href: '/service-targets/wealth-tax/', label: '財富稅務規劃', desc: '財富移轉與稅務安排的案例情境' },
+];
+
 // ProfilePage + Person：建立作者實體，強化 E-E-A-T 與 AI 對「誰寫的」之信任
 const personLd = {
   '@context': 'https://schema.org',
@@ -14,16 +25,18 @@ const personLd = {
   jobTitle: [principalAuthor.title, ...principalAuthor.roles],
   description: principalAuthor.bio,
   url: `https://www.dreamer868.com${principalAuthor.url}`,
-  knowsAbout: expertise,
+  knowsAbout,
   hasCredential: {
     '@type': 'EducationalOccupationalCredential',
     credentialCategory: 'professional certification',
     name: principalAuthor.credential,
+    recognizedBy: { '@type': 'Organization', name: 'IARFC' },
   },
   worksFor: [
     { '@type': 'Organization', name: principalAuthor.company },
     { '@id': 'https://www.dreamer868.com/#organization' },
   ],
+  workLocation: { '@type': 'Place', address: contactInfo.address },
   email: `mailto:${contactInfo.email}`,
   telephone: contactInfo.phone,
 };
@@ -66,9 +79,30 @@ const breadcrumbs = [{ name: '專業團隊', href: '/team/' }, { name: principal
       <p class="motto">「{principalAuthor.motto}」</p>
     </blockquote>
 
+    <h2>專業背景</h2>
+    <p class="background">
+      {principalAuthor.name}把財務顧問這份工作定位成「{principalAuthor.title}」：客戶帶著問題來，先診斷財務結構哪裡有風險，再開出對應的處方，後續持續追蹤調整。這套作法他已實踐 {principalAuthor.experienceYears} 年以上，服務對象以企業主、醫師、高資產家庭與專業人士為主。
+    </p>
+    <p class="background">
+      複雜的財務問題很少是單一專業能處理完的：不動產移轉牽動稅務，股權安排牽動公司的法律關係。尊茂整合了律師、會計師、地政士、海外移民顧問與國際貿易專家等跨領域夥伴，由{principalAuthor.name}擔任統籌窗口，讓各方專業在同一份規劃裡對齊。
+    </p>
+    <p class="background">
+      實務上常用的工具涵蓋財務規劃、稅務規劃、資產傳承、信託架構、海外公司設立與國際資產配置，目標只有一個：替客戶建立穩健、能世代延續的財務系統。
+    </p>
+
     <h2>專業領域</h2>
     <ul class="expertise">
       {expertise.map((e) => <li>{e}</li>)}
+    </ul>
+
+    <h2>代表案例類型</h2>
+    <p class="background">
+      站上的案例故事改編自真實法院判決，依情境分為四類，各自對應{principalAuthor.name}實務上經常處理的規劃主題：
+    </p>
+    <ul class="case-types">
+      {caseTypes.map((c) => (
+        <li><a href={c.href}>{c.label}</a>：{c.desc}</li>
+      ))}
     </ul>
 
     <h2>聯絡與預約</h2>
@@ -104,8 +138,13 @@ const breadcrumbs = [{ name: '專業團隊', href: '/team/' }, { name: principal
   .statement p:last-child { margin-bottom: 0; }
   .statement .motto { font-weight: 700; color: var(--color-primary); font-size: var(--text-sm); }
   .author-page h2 { margin-top: 44px; margin-bottom: 16px; color: var(--color-primary); font-size: var(--text-lg); }
+  .background { font-size: var(--text-sm); line-height: 1.9; color: var(--color-ink-soft); margin-bottom: 16px; }
   .expertise { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; padding: 0; }
   .expertise li { background: var(--color-bg-light); padding: 6px 16px; border-radius: 20px; font-size: var(--text-xs); }
+  .case-types { list-style: none; padding: 0; margin: 0; }
+  .case-types li { padding: 8px 0; border-bottom: 1px solid var(--color-bg-light); color: var(--color-ink-soft); line-height: 1.8; }
+  .case-types a { color: var(--color-primary); font-weight: 600; }
+  .case-types a:hover { text-decoration: underline; }
   .contact { list-style: none; padding: 0; line-height: 2.2; }
   .contact a { color: var(--color-primary); }
 </style>

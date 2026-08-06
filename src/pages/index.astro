@@ -17,6 +17,41 @@ const moreServices = [
   { slug: 'insurance', label: '保險服務', desc: '保險不只是保障，也是傳承與節稅的重要工具。' },
 ];
 
+// 首頁通用問答（不含收費、內部流程、稅率金額法條等公司內部或合規敏感事實）
+const homeFaq = [
+  {
+    q: '財務規劃顧問在做什麼？',
+    a: '把您的收支、保障、資產和人生目標放在一起看，先診斷結構上的風險，再規劃處理的先後順序，並且定期追蹤調整。單一商品好不好只是小環節，整體配置合不合理，才是顧問要回答的問題。',
+  },
+  {
+    q: '什麼情況該開始想傳承規劃？',
+    a: '名下有不動產或公司股權、家中長輩年事已高，或是家庭成員結構比較複雜，就可以開始了。傳承需要時間鋪排，等健康出狀況才處理，很多工具已經來不及用，越早開始選擇越多。',
+  },
+  {
+    q: '第一次諮詢前可以先想清楚什麼？',
+    a: '先大致盤點手上有哪些資產、保單和負債，再想想最放不下心的是哪一件事，例如退休、孩子的保障，或是資產怎麼傳下去。帶著具體的擔心來談，諮詢會更有方向。',
+  },
+  {
+    q: '財務規劃是有錢人才需要的嗎？',
+    a: '資產多的人煩惱在稅務和傳承，資產還在累積的人課題在保障和儲蓄的順序，兩種都需要規劃，只是重點不同。愈早把架構理清楚，之後要調整的代價愈小。',
+  },
+  {
+    q: '已經有保險業務員和會計師，還需要財務顧問嗎？',
+    a: '每種專業通常只看自己負責的範圍，業務員看保單、會計師看稅。財務顧問把這些建議放在同一張藍圖上檢查，確認彼此沒有矛盾、也沒有漏掉的環節，讓您做決定時有全局的依據。',
+  },
+];
+
+// FAQPage JSON-LD：與 ArticleLayout 同手法，讓 AI 答題引擎直接抽取
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: homeFaq.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+
 const caseCategories = [
   { href: '/service-targets/personal/', label: '個人財務規劃', desc: '個人保障與退休規劃相關案例情境。' },
   { href: '/service-targets/family/', label: '家庭財務規劃', desc: '家庭資產保護與傳承相關案例情境。' },
@@ -25,7 +60,7 @@ const caseCategories = [
 ];
 ---
 
-<BaseLayout title="首頁">
+<BaseLayout title="首頁" jsonLd={faqLd}>
   <!-- Hero Banner -->
   <section class="hero">
     <div class="hero-bg">
@@ -107,6 +142,19 @@ const caseCategories = [
           <p>{c.desc}</p>
           <span class="card-arrow">→</span>
         </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section faq-section">
+    <h2 class="section-heading centered" data-animate-in="up">常見問答</h2>
+    <div class="faq-list" data-animate-in="up">
+      {homeFaq.map((f) => (
+        <details class="faq-item">
+          <summary>{f.q}</summary>
+          <p>{f.a}</p>
+        </details>
       ))}
     </div>
   </section>
@@ -421,6 +469,45 @@ const caseCategories = [
     font-size: var(--text-xs);
     color: var(--color-ink-soft);
     line-height: 1.8;
+  }
+
+  /* FAQ */
+  .faq-section {
+    background: var(--color-bg-light);
+  }
+
+  .faq-list {
+    max-width: 820px;
+    margin: 0 auto;
+  }
+
+  .faq-item {
+    background: var(--color-white);
+    border-radius: 8px;
+    box-shadow: var(--shadow-card);
+    padding: 20px 24px;
+    margin-bottom: 16px;
+  }
+
+  .faq-item summary {
+    cursor: pointer;
+    font-weight: 600;
+    font-size: var(--text-sm);
+    line-height: 1.6;
+    color: var(--color-ink-soft);
+    list-style: none;
+  }
+
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::before { content: '＋ '; color: var(--color-primary); font-weight: 700; }
+  .faq-item[open] summary::before { content: '－ '; }
+
+  .faq-item p {
+    margin: 12px 0 0;
+    padding-left: 1.4em;
+    color: var(--color-ink-soft);
+    font-size: var(--text-xs);
+    line-height: 1.9;
   }
 
   /* CTA */
