@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-labelledby="title desc">
+  <title id="title">家族信託的可能作用與重要限制</title>
+  <desc id="desc">五張並列卡片分別整理家族信託在債權、離婚、揮霍、稅務與管理成本上的可能作用及限制。</desc>
+  <rect width="960" height="600" fill="#FFFFFF"/>
+  <style>
+    text{font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;fill:#1F1F1F}
+    .card{fill:#FFFFFF;stroke:#003A93;stroke-width:2}
+    .head{fill:#003A93}.label{font-size:13px;font-weight:700;fill:#3D6BB5}
+    .limit{fill:#D1482A}.body{font-size:14px}.muted{font-size:13px;fill:#6B7280}
+    .icon{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  </style>
+  <text x="480" y="48" text-anchor="middle" font-size="28" font-weight="700" fill="#003A93">家族信託：可能作用與重要限制</text>
+  <text x="480" y="75" text-anchor="middle" class="muted">實際效果取決於信託條款、個案事實與適用法規</text>
+
+  <g transform="translate(25 105)">
+    <rect class="card" width="174" height="450" rx="12"/>
+    <path class="head" d="M12 0H162Q174 0 174 12V90H0V12Q0 0 12 0Z"/>
+    <path class="icon" d="M87 17L105 24V39C105 53 96 62 87 67C78 62 69 53 69 39V24Z M79 40L85 46L96 33"/>
+    <text x="87" y="82" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">債權主張</text>
+    <text x="16" y="122" class="label">可能有助於</text>
+    <text x="16" y="150" class="body"><tspan x="16">區隔信託財產與</tspan><tspan x="16" dy="23">個人名下財產</tspan></text>
+    <line x1="16" y1="205" x2="158" y2="205" stroke="#D9E2F1"/>
+    <text x="16" y="236" class="label limit">重要限制</text>
+    <text x="16" y="264" class="body"><tspan x="16">法定強制執行例外</tspan><tspan x="16" dy="23">仍可能適用，亦可能</tspan><tspan x="16" dy="23">面臨詐害移轉爭議</tspan></text>
+  </g>
+
+  <g transform="translate(209 105)">
+    <rect class="card" width="174" height="450" rx="12"/>
+    <path class="head" d="M12 0H162Q174 0 174 12V90H0V12Q0 0 12 0Z"/>
+    <circle class="icon" cx="79" cy="38" r="13"/><circle class="icon" cx="95" cy="38" r="13"/>
+    <text x="87" y="82" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">離婚分產</text>
+    <text x="16" y="122" class="label">可能有助於</text>
+    <text x="16" y="150" class="body"><tspan x="16">釐清資產來源與</tspan><tspan x="16" dy="23">受益人權利性質</tspan></text>
+    <line x1="16" y1="205" x2="158" y2="205" stroke="#D9E2F1"/>
+    <text x="16" y="236" class="label limit">重要限制</text>
+    <text x="16" y="264" class="body"><tspan x="16">仍須依個案認定</tspan><tspan x="16" dy="23">是否屬於婚姻財產</tspan><tspan x="16" dy="23">及其分配方式</tspan></text>
+  </g>
+
+  <g transform="translate(393 105)">
+    <rect class="card" width="174" height="450" rx="12"/>
+    <path class="head" d="M12 0H162Q174 0 174 12V90H0V12Q0 0 12 0Z"/>
+    <rect class="icon" x="67" y="26" width="40" height="28" rx="4"/><circle cx="96" cy="40" r="3" fill="#FFFFFF"/>
+    <text x="87" y="82" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">受益人揮霍</text>
+    <text x="16" y="122" class="label">可能有助於</text>
+    <text x="16" y="150" class="body"><tspan x="16">採分期給付或</tspan><tspan x="16" dy="23">限定款項用途</tspan></text>
+    <line x1="16" y1="205" x2="158" y2="205" stroke="#D9E2F1"/>
+    <text x="16" y="236" class="label limit">重要限制</text>
+    <text x="16" y="264" class="body"><tspan x="16">無法保證受益人的</tspan><tspan x="16" dy="23">消費習慣或行為</tspan><tspan x="16" dy="23">因此改變</tspan></text>
+  </g>
+
+  <g transform="translate(577 105)">
+    <rect class="card" width="174" height="450" rx="12"/>
+    <path class="head" d="M12 0H162Q174 0 174 12V90H0V12Q0 0 12 0Z"/>
+    <path class="icon" d="M72 19H96L104 27V58H72Z M96 19V27H104 M79 36H97 M79 44H97 M79 52H91"/>
+    <text x="87" y="82" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">稅務安排</text>
+    <text x="16" y="122" class="label">可能有助於</text>
+    <text x="16" y="150" class="body"><tspan x="16">規劃財產持有架構</tspan><tspan x="16" dy="23">與收益分配方式</tspan></text>
+    <line x1="16" y1="205" x2="158" y2="205" stroke="#D9E2F1"/>
+    <text x="16" y="236" class="label limit">重要限制</text>
+    <text x="16" y="264" class="body"><tspan x="16">不會自動節稅，</tspan><tspan x="16" dy="23">須按個人情況與</tspan><tspan x="16" dy="23">交易內容試算</tspan></text>
+  </g>
+
+  <g transform="translate(761 105)">
+    <rect class="card" width="174" height="450" rx="12"/>
+    <path class="head" d="M12 0H162Q174 0 174 12V90H0V12Q0 0 12 0Z"/>
+    <circle class="icon" cx="87" cy="29" r="10"/><path class="icon" d="M68 58C69 46 76 41 87 41S105 46 106 58 M87 41V55"/>
+    <text x="87" y="82" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">管理成本</text>
+    <text x="16" y="122" class="label">可能有助於</text>
+    <text x="16" y="150" class="body"><tspan x="16">提供專業管理與</tspan><tspan x="16" dy="23">長期運作延續性</tspan></text>
+    <line x1="16" y1="205" x2="158" y2="205" stroke="#D9E2F1"/>
+    <text x="16" y="236" class="label limit">重要限制</text>
+    <text x="16" y="264" class="body"><tspan x="16">伴隨管理費、文件</tspan><tspan x="16" dy="23">作業與資金流動性</tspan><tspan x="16" dy="23">限制</tspan></text>
+  </g>
+
+  <rect x="25" y="570" width="910" height="4" rx="2" fill="#3D6BB5"/>
+  <text x="480" y="594" text-anchor="middle" font-size="12" fill="#6B7280">信託並非完全保障；設立與執行前宜進行法律、稅務及財務評估</text>
+<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7280" fill-opacity="0.45" font-weight="600">dreamer868.com</text></svg>
