@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" role="img" aria-labelledby="title desc">
+  <title id="title">台灣經濟、企業獲利與股市評價</title>
+  <desc id="desc">三欄資訊圖並列台灣 GDP、企業獲利與股市評價，分別標示各自衡量內容及影響因素。</desc>
+  <style>
+    text{font-family:"Noto Sans TC","Microsoft JhengHei","PingFang TC",sans-serif;fill:#1F1F1F}
+    .head{font-size:30px;font-weight:700;fill:#003A93}
+    .sub{font-size:15px;fill:#6B7280}
+    .cardTitle{font-size:23px;font-weight:700;fill:#003A93}
+    .label{font-size:14px;font-weight:700;fill:#3D6BB5}
+    .body{font-size:17px;font-weight:600}
+    .note{font-size:16px;fill:#6B7280}
+  </style>
+  <rect width="960" height="600" fill="#FFFFFF"/>
+  <text id="titleText" x="480" y="54" text-anchor="middle" class="head">三個不同層次，三種觀察角度</text>
+  <text x="480" y="82" text-anchor="middle" class="sub">台灣 GDP、企業獲利與股市評價彼此相關，但衡量的並非同一件事</text>
+  <line x1="60" y1="104" x2="900" y2="104" stroke="#003A93" stroke-width="3"/>
+
+  <g aria-label="台灣 GDP">
+    <rect x="45" y="132" width="270" height="340" rx="12" fill="#F4F4F4" stroke="#003A93" stroke-width="2"/>
+    <rect x="45" y="132" width="270" height="62" rx="12" fill="#003A93"/>
+    <path d="M45 182H315V194H45Z" fill="#003A93"/>
+    <text x="180" y="171" text-anchor="middle" font-size="23" font-weight="700" fill="#FFFFFF">台灣 GDP</text>
+    <text x="68" y="229" class="label">衡量內容</text>
+    <text x="68" y="260" class="body">整體經濟產出</text>
+    <line x1="68" y1="282" x2="292" y2="282" stroke="#D1D5DB"/>
+    <text x="68" y="316" class="label">主要驅動因素</text>
+    <circle cx="76" cy="350" r="5" fill="#D1482A"/><text x="91" y="356" class="body">出口</text>
+    <circle cx="76" cy="390" r="5" fill="#D1482A"/><text x="91" y="396" class="body">消費</text>
+    <circle cx="76" cy="430" r="5" fill="#D1482A"/><text x="91" y="436" class="body">投資</text>
+  </g>
+
+  <g aria-label="企業獲利">
+    <rect x="345" y="132" width="270" height="340" rx="12" fill="#F4F4F4" stroke="#003A93" stroke-width="2"/>
+    <rect x="345" y="132" width="270" height="62" rx="12" fill="#3D6BB5"/>
+    <path d="M345 182H615V194H345Z" fill="#3D6BB5"/>
+    <text x="480" y="171" text-anchor="middle" font-size="23" font-weight="700" fill="#FFFFFF">企業獲利</text>
+    <text x="368" y="229" class="label">衡量內容</text>
+    <text x="368" y="260" class="body">企業最終賺取的利潤</text>
+    <line x1="368" y1="282" x2="592" y2="282" stroke="#D1D5DB"/>
+    <text x="368" y="316" class="label">主要構成因素</text>
+    <text x="368" y="356" class="body">營收</text><text x="432" y="356" font-size="20" fill="#D1482A">−</text>
+    <text x="456" y="356" class="body">成本</text><text x="520" y="356" font-size="20" fill="#D1482A">−</text>
+    <text x="368" y="402" class="body">利息</text><text x="432" y="402" font-size="20" fill="#D1482A">−</text>
+    <text x="456" y="402" class="body">稅負</text>
+  </g>
+
+  <g aria-label="股市評價">
+    <rect x="645" y="132" width="270" height="340" rx="12" fill="#F4F4F4" stroke="#003A93" stroke-width="2"/>
+    <rect x="645" y="132" width="270" height="62" rx="12" fill="#003A93"/>
+    <path d="M645 182H915V194H645Z" fill="#003A93"/>
+    <text x="780" y="171" text-anchor="middle" font-size="23" font-weight="700" fill="#FFFFFF">股市評價</text>
+    <text x="668" y="229" class="label">衡量內容</text>
+    <text x="668" y="260" class="body">投資人願意支付的價格</text>
+    <line x1="668" y1="282" x2="892" y2="282" stroke="#D1D5DB"/>
+    <text x="668" y="316" class="label">主要驅動因素</text>
+    <circle cx="676" cy="350" r="5" fill="#D1482A"/><text x="691" y="356" class="body">未來獲利預期</text>
+    <circle cx="676" cy="390" r="5" fill="#D1482A"/><text x="691" y="396" class="body">投資人出價意願</text>
+    <circle cx="676" cy="430" r="5" fill="#D1482A"/><text x="691" y="436" class="body">資金成本</text>
+  </g>
+
+  <g aria-label="三者變化可能不同">
+    <rect x="120" y="505" width="720" height="66" rx="12" fill="#FFFFFF" stroke="#D1482A" stroke-width="2"/>
+    <circle cx="156" cy="538" r="8" fill="#003A93"/><line x1="176" y1="545" x2="216" y2="525" stroke="#003A93" stroke-width="4"/>
+    <circle cx="246" cy="538" r="8" fill="#3D6BB5"/><line x1="266" y1="531" x2="306" y2="547" stroke="#3D6BB5" stroke-width="4"/>
+    <circle cx="336" cy="538" r="8" fill="#D1482A"/><line x1="356" y1="538" x2="396" y2="538" stroke="#D1482A" stroke-width="4"/>
+    <text x="430" y="535" font-size="18" font-weight="700" fill="#D1482A">不必同步</text>
+    <text x="430" y="558" class="note">三者可能同向、背離，或以不同速度變化</text>
+  </g>
+<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7280" fill-opacity="0.45" font-weight="600">dreamer868.com</text></svg>
