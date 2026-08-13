@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" role="img" aria-labelledby="title desc">
+  <title id="title">退休規劃容易遺漏的三類家庭支援</title>
+  <desc id="desc">三張並列卡片分別呈現生活費增加、代墊債務或房租，以及協助購屋頭期款。</desc>
+  <style>
+    text{font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif}
+    .heading{fill:#003A93;font-size:30px;font-weight:700}
+    .context{fill:#1F1F1F;font-size:17px;font-weight:700}
+    .label{fill:#003A93;font-size:21px;font-weight:700}
+    .note{fill:#6B7280;font-size:15px}
+    .icon{fill:none;stroke:#003A93;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
+    .accent{fill:none;stroke:#D1482A;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
+  </style>
+
+  <rect width="960" height="600" fill="#FFFFFF"/>
+  <text class="heading" x="480" y="55" text-anchor="middle">退休規劃容易遺漏的家庭支援</text>
+  <line x1="345" y1="73" x2="615" y2="73" stroke="#D1482A" stroke-width="4"/>
+
+  <rect x="340" y="96" width="280" height="98" rx="16" fill="#F4F4F4" stroke="#3D6BB5" stroke-width="2"/>
+  <path class="icon" d="M405 149h38v24h-38z M411 149v-12a13 13 0 0 1 26 0v12"/>
+  <path class="accent" d="M424 132v-13 M416 124h16"/>
+  <text class="context" x="470" y="137">退休準備金</text>
+  <text class="note" x="470" y="164">共同的財務背景</text>
+
+  <rect x="45" y="228" width="270" height="314" rx="18" fill="#F4F4F4" stroke="#003A93" stroke-width="3"/>
+  <circle cx="180" cy="329" r="68" fill="#FFFFFF" stroke="#3D6BB5" stroke-width="2"/>
+  <path class="icon" d="M130 341h100 M143 341l9 35h56l9-35 M154 341l10-45h42l10 45"/>
+  <path class="accent" d="M178 296v45 M164 316h28"/>
+  <text class="label" x="180" y="429" text-anchor="middle">生活費增加</text>
+  <line x1="105" y1="448" x2="255" y2="448" stroke="#D1482A" stroke-width="3"/>
+  <text class="note" x="180" y="478" text-anchor="middle">日常採買與水電等</text>
+  <text class="note" x="180" y="501" text-anchor="middle">持續增加的家庭支出</text>
+
+  <rect x="345" y="228" width="270" height="314" rx="18" fill="#F4F4F4" stroke="#003A93" stroke-width="3"/>
+  <circle cx="480" cy="329" r="68" fill="#FFFFFF" stroke="#3D6BB5" stroke-width="2"/>
+  <rect class="icon" x="438" y="286" width="60" height="82" rx="5"/>
+  <line class="icon" x1="451" y1="305" x2="485" y2="305"/>
+  <line class="icon" x1="451" y1="320" x2="478" y2="320"/>
+  <path class="accent" d="M491 355h32 M513 345l10 10-10 10"/>
+  <circle cx="462" cy="345" r="9" fill="none" stroke="#D1482A" stroke-width="4"/>
+  <text class="label" x="480" y="429" text-anchor="middle">代墊債務或房租</text>
+  <line x1="405" y1="448" x2="555" y2="448" stroke="#D1482A" stroke-width="3"/>
+  <text class="note" x="480" y="478" text-anchor="middle">多次協助成年子女</text>
+  <text class="note" x="480" y="501" text-anchor="middle">支付債務或居住費用</text>
+
+  <rect x="645" y="228" width="270" height="314" rx="18" fill="#F4F4F4" stroke="#003A93" stroke-width="3"/>
+  <circle cx="780" cy="329" r="68" fill="#FFFFFF" stroke="#3D6BB5" stroke-width="2"/>
+  <path class="icon" d="M730 325l50-39 50 39 M741 318v52h78v-52 M771 370v-31h18v31"/>
+  <circle cx="820" cy="295" r="17" fill="#FFFFFF" stroke="#D1482A" stroke-width="4"/>
+  <path class="accent" d="M820 285v20 M812 291h16"/>
+  <text class="label" x="780" y="429" text-anchor="middle">協助購屋頭期款</text>
+  <line x1="705" y1="448" x2="855" y2="448" stroke="#D1482A" stroke-width="3"/>
+  <text class="note" x="780" y="478" text-anchor="middle">一次提供較大筆資金</text>
+  <text class="note" x="780" y="501" text-anchor="middle">支援家庭購屋需求</text>
+
+  <text class="note" x="480" y="578" text-anchor="middle">納入整體規劃，才能看見完整的家庭支援負擔</text>
+<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7280" fill-opacity="0.45" font-weight="600">dreamer868.com</text></svg>
