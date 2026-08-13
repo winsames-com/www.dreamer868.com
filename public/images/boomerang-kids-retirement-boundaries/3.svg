@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-labelledby="title desc">
+  <title id="title">專款帳戶與安養信託比較</title>
+  <desc id="desc">專款帳戶與安養信託以雙欄卡片比較管理人、給付方式、成本和限制。</desc>
+  <style>
+    text{font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;fill:#1F1F1F}
+    .title{font-size:30px;font-weight:700;fill:#003A93}
+    .subtitle{font-size:15px;fill:#6B7280}
+    .head{font-size:23px;font-weight:700;fill:#FFFFFF}
+    .tag{font-size:14px;font-weight:700;fill:#3D6BB5}
+    .body{font-size:17px;font-weight:600}
+    .note{font-size:13px;fill:#6B7280}
+    .limit{fill:#D1482A}
+  </style>
+
+  <rect width="960" height="600" fill="#FFFFFF"/>
+  <text id="title" x="480" y="48" text-anchor="middle" class="title">專款帳戶 vs. 安養信託</text>
+  <text x="480" y="74" text-anchor="middle" class="subtitle">四個面向，並列看懂管理與運作差異</text>
+
+  <rect x="40" y="100" width="425" height="442" rx="18" fill="#FFFFFF" stroke="#003A93" stroke-width="2"/>
+  <rect x="495" y="100" width="425" height="442" rx="18" fill="#FFFFFF" stroke="#003A93" stroke-width="2"/>
+
+  <path d="M40 118Q40 100 58 100H447Q465 100 465 118V170H40Z" fill="#003A93"/>
+  <path d="M495 118Q495 100 513 100H902Q920 100 920 118V170H495Z" fill="#3D6BB5"/>
+  <circle cx="78" cy="135" r="17" fill="#FFFFFF" opacity=".18"/>
+  <path d="M66 139H90M69 139V128M77 139V128M85 139V128M66 125L78 118L90 125" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+  <text x="108" y="143" class="head">專款帳戶</text>
+  <circle cx="533" cy="135" r="17" fill="#FFFFFF" opacity=".18"/>
+  <path d="M533 118L545 123V133C545 142 539 148 533 151C527 148 521 142 521 133V123Z" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+  <text x="563" y="143" class="head">安養信託</text>
+
+  <rect x="41" y="170" width="423" height="92" fill="#F4F4F4"/>
+  <rect x="496" y="170" width="423" height="92" fill="#F4F4F4"/>
+  <text x="68" y="201" class="tag">管理人</text>
+  <text x="68" y="231" class="body">帳戶持有人自行管理</text>
+  <text x="523" y="201" class="tag">管理人</text>
+  <text x="523" y="231" class="body">由受託人依契約管理</text>
+
+  <line x1="41" y1="262" x2="464" y2="262" stroke="#FFFFFF" stroke-width="2"/>
+  <line x1="496" y1="262" x2="919" y2="262" stroke="#FFFFFF" stroke-width="2"/>
+  <text x="68" y="293" class="tag">給付方式</text>
+  <text x="68" y="323" class="body">可彈性轉帳與支用</text>
+  <text x="523" y="293" class="tag">給付方式</text>
+  <text x="523" y="323" class="body">依契約約定條件給付</text>
+
+  <rect x="41" y="354" width="423" height="92" fill="#F4F4F4"/>
+  <rect x="496" y="354" width="423" height="92" fill="#F4F4F4"/>
+  <text x="68" y="385" class="tag">成本</text>
+  <text x="68" y="415" class="body">帳務較簡單，費用依銀行規定</text>
+  <text x="523" y="385" class="tag">成本</text>
+  <text x="523" y="415" class="body">可能有管理費或承作門檻</text>
+
+  <line x1="41" y1="446" x2="464" y2="446" stroke="#FFFFFF" stroke-width="2"/>
+  <line x1="496" y1="446" x2="919" y2="446" stroke="#FFFFFF" stroke-width="2"/>
+  <text x="68" y="477" class="tag limit">限制</text>
+  <text x="68" y="507" class="body">持有人仍可自行移動資金</text>
+  <text x="523" y="477" class="tag limit">限制</text>
+  <text x="523" y="507" class="body">受契約條款與適用規範限制</text>
+
+  <circle cx="285" cy="570" r="3" fill="#D1482A"/>
+  <text x="480" y="575" text-anchor="middle" class="note">實際安排與費用，依金融機構規定及個別契約內容而定</text>
+<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7280" fill-opacity="0.45" font-weight="600">dreamer868.com</text></svg>
