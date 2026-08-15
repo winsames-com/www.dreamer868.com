@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-labelledby="title desc">
+  <title id="title">美元債券、美元存款與外幣保單比較</title>
+  <desc id="desc">三欄資訊圖並列美元債券、美元存款與外幣保單，從流動性、期限、利率敏感度、提前退出成本、信用曝險及匯率風險逐項比較。</desc>
+  <style>
+    text{font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;fill:#1F1F1F}
+    .head{font-size:27px;font-weight:700;fill:#003A93}
+    .sub{font-size:14px;fill:#6B7280}
+    .product{font-size:19px;font-weight:700;fill:#FFFFFF}
+    .label{font-size:14px;font-weight:700;fill:#003A93}
+    .body{font-size:13px;fill:#1F1F1F}
+    .note{font-size:12px;fill:#6B7280}
+  </style>
+
+  <rect width="960" height="600" fill="#FFFFFF"/>
+  <text id="titleText" class="head" x="32" y="40">美元資產怎麼選？三類商品六面向比較</text>
+  <text class="sub" x="32" y="66">條件與風險結構不同，應依資金用途、持有期間與契約內容判斷</text>
+
+  <rect x="32" y="88" width="896" height="476" rx="12" fill="#F4F4F4" stroke="#003A93" stroke-width="2"/>
+  <rect x="150" y="88" width="259" height="58" fill="#003A93"/>
+  <rect x="409" y="88" width="259" height="58" fill="#3D6BB5"/>
+  <rect x="668" y="88" width="260" height="58" rx="10" fill="#003A93"/>
+  <text class="product" x="279" y="124" text-anchor="middle">美元債券</text>
+  <text class="product" x="538" y="124" text-anchor="middle">美元存款</text>
+  <text class="product" x="798" y="124" text-anchor="middle">外幣保單</text>
+
+  <line x1="150" y1="146" x2="150" y2="564" stroke="#003A93"/>
+  <line x1="409" y1="88" x2="409" y2="494" stroke="#FFFFFF" stroke-opacity=".7"/>
+  <line x1="668" y1="88" x2="668" y2="494" stroke="#FFFFFF" stroke-opacity=".7"/>
+  <line x1="32" y1="216" x2="928" y2="216" stroke="#FFFFFF" stroke-width="2"/>
+  <line x1="32" y1="286" x2="928" y2="286" stroke="#FFFFFF" stroke-width="2"/>
+  <line x1="32" y1="356" x2="928" y2="356" stroke="#FFFFFF" stroke-width="2"/>
+  <line x1="32" y1="426" x2="928" y2="426" stroke="#FFFFFF" stroke-width="2"/>
+  <line x1="32" y1="494" x2="928" y2="494" stroke="#003A93" stroke-width="2"/>
+
+  <text class="label" x="52" y="183">流動性</text>
+  <text class="body" x="168" y="174"><tspan x="168">可於市場出售</tspan><tspan x="168" dy="20">成交價格可能波動</tspan></text>
+  <text class="body" x="427" y="174"><tspan x="427">到期領回較直接</tspan><tspan x="427" dy="20">提前解約受約定限制</tspan></text>
+  <text class="body" x="686" y="174"><tspan x="686">依契約辦理</tspan><tspan x="686" dy="20">提領彈性差異較大</tspan></text>
+
+  <text class="label" x="52" y="253">期限／可領日</text>
+  <text class="body" x="168" y="253">單一債券有明確到期日</text>
+  <text class="body" x="427" y="253">依存款天期約定到期</text>
+  <text class="body" x="686" y="244"><tspan x="686">依契約年期</tspan><tspan x="686" dy="20">與可領日期而定</tspan></text>
+
+  <text class="label" x="52" y="323">利率敏感度</text>
+  <text class="body" x="168" y="314"><tspan x="168">市場利率變動</tspan><tspan x="168" dy="20">會影響債券價格</tspan></text>
+  <text class="body" x="427" y="314"><tspan x="427">約定利率為主</tspan><tspan x="427" dy="20">續存利率可能改變</tspan></text>
+  <text class="body" x="686" y="314"><tspan x="686">依宣告利率</tspan><tspan x="686" dy="20">與契約條款而定</tspan></text>
+
+  <text class="label" x="52" y="393">提前退出成本</text>
+  <text class="body" x="168" y="384"><tspan x="168">到期前出售</tspan><tspan x="168" dy="20">可能產生價格損益</tspan></text>
+  <text class="body" x="427" y="384"><tspan x="427">提前解約</tspan><tspan x="427" dy="20">可能損失部分利息</tspan></text>
+  <text class="body" x="686" y="384"><tspan x="686">費用與解約金</tspan><tspan x="686" dy="20">可能影響可領金額</tspan></text>
+
+  <text class="label" x="52" y="462">信用曝險</text>
+  <text class="body" x="168" y="454"><tspan x="168">取決於發行人</tspan><tspan x="168" dy="20">償債能力</tspan></text>
+  <text class="body" x="427" y="454"><tspan x="427">取決於存款銀行</tspan><tspan x="427" dy="20">及保障適用範圍</tspan></text>
+  <text class="body" x="686" y="454"><tspan x="686">取決於保險公司</tspan><tspan x="686" dy="20">履約能力</tspan></text>
+
+  <rect x="44" y="506" width="872" height="46" rx="8" fill="#FFFFFF" stroke="#D1482A" stroke-width="2"/>
+  <circle cx="66" cy="529" r="6" fill="#D1482A"/>
+  <text x="82" y="534" font-size="14" font-weight="700" fill="#D1482A">共同匯率風險</text>
+  <text class="body" x="222" y="534">三者皆以美元計價；換回新台幣時，匯率變動可能影響實際報酬與可領金額</text>
+
+  <text class="note" x="480" y="587" text-anchor="middle">實際條件依發行文件、銀行約定與保險契約為準</text>
+<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7280" fill-opacity="0.45" font-weight="600">dreamer868.com</text></svg>
