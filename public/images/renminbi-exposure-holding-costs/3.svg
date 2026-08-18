@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-labelledby="title desc">
+  <title id="title">三類人民幣部位風險檢查</title>
+  <desc id="desc">三欄風險檢查卡並列人民幣存款、中國債券與兩岸貿易應收款，分別整理用途、隱藏成本及優先核對項目。</desc>
+  <style>
+    text{font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;fill:#1F1F1F}
+    .card{fill:#FFFFFF;stroke:#003A93;stroke-width:2}
+    .head{fill:#003A93}.icon{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+    .cardTitle{fill:#FFFFFF;font-size:22px;font-weight:700}.label{fill:#3D6BB5;font-size:15px;font-weight:700}
+    .body{font-size:16px}.muted{fill:#6B7280;font-size:14px}.key{fill:#D1482A;font-size:15px;font-weight:700}
+    .keyText{fill:#1F1F1F;font-size:17px;font-weight:700}.rule{stroke:#D7DCE3;stroke-width:1}
+  </style>
+  <rect width="960" height="600" fill="#FFFFFF"/>
+  <text x="480" y="48" text-anchor="middle" fill="#003A93" font-size="30" font-weight="700">三類人民幣部位風險檢查</text>
+  <text x="480" y="76" text-anchor="middle" class="muted">別只看名目收益，先確認成本、風險與實際可回收價值</text>
+
+  <g transform="translate(30 105)">
+    <rect class="card" width="286" height="455" rx="12"/>
+    <path class="head" d="M12 0H274Q286 0 286 12V82H0V12Q0 0 12 0Z"/>
+    <g class="icon" transform="translate(22 22)">
+      <rect x="0" y="8" width="42" height="30" rx="3"/><line x1="7" y1="16" x2="35" y2="16"/>
+      <circle cx="21" cy="27" r="6"/><path d="M18 27h6M21 22v10"/>
+    </g>
+    <text x="78" y="50" class="cardTitle">人民幣存款</text>
+    <text x="22" y="118" class="label">用途／報酬</text>
+    <text x="22" y="148" class="body"><tspan x="22">賺取利息</tspan><tspan x="22" dy="25">支應未來人民幣支出</tspan></text>
+    <line x1="22" y1="194" x2="264" y2="194" class="rule"/>
+    <text x="22" y="226" class="label">隱藏成本</text>
+    <text x="22" y="256" class="body"><tspan x="22">匯率波動、銀行買賣價差</tspan><tspan x="22" dy="25">手續費、提前解約成本</tspan></text>
+    <line x1="22" y1="309" x2="264" y2="309" class="rule"/>
+    <text x="22" y="342" class="key">優先核對</text>
+    <rect x="22" y="360" width="242" height="66" rx="7" fill="#F4F4F4"/>
+    <text x="143" y="389" text-anchor="middle" class="keyText"><tspan x="143">換回新台幣後的</tspan><tspan x="143" dy="25" fill="#D1482A">淨值</tspan></text>
+  </g>
+
+  <g transform="translate(337 105)">
+    <rect class="card" width="286" height="455" rx="12"/>
+    <path class="head" d="M12 0H274Q286 0 286 12V82H0V12Q0 0 12 0Z"/>
+    <g class="icon" transform="translate(24 20)">
+      <path d="M4 2h27l9 9v31H4Z"/><path d="M31 2v10h9M11 21h22M11 29h22M11 37h14"/>
+    </g>
+    <text x="78" y="50" class="cardTitle">中國債券</text>
+    <text x="22" y="118" class="label">用途／報酬</text>
+    <text x="22" y="148" class="body"><tspan x="22">賺取利息</tspan><tspan x="22" dy="25">資產配置</tspan></text>
+    <line x1="22" y1="194" x2="264" y2="194" class="rule"/>
+    <text x="22" y="226" class="label">隱藏成本</text>
+    <text x="22" y="256" class="body"><tspan x="22">信用、市價與流動性風險</tspan><tspan x="22" dy="25">政策變動與匯率曝險</tspan></text>
+    <line x1="22" y1="309" x2="264" y2="309" class="rule"/>
+    <text x="22" y="342" class="key">優先核對</text>
+    <rect x="22" y="360" width="242" height="66" rx="7" fill="#F4F4F4"/>
+    <text x="143" y="389" text-anchor="middle" class="keyText"><tspan x="143">最差測試情境下的</tspan><tspan x="143" dy="25" fill="#D1482A">可變現價值</tspan></text>
+  </g>
+
+  <g transform="translate(644 105)">
+    <rect class="card" width="286" height="455" rx="12"/>
+    <path class="head" d="M12 0H274Q286 0 286 12V82H0V12Q0 0 12 0Z"/>
+    <g class="icon" transform="translate(22 20)">
+      <rect x="3" y="2" width="38" height="40" rx="3"/><line x1="11" y1="13" x2="33" y2="13"/>
+      <line x1="11" y1="22" x2="33" y2="22"/><line x1="11" y1="31" x2="25" y2="31"/><circle cx="34" cy="33" r="4"/>
+    </g>
+    <text x="76" y="42" class="cardTitle"><tspan x="76">兩岸貿易</tspan><tspan x="76" dy="25">應收款</tspan></text>
+    <text x="22" y="118" class="label">用途／報酬</text>
+    <text x="22" y="148" class="body"><tspan x="22">收取銷售貨款</tspan></text>
+    <line x1="22" y1="194" x2="264" y2="194" class="rule"/>
+    <text x="22" y="226" class="label">隱藏成本</text>
+    <text x="22" y="256" class="body"><tspan x="22">付款延遲、換匯成本</tspan><tspan x="22" dy="25">幣別錯配、交易對手集中</tspan></text>
+    <line x1="22" y1="309" x2="264" y2="309" class="rule"/>
+    <text x="22" y="342" class="key">優先核對</text>
+    <rect x="22" y="360" width="242" height="66" rx="7" fill="#F4F4F4"/>
+    <text x="143" y="389" text-anchor="middle" class="keyText"><tspan x="143">人民幣淨現金流</tspan><tspan x="143" dy="25" fill="#D1482A">與到期日</tspan></text>
+  </g>
+<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7280" fill-opacity="0.45" font-weight="600">dreamer868.com</text></svg>
