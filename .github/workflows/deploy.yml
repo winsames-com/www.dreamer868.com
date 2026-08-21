@@ -54,11 +54,14 @@ jobs:
     needs: deploy
     runs-on: ubuntu-latest
     steps:
-      - name: Wait for Pages CDN propagation
-        run: sleep 15
-
       - name: Fetch sitemap and verify all URLs
         run: |
+          # Pages CDN 對「剛出現的新網址」不是一次就位的。原本 sleep 15 一次定生死，
+          # 2026-08-21 的 CBAM 那篇就是這樣被判死（同一批網址事後全部 200）。
+          # 改成：先等一段，非 200 的網址再複驗幾輪，連續幾輪都不行才算真的壞。
+          echo "等待 Pages CDN 傳播..."
+          sleep 30
+
           echo "Fetching sitemap index..."
           SITEMAPS=$(curl -sf "$SITE_URL/sitemap-index.xml" \
             | grep -oP '(?<=<loc>)[^<]+')
@@ -69,18 +72,44 @@ jobs:
             URLS="$URLS $(curl -sf "$sm" | grep -oP '(?<=<loc>)[^<]+')"
           done
 
-          TOTAL=0
-          FAILED=0
-          FAIL_LIST=""
+          # 🔴 這裡不准用 curl -f。-f 會讓 curl 在 4xx 直接以 exit 22 收場，而這個
+          # step 跑在 `bash -e` 下——第一個非 200 的網址就把整個 step 殺掉，底下
+          # 收集失敗清單、印出「Failed URLs」的邏輯永遠跑不到。2026-08-21 的 log
+          # 就只剩一行 exit code 22，沒有任何網址資訊，Slack 只好亂猜失敗原因。
+          probe() { curl -s -o /dev/null -w '%{http_code}' --max-time 20 "$1" || echo 000; }
 
+          TOTAL=0
+          PENDING=""
           for u in $URLS; do
             TOTAL=$((TOTAL + 1))
-            CODE=$(curl -sf -o /dev/null -w '%{http_code}' "$u")
+            CODE=$(probe "$u")
             if [ "$CODE" != "200" ]; then
-              FAILED=$((FAILED + 1))
-              FAIL_LIST="$FAIL_LIST\n  ✗ $CODE $u"
+              echo "  ? $CODE $u"
+              PENDING="$PENDING $u"
             fi
           done
+
+          # 複驗：只重打第一輪失敗的，最多 3 輪、每輪間隔 30 秒。
+          ROUND=0
+          while [ -n "$PENDING" ] && [ "$ROUND" -lt 3 ]; do
+            ROUND=$((ROUND + 1))
+            echo ""
+            echo "第 $ROUND 輪複驗（$(echo $PENDING | wc -w) 個網址）..."
+            sleep 30
+            STILL=""
+            for u in $PENDING; do
+              CODE=$(probe "$u")
+              if [ "$CODE" != "200" ]; then
+                echo "  ✗ $CODE $u"
+                STILL="$STILL $u"
+              else
+                echo "  ✓ 200 $u（第 $ROUND 輪補上，屬 CDN 傳播延遲）"
+              fi
+            done
+            PENDING="$STILL"
+          done
+
+          FAILED=$(echo $PENDING | wc -w)
 
           echo ""
           echo "===== Verification Result ====="
@@ -88,11 +117,12 @@ jobs:
           echo "Failed: $FAILED"
 
           if [ "$FAILED" -gt 0 ]; then
-            echo -e "\nFailed URLs:$FAIL_LIST"
+            echo ""
+            echo "Failed URLs（複驗 $ROUND 輪後仍非 200）:"
+            for u in $PENDING; do echo "  ✗ $(probe "$u") $u"; done
             exit 1
-          else
-            echo "All URLs returned 200 ✓"
           fi
+          echo "All URLs returned 200 ✓"
 
   indexnow:
     needs: verify
@@ -139,7 +169,24 @@ jobs:
             exit 0
           fi
           RUN_URL="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
-          TEXT="🚨 ${{ github.repository }} 部署被守門擋下（commit ${GITHUB_SHA::7}）。請修正設計規範/建置錯誤後 push，workflow 會自動重審。詳情： $RUN_URL"
+          # 哪一關垮的要講出來。原本不分關卡一律寫「請修正設計規範/建置錯誤」，
+          # 2026-08-21 掛掉的其實是 verify（線上網址複驗），訊息把人指向錯的地方。
+          BUILD_R="${{ needs.build.result }}"
+          DEPLOY_R="${{ needs.deploy.result }}"
+          VERIFY_R="${{ needs.verify.result }}"
+          INDEXNOW_R="${{ needs.indexnow.result }}"
+          if [ "$BUILD_R" = "failure" ]; then
+            STAGE="建置（build）"; HINT="設計規範守門或 astro build 沒過，先在本機跑 pnpm build 複現"
+          elif [ "$DEPLOY_R" = "failure" ]; then
+            STAGE="部署（deploy）"; HINT="GitHub Pages 部署本身失敗，內容沒問題，通常重跑即可"
+          elif [ "$VERIFY_R" = "failure" ]; then
+            STAGE="線上複驗（verify）"; HINT="sitemap 裡有網址複驗多輪後仍非 200，log 末尾列出是哪幾個"
+          elif [ "$INDEXNOW_R" = "failure" ]; then
+            STAGE="IndexNow 推送"; HINT="站已經上線了，只有搜尋引擎通知沒送出"
+          else
+            STAGE="未知關卡"; HINT="看 run log"
+          fi
+          TEXT="🚨 ${{ github.repository }} 卡在 *${STAGE}* （commit ${GITHUB_SHA::7}）。${HINT}。詳情： $RUN_URL"
           curl -sf -X POST https://slack.com/api/chat.postMessage \
             -H "Authorization: Bearer $SLACK_BOT_TOKEN" \
             -H 'Content-type: application/json; charset=utf-8' \
