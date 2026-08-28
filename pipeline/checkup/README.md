@@ -24,7 +24,7 @@
 接在判決 pipeline 那行下面（共用 `CRON_TZ=Asia/Taipei` 與 `PATH`）：
 
 ```
-0 6 * * * /root/www.dreamer868.com/pipeline/checkup/cron.sh >> /tmp/judgment-checkup.log 2>&1
+0 6 * * * /mnt/customer/www.dreamer868.com/pipeline/checkup/cron.sh >> /tmp/judgment-checkup.log 2>&1
 ```
 
 ## 手動執行 / 測試
