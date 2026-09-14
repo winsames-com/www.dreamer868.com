@@ -1,14 +1,138 @@
 ---
 import { getCollection } from 'astro:content';
-import CategoryPage from '../../components/CategoryPage.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageBanner from '../../components/PageBanner.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+
+const title = '海外銀行開戶';
+const description = '新加坡、香港海外帳戶好處、開戶條件、費用與稅務申報說明。';
 
 const articles = (await getCollection('articles')).filter(
   (a) => a.data.subcategory === 'overseas-banking'
 );
+const sorted = [...articles].sort((a, b) => a.data.order - b.data.order);
+
+const serviceLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: title,
+  serviceType: title,
+  description,
+  provider: { '@id': 'https://www.dreamer868.com/#organization' },
+  areaServed: [
+    { '@type': 'City', name: '台中市' },
+    { '@type': 'Country', name: 'Taiwan' },
+  ],
+  inLanguage: 'zh-Hant-TW',
+};
+
+const itemListLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: `${title}相關文章`,
+  itemListElement: sorted.map((a, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    url: `https://www.dreamer868.com/articles/${a.data.slug}`,
+    name: a.data.title,
+  })),
+};
 ---
 
-<CategoryPage
-  title="海外銀行開戶"
-  description="新加坡、香港海外帳戶好處、開戶條件、費用與稅務申報說明。"
-  articles={articles}
-/>
+<BaseLayout title={title} description={description} jsonLd={[serviceLd, itemListLd]}>
+  <PageBanner title={title} />
+
+  <section class="category-content">
+    <p class="category-desc">{description}</p>
+
+    <div class="topic-block">
+      <h2>海外銀行開戶要準備什麼</h2>
+      <p>
+        非本地居民一樣可以在新加坡、香港的銀行開戶，不需要當地居留權。但近年各銀行對非居民的審核明顯趨嚴，需要說明清楚的開戶目的，備妥收入來源、資金用途等文件，銀行才會受理。
+      </p>
+      <p>
+        開戶必須本人親自完成，這是銀行 KYC（認識你的客戶）程序的硬性要求，沒有辦法委託他人代辦；不過可以請專業人員陪同協助準備文件與流程。
+      </p>
+      <p>自己的條件符不符合、該準備哪些文件，直接找顧問確認會比較準。</p>
+
+      <h2>香港、新加坡怎麼選</h2>
+      <p>
+        兩地都是台灣人海外開戶的常見選擇，考量點不太一樣。香港距離近、語言相通，稅制簡單，沒有資本利得稅與遺產稅；新加坡則以政治穩定著稱，比較適合看重長期穩定的資產配置。
+      </p>
+      <p>
+        台灣的稅務居民，海外帳戶的所得仍要依規定申報，台灣與港星都在 CRS（共同申報準則）架構下有金融帳戶資訊交換，開戶前把申報義務一併考慮進去，比較不會日後有意外。
+      </p>
+      <p>兩地也可以都開，實際上怎麼配置比較適合，還是要看自己的資產狀況與需求，找顧問聊聊比較實際。</p>
+    </div>
+
+    <div class="articles-grid">
+      {sorted.map((article) => (
+        <ArticleCard
+          title={article.data.title}
+          href={`/articles/${article.data.slug}/`}
+          image={article.data.images.hero.url}
+          imageAlt={article.data.images.hero.alt}
+          category={article.data.category}
+        />
+      ))}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .category-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px 100px;
+  }
+
+  .category-desc {
+    font-size: var(--text-base);
+    text-align: center;
+    color: var(--color-ink-soft);
+    margin-bottom: 50px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .topic-block {
+    max-width: 800px;
+    margin: 0 auto 60px;
+  }
+
+  .topic-block h2 {
+    font-size: var(--text-lg);
+    color: var(--color-text);
+    margin-bottom: 16px;
+  }
+
+  .topic-block h2:not(:first-child) {
+    margin-top: 36px;
+  }
+
+  .topic-block p {
+    font-size: var(--text-base);
+    color: var(--color-ink-soft);
+    line-height: 1.8;
+    margin-bottom: 16px;
+  }
+
+  .articles-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  @media (min-width: 640px) {
+    .articles-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .articles-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>
