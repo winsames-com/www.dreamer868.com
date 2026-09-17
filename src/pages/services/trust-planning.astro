@@ -1,14 +1,134 @@
 ---
 import { getCollection } from 'astro:content';
-import CategoryPage from '../../components/CategoryPage.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageBanner from '../../components/PageBanner.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+
+const title = '信託規劃';
+const description = '離岸信託是什麼、如何運作？客製化信託方案，確保跨境資產按照您的意願分配。';
 
 const articles = (await getCollection('articles')).filter(
   (a) => a.data.subcategory === 'trust-planning'
 );
+const sorted = [...articles].sort((a, b) => a.data.order - b.data.order);
+
+const serviceLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: title,
+  serviceType: title,
+  description,
+  provider: { '@id': 'https://www.dreamer868.com/#organization' },
+  areaServed: [
+    { '@type': 'City', name: '台中市' },
+    { '@type': 'Country', name: 'Taiwan' },
+  ],
+  inLanguage: 'zh-Hant-TW',
+};
+
+const itemListLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: `${title}相關文章`,
+  itemListElement: sorted.map((a, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    url: `https://www.dreamer868.com/articles/${a.data.slug}`,
+    name: a.data.title,
+  })),
+};
 ---
 
-<CategoryPage
-  title="信託規劃"
-  description="離岸信託是什麼、如何運作？客製化信託方案，確保跨境資產按照您的意願分配。"
-  articles={articles}
-/>
+<BaseLayout title={title} description={description} jsonLd={[serviceLd, itemListLd]}>
+  <PageBanner title={title} />
+
+  <section class="category-content">
+    <p class="category-desc">{description}</p>
+
+    <div class="topic-block">
+      <h2>信託裡的委託人、受託人、受益人差在哪</h2>
+      <p>
+        委託人是拿出財產、決定信託怎麼運作的人；受託人依照信託契約管理這筆財產，可能是信託公司，也可能是家人擔任；受益人則是最後拿到信託利益的人。三個角色可以是同一人，也可以分開設定，實務上的安排方式差很多。
+      </p>
+      <p>
+        信託公司當受託人，好處是有專業團隊管理、帳務透明；找家人或熟人擔任受託人，彈性比較高，但要考量對方的財務知識和信任基礎夠不夠。
+      </p>
+
+      <h2>委託人或受託人可以是自己嗎</h2>
+      <p>
+        可以。常見的自益信託，委託人同時是受益人，把資產放進信託但享有的權益不變；也有人會自己兼任受託人管理財產，只是這種安排在資產保護的效果上，跟找專業受託人差異不小。
+      </p>
+      <p>哪一種架構適合，要看資產類型、家族成員狀況、想達成的目標而定，實際規劃前找顧問談一次會比較清楚。</p>
+    </div>
+
+    <div class="articles-grid">
+      {sorted.map((article) => (
+        <ArticleCard
+          title={article.data.title}
+          href={`/articles/${article.data.slug}/`}
+          image={article.data.images.hero.url}
+          imageAlt={article.data.images.hero.alt}
+          category={article.data.category}
+        />
+      ))}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .category-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px 100px;
+  }
+
+  .category-desc {
+    font-size: var(--text-base);
+    text-align: center;
+    color: var(--color-ink-soft);
+    margin-bottom: 50px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .topic-block {
+    max-width: 800px;
+    margin: 0 auto 60px;
+  }
+
+  .topic-block h2 {
+    font-size: var(--text-lg);
+    color: var(--color-text);
+    margin-bottom: 16px;
+  }
+
+  .topic-block h2:not(:first-child) {
+    margin-top: 36px;
+  }
+
+  .topic-block p {
+    font-size: var(--text-base);
+    color: var(--color-ink-soft);
+    line-height: 1.8;
+    margin-bottom: 16px;
+  }
+
+  .articles-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  @media (min-width: 640px) {
+    .articles-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .articles-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>
