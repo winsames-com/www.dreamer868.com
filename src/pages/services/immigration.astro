@@ -1,14 +1,138 @@
 ---
 import { getCollection } from 'astro:content';
-import CategoryPage from '../../components/CategoryPage.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageBanner from '../../components/PageBanner.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+
+const title = '移民規劃';
+const description = '第二國身份規劃、移民稅務影響評估，移民前的財務檢視與跨境資產配置。';
 
 const articles = (await getCollection('articles')).filter(
   (a) => a.data.subcategory === 'immigration'
 );
+const sorted = [...articles].sort((a, b) => a.data.order - b.data.order);
+
+const serviceLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: title,
+  serviceType: title,
+  description,
+  provider: { '@id': 'https://www.dreamer868.com/#organization' },
+  areaServed: [
+    { '@type': 'City', name: '台中市' },
+    { '@type': 'Country', name: 'Taiwan' },
+  ],
+  inLanguage: 'zh-Hant-TW',
+};
+
+const itemListLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: `${title}相關文章`,
+  itemListElement: sorted.map((a, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    url: `https://www.dreamer868.com/articles/${a.data.slug}`,
+    name: a.data.title,
+  })),
+};
 ---
 
-<CategoryPage
-  title="移民規劃"
-  description="第二國身份規劃，移民前的財務檢視與跨境資產配置。"
-  articles={articles}
-/>
+<BaseLayout title={title} description={description} jsonLd={[serviceLd, itemListLd]}>
+  <PageBanner title={title} />
+
+  <section class="category-content">
+    <p class="category-desc">{description}</p>
+
+    <div class="topic-block">
+      <h2>移民稅務影響先看懂</h2>
+      <p>
+        移民會改變「稅務居民身份」，這會牽動所得稅、資本利得稅、遺產贈與稅的課稅方式跟著換一套規則。各國認定稅務居民的標準不一樣，常見依據是每年住滿多少天、生活重心與經濟利益中心落在哪裡，移民後有可能同時被兩個國家認定為稅務居民，面臨雙重課稅的風險。
+      </p>
+      <p>
+        <a href="/articles/immigration-03/">移民稅務影響</a>會依個人狀況、原居地與目的地國家的稅制而不同，實際適用哪些規則，還是要找顧問確認自己的情況。
+      </p>
+
+      <h2>資產處分時機要提前想</h2>
+      <p>
+        資產是移民前賣還是移民後賣，稅負結果可能差很大。出售時機、成本認定、匯率換算都牽涉在內，等到人已經移居當地才處理，選擇會少很多，提前規劃比較有空間調整。
+      </p>
+
+      <h2>CRS 讓海外帳戶藏不住</h2>
+      <p>
+        台灣與多數移民目的地都在 CRS（共同申報準則）架構下有金融帳戶資訊自動交換，海外帳戶的存在與收益，稅務機關查得到，抱著僥倖心態不申報風險很高，移民規劃要把申報義務一併算進去。
+      </p>
+    </div>
+
+    <div class="articles-grid">
+      {sorted.map((article) => (
+        <ArticleCard
+          title={article.data.title}
+          href={`/articles/${article.data.slug}/`}
+          image={article.data.images.hero.url}
+          imageAlt={article.data.images.hero.alt}
+          category={article.data.category}
+        />
+      ))}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .category-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px 100px;
+  }
+
+  .category-desc {
+    font-size: var(--text-base);
+    text-align: center;
+    color: var(--color-ink-soft);
+    margin-bottom: 50px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .topic-block {
+    max-width: 800px;
+    margin: 0 auto 60px;
+  }
+
+  .topic-block h2 {
+    font-size: var(--text-lg);
+    color: var(--color-text);
+    margin-bottom: 16px;
+  }
+
+  .topic-block h2:not(:first-child) {
+    margin-top: 36px;
+  }
+
+  .topic-block p {
+    font-size: var(--text-base);
+    color: var(--color-ink-soft);
+    line-height: 1.8;
+    margin-bottom: 16px;
+  }
+
+  .articles-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  @media (min-width: 640px) {
+    .articles-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .articles-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>
