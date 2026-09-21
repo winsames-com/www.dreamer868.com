@@ -1,14 +1,132 @@
 ---
 import { getCollection } from 'astro:content';
-import CategoryPage from '../../components/CategoryPage.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageBanner from '../../components/PageBanner.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+
+const title = '理財規劃';
+const description = '根據每位客戶的個別需求，提供全面的理財諮詢和建議，協助實現財務目標。';
 
 const articles = (await getCollection('articles')).filter(
   (a) => a.data.subcategory === 'financial-planning'
 );
+const sorted = [...articles].sort((a, b) => a.data.order - b.data.order);
+
+const serviceLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: title,
+  serviceType: title,
+  description,
+  provider: { '@id': 'https://www.dreamer868.com/#organization' },
+  areaServed: [
+    { '@type': 'City', name: '台中市' },
+    { '@type': 'Country', name: 'Taiwan' },
+  ],
+  inLanguage: 'zh-Hant-TW',
+};
+
+const itemListLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: `${title}相關文章`,
+  itemListElement: sorted.map((a, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    url: `https://www.dreamer868.com/articles/${a.data.slug}`,
+    name: a.data.title,
+  })),
+};
 ---
 
-<CategoryPage
-  title="理財規劃"
-  description="根據每位客戶的個別需求，提供全面的理財諮詢和建議，協助實現財務目標。"
-  articles={articles}
-/>
+<BaseLayout title={title} description={description} jsonLd={[serviceLd, itemListLd]}>
+  <PageBanner title={title} />
+
+  <section class="category-content">
+    <p class="category-desc">{description}</p>
+
+    <div class="topic-block">
+      <h2>家族信託規劃費用大概有哪些項目</h2>
+      <p>
+        <a href="/articles/family-trust-wealth-continuity/">家族信託</a>常見的費用可分成設立費與管理費兩類，實際金額依資產種類、契約複雜度與受託機構報價而不同。資產規模較小時，更需要把設立費、管理費與其他替代方案放在一起比較，不是資產夠多才適合評估。
+      </p>
+      <p>信託不是當然的節稅工具，委託人、受益人、財產種類、給付方式與成立時點都可能產生不同稅務結果，具體費用與稅務試算建議直接找顧問依個案報價確認。</p>
+
+      <h2>家族信託規劃流程怎麼走</h2>
+      <p>
+        多數家庭可以先從盤點開始，再判斷是否真的需要信託：列出哪些人的生活、教育、醫療或長照必須持續；建立資產地圖，標示所有權、負債、受益人與必要文件位置；先補上緊急預備金、保險受益人、遺囑及代理授權等基本安排；若給付要跨年、附條件、多人受益或需要第三方管理，再評估信託；最後由律師、會計師、稅務與信託專業人員組成團隊，核對契約、登記、稅負及執行成本。
+      </p>
+      <p>信託能規範管理及給付，但債權、婚姻、稅務與投資風險都有法律邊界，契約成立前應由跨領域專業人員依最新法規與個案條件確認。</p>
+    </div>
+
+    <div class="articles-grid">
+      {sorted.map((article) => (
+        <ArticleCard
+          title={article.data.title}
+          href={`/articles/${article.data.slug}/`}
+          image={article.data.images.hero.url}
+          imageAlt={article.data.images.hero.alt}
+          category={article.data.category}
+        />
+      ))}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .category-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px 100px;
+  }
+
+  .category-desc {
+    font-size: var(--text-base);
+    text-align: center;
+    color: var(--color-ink-soft);
+    margin-bottom: 50px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .topic-block {
+    max-width: 800px;
+    margin: 0 auto 60px;
+  }
+
+  .topic-block h2 {
+    font-size: var(--text-lg);
+    color: var(--color-text);
+    margin-bottom: 16px;
+  }
+
+  .topic-block h2:not(:first-child) {
+    margin-top: 36px;
+  }
+
+  .topic-block p {
+    font-size: var(--text-base);
+    color: var(--color-ink-soft);
+    line-height: 1.8;
+    margin-bottom: 16px;
+  }
+
+  .articles-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  @media (min-width: 640px) {
+    .articles-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .articles-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>
