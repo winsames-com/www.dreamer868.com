@@ -1,14 +1,134 @@
 ---
 import { getCollection } from 'astro:content';
-import CategoryPage from '../../components/CategoryPage.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageBanner from '../../components/PageBanner.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+
+const title = '家族治理';
+const description = '建立家族辦公室與治理機制，守護家族永續經營。';
 
 const articles = (await getCollection('articles')).filter(
   (a) => a.data.subcategory === 'family-governance'
 );
+const sorted = [...articles].sort((a, b) => a.data.order - b.data.order);
+
+const serviceLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: title,
+  serviceType: title,
+  description,
+  provider: { '@id': 'https://www.dreamer868.com/#organization' },
+  areaServed: [
+    { '@type': 'City', name: '台中市' },
+    { '@type': 'Country', name: 'Taiwan' },
+  ],
+  inLanguage: 'zh-Hant-TW',
+};
+
+const itemListLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: `${title}相關文章`,
+  itemListElement: sorted.map((a, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    url: `https://www.dreamer868.com/articles/${a.data.slug}`,
+    name: a.data.title,
+  })),
+};
 ---
 
-<CategoryPage
-  title="家族治理"
-  description="建立家族辦公室與治理機制，守護家族永續經營。"
-  articles={articles}
-/>
+<BaseLayout title={title} description={description} jsonLd={[serviceLd, itemListLd]}>
+  <PageBanner title={title} />
+
+  <section class="category-content">
+    <p class="category-desc">{description}</p>
+
+    <div class="topic-block">
+      <h2>家族會議通常談什麼</h2>
+      <p>
+        家族會議的議程沒有固定公式，多數家庭會從幾個方向切入：怎麼開會、重大決定要不要經過表決、老中青三代各自扮演什麼角色。這些規則討論到一定程度，家庭常會想把共識寫下來，形成
+        <a href="/articles/family-governance-04/">家族憲章</a>，讓下一次遇到類似的狀況有依循的準則。
+      </p>
+      <p>
+        除了規則本身，家族會議也是聽取不同意見的場合。財產怎麼管理、企業股權怎麼安排、爭議發生時找誰協調，這幾件事拖到真的出事才談，選項會少很多，先在會議室裡討論過一輪，臨場反而不會慌。
+      </p>
+
+      <h2>不用一次到位</h2>
+      <p>
+        第一次家族會議不必把憲章、股權、繼承通通排上議程。先固定半年或一年聚一次，聊聊家裡的近況，養成願意坐下來講話的習慣，再挑一件具體的事（例如誰接班、某筆資產怎麼處理）當作第一個議題，比一開始就求全面來得踏實。
+      </p>
+    </div>
+
+    <div class="articles-grid">
+      {sorted.map((article) => (
+        <ArticleCard
+          title={article.data.title}
+          href={`/articles/${article.data.slug}/`}
+          image={article.data.images.hero.url}
+          imageAlt={article.data.images.hero.alt}
+          category={article.data.category}
+        />
+      ))}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .category-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px 100px;
+  }
+
+  .category-desc {
+    font-size: var(--text-base);
+    text-align: center;
+    color: var(--color-ink-soft);
+    margin-bottom: 50px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .topic-block {
+    max-width: 800px;
+    margin: 0 auto 60px;
+  }
+
+  .topic-block h2 {
+    font-size: var(--text-lg);
+    color: var(--color-text);
+    margin-bottom: 16px;
+  }
+
+  .topic-block h2:not(:first-child) {
+    margin-top: 36px;
+  }
+
+  .topic-block p {
+    font-size: var(--text-base);
+    color: var(--color-ink-soft);
+    line-height: 1.8;
+    margin-bottom: 16px;
+  }
+
+  .articles-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  @media (min-width: 640px) {
+    .articles-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .articles-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>
