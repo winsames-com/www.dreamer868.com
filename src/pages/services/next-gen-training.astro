@@ -1,14 +1,134 @@
 ---
 import { getCollection } from 'astro:content';
-import CategoryPage from '../../components/CategoryPage.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageBanner from '../../components/PageBanner.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+
+const title = '二代培訓';
+const description = '協助企業二代順利接班，提供培訓與創業輔導。';
 
 const articles = (await getCollection('articles')).filter(
   (a) => a.data.subcategory === 'next-gen-training'
 );
+const sorted = [...articles].sort((a, b) => a.data.order - b.data.order);
+
+const serviceLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: title,
+  serviceType: title,
+  description,
+  provider: { '@id': 'https://www.dreamer868.com/#organization' },
+  areaServed: [
+    { '@type': 'City', name: '台中市' },
+    { '@type': 'Country', name: 'Taiwan' },
+  ],
+  inLanguage: 'zh-Hant-TW',
+};
+
+const itemListLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: `${title}相關文章`,
+  itemListElement: sorted.map((a, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    url: `https://www.dreamer868.com/articles/${a.data.slug}`,
+    name: a.data.title,
+  })),
+};
 ---
 
-<CategoryPage
-  title="二代培訓"
-  description="協助企業二代順利接班，提供培訓與創業輔導。"
-  articles={articles}
-/>
+<BaseLayout title={title} description={description} jsonLd={[serviceLd, itemListLd]}>
+  <PageBanner title={title} />
+
+  <section class="category-content">
+    <p class="category-desc">{description}</p>
+
+    <div class="topic-block">
+      <h2>沒有接班安排，公司會卡在哪裡</h2>
+      <p>
+        一人公司如果只有一位董事，負責人若突然身故、繼承人又選擇拋棄繼承，公司登記被廢止之後，稅務問題並不會跟著消失。沒有人擔任清算人，稽徵機關的課稅程序就會卡住，繼承人也很難脫身。想避開類似的
+        <a href="/articles/corporate-story-06/">清算僵局</a
+        >，可以在公司章程預先指定清算人，或者增設第二位董事，讓身故後仍有人能接手處理。
+      </p>
+
+      <h2>接班規劃拖到最後最難補救</h2>
+      <p>
+        二代接班需要的準備期，常常要十年以上。太晚開始準備是最普遍也最難補救的狀況，因為培養一個能扛起責任的接班人，急不來。
+        <a href="/articles/next-gen-training-01/">傳承的挑戰：不只是交棒</a
+        >整理了幾個企業常卡關的原因，多半都跟拖到最後才處理有關。
+      </p>
+    </div>
+
+    <div class="articles-grid">
+      {sorted.map((article) => (
+        <ArticleCard
+          title={article.data.title}
+          href={`/articles/${article.data.slug}/`}
+          image={article.data.images.hero.url}
+          imageAlt={article.data.images.hero.alt}
+          category={article.data.category}
+        />
+      ))}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .category-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px 100px;
+  }
+
+  .category-desc {
+    font-size: var(--text-base);
+    text-align: center;
+    color: var(--color-ink-soft);
+    margin-bottom: 50px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .topic-block {
+    max-width: 800px;
+    margin: 0 auto 60px;
+  }
+
+  .topic-block h2 {
+    font-size: var(--text-lg);
+    color: var(--color-text);
+    margin-bottom: 16px;
+  }
+
+  .topic-block h2:not(:first-child) {
+    margin-top: 36px;
+  }
+
+  .topic-block p {
+    font-size: var(--text-base);
+    color: var(--color-ink-soft);
+    line-height: 1.8;
+    margin-bottom: 16px;
+  }
+
+  .articles-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  @media (min-width: 640px) {
+    .articles-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .articles-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>
