@@ -3,7 +3,7 @@ title: "美國公債真的安全嗎？退休配置先查4項風險"
 description: "美債信用風險較低，仍會受殖利率、避險基金槓桿、債券ETF折溢價與美元波動影響。從存續期間、幣別避險、現金水位及總曝險檢查退休配置。"
 date: 2026-09-01
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1

@@ -3,7 +3,7 @@ title: "澳洲房價連兩月下跌，海外置產退休規劃該怎麼調整？
 description: "澳洲房價連兩個月加速下跌，美國30年期房貸利率同步衝上6.66%的一年新高。持有或考慮以澳洲房產做退休配置、留學置產的台灣家庭，該如何重新檢視資產與貸款假設。"
 date: 2026-08-08
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1

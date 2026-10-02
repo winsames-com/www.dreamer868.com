@@ -3,7 +3,7 @@ title: "3 張清單看懂稀土與科技股集中風險"
 description: "鉺價跳升揭露科技供應鏈的材料風險。從材料依賴、成本轉嫁到家庭資產集中度，盤點台股電子與半導體持股真正承受的波動。"
 date: 2026-08-25
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1

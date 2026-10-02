@@ -3,7 +3,7 @@ title: "聯準會九月決策完整指南：美元固定收益與退休配置"
 description: "聯準會出現罕見三票異議，九月利率方向更難單點預測。解析美元債券、外幣保單與美元存款差異，提供退休配置的存續期、提領與匯率風險檢查框架。"
 date: 2026-08-15
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1

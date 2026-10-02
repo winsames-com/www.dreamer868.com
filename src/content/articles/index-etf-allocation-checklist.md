@@ -4,7 +4,7 @@ description: "買進大盤ETF仍需管理市場、指數、集中度與幣別風
 date: 2026-08-19
 updatedDate: 2026-09-14
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1

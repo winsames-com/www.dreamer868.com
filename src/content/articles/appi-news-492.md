@@ -3,7 +3,7 @@ title: "非農數據公布，你的退休金該跟著動嗎？先做這個健檢
 description: "美國7月非農數據牽動聯準會降息路徑、公債殖利率與新台幣匯率，直接影響退休提領規劃。與其猜數據方向，不如先做一次多情境財務健檢，看你的配置撐不撐得住。"
 date: 2026-08-09
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1

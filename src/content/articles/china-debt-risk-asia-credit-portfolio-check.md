@@ -3,7 +3,7 @@ title: "中國債務安全網破洞？企業主與家庭的資產避震健檢"
 description: "中國化債機構也可能財務惡化。從負債、減值與融資成本看風險如何傳向人民幣、亞洲高收益債及臺灣企業，並用五項健檢降低資產集中度。"
 date: 2026-09-01
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1

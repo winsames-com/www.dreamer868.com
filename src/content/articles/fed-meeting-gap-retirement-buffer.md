@@ -3,7 +3,7 @@ title: "退休金放美債，遇到議息空窗該怎麼調整？"
 description: "聯準會研議減少議息次數，決策空窗可能拉長。退休族的因應重點在於先算出近期支出緩衝，再用配置區間與期限梯形，讓再平衡有規則可循。"
 date: 2026-08-19
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1

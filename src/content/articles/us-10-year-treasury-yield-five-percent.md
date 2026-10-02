@@ -3,7 +3,7 @@ title: "美國10年期公債殖利率突破5%完整指南：房貸、股市與�
 description: "美國10年期公債殖利率突破5%代表什麼？從房貸、公司債、WACC、股票本益比到企業資本支出，拆解全球資金價格上升對台灣家庭與投資人的影響。"
 date: 2026-09-21
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1

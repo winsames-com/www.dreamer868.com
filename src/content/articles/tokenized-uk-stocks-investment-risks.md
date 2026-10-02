@@ -3,7 +3,7 @@ title: "代幣化股票等同持有原股嗎？臺灣投資人先看4項風險"
 description: "LSEG與Payward規劃把英股代幣化，交易時段可能延長，但代幣未必等於原股。臺灣投資人應先檢查法律權利、託管、流動性、成本與跨境稅務。"
 date: 2026-09-16
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1

@@ -4,7 +4,7 @@ description: "日圓兌美元貶破163，創四十年新低，日本貿易逆差
 date: 2026-07-24
 updatedDate: 2026-08-06
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1

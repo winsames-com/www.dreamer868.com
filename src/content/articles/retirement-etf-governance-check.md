@@ -3,7 +3,7 @@ title: "退休投資只看低費用率夠嗎？海外ETF的公司治理健檢"
 description: "海外ETF能分散個股風險，卻無法排除股東權利弱化與投票權集中的影響。本文用財務健檢方式，帶你檢查基金投票政策、實際紀錄與市場集中度。"
 date: 2026-08-24
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1

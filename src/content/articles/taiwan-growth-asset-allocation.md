@@ -3,7 +3,7 @@ title: "台灣經濟成長完整指南：台股、台幣與美元資產怎麼配
 description: "台灣上半年經濟高速成長，資產價格卻未必同步上漲。從股市評價、台幣升值、美元與美債環境，檢查台股、科技股及美元資產是否失衡。"
 date: 2026-08-12
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1

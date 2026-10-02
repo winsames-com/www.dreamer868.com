@@ -3,7 +3,7 @@ title: "關於香港基金減稅，你需要知道的 5 件事"
 description: "香港基金減稅可能降低基金層級成本，卻不等於台灣稅務居民免申報。掌握新舊優惠、海外所得、最低稅負、CFC與資產傳承檢查重點。"
 date: 2026-09-15
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1

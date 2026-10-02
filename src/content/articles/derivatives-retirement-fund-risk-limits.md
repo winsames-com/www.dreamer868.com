@@ -3,7 +3,7 @@ title: "3道衍生品風控界線：別讓退休金成為交易保證金"
 description: "印度官方答覆顯示，散戶一年在股票衍生品虧損9,168.5億盧比（約96億美元）。臺灣投資人可用部位上限、最大損失與禁用資金清單守住退休本金。"
 date: 2026-08-19
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1

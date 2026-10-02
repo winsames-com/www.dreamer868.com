@@ -4,7 +4,7 @@ description: "畢業潮又至，社會新鮮人求職別只看起薪與公司規
 date: 2026-08-04
 updatedDate: 2026-08-06
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1

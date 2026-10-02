@@ -4,7 +4,7 @@ description: "美國回巢族調查顯示，成年子女返家與持續金援可
 date: 2026-08-13
 updatedDate: 2026-09-14
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1

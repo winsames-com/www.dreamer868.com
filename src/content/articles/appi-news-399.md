@@ -3,7 +3,7 @@ title: "新加坡稅改留才完整指南：家族辦公室該遷去新加坡還
 description: "新加坡與香港近期相繼調整基金與家族辦公室稅務優惠，正評估設立地點的台灣高資產家庭與企業主，該如何比較兩地制度、判斷現有海外資產配置是否仍具稅務效率？"
 date: 2026-09-15
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1

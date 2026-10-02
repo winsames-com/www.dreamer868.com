@@ -3,7 +3,7 @@ title: "銀行高利率值得嗎？先用德州比率做三層風險體檢"
 description: "海外存款與金融債利率亮眼，先別只算收益。本文用德州比率檢查銀行資產品質，再從存保、受償順位、資本與流動性完成配置前體檢。"
 date: 2026-08-27
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1

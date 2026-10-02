@@ -3,7 +3,7 @@ title: "德國退休金改革能照抄嗎？臺灣家庭先分散三種風險"
 description: "德國退休金改革把資本提存納入制度，約5,000億歐元代表什麼？從勞保年金、退休所得替代率到股債配置，整理臺灣家庭可採取的退休規劃步驟。"
 date: 2026-09-03
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1

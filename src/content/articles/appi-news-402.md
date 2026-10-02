@@ -4,7 +4,7 @@ description: "高盛與麥肯錫全球研究院揭露美國財富結構翻轉：
 date: 2026-07-29
 updatedDate: 2026-09-14
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1

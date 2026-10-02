@@ -3,7 +3,7 @@ title: "貨幣基金適合加碼嗎？美元資產與現金配置先看3個風�
 description: "全球資金轉進貨幣基金，不代表家庭應全面增加美元現金。從利率、匯率與機會成本檢查三桶現金配置，再決定是否再平衡。"
 date: 2026-09-19
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1

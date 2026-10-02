@@ -3,7 +3,7 @@ title: "美日韓聯手干預匯市：日圓保單、韓元資產該注意什麼
 description: "美日韓罕見聯手干預匯市，日圓、韓元同步走升，美元指數持續走弱。對持有日圓保單、韓元計價商品的台灣投資人來說，這是重新盤點貨幣集中度與避險比例的訊號，而非猜測央行下一步的時刻。"
 date: 2026-08-05
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1

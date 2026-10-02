@@ -3,7 +3,7 @@ title: "AI資料中心和美國營建景氣差在哪？海外REIT怎麼檢查"
 description: "美國7月營建支出年減，AI資料中心支出卻創高；搭配房貸利率走勢，帶你檢查海外REIT、赴美置產現金流與退休配置的集中風險。"
 date: 2026-09-29
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1

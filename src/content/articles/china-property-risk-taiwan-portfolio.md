@@ -3,7 +3,7 @@ title: "如何盤點投資組合的中國曝險：4個步驟看懂土地年限�
 description: "中國逾1兆人民幣（約1480億美元）商用不動產土地年期剩不到20年，續期規則陸續明朗。本文拆解這項風險與房市走弱如何傳到台灣，並提供四步驟曝險盤點法。"
 date: 2026-08-19
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1

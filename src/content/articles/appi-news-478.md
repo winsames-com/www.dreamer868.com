@@ -3,7 +3,7 @@ title: "金價拉回還能配置黃金嗎？企業主的資產健檢思考框架
 description: "金價自高點回落，讓不少企業主與家庭決策者猶豫黃金該加碼還是觀望。從央行買盤、Fed利率走向到個人風險屬性，拆解黃金資產配置該怎麼判斷、怎麼抓比例。"
 date: 2026-08-02
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1

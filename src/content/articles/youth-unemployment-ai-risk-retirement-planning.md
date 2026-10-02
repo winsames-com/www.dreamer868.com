@@ -3,7 +3,7 @@ title: "薪資會持續成長是真的嗎？青年失業下的退休規劃健檢
 description: "青年失業與AI職務轉型可能拉長職涯空窗。從薪資假設、轉職準備金、房貸能力與最低退休提撥，重做家庭現金流健檢。"
 date: 2026-08-28
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1

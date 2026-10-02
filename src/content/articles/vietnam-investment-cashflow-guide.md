@@ -3,7 +3,7 @@ title: "越南投資完整風險指南：從銀行缺口到家庭現金流"
 description: "越南銀行存放款差額接近770億美元。給企業主與家庭的南向投資健檢，盤點基金、銀行股、海外房產、越南盾與營運資金風險。"
 date: 2026-08-26
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1

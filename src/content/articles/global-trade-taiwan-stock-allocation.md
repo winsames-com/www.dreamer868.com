@@ -3,7 +3,7 @@ title: "全球貿易還在成長，台股配置要看什麼？"
 description: "OECD指出G20第二季商品貿易續增，WTO則記錄2025年全球商品貿易量成長。出口型家庭檢視台股配置時，還要看AI需求、產業集中、匯率與退休資金期限。"
 date: 2026-09-27
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1

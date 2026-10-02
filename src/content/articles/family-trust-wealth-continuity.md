@@ -3,7 +3,7 @@ title: "家族信託入門指南：財產、規則與長期複利如何安排"
 description: "本文說明家族信託如何分開管理與受益、設定分配規則，以及債務、婚姻、稅務與長期資產管理上的限制。"
 date: 2026-08-11
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1

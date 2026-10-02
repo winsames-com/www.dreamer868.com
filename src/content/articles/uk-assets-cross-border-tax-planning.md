@@ -3,7 +3,7 @@ title: "如何盤點英國海外資產：跨境稅務與傳承 5 步驟"
 description: "英國 10 月預算前出現資本利得稅、房產稅與年度財富稅等方案，但尚非定案。台灣家庭可先核對英國稅務居民身分、資產類型與所在地，分清出售、匯回和繼承的稅務問題，再依正式規則調整安排。"
 date: 2026-09-24
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1

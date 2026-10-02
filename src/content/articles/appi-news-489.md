@@ -4,7 +4,7 @@ description: "台灣上半年經濟成長創50年新高，對照美元指數與�
 date: 2026-08-06
 updatedDate: 2026-09-14
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1

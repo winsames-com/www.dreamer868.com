@@ -3,7 +3,7 @@ title: "玉米價格牽動食品通膨？家庭與退休現金流的四步健檢
 description: "玉米單產下修與強烈聖嬰增加糧價風險。看懂成本如何傳到臺灣肉蛋乳，並以三種情境重算家庭預算、安全墊與退休提領需求。"
 date: 2026-08-31
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1

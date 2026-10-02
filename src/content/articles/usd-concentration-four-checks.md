@@ -3,7 +3,7 @@ title: "美元資產愈存愈多？退休前該做的4道貨幣體檢"
 description: "美、英、歐、加央行步調不同，美元資產的相對報酬更難用過去經驗推估。從貨幣、地區、資產類別與到期時間四個角度，檢查退休與傳承部位是否過度集中。"
 date: 2026-08-19
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1

@@ -4,7 +4,7 @@ description: "台積電第二季營收獲利雙創新高，股價卻不漲反跌
 date: 2026-07-31
 updatedDate: 2026-08-06
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1

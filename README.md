@@ -109,7 +109,7 @@ node pipeline/checkup/run.mjs            # 立即產一次每日品管報告
 
 - BaseLayout 每頁輸出 canonical、Open Graph、Twitter Card、BreadcrumbList + Organization/FinancialService(@id) + WebSite JSON-LD。
 - 文章頁：Article +（有 `faq:` 時）FAQPage JSON-LD；作者頁：Person + ProfilePage。
-- 作者 E-E-A-T 由 `src/data/navigation.ts` 的 `principalAuthor`（吳芳圳｜財務醫師）集中管理。
+- 作者 E-E-A-T 由 `src/data/navigation.ts` 的 `principalAuthor`（吳芳圳｜財務規劃師）集中管理。
 - `/llms.txt`（連結目錄）、`/llms-full.txt`（主要內容全文純文字）、`/rss.xml`、`robots.txt`（歡迎 AI 爬蟲）、sitemap（`@astrojs/sitemap` 自動產）。
 
 ## GEO/AEO 腳本（`scripts/`）

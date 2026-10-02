@@ -3,7 +3,7 @@ title: "高國債時代加稅對象完整指南：公共債務與海外資產傳
 description: "公共債務上升未必代表必然開徵財富稅，但可能改變稅負分配。本文拆解財富稅、資本利得稅、遺產稅與贈與稅，帶臺灣高資產家庭盤點海外資產與跨境傳承風險。"
 date: 2026-09-13
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1

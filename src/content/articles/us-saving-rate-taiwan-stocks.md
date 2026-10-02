@@ -3,7 +3,7 @@ title: "美國儲蓄率完整指南：消費降溫如何牽動台股配置"
 description: "美國家庭儲蓄率降至2.7%，會不會拖累美股與台灣出口股？從消費、企業獲利與訂單傳導，檢查家庭現金流、台股配置及退休提領風險。"
 date: 2026-08-30
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1

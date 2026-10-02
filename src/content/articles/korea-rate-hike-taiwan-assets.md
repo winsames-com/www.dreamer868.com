@@ -3,7 +3,7 @@ title: "韓元、亞洲債券與臺股集中風險：臺灣家庭的三項檢查
 description: "南韓基準利率升至3.00%，通膨與成長牽動韓元、臺幣、亞洲基金與臺股配置，臺灣家庭可從三項風險檢查開始。"
 date: 2026-09-14
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1

@@ -3,7 +3,7 @@ title: "夫妻贈與免稅和遺產稅差在哪？死亡前二年仍可能併計
 description: "夫妻相互贈與不計入贈與總額，不代表遺產稅一併免除。整理死亡前二年贈與、過世後轉帳、借款證明與2026年修法適用時點。"
 date: 2026-09-23
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1

@@ -3,7 +3,7 @@ title: "老人養老人退休金規劃完整指南：成因、風險與因應方
 description: "台灣邁入超高齡社會，越來越多退休族群拿有限的退休金反過來扶養年邁父母。本文從財務規劃角度拆解老人養老人的成因、退休金衝擊，並提供企業主與專業人士可及早部署的因應方向。"
 date: 2026-07-27
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1

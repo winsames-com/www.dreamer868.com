@@ -4,7 +4,7 @@ description: "立法院三讀刪除兄弟姊妹的特留分，民法第一千二
 date: 2026-07-30
 updatedDate: 2026-08-06
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1

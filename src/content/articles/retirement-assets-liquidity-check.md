@@ -3,7 +3,7 @@ title: "基金、ETF、保單都買了，退休配置真的有分散嗎？"
 description: "退休資產分散不能只數商品。從IMF壓力測試看共同持倉、槓桿與流動性如何互相牽動，並用四步財務健檢保留提領彈性。"
 date: 2026-09-04
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1

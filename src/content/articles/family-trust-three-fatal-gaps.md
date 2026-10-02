@@ -3,7 +3,7 @@ title: "3 個家族信託死穴：從娃哈哈信託爭議看傳承最後一哩"
 description: "娃哈哈信託爭議提醒家族企業：寫下意圖、準備資金與家人口頭同意，都不等於傳承已完成。本文拆解家族信託的三個死穴與六項執行檢核。"
 date: 2026-08-29
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1

@@ -3,7 +3,7 @@ title: "退休規劃撐得住崩盤嗎？先檢查3道防線"
 description: "挪威主權財富基金示警極端損失。準退休族可用壓力測試檢查最大回撤、現金緩衝、美元資產與再平衡規則，降低低點被迫賣出的風險。"
 date: 2026-08-20
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1

@@ -104,7 +104,7 @@ export const serviceTargets: ServiceTarget[] = [
 // 主顧問（作者 E-E-A-T）。所有文章預設掛此人。以下為本人提供之真實資歷。
 export const principalAuthor = {
   name: '吳芳圳',
-  title: '財務醫師',
+  title: '財務規劃師',
   url: '/author/wu-fang-jun/',
   personId: 'https://www.dreamer868.com/author/wu-fang-jun/#person',
   company: '尊茂國際有限公司',
@@ -116,7 +116,7 @@ export const principalAuthor = {
     '得勝教練團隊 金融教練',
   ],
   motto: '安全感來自數字，安心感來自財務系統。',
-  bio: '吳芳圳，財務醫師，IARFC 國際認證財務規劃師，擁有 14 年以上財務規劃與資產配置實務經驗。現任尊茂國際有限公司負責人、大人物商學院院長、得勝教練團隊金融教練。專注協助企業主、醫師、高資產家庭與專業人士，透過財務規劃、稅務規劃、資產傳承、信託架構、海外公司設立及國際資產配置等工具，建立穩健且能世代延續的財務系統。',
+  bio: '吳芳圳，IARFC 國際認證財務規劃師，擁有 14 年以上財務規劃與資產配置實務經驗。現任尊茂國際有限公司負責人、大人物商學院院長、得勝教練團隊金融教練。專注協助企業主、醫師、高資產家庭與專業人士，透過財務規劃、稅務規劃、資產傳承、信託架構、海外公司設立及國際資產配置等工具，建立穩健且能世代延續的財務系統。',
 };
 
 export const contactInfo = {

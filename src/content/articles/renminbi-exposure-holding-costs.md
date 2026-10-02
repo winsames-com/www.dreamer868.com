@@ -4,7 +4,7 @@ description: "人民幣跨境交易增加，不代表儲備貨幣功能同步成
 date: 2026-08-18
 updatedDate: 2026-09-14
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1

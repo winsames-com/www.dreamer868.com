@@ -3,7 +3,7 @@ title: "美債和美元保單差在哪？退休配置先看久期與匯率"
 description: "美國財政赤字升高、10年期美債殖利率來到4.70%，高收益是否足以補償債價與匯率波動？從現金流、久期與幣別檢查退休配置。"
 date: 2026-08-22
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1

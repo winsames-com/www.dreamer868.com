@@ -3,7 +3,7 @@ title: "4 個越南房市南向置產前的現金流檢查"
 description: "越南房貸利率升至高檔，南向置產不能只看房價與租金殖利率；從月付金、貸款成數、匯率、跨境稅務到退休現金流，先完成四組壓力測試。"
 date: 2026-09-18
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1

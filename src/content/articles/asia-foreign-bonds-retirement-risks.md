@@ -3,7 +3,7 @@ title: "亞洲發行的外幣債比較安全是真的嗎？5 個退休配置檢�
 description: "亞太債券發行爆量，不等同低風險。從發行人信用、計價幣別、存續期間、流動性與贖回條款，拆解臺灣退休族換回新臺幣後的實際報酬。"
 date: 2026-09-07
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1

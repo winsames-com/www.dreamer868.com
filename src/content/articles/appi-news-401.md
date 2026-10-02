@@ -3,7 +3,7 @@ title: "資產集中度風險完整指南：企業主與家庭決策者的檢視
 description: "南韓Kospi指數今年漲幅驚人卻也是全球波動度最高的股市，根源在於三星、SK海力士的極端集中。台灣企業主與家庭決策者的資產配置有相似結構，本文提供檢視與分散的具體方向。"
 date: 2026-07-28
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1

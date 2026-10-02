@@ -3,7 +3,7 @@ title: "教育基金：分年贈與和家族信託差在哪？怎麼選"
 description: "祖父母替孫子女準備教育基金，先檢查退休現金流，再比較分年贈與、教育專款與家族信託，並釐清贈與稅及家族公平的安排重點。"
 date: 2026-08-24
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1

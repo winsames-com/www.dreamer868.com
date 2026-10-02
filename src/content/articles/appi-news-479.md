@@ -3,7 +3,7 @@ title: "企業主想用穩定幣配置美元？先看懂兩層風險"
 description: "BIS最新工作報告指出，穩定幣正在新興市場複製「美元化」的老路，且幾乎不受資本管制約束。本文從財務健檢角度，拆解企業主用穩定幣做美元配置該留意的對手方風險與法遵風險，並說明它與合規海外配置架構的分工。"
 date: 2026-08-03
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1

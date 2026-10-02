@@ -3,7 +3,7 @@ title: "企業主看CBAM：用6項數字重做台股持股健檢"
 description: "歐盟碳關稅已進入正式期。企業主與家庭投資人可從歐洲營收、納管產品、碳排強度、碳價扣抵、轉型支出與合約條款，檢查持股的CBAM風險。"
 date: 2026-08-21
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1

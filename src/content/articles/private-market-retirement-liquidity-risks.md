@@ -3,7 +3,7 @@ title: "私募市場投資前必查5個流動性風險"
 description: "散戶透過海外券商買進私募市場基金前，應先理解封閉型基金折溢價、非上市資產估值、美元匯率、費用與退休提領風險。"
 date: 2026-09-06
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1

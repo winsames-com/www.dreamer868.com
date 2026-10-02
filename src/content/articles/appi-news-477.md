@@ -3,7 +3,7 @@ title: "油價衝擊公債殖利率，退休配置該健檢了嗎？"
 description: "布蘭特原油單月漲幅逼近25%，牽動美國10年期公債殖利率升至4.63%、30年期房貸利率達6.55%，聯準會利率則按兵不動。企業主與退休族的債券部位正在被重新定價，三步驟教你健檢存續期間曝險。"
 date: 2026-08-01
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1

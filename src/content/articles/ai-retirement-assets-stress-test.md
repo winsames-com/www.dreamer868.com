@@ -3,7 +3,7 @@ title: "AI估值高檔，退休資產如何做跨帳戶壓力測試？"
 description: "臺股ETF、美股指數與全球基金可能重複持有AI供應鏈。本文帶你穿透帳戶、測試股市利率與匯率衝擊，並建立可執行的再平衡門檻。"
 date: 2026-09-05
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1

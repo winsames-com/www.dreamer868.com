@@ -3,7 +3,7 @@ title: "什麼是歐元資產配置？從保單、債券到匯率避險"
 description: "歐元區通膨可能在高檔盤旋，持有歐元保單、歐元債券或規劃赴歐者，可從用途、期限、保單假設、實質報酬與匯率避險重新檢視配置。"
 date: 2026-09-12
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1

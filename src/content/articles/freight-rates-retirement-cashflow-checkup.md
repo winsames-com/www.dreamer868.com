@@ -3,7 +3,7 @@ title: "貨櫃運價再漲，退休家庭如何守住現金流？三層財務健
 description: "貨櫃運價回升可能增加輸入性通膨壓力。從生活預備金、退休提領到長天期債券，帶你重做家庭現金流壓力測試。"
 date: 2026-08-23
 author: "吳芳圳"
-authorTitle: "財務醫師"
+authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
 status: "published"
 version: 1
