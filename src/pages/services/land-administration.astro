@@ -1,14 +1,126 @@
 ---
 import { getCollection } from 'astro:content';
-import CategoryPage from '../../components/CategoryPage.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageBanner from '../../components/PageBanner.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+
+const title = '地政士服務';
+const description = '不動產移轉、過戶流程與土地開發的專業服務。';
 
 const articles = (await getCollection('articles')).filter(
   (a) => a.data.subcategory === 'land-administration'
 );
+const sorted = [...articles].sort((a, b) => a.data.order - b.data.order);
+
+const serviceLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: title,
+  serviceType: title,
+  description,
+  provider: { '@id': 'https://www.dreamer868.com/#organization' },
+  areaServed: [
+    { '@type': 'City', name: '台中市' },
+    { '@type': 'Country', name: 'Taiwan' },
+  ],
+  inLanguage: 'zh-Hant-TW',
+};
+
+const itemListLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: `${title}相關文章`,
+  itemListElement: sorted.map((a, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    url: `https://www.dreamer868.com/articles/${a.data.slug}`,
+    name: a.data.title,
+  })),
+};
 ---
 
-<CategoryPage
-  title="地政士服務"
-  description="不動產移轉、過戶流程與土地開發的專業服務。"
-  articles={articles}
-/>
+<BaseLayout title={title} description={description} jsonLd={[serviceLd, itemListLd]}>
+  <PageBanner title={title} />
+
+  <section class="category-content">
+    <p class="category-desc">{description}</p>
+
+    <div class="topic-block">
+      <h2>房子過戶給子女前，要先看清楚負債狀況</h2>
+      <p>
+        不少家庭想把房子提早過戶給子女，或是在繼承時把不動產分配給其中一人，省掉之後再處理的麻煩。但過戶的那一方名下如果已經有債務，債權人發現後可以向法院申請撤銷這筆移轉或繼承登記，過戶完成不代表這筆資產就此沒事。站上有一篇改編自法院判決的案例，父親過世後兄弟協議分房產、欠銀行貸款的兒子沒分到，法院最後仍判准撤銷繼承登記，可以看<a href="/articles/family-story-61/">這篇判決故事</a>了解法院怎麼認定。
+      </p>
+      <p>辦理不動產過戶或繼承登記前，建議先確認每位相關人是否背負債務，避免登記完成後才被追回，徒增過戶成本與時間。</p>
+    </div>
+
+    <div class="articles-grid">
+      {sorted.map((article) => (
+        <ArticleCard
+          title={article.data.title}
+          href={`/articles/${article.data.slug}/`}
+          image={article.data.images.hero.url}
+          imageAlt={article.data.images.hero.alt}
+          category={article.data.category}
+        />
+      ))}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .category-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px 100px;
+  }
+
+  .category-desc {
+    font-size: var(--text-base);
+    text-align: center;
+    color: var(--color-ink-soft);
+    margin-bottom: 50px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .topic-block {
+    max-width: 800px;
+    margin: 0 auto 60px;
+  }
+
+  .topic-block h2 {
+    font-size: var(--text-lg);
+    color: var(--color-text);
+    margin-bottom: 16px;
+  }
+
+  .topic-block h2:not(:first-child) {
+    margin-top: 36px;
+  }
+
+  .topic-block p {
+    font-size: var(--text-base);
+    color: var(--color-ink-soft);
+    line-height: 1.8;
+    margin-bottom: 16px;
+  }
+
+  .articles-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  @media (min-width: 640px) {
+    .articles-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .articles-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>
