@@ -1,0 +1,80 @@
+<svg viewBox="0 0 960 600" width="960" height="600" xmlns="http://www.w3.org/2000/svg">
+<rect x="0" y="0" width="960" height="600" fill="#FFFFFF"/>
+<text x="480" y="36" text-anchor="middle" font-family="sans-serif" font-size="25" font-weight="700" fill="#003A93">家庭照護情境資源對照圖</text>
+<text x="480" y="60" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#6B7280">三種情境並列比較，資格與實際可得資源依家庭狀況與所在地區而定</text>
+
+<!-- 欄位：基本照護 -->
+<rect x="40" y="82" width="280" height="40" rx="6" fill="#003A93"/>
+<text x="180" y="108" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">基本照護</text>
+
+<rect x="40" y="134" width="280" height="86" rx="6" fill="#F4F4F4" stroke="#3D6BB5" stroke-width="1.5"/>
+<text x="56" y="158" font-family="sans-serif" font-size="14" font-weight="700" fill="#003A93">政府長照服務</text>
+<text x="56" y="178" font-family="sans-serif" font-size="11" fill="#6B7280">依戶籍地核定資格與服務量能</text>
+<text x="56" y="196" font-family="sans-serif" font-size="11" fill="#6B7280">各縣市資源配置不同</text>
+
+<rect x="40" y="230" width="280" height="86" rx="6" fill="#F4F4F4" stroke="#3D6BB5" stroke-width="1.5"/>
+<text x="56" y="254" font-family="sans-serif" font-size="14" font-weight="700" fill="#003A93">保險給付</text>
+<text x="56" y="274" font-family="sans-serif" font-size="11" fill="#6B7280">依個人保單條款與承保範圍</text>
+<text x="56" y="292" font-family="sans-serif" font-size="11" fill="#6B7280">是否理賠需個案審核</text>
+
+<rect x="40" y="326" width="280" height="86" rx="6" fill="#F4F4F4" stroke="#D1482A" stroke-width="1.5"/>
+<text x="56" y="350" font-family="sans-serif" font-size="14" font-weight="700" fill="#D1482A">自費支出</text>
+<text x="56" y="370" font-family="sans-serif" font-size="11" fill="#6B7280">補足公共服務與保險之外缺口</text>
+<text x="56" y="388" font-family="sans-serif" font-size="11" fill="#6B7280">金額因家庭選擇而異</text>
+
+<rect x="40" y="422" width="280" height="86" rx="6" fill="#F4F4F4" stroke="#3D6BB5" stroke-width="1.5"/>
+<text x="56" y="446" font-family="sans-serif" font-size="14" font-weight="700" fill="#003A93">家人照顧</text>
+<text x="56" y="466" font-family="sans-serif" font-size="11" fill="#6B7280">家庭成員投入時間與人力</text>
+<text x="56" y="484" font-family="sans-serif" font-size="11" fill="#6B7280">是否可持續視家庭狀況</text>
+
+<!-- 欄位：延長照護 -->
+<rect x="340" y="82" width="280" height="40" rx="6" fill="#003A93"/>
+<text x="480" y="108" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">延長照護</text>
+
+<rect x="340" y="134" width="280" height="86" rx="6" fill="#F4F4F4" stroke="#3D6BB5" stroke-width="1.5"/>
+<text x="356" y="158" font-family="sans-serif" font-size="14" font-weight="700" fill="#003A93">政府長照服務</text>
+<text x="356" y="178" font-family="sans-serif" font-size="11" fill="#6B7280">長期使用需持續符合資格</text>
+<text x="356" y="196" font-family="sans-serif" font-size="11" fill="#6B7280">可能面臨排隊或額度限制</text>
+
+<rect x="340" y="230" width="280" height="86" rx="6" fill="#F4F4F4" stroke="#3D6BB5" stroke-width="1.5"/>
+<text x="356" y="254" font-family="sans-serif" font-size="14" font-weight="700" fill="#003A93">保險給付</text>
+<text x="356" y="274" font-family="sans-serif" font-size="11" fill="#6B7280">需留意給付年限與上限條款</text>
+<text x="356" y="292" font-family="sans-serif" font-size="11" fill="#6B7280">各保單差異大</text>
+
+<rect x="340" y="326" width="280" height="86" rx="6" fill="#F4F4F4" stroke="#D1482A" stroke-width="1.5"/>
+<text x="356" y="350" font-family="sans-serif" font-size="14" font-weight="700" fill="#D1482A">自費支出</text>
+<text x="356" y="370" font-family="sans-serif" font-size="11" fill="#6B7280">照護時間拉長，負擔期間增加</text>
+<text x="356" y="388" font-family="sans-serif" font-size="11" fill="#6B7280">實際金額依個案而定</text>
+
+<rect x="340" y="422" width="280" height="86" rx="6" fill="#F4F4F4" stroke="#3D6BB5" stroke-width="1.5"/>
+<text x="356" y="446" font-family="sans-serif" font-size="14" font-weight="700" fill="#003A93">家人照顧</text>
+<text x="356" y="466" font-family="sans-serif" font-size="11" fill="#6B7280">長期投入可能影響照顧者本業</text>
+<text x="356" y="484" font-family="sans-serif" font-size="11" fill="#6B7280">需評估輪替與喘息安排</text>
+
+<!-- 欄位：早期家庭收入中斷 -->
+<rect x="640" y="82" width="280" height="40" rx="6" fill="#003A93"/>
+<text x="780" y="108" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">早期家庭收入中斷</text>
+
+<rect x="640" y="134" width="280" height="86" rx="6" fill="#F4F4F4" stroke="#3D6BB5" stroke-width="1.5"/>
+<text x="656" y="158" font-family="sans-serif" font-size="14" font-weight="700" fill="#003A93">政府長照服務</text>
+<text x="656" y="178" font-family="sans-serif" font-size="11" fill="#6B7280">與收入中斷非直接關聯</text>
+<text x="656" y="196" font-family="sans-serif" font-size="11" fill="#6B7280">資格仍以照護需求為核定基準</text>
+
+<rect x="640" y="230" width="280" height="86" rx="6" fill="#F4F4F4" stroke="#3D6BB5" stroke-width="1.5"/>
+<text x="656" y="254" font-family="sans-serif" font-size="14" font-weight="700" fill="#003A93">保險給付</text>
+<text x="656" y="274" font-family="sans-serif" font-size="11" fill="#6B7280">視是否另有收入損失相關保障</text>
+<text x="656" y="292" font-family="sans-serif" font-size="11" fill="#6B7280">非所有保單皆涵蓋</text>
+
+<rect x="640" y="326" width="280" height="86" rx="6" fill="#F4F4F4" stroke="#D1482A" stroke-width="1.5"/>
+<text x="656" y="350" font-family="sans-serif" font-size="14" font-weight="700" fill="#D1482A">自費支出</text>
+<text x="656" y="370" font-family="sans-serif" font-size="11" fill="#6B7280">家庭須同時承擔照護與生活開銷</text>
+<text x="656" y="388" font-family="sans-serif" font-size="11" fill="#6B7280">壓力程度因儲備不同而異</text>
+
+<rect x="640" y="422" width="280" height="86" rx="6" fill="#F4F4F4" stroke="#3D6BB5" stroke-width="1.5"/>
+<text x="656" y="446" font-family="sans-serif" font-size="14" font-weight="700" fill="#003A93">家人照顧</text>
+<text x="656" y="466" font-family="sans-serif" font-size="11" fill="#6B7280">照顧者可能同時暫停或減少工作</text>
+<text x="656" y="484" font-family="sans-serif" font-size="11" fill="#6B7280">對家庭收入影響需個別評估</text>
+
+<rect x="40" y="524" width="880" height="42" rx="6" fill="#F4F4F4"/>
+<text x="480" y="550" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#6B7280">各項資格、給付條件與實際可得資源，依家庭所在縣市、保單內容與個案狀況而有不同，請以當地主管機關與保險公司資訊為準</text>
+<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7280" fill-opacity="0.45" font-weight="600">dreamer868.com</text></svg>
