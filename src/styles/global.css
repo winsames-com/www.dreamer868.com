@@ -101,11 +101,18 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto;
 }
 
-.prose h1 {
+/* .prose-h1：markdown 內文的 `# 標題` 改成的 <p>（astro.config.mjs rehypeDemoteH1），外觀同原本的 h1 */
+.prose h1,
+.prose .prose-h1 {
   font-size: var(--text-2xl);
   color: var(--color-primary);
   font-family: var(--font-serif);
   margin-bottom: 1em;
+}
+
+.prose .prose-h1 {
+  line-height: 1.4;
+  font-weight: 700;
 }
 
 .prose h2 {

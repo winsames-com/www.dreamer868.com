@@ -61,7 +61,7 @@ const breadcrumbs = [{ name: '專業團隊', href: '/team/' }, { name: principal
   <PageBanner title={`${principalAuthor.name}｜${principalAuthor.title}`} />
 
   <section class="author-page" itemscope itemtype="https://schema.org/Person">
-    <h1 itemprop="name">{principalAuthor.name}</h1>
+    <p class="author-name" itemprop="name">{principalAuthor.name}</p>
     <p class="title" itemprop="jobTitle">{principalAuthor.title}</p>
 
     <ul class="creds">
@@ -121,7 +121,8 @@ const breadcrumbs = [{ name: '專業團隊', href: '/team/' }, { name: principal
     margin: 0 auto;
     padding: 60px 20px 100px;
   }
-  .author-page h1 { font-size: var(--text-2xl); margin-bottom: 6px; }
+  /* 頁面主標題 h1 在 PageBanner；姓名用 p，外觀維持原本 h1 */
+  .author-page .author-name { font-size: var(--text-2xl); margin-bottom: 6px; line-height: 1.4; font-weight: 700; }
   .author-page .title { color: var(--color-primary); font-weight: 600; margin-bottom: 28px; }
   .author-page .bio { font-size: var(--text-sm); line-height: 1.9; color: var(--color-ink-soft); }
   .creds { list-style: none; padding: 0; margin: 0 0 28px; }

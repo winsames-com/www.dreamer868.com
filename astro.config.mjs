@@ -45,9 +45,27 @@ function pageGitDate(path) {
 
 const CONTENT_DATES = contentDates();
 
+// 文章 markdown 內文的 `# 標題`（多數文章開頭重複一次文章標題）會輸出成第二個 <h1>，
+// 頁面主標題已由 PageBanner 輸出 h1，每頁只能有一個。這裡把內文的 h1 改成 <p class="prose-h1">，
+// 外觀由 global.css 的 `.prose .prose-h1` 維持跟原本 `.prose h1` 一樣；不進目錄（原本也不進）。
+function rehypeDemoteH1() {
+  const walk = (node) => {
+    if (node.type === 'element' && node.tagName === 'h1') {
+      node.tagName = 'p';
+      const cls = node.properties.className;
+      node.properties.className = [...(Array.isArray(cls) ? cls : cls ? [cls] : []), 'prose-h1'];
+    }
+    if (node.children) node.children.forEach(walk);
+  };
+  return (tree) => walk(tree);
+}
+
 export default defineConfig({
   site: 'https://www.dreamer868.com',
   output: 'static',
+  markdown: {
+    rehypePlugins: [rehypeDemoteH1],
+  },
   build: {
     format: 'directory',
   },
