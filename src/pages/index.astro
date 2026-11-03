@@ -41,6 +41,17 @@ const homeFaq = [
   },
 ];
 
+// FAQPage JSON-LD：與 ArticleLayout 同手法，讓 AI 答題引擎直接抽取
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: homeFaq.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+
 const caseCategories = [
   { href: '/service-targets/personal/', label: '個人財務規劃', desc: '個人保障與退休規劃相關案例情境。' },
   { href: '/service-targets/family/', label: '家庭財務規劃', desc: '家庭資產保護與傳承相關案例情境。' },
@@ -49,7 +60,7 @@ const caseCategories = [
 ];
 ---
 
-<BaseLayout title="首頁">
+<BaseLayout title="首頁" jsonLd={faqLd}>
   <!-- Hero Banner -->
   <section class="hero">
     <div class="hero-bg">
