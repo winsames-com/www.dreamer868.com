@@ -170,7 +170,7 @@ const breadcrumbs = [
       <section class="faq" aria-labelledby="faq-heading">
         <h2 id="faq-heading">常見問答</h2>
         {faq.map((f) => (
-          <details class="faq-item">
+          <details class="faq-item" open>
             <summary>{f.q}</summary>
             <p>{f.a}</p>
           </details>
