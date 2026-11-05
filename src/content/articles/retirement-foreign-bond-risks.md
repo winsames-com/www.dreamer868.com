@@ -1,7 +1,8 @@
 ---
 title: "美元債、債券ETF和外幣保單差在哪？退休族先看風險"
 description: "BIS觀察美國長端利率與公債槓桿交易變化。退休族檢視美元債、債券ETF或外幣保單時，還要對照久期、信用、匯率、退出成本與未來支出幣別。"
-date: 2026-11-05
+date: 2026-10-19
+updatedDate: 2026-11-05
 author: "吳芳圳"
 authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
