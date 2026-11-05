@@ -1,7 +1,8 @@
 ---
 title: "AI融資重估如何影響美元債基金、美元保單與科技股？"
 description: "AI融資與科技企業借款增加，可能牽動信用利差、債券估值與科技股情緒。從美元債基金、美元保單到ETF，整理台灣家庭的資產配置檢查重點。"
-date: 2026-11-05
+date: 2026-10-28
+updatedDate: 2026-11-05
 author: "吳芳圳"
 authorTitle: "財務規劃師"
 authorUrl: "/author/wu-fang-jun/"
