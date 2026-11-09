@@ -30,6 +30,10 @@ set -a
 [ -f pipeline/.env ] && . pipeline/.env
 set +a
 
+# 2026-11-09 起：境外主機連不上司法院 API（9/6 起 Auth timeout），改讀台灣主機 tw8 投遞的收件匣
+# （tw8 端＝pipeline/tw8/fetch-taiwan.sh，每天台灣 00:30）。要臨時改回直連：JUD_SOURCE=api。
+export JUD_SOURCE="${JUD_SOURCE:-inbox}"
+
 # run.mjs 失敗也不中斷：仍要發 Slack 告警（heartbeat 會偵測缺 last-run.json）。
 node pipeline/run.mjs || echo "[cron] run.mjs 非零退出（續行：commit 判斷 + Slack 告警）"
 

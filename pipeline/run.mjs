@@ -3,12 +3,16 @@
 //         claude -p 改編 -> 第一關(化名正則+自評) -> 第二關(獨立 claude -p 查核+故事性) ->
 //         寫檔/隔離 -> 更新帳本 -> summary。
 // 環境變數：JUD_USER, JUD_PASS, DRY_RUN（"1" 則不寫正式檔、不更新帳本）。
+// JUD_SOURCE=inbox：改讀台灣主機 tw8 投遞的收件匣（境外主機連不上司法院 API，2026-11-09 起 cron.sh 預設此模式），
+//   收件匣位置 JUD_INBOX，見 pipeline/inbox-source.mjs；此模式不需要 JUD_USER／JUD_PASS。
 // 改編用 claude -p（本機訂閱帳戶），須先 `claude` 登入；無需 ANTHROPIC_API_KEY。
 
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 import { CATEGORIES, LIMITS, PATHS, THRESHOLDS } from './config.mjs';
-import { auth, getChangeList, getDoc, fullText, caseSourceOf } from './judicial.mjs';
+import * as judicial from './judicial.mjs';
+import { fullText, caseSourceOf } from './judicial.mjs';
+import { openInbox } from './inbox-source.mjs';
 import { prefilterJids, classifyDoc } from './classify.mjs';
 import { loadSeen, saveSeen } from './state.mjs';
 import { rewriteOne, termsForCategory } from './rewrite.mjs';
@@ -27,8 +31,12 @@ async function existingSlugs() {
 }
 
 async function main() {
-  const user = process.env.JUD_USER, pass = process.env.JUD_PASS;
-  if (!user || !pass) throw new Error('Missing JUD_USER / JUD_PASS');
+  let src = judicial, user = process.env.JUD_USER, pass = process.env.JUD_PASS;
+  if (process.env.JUD_SOURCE === 'inbox') {
+    src = await openInbox();
+    log('收件匣模式', JSON.stringify(src.meta));
+  } else if (!user || !pass) throw new Error('Missing JUD_USER / JUD_PASS');
+  const { auth, getChangeList, getDoc } = src;
 
   const today = new Date();
   const dateStr = today.toISOString().slice(0, 10);
