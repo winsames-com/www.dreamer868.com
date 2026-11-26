@@ -27,7 +27,7 @@ images:
   hero:
     pexels_id: 0
     url: "https://www.dreamer868.com/images/work-stoppage-income-emergency-fund/1.jpg"
-    alt: "一對伴侶在餐桌前查看房貸繳款表、生活帳單與存款資料。"
+    alt: "一對台灣伴侶在家中餐桌旁查看停工通知與薪資單。"
     photographer: "吳芳圳"
     photographer_url: "https://www.dreamer868.com/author/wu-fang-jun/"
     credit: "圖：吳芳圳／尊茂財務規劃"
@@ -36,7 +36,7 @@ images:
 
 財務也需要健檢。先列出每月不能延後的支出，再分開確認「依法可請求的工資」與「今天能支付帳單的現金」，才有辦法估算緊急預備金。
 
-![一對伴侶在餐桌前查看房貸繳款表、生活帳單與存款資料。](https://www.dreamer868.com/images/work-stoppage-income-emergency-fund/1.jpg "停工前先盤點必要支出與手邊現金，才能估算家庭收入中斷時的承受能力。")
+![一對台灣伴侶在家中餐桌旁查看停工通知與薪資單。](https://www.dreamer868.com/images/work-stoppage-income-emergency-fund/1.jpg "薪水何時恢復未必能預料，先看清家庭眼前要面對的收入中斷。")
 
 ## MLB 為何在封館前先告球員工會？
 
@@ -68,6 +68,8 @@ images:
 
 MLB 爭議還涉及勞動關係下的反托拉斯豁免，也就是特定集體勞動安排能否排除反托拉斯法審查。球團主張豁免適用，並不等於球員已獲判賠。對家庭帳目而言，可能提出的請求也尚未成為可用存款。
 
+![兩條法律流程圖分別呈現台灣停工責任分類與美國反托拉斯求償的成立條件。](https://www.dreamer868.com/images/work-stoppage-income-emergency-fund/2.png "停工工資要先看責任歸屬；美國三倍賠償也須先成立請求並認定損害。")
+
 ## 停工收入中斷，緊急預備金要準備多少？
 
 <strong>先算每月必要支出減去仍可確定入帳的收入，再依可能中斷期間設定目標。</strong>預備金月數是家庭規劃工具，沒有人人適用的法定標準。
@@ -87,7 +89,7 @@ MLB 爭議還涉及勞動關係下的反托拉斯豁免，也就是特定集體�
 
 單一收入家庭、主要收入者工作型態不穩定，以及有扶養責任或固定債務的家庭，應評估較長的收入中斷情境。若夫妻收入來自同一產業，也要檢查兩份收入是否可能同時減少。尚未確定的求償款，不納入基本生活費來源。
 
-![流程圖以必要月支出扣除確定收入計算每月缺口，再以可用現金除以正缺口估算可支應月數，並將未確認給付及年度帳單分開標示。](https://www.dreamer868.com/images/work-stoppage-income-emergency-fund/3.png "先用確定收入算出每月缺口，再估算現金可支應多久，未確認給付不列入可用資金。")
+![圖中以必要支出扣除確定收入得出每月缺口，再以可用現金估算可支應月數，旁列年度帳單到期日。](https://www.dreamer868.com/images/work-stoppage-income-emergency-fund/3.png "預備金能支應多久，取決於確定收入扣除必要支出後的缺口與可用現金。")
 
 ## 發生勞資糾紛後，資料與求助順序怎麼安排？
 
